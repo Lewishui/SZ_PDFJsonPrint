@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SZ_PDFJsonPrint", "SZ_PDFJsonPrint\SZ_PDFJsonPrint.csproj", "{AABBA490-EBE5-4F56-AFE9-8CEB6D646DD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPJP.DB", "SPJP.DB\SPJP.DB.csproj", "{888CA61F-5948-478B-9B02-AC287ABB57AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPJP.Buiness", "SPJP.Buiness\SPJP.Buiness.csproj", "{BA5E9570-E85B-4B06-B70E-3AA93B2DE7BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AABBA490-EBE5-4F56-AFE9-8CEB6D646DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABBA490-EBE5-4F56-AFE9-8CEB6D646DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABBA490-EBE5-4F56-AFE9-8CEB6D646DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABBA490-EBE5-4F56-AFE9-8CEB6D646DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888CA61F-5948-478B-9B02-AC287ABB57AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888CA61F-5948-478B-9B02-AC287ABB57AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888CA61F-5948-478B-9B02-AC287ABB57AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888CA61F-5948-478B-9B02-AC287ABB57AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA5E9570-E85B-4B06-B70E-3AA93B2DE7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5E9570-E85B-4B06-B70E-3AA93B2DE7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5E9570-E85B-4B06-B70E-3AA93B2DE7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5E9570-E85B-4B06-B70E-3AA93B2DE7BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
