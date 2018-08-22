@@ -47,12 +47,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.关于系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btmain = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dockPanel2 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            this.关于系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -68,10 +68,17 @@
             this.toolStripDropDownButton3.Text = "关于";
             this.toolStripDropDownButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // 关于系统ToolStripMenuItem
+            // 
+            this.关于系统ToolStripMenuItem.Name = "关于系统ToolStripMenuItem";
+            this.关于系统ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.关于系统ToolStripMenuItem.Text = "关于系统";
+            this.关于系统ToolStripMenuItem.Click += new System.EventHandler(this.关于系统ToolStripMenuItem_Click);
+            // 
             // btmain
             // 
             this.btmain.Name = "btmain";
-            this.btmain.Size = new System.Drawing.Size(152, 26);
+            this.btmain.Size = new System.Drawing.Size(144, 26);
             this.btmain.Text = "在线打印";
             this.btmain.Click += new System.EventHandler(this.btmain_Click);
             // 
@@ -95,7 +102,7 @@
             this.toolStripDropDownButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(842, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(1033, 28);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -107,7 +114,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(842, 453);
+            this.panel1.Size = new System.Drawing.Size(1033, 518);
             this.panel1.TabIndex = 11;
             // 
             // dockPanel2
@@ -122,7 +129,7 @@
             this.dockPanel2.DocumentStyle = WeifenLuo.WinFormsUI.Docking.DocumentStyle.DockingWindow;
             this.dockPanel2.Location = new System.Drawing.Point(0, 28);
             this.dockPanel2.Name = "dockPanel2";
-            this.dockPanel2.Size = new System.Drawing.Size(842, 425);
+            this.dockPanel2.Size = new System.Drawing.Size(1033, 490);
             dockPanelGradient1.EndColor = System.Drawing.SystemColors.ControlLight;
             dockPanelGradient1.StartColor = System.Drawing.SystemColors.ControlLight;
             autoHideStripSkin1.DockStripGradient = dockPanelGradient1;
@@ -169,21 +176,15 @@
             this.dockPanel2.Skin = dockPanelSkin1;
             this.dockPanel2.TabIndex = 9;
             // 
-            // 关于系统ToolStripMenuItem
-            // 
-            this.关于系统ToolStripMenuItem.Name = "关于系统ToolStripMenuItem";
-            this.关于系统ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.关于系统ToolStripMenuItem.Text = "关于系统";
-            this.关于系统ToolStripMenuItem.Click += new System.EventHandler(this.关于系统ToolStripMenuItem_Click);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 453);
+            this.ClientSize = new System.Drawing.Size(1033, 518);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GYENNO步态数据采集系统";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

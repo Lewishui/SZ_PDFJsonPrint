@@ -27,7 +27,7 @@ namespace SPJP.Buiness
         public void Run(List<clsOrderDatabaseinfo> FilterOrderResults)
         {
             LocalReport report = new LocalReport();
-            report.ReportPath = Application.StartupPath + "\\Report1.rdlc";
+            report.ReportPath = Application.StartupPath + "\\Report4.rdlc";
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
             Export(report);
             m_currentPageIndex = 0;
@@ -69,27 +69,27 @@ namespace SPJP.Buiness
             //"  <MarginBottom>0.0cm</MarginBottom>" +
             //"</DeviceInfo>";
 
-            string deviceInfo =
-"<DeviceInfo>" +
-"  <OutputFormat>EMF</OutputFormat>" +
-"  <PageWidth>8.66in</PageWidth>" +
-"  <PageHeight>5.2</PageHeight>" +
-"  <MarginTop>0.0cm</MarginTop>" +
-"  <MarginLeft>0.0cm</MarginLeft>" +
-"  <MarginRight>0.0cm</MarginRight>" +
-"  <MarginBottom>0.0cm</MarginBottom>" +
-"</DeviceInfo>";
-
             //            string deviceInfo =
             //"<DeviceInfo>" +
             //"  <OutputFormat>EMF</OutputFormat>" +
-            //"  <PageWidth>8.03in</PageWidth>" +
-            //"  <PageHeight>5.39in</PageHeight>" +
+            //"  <PageWidth>8.66in</PageWidth>" +
+            //"  <PageHeight>5.2</PageHeight>" +
             //"  <MarginTop>0.0cm</MarginTop>" +
             //"  <MarginLeft>0.0cm</MarginLeft>" +
             //"  <MarginRight>0.0cm</MarginRight>" +
             //"  <MarginBottom>0.0cm</MarginBottom>" +
             //"</DeviceInfo>";
+
+            string deviceInfo =
+                            "<DeviceInfo>" +
+                            "  <OutputFormat>EMF</OutputFormat>" +
+                            "  <PageWidth>8.5in</PageWidth>" +
+                            "  <PageHeight>11.1in</PageHeight>" +
+                            "  <MarginTop>0in</MarginTop>" +
+                            "  <MarginLeft>0.0cm</MarginLeft>" +
+                            "  <MarginRight>0.0cm</MarginRight>" +
+                            "  <MarginBottom>0in</MarginBottom>" +
+                            "</DeviceInfo>";
 
 
             Warning[] warnings;
@@ -169,7 +169,7 @@ Encoding encoding, string mimeType, bool willSeek)
             m_currentPageIndex++;
             ev.HasMorePages = (m_currentPageIndex < m_streams.Count);
         }
-     
+
 
     }
 }

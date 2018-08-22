@@ -184,7 +184,7 @@ namespace SZ_PDFJsonPrint
                 BusinessHelp.Run(FilterOrderResults);
              
             }
-      
+            MessageBox.Show("打印完成！","提醒",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
 
