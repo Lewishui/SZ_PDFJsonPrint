@@ -17,183 +17,259 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="baoxianfei2">
-          <DataField>baoxianfei2</DataField>
+        <Field Name="auditDoctorName">
+          <DataField>auditDoctorName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="baoxianjin2">
-          <DataField>baoxianjin2</DataField>
+        <Field Name="balanceTrunkHorizontalPeakVelocity">
+          <DataField>balanceTrunkHorizontalPeakVelocity</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="chaxundianhua">
-          <DataField>chaxundianhua</DataField>
+        <Field Name="balanceTrunkSagittalPeakVelocity">
+          <DataField>balanceTrunkSagittalPeakVelocity</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="chepaihao5">
-          <DataField>chepaihao5</DataField>
+        <Field Name="birthday">
+          <DataField>birthday</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="chicunjizhongliang5">
-          <DataField>chicunjizhongliang5</DataField>
+        <Field Name="cadence_avg">
+          <DataField>cadence_avg</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="comment">
-          <DataField>comment</DataField>
+        <Field Name="cadence_L">
+          <DataField>cadence_L</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="daishouzafei2">
-          <DataField>daishouzafei2</DataField>
+        <Field Name="cadence_R">
+          <DataField>cadence_R</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="danwei2">
-          <DataField>danwei2</DataField>
+        <Field Name="checkConclusion">
+          <DataField>checkConclusion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="daodaidi2">
-          <DataField>daodaidi2</DataField>
+        <Field Name="checkDoctorId">
+          <DataField>checkDoctorId</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="daofukuan2">
-          <DataField>daofukuan2</DataField>
+        <Field Name="checkDoctorName">
+          <DataField>checkDoctorName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="dianhua">
-          <DataField>dianhua</DataField>
+        <Field Name="checkEndTime">
+          <DataField>checkEndTime</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="dianhua2">
-          <DataField>dianhua2</DataField>
+        <Field Name="checkHospitalId">
+          <DataField>checkHospitalId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="checkHospitalName">
+          <DataField>checkHospitalName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="checkRemark">
+          <DataField>checkRemark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="checkStartTime">
+          <DataField>checkStartTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="checkType">
+          <DataField>checkType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="courseOfDisease">
+          <DataField>courseOfDisease</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="diseaseType">
+          <DataField>diseaseType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="dizhi">
           <DataField>dizhi</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="dizhi2">
-          <DataField>dizhi2</DataField>
+        <Field Name="dualTask">
+          <DataField>dualTask</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="fahuoshijian4">
-          <DataField>fahuoshijian4</DataField>
+        <Field Name="gaitCycle_avg">
+          <DataField>gaitCycle_avg</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="fukuandanwei">
-          <DataField>fukuandanwei</DataField>
+        <Field Name="gaitCycle_L">
+          <DataField>gaitCycle_L</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="huowupinming2">
-          <DataField>huowupinming2</DataField>
+        <Field Name="gaitCycle_R">
+          <DataField>gaitCycle_R</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Input_Date">
-          <DataField>Input_Date</DataField>
+        <Field Name="inspectId">
+          <DataField>inspectId</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="jiesuanfangshi2">
-          <DataField>jiesuanfangshi2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="kongyun4">
-          <DataField>kongyun4</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="kongyunbu">
-          <DataField>kongyunbu</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="luyun4">
-          <DataField>luyun4</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="luyunbu">
-          <DataField>luyunbu</DataField>
+        <Field Name="meanPhaseDifference">
+          <DataField>meanPhaseDifference</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Order_id">
           <DataField>Order_id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="pansongwanglu5">
-          <DataField>pansongwanglu5</DataField>
+        <Field Name="patientId">
+          <DataField>patientId</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="qianshouren5">
-          <DataField>qianshouren5</DataField>
+        <Field Name="patientName">
+          <DataField>patientName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="quhuoren_riqi3">
-          <DataField>quhuoren_riqi3</DataField>
+        <Field Name="peakShankVelocityAsymmetry">
+          <DataField>peakShankVelocityAsymmetry</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="quhuoren3">
-          <DataField>quhuoren3</DataField>
+        <Field Name="peakSiStAngularVelocity">
+          <DataField>peakSiStAngularVelocity</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="shijijianshu2">
-          <DataField>shijijianshu2</DataField>
+        <Field Name="phaseCoordinationIndex">
+          <DataField>phaseCoordinationIndex</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="shijizhongliang2">
-          <DataField>shijizhongliang2</DataField>
+        <Field Name="serialNumber">
+          <DataField>serialNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="shouhuoren2">
-          <DataField>shouhuoren2</DataField>
+        <Field Name="sex">
+          <DataField>sex</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="shouji">
-          <DataField>shouji</DataField>
+        <Field Name="shank_SSI">
+          <DataField>shank_SSI</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="shouji2">
-          <DataField>shouji2</DataField>
+        <Field Name="shankAsymmetry">
+          <DataField>shankAsymmetry</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="showimage">
           <DataField>showimage</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
-        <Field Name="sijixingming5">
-          <DataField>sijixingming5</DataField>
+        <Field Name="sistDuration">
+          <DataField>sistDuration</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="tijizhongliang2">
-          <DataField>tijizhongliang2</DataField>
+        <Field Name="sistTrunkRoM">
+          <DataField>sistTrunkRoM</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="toushudianhua">
-          <DataField>toushudianhua</DataField>
+        <Field Name="stance_avg">
+          <DataField>stance_avg</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="weituoren">
-          <DataField>weituoren</DataField>
+        <Field Name="stance_L">
+          <DataField>stance_L</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="weituoren_riqi3">
-          <DataField>weituoren_riqi3</DataField>
+        <Field Name="stance_R">
+          <DataField>stance_R</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="weituoren3">
-          <DataField>weituoren3</DataField>
+        <Field Name="stanceAsymmetry">
+          <DataField>stanceAsymmetry</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="yewuyuan5">
-          <DataField>yewuyuan5</DataField>
+        <Field Name="stepLength_avg">
+          <DataField>stepLength_avg</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="yundanhao">
-          <DataField>yundanhao</DataField>
+        <Field Name="stepLength_L">
+          <DataField>stepLength_L</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="zhongyaotishi3">
-          <DataField>zhongyaotishi3</DataField>
+        <Field Name="stepLength_R">
+          <DataField>stepLength_R</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="strideLength_avg">
+          <DataField>strideLength_avg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="strideLength_L">
+          <DataField>strideLength_L</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="strideLength_R">
+          <DataField>strideLength_R</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="strideLengthAsymmetry">
+          <DataField>strideLengthAsymmetry</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="strideVelocity_avg">
+          <DataField>strideVelocity_avg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="strideVelocity_L">
+          <DataField>strideVelocity_L</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="strideVelocity_R">
+          <DataField>strideVelocity_R</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="strideVelocityAsymmetry">
+          <DataField>strideVelocityAsymmetry</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="support_avg">
+          <DataField>support_avg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="support_L">
+          <DataField>support_L</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="support_R">
+          <DataField>support_R</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="swing_avg">
+          <DataField>swing_avg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="swing_L">
+          <DataField>swing_L</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="swing_R">
+          <DataField>swing_R</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="swingAsymmetry">
+          <DataField>swingAsymmetry</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="trunkHorizontalPeakVelocity">
+          <DataField>trunkHorizontalPeakVelocity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="trunkSagittalPeakVelocity">
+          <DataField>trunkSagittalPeakVelocity</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>TJ.DB</rd:DataSetName>
+        <rd:DataSetName>SPJP.DB</rd:DataSetName>
         <rd:TableName>clsOrderDatabaseinfo</rd:TableName>
-        <rd:ObjectDataSourceType>TJ.DB.clsOrderDatabaseinfo, TJ.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>SPJP.DB.clsOrderDatabaseinfo, SPJP.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -208,15 +284,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!dianhua.Value</Value>
+                    <Value EvaluationMode="Constant" />
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>0.7484in</Top>
-            <Left>1.40417in</Left>
+            <Top>1.9984in</Top>
+            <Left>1.27917in</Left>
             <Height>0.18749in</Height>
             <Width>1.88633in</Width>
             <Style>
@@ -236,15 +312,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!shouji.Value</Value>
+                    <Value EvaluationMode="Constant" />
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>0.74839in</Top>
-            <Left>4.37774in</Left>
+            <Top>1.99839in</Top>
+            <Left>4.25274in</Left>
             <Height>0.18751in</Height>
             <Width>2.08333in</Width>
             <ZIndex>1</ZIndex>
@@ -265,7 +341,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!zhongyaotishi3.Value</Value>
+                    <Value EvaluationMode="Constant" />
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -274,10 +350,10 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>2.21582in</Top>
-            <Left>0.46542in</Left>
+            <Top>3.46582in</Top>
+            <Left>0.34042in</Left>
             <Height>5.14583in</Height>
-            <Width>7.73697in</Width>
+            <Width>7.29949in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -296,15 +372,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!daodaidi2.Value</Value>
+                    <Value EvaluationMode="Constant" />
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.125in</Top>
-            <Left>4.37774in</Left>
+            <Top>2.375in</Top>
+            <Left>4.25274in</Left>
             <Height>0.1875in</Height>
             <Width>2.08333in</Width>
             <ZIndex>3</ZIndex>
@@ -325,15 +401,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!shouhuoren2.Value</Value>
+                    <Value EvaluationMode="Constant" />
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.125in</Top>
-            <Left>1.40417in</Left>
+            <Top>2.375in</Top>
+            <Left>1.27917in</Left>
             <Height>0.1875in</Height>
             <Width>1.88633in</Width>
             <ZIndex>4</ZIndex>
@@ -354,15 +430,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!danwei2.Value</Value>
+                    <Value EvaluationMode="Constant" />
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.47917in</Top>
-            <Left>4.37774in</Left>
+            <Top>2.72917in</Top>
+            <Left>4.25274in</Left>
             <Height>0.1875in</Height>
             <Width>2.08333in</Width>
             <ZIndex>5</ZIndex>
@@ -383,15 +459,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!dizhi2.Value</Value>
+                    <Value EvaluationMode="Constant" />
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>8.13905in</Top>
-            <Left>1.9762in</Left>
+            <Top>9.01405in</Top>
+            <Left>1.8512in</Left>
             <Height>0.1875in</Height>
             <Width>2.08333in</Width>
             <ZIndex>6</ZIndex>
@@ -412,15 +488,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!dianhua2.Value</Value>
+                    <Value EvaluationMode="Constant" />
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>8.56642in</Top>
-            <Left>1.9762in</Left>
+            <Top>9.44142in</Top>
+            <Left>1.8512in</Left>
             <Height>0.1875in</Height>
             <Width>2.08333in</Width>
             <ZIndex>7</ZIndex>
@@ -441,15 +517,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!shouji2.Value</Value>
+                    <Value />
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>8.13905in</Top>
-            <Left>5.75403in</Left>
+            <Top>9.01405in</Top>
+            <Left>5.62903in</Left>
             <Height>0.1875in</Height>
             <Width>1.34328in</Width>
             <ZIndex>8</ZIndex>
@@ -483,8 +559,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.125in</Top>
-            <Left>2.8274in</Left>
+            <Top>1.375in</Top>
+            <Left>2.3274in</Left>
             <Height>0.42933in</Height>
             <Width>3.42708in</Width>
             <ZIndex>9</ZIndex>
@@ -515,8 +591,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.74839in</Top>
-            <Left>0.45625in</Left>
+            <Top>1.99839in</Top>
+            <Left>0.33125in</Left>
             <Height>0.1875in</Height>
             <Width>0.86931in</Width>
             <ZIndex>10</ZIndex>
@@ -545,8 +621,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.7484in</Top>
-            <Left>3.44495in</Left>
+            <Top>1.9984in</Top>
+            <Left>3.31995in</Left>
             <Height>0.1875in</Height>
             <Width>0.86335in</Width>
             <ZIndex>11</ZIndex>
@@ -577,8 +653,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.125in</Top>
-            <Left>0.46542in</Left>
+            <Top>2.375in</Top>
+            <Left>0.34042in</Left>
             <Height>0.1875in</Height>
             <Width>0.86931in</Width>
             <ZIndex>12</ZIndex>
@@ -607,8 +683,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.125in</Top>
-            <Left>3.44495in</Left>
+            <Top>2.375in</Top>
+            <Left>3.31995in</Left>
             <Height>0.1875in</Height>
             <Width>0.86335in</Width>
             <ZIndex>13</ZIndex>
@@ -639,8 +715,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.47917in</Top>
-            <Left>0.46542in</Left>
+            <Top>2.72917in</Top>
+            <Left>0.34042in</Left>
             <Height>0.1875in</Height>
             <Width>0.86931in</Width>
             <ZIndex>14</ZIndex>
@@ -661,15 +737,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!shouhuoren2.Value</Value>
+                    <Value EvaluationMode="Constant" />
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.47917in</Top>
-            <Left>1.40417in</Left>
+            <Top>2.72917in</Top>
+            <Left>1.27917in</Left>
             <Height>0.1875in</Height>
             <Width>1.88633in</Width>
             <ZIndex>15</ZIndex>
@@ -698,8 +774,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.47917in</Top>
-            <Left>3.44495in</Left>
+            <Top>2.72917in</Top>
+            <Left>3.31995in</Left>
             <Height>0.1875in</Height>
             <Width>0.86335in</Width>
             <ZIndex>16</ZIndex>
@@ -730,8 +806,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.80208in</Top>
-            <Left>0.46542in</Left>
+            <Top>3.05208in</Top>
+            <Left>0.34042in</Left>
             <Height>0.1875in</Height>
             <Width>0.86931in</Width>
             <ZIndex>17</ZIndex>
@@ -762,8 +838,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>8.13905in</Top>
-            <Left>0.45625in</Left>
+            <Top>9.01405in</Top>
+            <Left>0.33125in</Left>
             <Height>0.1875in</Height>
             <Width>1.44133in</Width>
             <ZIndex>18</ZIndex>
@@ -792,8 +868,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>8.13905in</Top>
-            <Left>4.25274in</Left>
+            <Top>9.01405in</Top>
+            <Left>4.12774in</Left>
             <Height>0.1875in</Height>
             <Width>1.43184in</Width>
             <ZIndex>19</ZIndex>
@@ -824,8 +900,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>8.56642in</Top>
-            <Left>0.45625in</Left>
+            <Top>9.44142in</Top>
+            <Left>0.33125in</Left>
             <Height>0.1875in</Height>
             <Width>1.44133in</Width>
             <ZIndex>20</ZIndex>
@@ -839,316 +915,294 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="fukuandanwei">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>GYENNO步态数据采集系统</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.49951in</Top>
+            <Left>0.34043in</Left>
+            <Height>0.25in</Height>
+            <Width>1.84375in</Width>
+            <ZIndex>21</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="weituoren">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.79242in</Top>
+            <Left>1.30695in</Left>
+            <Height>0.22097in</Height>
+            <Width>2.08333in</Width>
+            <ZIndex>22</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="dizhi">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.79687in</Top>
+            <Left>5.94199in</Left>
+            <Height>0.21653in</Height>
+            <Width>1.69792in</Width>
+            <ZIndex>23</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>检查报告：</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.79242in</Top>
+            <Left>0.33126in</Left>
+            <Height>0.22097in</Height>
+            <Width>0.87847in</Width>
+            <ZIndex>24</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>订单流水号：</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.79687in</Top>
+            <Left>4.75917in</Left>
+            <Height>0.21653in</Height>
+            <Width>0.99531in</Width>
+            <ZIndex>25</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Image Name="Image1">
+            <Source>Embedded</Source>
+            <Value>LOGO</Value>
+            <Sizing>FitProportional</Sizing>
+            <Top>0.25in</Top>
+            <Left>0.34043in</Left>
+            <Height>0.22173in</Height>
+            <Width>0.35467in</Width>
+            <ZIndex>26</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Textbox Name="weituoren3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>9.99675in</Top>
+            <Left>5.23398in</Left>
+            <Height>0.26042in</Height>
+            <Width>0.8125in</Width>
+            <ZIndex>27</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="fukuandanwei2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>GYENNO步态数据采集系统</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>10.00717in</Top>
+            <Left>0.37692in</Left>
+            <Height>0.25in</Height>
+            <Width>1.83333in</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="fukuandanwei3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>医院 　步态分析检查室</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>9.99675in</Top>
+            <Left>6.11593in</Left>
+            <Height>0.25in</Height>
+            <Width>1.52398in</Width>
+            <ZIndex>29</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="fukuandanwei4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>1/3</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>9.99675in</Top>
+            <Left>3.47675in</Left>
+            <Height>0.25in</Height>
+            <Width>1.12722in</Width>
+            <ZIndex>30</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>9in</Height>
+        <Height>11in</Height>
         <Style />
       </Body>
-      <Width>8.5in</Width>
+      <Width>8in</Width>
       <Page>
-        <PageHeader>
-          <Height>1in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="fukuandanwei">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>GYENNO步态数据采集系统</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.41667in</Top>
-              <Left>0.46542in</Left>
-              <Height>0.25in</Height>
-              <Width>1.84375in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="weituoren">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!weituoren.Value</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.70958in</Top>
-              <Left>1.43194in</Left>
-              <Height>0.22097in</Height>
-              <Width>2.08333in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="dizhi">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!dizhi.Value</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.71403in</Top>
-              <Left>6.62948in</Left>
-              <Height>0.21653in</Height>
-              <Width>1.69792in</Width>
-              <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>检查报告：</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.70958in</Top>
-              <Left>0.45625in</Left>
-              <Height>0.22097in</Height>
-              <Width>0.87847in</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>订单流水号：</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.71403in</Top>
-              <Left>5.44666in</Left>
-              <Height>0.21653in</Height>
-              <Width>0.99531in</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Image Name="Image1">
-              <Source>Embedded</Source>
-              <Value>LOGO</Value>
-              <Sizing>FitProportional</Sizing>
-              <Top>0.16716in</Top>
-              <Left>0.46542in</Left>
-              <Height>0.22173in</Height>
-              <Width>0.35467in</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Image>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageHeader>
-        <PageFooter>
-          <Height>1in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="weituoren3">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!weituoren3.Value</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.26085in</Top>
-              <Left>5.54647in</Left>
-              <Height>0.26042in</Height>
-              <Width>0.8125in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="fukuandanwei2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>GYENNO步态数据采集系统</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.27127in</Top>
-              <Left>0.45625in</Left>
-              <Height>0.25in</Height>
-              <Width>1.83333in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="fukuandanwei3">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>医院 　步态分析检查室</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.26085in</Top>
-              <Left>6.42842in</Left>
-              <Height>0.25in</Height>
-              <Width>1.52398in</Width>
-              <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="fukuandanwei4">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>1/3</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.26085in</Top>
-              <Left>3.55608in</Left>
-              <Height>0.25in</Height>
-              <Width>1.12722in</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageFooter>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
         <TopMargin>1in</TopMargin>

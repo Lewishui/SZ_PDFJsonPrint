@@ -203,8 +203,9 @@
         <ReportItems>
           <Subreport Name="Subreport1">
             <ReportName>Report1</ReportName>
-            <Height>11in</Height>
-            <Width>8.5in</Width>
+            <Top>0.3175cm</Top>
+            <Height>10.7in</Height>
+            <Width>8in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -213,9 +214,9 @@
           </Subreport>
           <Subreport Name="Subreport2">
             <ReportName>Report2</ReportName>
-            <Top>11.19334in</Top>
-            <Height>11in</Height>
-            <Width>8.5in</Width>
+            <Top>10.9512in</Top>
+            <Height>10.7in</Height>
+            <Width>8in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -225,9 +226,9 @@
           </Subreport>
           <Subreport Name="Subreport3">
             <ReportName>Report3</ReportName>
-            <Top>22.36in</Top>
-            <Height>11in</Height>
-            <Width>8.5in</Width>
+            <Top>21.77064in</Top>
+            <Height>11.1in</Height>
+            <Width>8in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -236,10 +237,10 @@
             </Style>
           </Subreport>
         </ReportItems>
-        <Height>33.36in</Height>
+        <Height>32.88542in</Height>
         <Style />
       </Body>
-      <Width>8.5in</Width>
+      <Width>8in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>

@@ -27,7 +27,7 @@ namespace SPJP.Buiness
         public void Run(List<clsOrderDatabaseinfo> FilterOrderResults)
         {
             LocalReport report = new LocalReport();
-            report.ReportPath = Application.StartupPath + "\\Report4.rdlc";
+            report.ReportPath = Application.StartupPath + "\\Report1.rdlc";
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
             Export(report);
             m_currentPageIndex = 0;
@@ -171,5 +171,36 @@ Encoding encoding, string mimeType, bool willSeek)
         }
 
 
+        #region add data
+        private void InitializeReportEvent()
+        {
+            LocalReport report = new LocalReport();
+            report.ReportPath = Application.StartupPath + "\\Report1.rdlc";
+
+            //report.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_SubreportProcessing);
+            //  this.report.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
+        }
+
+        #endregion
+
+
+        public void Run2(List<clsOrderDatabaseinfo> FilterOrderResults)
+        {
+            LocalReport report = new LocalReport();
+            report.ReportPath = Application.StartupPath + "\\Report2.rdlc";
+            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
+            Export(report);
+            m_currentPageIndex = 0;
+            Print(orderprint, 0, 0);
+        }
+        public void Run3(List<clsOrderDatabaseinfo> FilterOrderResults)
+        {
+            LocalReport report = new LocalReport();
+            report.ReportPath = Application.StartupPath + "\\Report3.rdlc";
+            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
+            Export(report);
+            m_currentPageIndex = 0;
+            Print(orderprint, 0, 0);
+        }
     }
 }

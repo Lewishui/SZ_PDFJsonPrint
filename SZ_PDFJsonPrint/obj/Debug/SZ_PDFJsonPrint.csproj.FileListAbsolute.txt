@@ -20,3 +20,8 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Buiness.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report1.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.ReportForm.resources
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4_0.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report2.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report3.rdlc

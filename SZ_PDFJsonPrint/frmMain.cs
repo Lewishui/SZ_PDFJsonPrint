@@ -28,17 +28,24 @@ namespace SZ_PDFJsonPrint
         private bool backGroundRunResult;
         private SortableBindingList<clsOrderDatabaseinfo> sortablePendingOrderList;
         List<clsOrderDatabaseinfo> FilterOrderResults;
+
+        public ReportForm reportForm;
         public frmMain()
         {
             InitializeComponent();
             FilterOrderResults = new List<clsOrderDatabaseinfo>();
 
             clsOrderDatabaseinfo item = new clsOrderDatabaseinfo();
-            item.patientId ="2323";
-              item.dizhi ="jintian";
-            
+            item.patientId = "2323";
+            item.dizhi = "jintian";
+
             FilterOrderResults.Add(item);
             InitializeDataSource();
+
+            //
+            reportForm = new ReportForm();
+
+
         }
         private void InitializeDataSource()
         {
@@ -179,14 +186,24 @@ namespace SZ_PDFJsonPrint
 
                 var model = row.DataBoundItem as clsOrderDatabaseinfo;
                 //隐藏背景图
-                FilterOrderResults[0].showimage = true;
+                //FilterOrderResults[0].showimage = true;
+
+                PrintReportForEDI();
+
+              //  return;
 
                 BusinessHelp.Run(FilterOrderResults);
-             
+                BusinessHelp.Run2(FilterOrderResults);
+                BusinessHelp.Run3(FilterOrderResults);
             }
-            MessageBox.Show("打印完成！","提醒",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("打印完成！", "提醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
+        private void PrintReportForEDI()
+        {
+            reportForm.InitializeDataSource(FilterOrderResults);
+            reportForm.ShowDialog();
+            //InitializeEdiData();
+        }
 
     }
 }
