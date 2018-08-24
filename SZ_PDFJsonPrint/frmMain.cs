@@ -1,4 +1,5 @@
 ﻿using SPJP.Buiness;
+using SPJP.Common;
 using SPJP.DB;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,48 @@ namespace SZ_PDFJsonPrint
 
 
         }
+              private void InitialBackGroundWorker()
+        {
+            bgWorker = new BackgroundWorker();
+            bgWorker.WorkerReportsProgress = true;
+            bgWorker.WorkerSupportsCancellation = true;
+            bgWorker.RunWorkerCompleted +=
+                new RunWorkerCompletedEventHandler(bgWorker_RunWorkerCompleted);
+            bgWorker.ProgressChanged +=
+                new ProgressChangedEventHandler(bgWorker_ProgressChanged);
+        }
+
+        private void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                blnBackGroundWorkIsOK = false;
+            }
+            else if (e.Cancelled)
+            {
+                blnBackGroundWorkIsOK = true;
+            }
+            else
+            {
+                blnBackGroundWorkIsOK = true;
+            }
+        }
+
+        private void bgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            if (frmMessageShow != null && frmMessageShow.Visible == true)
+            {
+                //设置显示的消息
+                frmMessageShow.setMessage(e.UserState.ToString());
+                //设置显示的按钮文字
+                if (e.ProgressPercentage == clsConstant.Thread_Progress_OK)
+                {
+                    frmMessageShow.setStatus(clsConstant.Dialog_Status_Enable);
+                }
+            }
+        }
+
+
         private void InitializeDataSource()
         {
 
@@ -190,7 +233,7 @@ namespace SZ_PDFJsonPrint
 
                 PrintReportForEDI();
 
-              //  return;
+                return;
 
                 BusinessHelp.Run(FilterOrderResults);
                 BusinessHelp.Run2(FilterOrderResults);
@@ -205,5 +248,55 @@ namespace SZ_PDFJsonPrint
             //InitializeEdiData();
         }
 
+        private void filterButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                InitialBackGroundWorker();
+                bgWorker.DoWork += new DoWorkEventHandler(ReadJSONfromServer);
+
+                bgWorker.RunWorkerAsync();
+
+                // 启动消息显示画面
+                frmMessageShow = new frmMessageShow(clsShowMessage.MSG_001,
+                                                    clsShowMessage.MSG_007,
+                                                    clsConstant.Dialog_Status_Disable);
+                frmMessageShow.ShowDialog();
+
+                // 数据读取成功后在画面显示
+                if (blnBackGroundWorkIsOK)
+                {
+                   
+                        this.toolStripLabel1.Text = "Count : 0";
+                }
+            }
+            catch (Exception ex)
+            {
+                return;
+                throw ex;
+            }
+
+            clsAllnew BusinessHelp = new clsAllnew();
+
+
+        }
+        private void ReadJSONfromServer(object sender, DoWorkEventArgs e)
+        {
+
+
+            clsAllnew BusinessHelp = new clsAllnew();
+            //导入程序集
+            DateTime oldDate = DateTime.Now;
+
+            BusinessHelp.ReadJSON_Report(ref this.bgWorker, "A");
+
+            DateTime FinishTime = DateTime.Now;
+            TimeSpan s = DateTime.Now - oldDate;
+            string timei = s.Minutes.ToString() + ":" + s.Seconds.ToString();
+            string Showtime = clsShowMessage.MSG_029 + timei.ToString();
+            bgWorker.ReportProgress(clsConstant.Thread_Progress_OK, clsShowMessage.MSG_009 + "\r\n" + Showtime);
+   
+        }
     }
 }

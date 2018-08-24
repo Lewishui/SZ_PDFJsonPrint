@@ -27,7 +27,7 @@ namespace SZ_PDFJsonPrint
         {
           //  reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
             //NewMethod(); 
-            this.reportViewer1.RefreshReport();
+        this.reportViewer1.RefreshReport();
         }
         private void InitializeReportEvent()
         {

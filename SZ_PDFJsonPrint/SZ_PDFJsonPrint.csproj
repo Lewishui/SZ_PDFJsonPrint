@@ -156,6 +156,10 @@
       <Project>{ba5e9570-e85b-4b06-b70e-3aa93b2de7bc}</Project>
       <Name>SPJP.Buiness</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SPJP.Common\SPJP.Common.csproj">
+      <Project>{d4ce7893-018f-4124-8454-adaa2abc28d2}</Project>
+      <Name>SPJP.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SPJP.DB\SPJP.DB.csproj">
       <Project>{888ca61f-5948-478b-9b02-ac287abb57ab}</Project>
       <Name>SPJP.DB</Name>

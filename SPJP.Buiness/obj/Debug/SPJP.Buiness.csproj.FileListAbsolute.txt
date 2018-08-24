@@ -5,3 +5,5 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SPJP.DB.dl
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SPJP.DB.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\obj\Debug\SPJP.Buiness.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\obj\Debug\SPJP.Buiness.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\log4net.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\Newtonsoft.Json.dll

@@ -63,6 +63,7 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.labMessage);
             this.Name = "frmMessageShow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMessageShow";
             this.ResumeLayout(false);
 
