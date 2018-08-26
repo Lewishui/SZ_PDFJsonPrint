@@ -262,7 +262,7 @@ namespace SZ_PDFJsonPrint
         }
         private void PrintReportForEDI()
         {
-            reportForm.InitializeDataSource(FilterOrderResults);
+            reportForm.InitializeDataSource(tclass_datas);
             reportForm.ShowDialog();
             //InitializeEdiData();
         }

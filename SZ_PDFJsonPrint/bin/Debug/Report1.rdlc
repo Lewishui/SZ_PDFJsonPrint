@@ -284,7 +284,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=Fields!patientName.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -312,7 +312,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=Fields!diseaseType.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -341,7 +341,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=Fields!checkConclusion.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -372,7 +372,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=Fields!checkStartTime.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -401,7 +401,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=Fields!checkType.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -430,7 +430,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=Fields!auditDoctorName.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -459,7 +459,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=Fields!checkDoctorName.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -488,7 +488,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=Now</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -517,7 +517,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Fields!auditDoctorName.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -737,7 +737,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=Fields!checkDoctorId.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -951,7 +951,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Fields!inspectId.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -980,7 +980,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Fields!serialNumber.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -1084,7 +1084,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Fields!checkHospitalName.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>

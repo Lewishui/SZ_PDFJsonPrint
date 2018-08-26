@@ -15,7 +15,7 @@ namespace SZ_PDFJsonPrint
 {
     public partial class ReportForm : Form
     {
-        List<clsOrderDatabaseinfo> FilterOrderResults;
+        List<Datas> FilterOrderResults;
         public ReportForm()
         {
             InitializeComponent();
@@ -60,9 +60,9 @@ namespace SZ_PDFJsonPrint
             this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }
-        public void InitializeDataSource(List<clsOrderDatabaseinfo> orders)
+        public void InitializeDataSource(List<Datas> orders)
         {
-            FilterOrderResults = new List<clsOrderDatabaseinfo>();
+            FilterOrderResults = new List<Datas>();
             FilterOrderResults = orders;
 
             this.reportViewer1.LocalReport.DataSources.Clear();
