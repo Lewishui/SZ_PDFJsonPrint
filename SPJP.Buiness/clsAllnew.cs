@@ -14,6 +14,8 @@ using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Net;
+using System.Web.Script.Serialization;
+using System.Data;
 namespace SPJP.Buiness
 {
     public class clsAllnew
@@ -21,6 +23,21 @@ namespace SPJP.Buiness
 
         string orderprint;
         string tisprint;
+        //excel
+        public List<clsExcelinfo> TBB;
+        public List<Datas> tclass_datas;
+        public List<Root> Root_datas;
+
+        //客户查找
+        public List<Online_Data> Online_datas;
+        public List<MaGait> Online_MaGait;
+        public List<Online_Root> Online_Root_datas;
+        //PDF
+        public List<PDF_Root> PDF_Rootdb;
+        public List<Types> PDF_Types;
+        public List<ChildType> PDF_ChildType;
+
+
         #region print
         private List<Stream> m_streams;
         private int m_currentPageIndex;
@@ -218,10 +235,17 @@ Encoding encoding, string mimeType, bool willSeek)
         {
 
             List<clsOrderDatabaseinfo> ResutsReport = new List<clsOrderDatabaseinfo>();
+            TBB = new List<clsExcelinfo>();
+            tclass_datas = new List<Datas>();
+            Online_datas = new List<Online_Data>();
+            Online_MaGait = new List<MaGait>();
+            PDF_Rootdb = new List<PDF_Root>();
+            PDF_Types = new List<Types>();
+            PDF_ChildType = new List<ChildType>();
+            Root_datas = new List<Root>();
+            Online_Root_datas = new List<Online_Root>();
 
             ReadJsonID();
-
-
 
             return ResutsReport;
 
@@ -247,10 +271,9 @@ Encoding encoding, string mimeType, bool willSeek)
             string tx = message;
         }
 
-        private string readtxtJsom()
+        private string readtxtJsom(string A_Path)
         {
 
-            string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\pdf.json";
 
             string[] fileText = File.ReadAllLines(A_Path);
 
@@ -269,55 +292,444 @@ Encoding encoding, string mimeType, bool willSeek)
                     mailbody = a;
             }
 
+
+            #region MyRegion
+
+            //            mailbody = @"{
+            //                            'code': 0,
+            //                             'msg': 'success',
+            //	            'reqId':'40288a5f6518566601651861fd000004',
+            //                'data': {
+            //		            'header': {
+            //			            'rows': [{
+            //					            'cols': [{
+            //							            'text': '基础信息',
+            //							            'size': 20		//size表示跨列数目
+            //						            },
+            //						            {
+            //							            'text': '站立过程SiSt',
+            //							            'size': 3
+            //						            },
+            //						            {
+            //							            'text': '行走Gait',
+            //							            'size': 35
+            //						            },
+            //						            {
+            //							            'text': '平衡Balance',
+            //							            'size': 2
+            //						            }
+            //					            ]
+            //				            },
+            //				            {
+            //					            'cols': [{
+            //							            'text': '序号',
+            //							            'size': 1
+            //						            },
+            //						            {
+            //							            'text': '患者',
+            //							            'size': 1
+            //						            },
+            //						            {
+            //							            'text': '起立过程时间SiSt Duration（sec）',
+            //							            'size': 1
+            //						            },
+            //						            {
+            //							            'text': '右脚步长Step Length R.（cm）',
+            //							            'size': 1
+            //						            },
+            //						            {
+            //							            'text': '左脚步长Step Length L.（cm）',
+            //							            'size': 1
+            //						            },
+            //						            {
+            //							            'text': '躯干矢状面峰值角速度Trunk Sagittal PeakVelocity（degree/sec）',
+            //							            'size': 1
+            //						            }
+            //					            ]
+            //				            }
+            //			            ]
+            //		            },
+            //		            'content': {
+            //			            'datas': [
+            //                                    {
+            //                              'indexNumber': 1, //序号
+            //                              'patientId': 7957, //患者ID
+            //                              'patientName': '王二',//患者姓名
+            //                              'sex': 1,// 患者性别（1男,2女）
+            //                              'birthday': '2000-01-01 00:00:00',//出生年月
+            //                              'diseaseType': '1',//诊断（1帕金森综合征,2.特发性震颤…）
+            //                              'courseOfDisease': 2,// 病程（年）
+            //                              'serialNumber': '201808062022447132156',//检查订单流水号
+            //                              'inspectId': '25',//检查ID
+            //                              'checkType': '1',//检查内容（1计时起身-步行,2窄道）
+            //                              'dualTask': '1',//双任务（0否,1是）
+            //                              'checkRemark': '检查项备注内容',//检查备注
+            //                              'checkStartTime': '2018-08-01 17:19:00',//检查开始时间
+            //                              'checkEndTime': '2018-08-06 17:19:00',//检查结束时间
+            //                              'checkHospitalId': '8a9e2d385f1eb70c015f2e41a15000c5',//检查医院id
+            //                              'checkHospitalName': '华侨医院',//检查医院
+            //                              'checkDoctorId': 'biwei',//检查医生id
+            //                              'checkDoctorName': '毕伟',//检查医生
+            //                              'auditDoctorName': null,// 审核医生
+            //                              'checkConclusion': '这是医生的结论',//检查结论
+            //                              'sistDuration': '23±2',//起立过程时间SiSt Duration（sec）
+            //                              'peakSiStAngularVelocity': '22±1',
+            //                        //起立过程中躯干矢状面峰值角速度Peak SiSt Angular Velocity(degree/sec)
+            //                              'sistTrunkRoM': '21±0.5',
+            //                        //起立过程中躯干矢状面角度范围SiSt Trunk RoM（degree）
+            //                              'stepLength_R': null,
+            //                        //右脚步长Step Length R.（cm）
+            //                              'stepLength_L': null,
+            //                        //左脚步长Step Length L.（cm）
+            //                              'stepLength_avg': null,
+            //                        //左右脚平均步长Step Length（cm）
+            //                              'strideVelocity_R': null,
+            //                        //右脚速率Stride Velocity R.（m/s）
+            //                              'strideVelocity_L': null,
+            //                        //左脚速率Stride Velocity L.（m/s）
+            //                              'strideVelocity_avg': null,
+            //                        //左右脚平均速率Stride Velocity（m/s）
+            //                              'strideLength_R': null,
+            //                        //右脚跨步长Stride Length R.（cm）
+            //                              'strideLength_L': null,
+            //                        //左脚跨步长Stride Length L.（cm）
+            //                              'strideLength_avg': null,
+            //                        //左右脚平均跨步长Stride Length（cm）
+            //                              'gaitCycle_R': null,
+            //                        //右脚跨步时长Gait Cycle R.（sec）
+            //                              'gaitCycle_L': null,
+            //                        //左脚跨步时长Gait Cycle L.（sec）
+            //                              'gaitCycle_avg': null,
+            //                        //左右脚平均跨步时长Gait Cycle（sec）
+            //                              'cadence_R': null,
+            //                        //右脚步频Cadence R.（step/min）
+            //                              'cadence_L': null,
+            //                        //左脚步频Cadence L.（step/min）
+            //                              'cadence_avg': null,
+            //                        //左右脚平均步频Cadence（step/min）      
+            //                        'support_R': null,
+            //                        //右腿支撑相Right Support（%）
+            //                              'support_L': null,
+            //                        //左腿支撑相Left Support（%）
+            //                              'support_avg': null,
+            //                        //双腿支撑相Double Support（%）
+            //                              'swing_R': null,
+            //                        //右侧摆动相Swing R.（%）
+            //                              'swing_L': null,
+            //                        //左侧摆动相Swing L.（%）
+            //                              'swing_avg': null,
+            //                        //摆动相Swing（%）
+            //
+            //                              'stance_R': null,
+            //                        //右侧支撑相Stance R.（%）
+            //                              'stance_L': null,
+            //                        //左侧支撑相Stance L.（%）
+            //                              'stance_avg': null,
+            //                        //支撑相Stance（%）
+            //                              'trunkSagittalPeakVelocity': null,
+            //                        //躯干矢状面运动峰值角速度Trunk Sagittal Peak Velocity（degree/sec）
+            //                              'trunkHorizontalPeakVelocity': null,
+            //                        //躯干横断面运动峰值角速度Trunk Horizontal Peak Velocity （degree/sec）
+            //                              'strideVelocityAsymmetry': null,
+            //                        //左右脚速率的相对偏差Stride Velocity Asymmetry（%）
+            //                              'strideLengthAsymmetry': null,
+            //                        //左右脚跨步长的相对偏差Stride Length Asymmetry（%）
+            //                              'swingAsymmetry': null,
+            //                        //左右腿摆动相相对偏差Swing Asymmetry（%）
+            //                              'stanceAsymmetry': null,
+            //                        //左右腿支撑相相对偏差Stance Asymmetry（%）
+            //                              'shankAsymmetry': null,
+            //                        //左右小腿角度范围的相对偏差Shank Asymmetry（%）
+            //                              'peakShankVelocityAsymmetry': null,
+            //                        //左右小腿速率的相对偏差Peak Shank Velocity Asymmetry（%）
+            //                              'shank_SSI': null,
+            //                        //小腿角度范围对称性指数Shank SSI  (Symbolic Symmetry Index)（%）
+            //                              'meanPhaseDifference': null,
+            //                        //小腿相对平均相位差Mean Phase Difference（%）
+            //                              'phaseCoordinationIndex': null,
+            //                        //小腿相对平均相位差Mean Phase Difference（%）
+            //                              'balanceTrunkSagittalPeakVelocity': null,
+            //                        //躯干矢状面峰值角速度Trunk Sagittal Peak Velocity（degree/sec）
+            //                              'balanceTrunkHorizontalPeakVelocity': null
+            //                        //躯干横断面峰值角速度Trunk Horizontal Peak Velocity（degree/sec）
+            //                        }]
+            //		                }
+            //	                }
+            //
+            //            }";
+            #endregion
             return mailbody;
 
 
         }
 
         #endregion
+
         private void ReadJsonID()
         {
             string result1 = DoPost("https://api.douban.com/v2/book/isbn/9787115212948", "10");
 
             //假数据
-            result1 = readtxtJsom();
+            string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\pdf.json";
 
-            //取大字符串,这个“100”是我随便填的！！！
+            result1 = readtxtJsom(A_Path);
+
             JObject obj = (JObject)JsonConvert.DeserializeObject(result1);
-            //再讲字符串转成json格式
-            string tx1 = obj["typeCode"].ToString();
-            //获取summary内容
 
-
-            Newtonsoft.Json.Linq.JArray userAarray1 = Newtonsoft.Json.Linq.JArray.Parse(result1) as Newtonsoft.Json.Linq.JArray;
-            List<clsOrderDatabaseinfo> userListModel = userAarray1.ToObject<List<clsOrderDatabaseinfo>>();
-
+            string tx1 = obj["typegroupcode"].ToString();
 
             //new 
             #region MyRegion
-//            JArray array = (JArray)obj["article"];
-//            if (array != null)
+            ////Newtonsoft.Json.Linq.JArray userAarray1 = Newtonsoft.Json.Linq.JArray.Parse(result1) as Newtonsoft.Json.Linq.JArray;
+            ////List<clsOrderDatabaseinfo> userListModel = userAarray1.ToObject<List<clsOrderDatabaseinfo>>();
+            //JavaScriptSerializer jss = new JavaScriptSerializer();
+            ////1
+            //result_Msg result = jss.Deserialize<result_Msg>(result1);
+            //if (result.resultData.classinfo != null && result.resultData.classinfo.Count > 0)
+            //{
+            //    List<clsPDFchildTypeinfo> classinfos = result.resultData.classinfo;
+            //}
+            ////2
+            //var jarr = jss.Deserialize<Dictionary<string, object>>(result1);
+            //foreach (var j in jarr)
+            //{
+            //    Console.WriteLine(string.Format("{0}:{1}", j.Key, j.Value));
+            //}
 
-//                foreach (var jObject in array)
-//                {
-//                    //赋值属性
-//                }
-//            string inputJsonString = @"
-//                [
-//                    {StudentID:'100',Name:'aaa',Hometown:'china'},
-//                    {StudentID:'101',Name:'bbb',Hometown:'us'},
-//                    {StudentID:'102',Name:'ccc',Hometown:'england'}
-//                ]";
+            ////            JArray array = (JArray)obj["article"];
+            ////            if (array != null)
 
-//            string message = @"<table border='1'>
-//                    <tr><td width='80'>StudentID</td><td width='100'>Name</td><td width='100'>Hometown</td></tr>";
-//            string tpl = "<tr><td>{0}</td><td>{1}</td><td>{2}</td></tr>";
-//            List<clsOrderDatabaseinfo> studentList = JsonConvert.DeserializeObject<List<clsOrderDatabaseinfo>>(inputJsonString);//注意这里必须为List<Student>类型,因为客户端提交的是一个数组json
-//            foreach (clsOrderDatabaseinfo student in studentList)
-//            {
-//                //message += String.Format(tpl, student.StudentID, student.Name, student.Hometown);
-//            } 
+            ////                foreach (var jObject in array)
+            ////                {
+            ////                    //赋值属性
+            ////                }
+            ////            string inputJsonString = @"
+            ////                [
+            ////                    {StudentID:'100',Name:'aaa',Hometown:'china'},
+            ////                    {StudentID:'101',Name:'bbb',Hometown:'us'},
+            ////                    {StudentID:'102',Name:'ccc',Hometown:'england'}
+            ////                ]";
+
+            ////            string message = @"<table border='1'>
+            ////                    <tr><td width='80'>StudentID</td><td width='100'>Name</td><td width='100'>Hometown</td></tr>";
+            ////            string tpl = "<tr><td>{0}</td><td>{1}</td><td>{2}</td></tr>";
+            ////            List<clsOrderDatabaseinfo> studentList = JsonConvert.DeserializeObject<List<clsOrderDatabaseinfo>>(inputJsonString);//注意这里必须为List<Student>类型,因为客户端提交的是一个数组json
+            ////            foreach (clsOrderDatabaseinfo student in studentList)
+            ////            {
+            ////                //message += String.Format(tpl, student.StudentID, student.Name, student.Hometown);
+            ////            } 
             #endregion
+
+            //TEST_Tocovermethod2(result1);
+            Tocovermethod_PDF(result1);
+
+            Tocovermethod_excel(result1);
+
+            Tocovermethod_clientOnline(result1);
+        }
+
+        private void TEST_Tocovermethod2(string json)
+        {
+            string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\1.json";
+            json = readtxtJsom(A_Path);
+
+            //第一次解析
+            Dictionary<string, object> dic = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
+            //获取具体数据部分5
+            object obj = dic["resultData"];
+            //将数据部分再次转换为json字符串
+            string jsondata = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+            //获取数据中的  不同类型的数据   
+            Dictionary<string, object> dicc = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(jsondata);
+
+            //chalssinfo 
+            object objclass = dicc["classinfo"];
+            string jsonclass = Newtonsoft.Json.JsonConvert.SerializeObject(objclass);
+            List<clsPDFchildTypeinfo> tclass = Newtonsoft.Json.JsonConvert.DeserializeObject<List<clsPDFchildTypeinfo>>(jsonclass);
+            //otherinfo 
+            object objother = dicc["otherinfo"];
+            string jsonother = Newtonsoft.Json.JsonConvert.SerializeObject(objother);
+            DataTable tother = Newtonsoft.Json.JsonConvert.DeserializeObject<DataTable>(jsonother);
+
+
+            // tclass 和  tother 里面分别存放 classinfo和otherinfo  然后可以操作datatale 或者转成list也行
+
+        }
+        private void Tocovermethod_PDF(string json)
+        {
+            string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\pdf.json";
+            json = readtxtJsom(A_Path);
+
+            //第一次解析
+            Dictionary<string, object> dic = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
+
+            JObject mm = (JObject)JsonConvert.DeserializeObject(json.ToString());
+
+            PDF_Root item = new PDF_Root();
+            item.typegroupcode = mm["typegroupcode"].ToString();
+            PDF_Rootdb.Add(item);
+
+            object obj = dic["types"];
+            string jsondata = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+            //types
+            JArray jArray = (JArray)JsonConvert.DeserializeObject(jsondata);//jsonArrayText必须是带[]数组格式字符串
+            //
+            PDF_Types = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Types>>(jsondata);
+
+            //childType
+            foreach (JToken jt in jArray)
+            {
+
+                string partentID = jt["typeCode"].ToString();
+
+                JObject jo = (JObject)jt;
+
+                JArray temp = (JArray)jo["childType"];
+
+                foreach (JToken token in temp)
+                {
+                    ChildType itemTypes = new ChildType();
+          
+                    itemTypes.typeCode = token["typeCode"].ToString();
+                    itemTypes.typeName = token["typeName"].ToString();
+                    itemTypes.typeEnName = token["typeEnName"].ToString();
+                    itemTypes.unit = token["unit"].ToString();
+                    itemTypes.distinguish = token["distinguish"].ToString();
+
+                    itemTypes.partentID = partentID;
+
+                    PDF_ChildType.Add(itemTypes);
+                }
+
+
+            }
+
+
+        }
+        private void Tocovermethod_excel(string json)
+        {
+            string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\excel.json";
+            json = readtxtJsom(A_Path);
+
+            //第一次解析
+            Dictionary<string, object> dic = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
+            //获取具体数据部分5
+            object obj = dic["data"];
+            //将数据部分再次转换为json字符串
+            string jsondata = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+            //childType
+            Dictionary<string, object> dic1 = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(jsondata);
+
+            object obj_header = dic1["header"];
+            //获取数据中的  不同类型的数据   
+            string jsondata_header = Newtonsoft.Json.JsonConvert.SerializeObject(obj_header);
+            Dictionary<string, object> dicc = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(jsondata_header);
+
+            object obj_rows = dicc["rows"];
+            string jsondata_rows = Newtonsoft.Json.JsonConvert.SerializeObject(obj_rows);
+
+            string jsonArrayText = jsondata_rows;
+            JArray jArray = (JArray)JsonConvert.DeserializeObject(jsonArrayText);//jsonArrayText必须是带[]数组格式字符串
+
+            string str = jArray[0]["cols"].ToString();
+            //string jsondata_rows1 = Newtonsoft.Json.JsonConvert.SerializeObject(str);
+            //List<clsExcelinfo> TBB = Newtonsoft.Json.JsonConvert.DeserializeObject<List<clsExcelinfo>>(jsondata_rows1);
+            //JsonTextReader json111 = new JsonTextReader(new StringReader(json));
+            //Dictionary<string, object> dicc_rows = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(jsondata_rows1);
+            //while (json111.Read())
+            //{
+
+            //    Console.WriteLine(json111.Value + "--" + json111.TokenType + "--" + json111.ValueType);
+
+            //}
+
+            //
+            JObject mm = (JObject)JsonConvert.DeserializeObject(json.ToString());
+
+            Root item1 = new Root();
+            item1.code = mm["code"].ToString();
+            item1.msg = mm["msg"].ToString();
+            item1.reqId = mm["reqId"].ToString();
+
+            Root_datas.Add(item1);
+
+
+            //cols
+            foreach (JToken jt in jArray)
+            {
+
+                JObject jo = (JObject)jt;
+
+                JArray temp = (JArray)jo["cols"];
+
+                foreach (JToken token in temp)
+                {
+                    clsExcelinfo item = new clsExcelinfo();
+                    item.text = token["text"].ToString();
+                    item.size = token["size"].ToString();
+                    TBB.Add(item);
+                }
+            }
+            //datas
+            object obj_content = dic1["content"];
+            string jsondata_content = Newtonsoft.Json.JsonConvert.SerializeObject(obj_content);
+            Dictionary<string, object> dic121 = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(jsondata_content);
+
+            object obj_datas = dic121["datas"];
+            string jsondata_datas = Newtonsoft.Json.JsonConvert.SerializeObject(obj_datas);
+            tclass_datas = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Datas>>(jsondata_datas);
+            tclass_datas[0].reqId = item1.reqId;
+
+
+        
+        }
+
+        private void Tocovermethod_clientOnline(string json)
+        {
+            string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\Online.json";
+            json = readtxtJsom(A_Path);
+
+            Dictionary<string, object> dic = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
+
+            object obj = dic["data"];
+
+            string jsondata = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+
+            Dictionary<string, object> dic1 = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(jsondata);
+
+
+            JObject mm1 = (JObject)JsonConvert.DeserializeObject(json.ToString());
+
+            Online_Root item1 = new Online_Root();
+            item1.code = mm1["code"].ToString();
+            item1.msg = mm1["msg"].ToString();
+            item1.reqId = mm1["reqId"].ToString();
+
+            Online_Root_datas.Add(item1);
+
+
+            //
+            Online_Data item = new Online_Data();
+
+            JObject mm = (JObject)JsonConvert.DeserializeObject(obj.ToString());
+            //再讲字符串转成json格式
+            item.id = mm["id"].ToString();
+            item.serialNumber = mm["serialNumber"].ToString();
+            item.patientId = mm["patientId"].ToString();
+            item.acquisitionStartTime = mm["acquisitionStartTime"].ToString();
+            item.acquisitionEndTime = mm["acquisitionEndTime"].ToString();
+            item.equipmentModel = mm["equipmentModel"].ToString();
+            item.equipmentNumber = mm["equipmentNumber"].ToString();
+            item.checkNumber = mm["checkNumber"].ToString();
+            item.dataSources = mm["dataSources"].ToString();
+            item.type = mm["type"].ToString();
+            item.remark = mm["remark"].ToString();
+
+            Online_datas.Add(item);
+
+            object obj_maGait = dic1["maGait"];
+            string json_maGait = Newtonsoft.Json.JsonConvert.SerializeObject(obj_maGait);
+            Online_MaGait = Newtonsoft.Json.JsonConvert.DeserializeObject<List<MaGait>>(json_maGait);
 
         }
         public string DoPost(string url, string data)

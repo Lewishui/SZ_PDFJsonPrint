@@ -7,3 +7,12 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\obj\Debug\SPJP.Buine
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\obj\Debug\SPJP.Buiness.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\log4net.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\Newtonsoft.Json.dll
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SPJP.Buiness.dll
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SPJP.Buiness.pdb
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\log4net.dll
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\Newtonsoft.Json.dll
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SPJP.DB.dll
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SPJP.DB.pdb
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\obj\Debug\SPJP.Buiness.csprojResolveAssemblyReference.cache
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\obj\Debug\SPJP.Buiness.dll
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\obj\Debug\SPJP.Buiness.pdb

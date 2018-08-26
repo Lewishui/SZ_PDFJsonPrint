@@ -28,3 +28,30 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report3
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Common.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Newtonsoft.Json.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Common.pdb
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe.config
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.exe
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.pdb
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report1.rdlc
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report2.rdlc
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report3.rdlc
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4.rdlc
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4_0.rdlc
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.pdb
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Buiness.dll
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Common.dll
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.dll
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Newtonsoft.Json.dll
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Buiness.pdb
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Common.pdb
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.pdb
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.csprojResolveAssemblyReference.cache
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmAboutBox.resources
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmLogin.resources
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmMain.resources
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmMessageShow.resources
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.Properties.Resources.resources
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.ReportForm.resources
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.csproj.GenerateResource.Cache
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.cache
+D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.compiled

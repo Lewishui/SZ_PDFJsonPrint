@@ -16,9 +16,9 @@ namespace SPJP.Common
         public const string MSG_004 = "Login...";
         public const string MSG_005 = "Login OK !";
         public const string MSG_006 = "System Initialize...... ";
-        public const string MSG_007 = " Runing System Read System Data....";
+        public const string MSG_007 = " 运行中，请稍候....";
         public const string MSG_008 = "Reading Exce File，Waiting  ";
-        public const string MSG_009 = "Well， System Process Successful.";
+        public const string MSG_009 = "完成， 系统已完成作业";
         public const string MSG_010 = "System Synchronous Data Successful !";
         public const string MSG_011 = " Reading Raw Data and Check   ....";
         public const string MSG_012 = "System Update Successful !";
@@ -37,7 +37,7 @@ namespace SPJP.Common
         public const string MSG_025 = "System save is Complete ，Please Confirm～";
         public const string MSG_027 = " No Remind !";
         public const string MSG_028 = "Read OK !";
-        public const string MSG_029 = "The time-consuming：";
+        public const string MSG_029 = "本次运行耗时：";
         public const string MSG_030 = "System Error";
     }
 }

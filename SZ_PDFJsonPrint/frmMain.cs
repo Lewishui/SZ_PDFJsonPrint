@@ -31,6 +31,25 @@ namespace SZ_PDFJsonPrint
         List<clsOrderDatabaseinfo> FilterOrderResults;
 
         public ReportForm reportForm;
+
+
+        //excel
+        List<clsExcelinfo> TBB;
+        List<Datas> tclass_datas;
+        List<Root> Root_datas;
+
+
+
+        //客户查找
+        List<Online_Data> Online_datas;
+        List<MaGait> Online_MaGait;
+     List<Online_Root> Online_Root_datas;
+        //PDF
+        List<PDF_Root> PDF_Rootdb;
+        List<Types> PDF_Types;
+        List<ChildType> PDF_ChildType;
+
+
         public frmMain()
         {
             InitializeComponent();
@@ -48,7 +67,7 @@ namespace SZ_PDFJsonPrint
 
 
         }
-              private void InitialBackGroundWorker()
+        private void InitialBackGroundWorker()
         {
             bgWorker = new BackgroundWorker();
             bgWorker.WorkerReportsProgress = true;
@@ -267,8 +286,57 @@ namespace SZ_PDFJsonPrint
                 // 数据读取成功后在画面显示
                 if (blnBackGroundWorkIsOK)
                 {
-                   
-                        this.toolStripLabel1.Text = "Count : 0";
+
+                    #region pdf
+                    // this.dataGridView.DataSource = null;
+                    //this.dataGridView2.AutoGenerateColumns = false;
+                    //this.dataGridView2.DataSource = PDF_Rootdb;
+                    this.dataGridView3.AutoGenerateColumns = false;
+                    this.dataGridView3.DataSource = PDF_Types;
+                    //this.dataGridView4.AutoGenerateColumns = false;
+                    this.dataGridView4.DataSource = PDF_ChildType;
+
+                    this.toolStripLabel1.Text = "Count : 0"; 
+
+                    #endregion
+
+                 
+                    #region Excel 
+                    this.dataGridView1.DataSource = null;
+                    this.dataGridView1.AutoGenerateColumns = false;
+                    this.dataGridView1.DataSource = Root_datas;
+
+
+                    this.dataGridView2.DataSource = null;
+                    this.dataGridView2.AutoGenerateColumns = false;
+                    this.dataGridView2.DataSource = TBB;
+
+
+                    this.dataGridView5.DataSource = null;
+                    this.dataGridView5.AutoGenerateColumns = false;
+                    this.dataGridView5.DataSource = tclass_datas;
+
+                    #endregion
+
+
+                    #region Online
+                    this.dataGridView8.DataSource = null;
+                    this.dataGridView8.AutoGenerateColumns = false;
+                    this.dataGridView8.DataSource = Online_Root_datas;
+
+
+                    this.dataGridView7.DataSource = null;
+                    //this.dataGridView7.AutoGenerateColumns = false;
+                    this.dataGridView7.DataSource = Online_datas;
+
+
+                    this.dataGridView6.DataSource = null;
+                    //this.dataGridView6.AutoGenerateColumns = false;
+                    this.dataGridView6.DataSource = Online_MaGait;
+
+                    #endregion
+
+
                 }
             }
             catch (Exception ex)
@@ -283,6 +351,17 @@ namespace SZ_PDFJsonPrint
         }
         private void ReadJSONfromServer(object sender, DoWorkEventArgs e)
         {
+            PDF_Rootdb = new List<PDF_Root>();
+            PDF_Types = new List<Types>();
+            PDF_ChildType = new List<ChildType>();
+
+            Online_datas = new List<Online_Data>();
+            Online_MaGait = new List<MaGait>();
+            Online_Root_datas = new List<Online_Root>();
+
+            TBB = new List<clsExcelinfo>();
+            tclass_datas = new List<Datas>();
+            Root_datas = new List<Root>();
 
 
             clsAllnew BusinessHelp = new clsAllnew();
@@ -291,12 +370,56 @@ namespace SZ_PDFJsonPrint
 
             BusinessHelp.ReadJSON_Report(ref this.bgWorker, "A");
 
+            PDF_Rootdb = BusinessHelp.PDF_Rootdb;
+            PDF_Types = BusinessHelp.PDF_Types;
+            PDF_ChildType = BusinessHelp.PDF_ChildType;
+
+
+            TBB = BusinessHelp.TBB;
+            tclass_datas = BusinessHelp.tclass_datas;
+            Root_datas = BusinessHelp.Root_datas;
+
+
+            Online_datas = BusinessHelp.Online_datas;
+            Online_MaGait = BusinessHelp.Online_MaGait;
+            Online_Root_datas = BusinessHelp.Online_Root_datas;
+
+
             DateTime FinishTime = DateTime.Now;
             TimeSpan s = DateTime.Now - oldDate;
-            string timei = s.Minutes.ToString() + ":" + s.Seconds.ToString();
+            string timei = s.Minutes.ToString() + ": " + s.Seconds.ToString() + "  (分:秒)";
             string Showtime = clsShowMessage.MSG_029 + timei.ToString();
             bgWorker.ReportProgress(clsConstant.Thread_Progress_OK, clsShowMessage.MSG_009 + "\r\n" + Showtime);
-   
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewColumn column = dataGridView.Columns[e.ColumnIndex];
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            if (column == typeCode)
+            {
+
+
+            }
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewColumn column = dataGridView3.Columns[e.ColumnIndex];
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            if (column == typeCode)
+            {
+                var row = dataGridView3.Rows[e.RowIndex];
+
+                var model = row.DataBoundItem as Types;
+
+                List<ChildType> findsapinfo = PDF_ChildType.FindAll(o => o.partentID != null && model != null && o.partentID == model.typeCode);
+                this.dataGridView4.AutoGenerateColumns = false;
+                this.dataGridView4.DataSource = findsapinfo;
+            }
         }
     }
 }
