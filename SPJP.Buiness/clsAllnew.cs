@@ -124,10 +124,10 @@ namespace SPJP.Buiness
                       "  <OutputFormat>EMF</OutputFormat>" +
                       "  <PageWidth>21cm</PageWidth>" +
                       "  <PageHeight>29.7cm</PageHeight>" +
-                      "  <MarginTop>1cm</MarginTop>" +
+                      "  <MarginTop>0cm</MarginTop>" +
                       "  <MarginLeft>1cm</MarginLeft>" +
                       "  <MarginRight>1cm</MarginRight>" +
-                      "  <MarginBottom>1cm</MarginBottom>" +
+                      "  <MarginBottom>0cm</MarginBottom>" +
                       "</DeviceInfo>";
             Warning[] warnings;
             m_streams = new List<Stream>();
