@@ -1,33 +1,4 @@
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe.config
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.csprojResolveAssemblyReference.cache
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmLogin.resources
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.Properties.Resources.resources
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.csproj.GenerateResource.Cache
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.pdb
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\log4net.dll
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.exe
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.pdb
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\IrisSkin2.dll
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmAboutBox.resources
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmMain.resources
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmMessageShow.resources
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.cache
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.compiled
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Buiness.dll
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.dll
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Buiness.pdb
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.pdb
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report1.rdlc
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.ReportForm.resources
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4.rdlc
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4_0.rdlc
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report2.rdlc
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report3.rdlc
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Common.dll
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Newtonsoft.Json.dll
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Common.pdb
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe.config
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.exe
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.pdb
@@ -55,3 +26,33 @@ D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.Repo
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.csproj.GenerateResource.Cache
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.cache
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.compiled
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report1.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report2.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report3.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4_0.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe.config
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\IrisSkin2.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\log4net.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Buiness.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Common.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Newtonsoft.Json.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Buiness.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Common.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.csprojResolveAssemblyReference.cache
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmAboutBox.resources
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmLogin.resources
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmMain.resources
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.frmMessageShow.resources
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.Properties.Resources.resources
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.ReportForm.resources
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.csproj.GenerateResource.Cache
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.cache
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.compiled
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Microsoft.Office.Interop.Excel.dll

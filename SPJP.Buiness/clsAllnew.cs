@@ -16,6 +16,7 @@ using Newtonsoft.Json;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.Data;
+using SPJP.Common;
 namespace SPJP.Buiness
 {
     public class clsAllnew
@@ -37,6 +38,7 @@ namespace SPJP.Buiness
         public List<Types> PDF_Types;
         public List<ChildType> PDF_ChildType;
 
+        string savepdfexcel_path;
 
         #region print
         private List<Stream> m_streams;
@@ -589,7 +591,7 @@ Encoding encoding, string mimeType, bool willSeek)
                 foreach (JToken token in temp)
                 {
                     ChildType itemTypes = new ChildType();
-          
+
                     itemTypes.typeCode = token["typeCode"].ToString();
                     itemTypes.typeName = token["typeName"].ToString();
                     itemTypes.typeEnName = token["typeEnName"].ToString();
@@ -681,7 +683,7 @@ Encoding encoding, string mimeType, bool willSeek)
             tclass_datas[0].reqId = item1.reqId;
 
 
-        
+
         }
 
         private void Tocovermethod_clientOnline(string json)
@@ -783,5 +785,444 @@ Encoding encoding, string mimeType, bool willSeek)
             }
             return result.ToString();
         }
+
+
+        public void InitializeDataSource(List<clsExcelinfo> TBB1, List<Datas> tclass_datas1, List<Root> Root_datas1, List<Online_Data> Online_datas1, List<MaGait> Online_MaGait1, List<Online_Root> Online_Root_datas1, List<PDF_Root> PDF_Rootdb1, List<Types> PDF_Types1, List<ChildType> PDF_ChildType1)
+        {
+            //excel
+            TBB = new List<clsExcelinfo>();
+            tclass_datas = new List<Datas>();
+            Root_datas = new List<Root>();
+
+            Online_datas = new List<Online_Data>();
+            Online_MaGait = new List<MaGait>();
+            Online_Root_datas = new List<Online_Root>();
+
+            PDF_Rootdb = new List<PDF_Root>();
+            PDF_Types = new List<Types>();
+            PDF_ChildType = new List<ChildType>();
+
+            TBB = TBB1;
+            tclass_datas = tclass_datas1;
+            Root_datas = Root_datas1;
+
+            Online_datas = Online_datas1;
+            Online_MaGait = Online_MaGait1;
+            Online_Root_datas = Online_Root_datas1;
+
+            PDF_Rootdb = PDF_Rootdb1;
+            PDF_Types = PDF_Types1;
+            PDF_ChildType = PDF_ChildType1;
+        }
+        public void DownLoadExcel(ref BackgroundWorker bgWorker, string pathname)
+        {
+            bgWorker1 = bgWorker;
+
+            #region 获取模板路径
+            System.Globalization.CultureInfo CurrentCI = System.Threading.Thread.CurrentThread.CurrentCulture;
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+            string fullPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "System\\"), "Model.xlsx");
+            SaveFileDialog sfdDownFile = new SaveFileDialog();
+            sfdDownFile.OverwritePrompt = false;
+            string DesktopPath = Convert.ToString(System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+            sfdDownFile.Filter = "Excel files (*.xls,*.xlsx)|*.xls;*.xlsx";
+            string file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Results\\");
+            string[] temp1 = System.Text.RegularExpressions.Regex.Split(pathname, " ");
+            sfdDownFile.FileName = pathname;
+
+            string strExcelFileName = string.Empty;
+            #endregion
+
+            #region 导出前校验模板信息
+            if (string.IsNullOrEmpty(sfdDownFile.FileName))
+            {
+                MessageBox.Show("File name can't be empty, please confirm, thanks!");
+                return;
+            }
+            if (!File.Exists(fullPath))
+            {
+                MessageBox.Show("Template file does not exist, please confirm, thanks!");
+                return;
+            }
+            else
+            {
+                strExcelFileName = sfdDownFile.FileName;
+                strExcelFileName = pathname;
+
+            }
+            #endregion
+            #region Excel 初始化
+
+            Microsoft.Office.Interop.Excel.ApplicationClass ExcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+            System.Reflection.Missing missingValue = System.Reflection.Missing.Value;
+            Microsoft.Office.Interop.Excel._Workbook ExcelBook =
+            ExcelApp.Workbooks.Open(fullPath, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue);
+            #endregion
+            #region Sheet 初始化
+            try
+            {
+                Microsoft.Office.Interop.Excel._Worksheet ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Worksheets[1];
+                //打开时是否显示Excel
+                //ExcelApp.Visible = true;
+                //ExcelApp.ScreenUpdating = true;
+            #endregion
+
+                #region 填充数据
+                int doing = 0;
+                if (tclass_datas != null)
+                    foreach (Datas item in tclass_datas)
+                    {
+
+                        int RowIndex = 2;
+                        doing++;
+
+                        bgWorker1.ReportProgress(0, "导出进度  :  " + RowIndex.ToString() + "/" + tclass_datas.Count.ToString());
+
+                        RowIndex++;
+                        #region MyRegion
+                        //ExcelApp.Visible = true;
+                        //ExcelApp.ScreenUpdating = true;
+                        ExcelSheet.Cells[RowIndex, 1] = RowIndex - 2;
+                        ExcelSheet.Cells[RowIndex, 2] = item.patientId;
+                        ExcelSheet.Cells[RowIndex, 3] = item.patientName;
+                        ExcelSheet.Cells[RowIndex, 4] = item.sex;
+                        ExcelSheet.Cells[RowIndex, 5] = item.birthday;
+                        ExcelSheet.Cells[RowIndex, 6] = item.diseaseType;
+                        ExcelSheet.Cells[RowIndex, 7] = item.courseOfDisease;
+                        ExcelSheet.Cells[RowIndex, 8] = item.serialNumber;
+                        ExcelSheet.Cells[RowIndex, 9] = item.inspectId;
+                        ExcelSheet.Cells[RowIndex, 10] = item.checkType;
+                        ExcelSheet.Cells[RowIndex, 11] = item.dualTask;
+                        ExcelSheet.Cells[RowIndex, 12] = item.checkRemark;
+                        ExcelSheet.Cells[RowIndex, 13] = item.checkStartTime;
+                        ExcelSheet.Cells[RowIndex, 14] = item.checkEndTime;
+                        ExcelSheet.Cells[RowIndex, 15] = item.checkHospitalId;
+                        ExcelSheet.Cells[RowIndex, 16] = item.checkHospitalName;
+                        ExcelSheet.Cells[RowIndex, 17] = item.checkDoctorId;
+                        ExcelSheet.Cells[RowIndex, 18] = item.checkDoctorName;
+                        ExcelSheet.Cells[RowIndex, 19] = item.auditDoctorName;
+                        ExcelSheet.Cells[RowIndex, 20] = item.checkConclusion;
+                        ExcelSheet.Cells[RowIndex, 21] = item.sistDuration;
+                        ExcelSheet.Cells[RowIndex, 22] = item.peakSiStAngularVelocity;
+                        ExcelSheet.Cells[RowIndex, 23] = item.sistTrunkRoM;
+                        ExcelSheet.Cells[RowIndex, 24] = item.stepLength_R;
+                        ExcelSheet.Cells[RowIndex, 25] = item.stepLength_L;
+                        ExcelSheet.Cells[RowIndex, 26] = item.stepLength_avg;
+                        ExcelSheet.Cells[RowIndex, 27] = item.strideVelocity_R;
+                        ExcelSheet.Cells[RowIndex, 28] = item.strideVelocity_L;
+                        ExcelSheet.Cells[RowIndex, 29] = item.strideVelocity_avg;
+                        ExcelSheet.Cells[RowIndex, 30] = item.strideLength_R;
+                        ExcelSheet.Cells[RowIndex, 31] = item.strideLength_L;
+                        ExcelSheet.Cells[RowIndex, 32] = item.strideLength_avg;
+                        ExcelSheet.Cells[RowIndex, 33] = item.gaitCycle_R;
+                        ExcelSheet.Cells[RowIndex, 34] = item.gaitCycle_L;
+                        ExcelSheet.Cells[RowIndex, 35] = item.gaitCycle_avg;
+                        ExcelSheet.Cells[RowIndex, 36] = item.cadence_R;
+                        ExcelSheet.Cells[RowIndex, 37] = item.cadence_L;
+                        ExcelSheet.Cells[RowIndex, 38] = item.cadence_avg;
+                        ExcelSheet.Cells[RowIndex, 39] = item.support_R;
+                        ExcelSheet.Cells[RowIndex, 40] = item.support_L;
+                        ExcelSheet.Cells[RowIndex, 41] = item.support_avg;
+                        ExcelSheet.Cells[RowIndex, 42] = item.swing_R;
+                        ExcelSheet.Cells[RowIndex, 43] = item.swing_L;
+                        ExcelSheet.Cells[RowIndex, 44] = item.swing_avg;
+                        ExcelSheet.Cells[RowIndex, 45] = item.stance_R;
+                        ExcelSheet.Cells[RowIndex, 46] = item.stance_L;
+                        ExcelSheet.Cells[RowIndex, 47] = item.stance_avg;
+                        ExcelSheet.Cells[RowIndex, 48] = item.trunkSagittalPeakVelocity;
+                        ExcelSheet.Cells[RowIndex, 49] = item.trunkHorizontalPeakVelocity;
+                        ExcelSheet.Cells[RowIndex, 50] = item.strideVelocityAsymmetry;
+                        ExcelSheet.Cells[RowIndex, 51] = item.strideLengthAsymmetry;
+                        ExcelSheet.Cells[RowIndex, 52] = item.swingAsymmetry;
+                        ExcelSheet.Cells[RowIndex, 53] = item.stanceAsymmetry;
+                        ExcelSheet.Cells[RowIndex, 54] = item.shankAsymmetry;
+                        ExcelSheet.Cells[RowIndex, 55] = item.peakShankVelocityAsymmetry;
+                        ExcelSheet.Cells[RowIndex, 56] = item.shank_SSI;
+                        ExcelSheet.Cells[RowIndex, 57] = item.meanPhaseDifference;
+                        ExcelSheet.Cells[RowIndex, 58] = item.phaseCoordinationIndex;
+                        ExcelSheet.Cells[RowIndex, 59] = item.balanceTrunkSagittalPeakVelocity;
+                        ExcelSheet.Cells[RowIndex, 60] = item.balanceTrunkHorizontalPeakVelocity;
+                        #endregion
+
+                    }
+                ExcelBook.RefreshAll();
+                #region 写入文件
+                ExcelApp.ScreenUpdating = true;
+                if (doing != 0)
+                    ExcelBook.SaveAs(strExcelFileName, missingValue, missingValue, missingValue, missingValue, missingValue, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlNoChange, missingValue, missingValue, missingValue, missingValue, missingValue);
+                ExcelApp.DisplayAlerts = false;
+
+                #endregion
+            }
+
+            #region 异常处理
+            catch (Exception ex)
+            {
+                ExcelApp.DisplayAlerts = false;
+                ExcelApp.Quit();
+                ExcelBook = null;
+                ExcelApp = null;
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                throw ex;
+            }
+            #endregion
+
+            #region Finally垃圾回收
+            finally
+            {
+                ExcelBook.Close(false, missingValue, missingValue);
+                ExcelBook = null;
+                ExcelApp.DisplayAlerts = true;
+                ExcelApp.Quit();
+                clsKeyMyExcelProcess.Kill(ExcelApp);
+
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+            }
+            #endregion
+
+                #endregion
+        }
+
+        public void DownLoadPDF(ref BackgroundWorker bgWorker, string pathname)
+        {
+            bgWorker1 = bgWorker;
+            DownLoadPDFExcel();
+            if (XLSConvertToPDF(savepdfexcel_path, savepdfexcel_path.Replace("xlsx", "pdf")))
+            {
+                var dir = System.IO.Path.GetDirectoryName(pathname);
+                string namesave = System.IO.Path.GetFileName(savepdfexcel_path);
+                File.Copy(savepdfexcel_path.Replace("xlsx", "pdf"), dir + "\\" + namesave.Replace("xlsx", "pdf"));
+
+                File.Delete(savepdfexcel_path);
+                File.Delete(savepdfexcel_path.Replace("xlsx", "pdf"));
+            }
+
+
+
+        }
+        public void DownLoadPDFExcel()
+        {
+
+
+            #region 获取模板路径
+            System.Globalization.CultureInfo CurrentCI = System.Threading.Thread.CurrentThread.CurrentCulture;
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+            string fullPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "System\\"), "TEL.xlsx");
+            SaveFileDialog sfdDownFile = new SaveFileDialog();
+            sfdDownFile.OverwritePrompt = false;
+            string DesktopPath = Convert.ToString(System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+            sfdDownFile.Filter = "Excel files (*.xls,*.xlsx)|*.xls;*.xlsx";
+            string file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Results\\");
+            string pathname = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss")+
+                ".xlsx";
+
+            sfdDownFile.FileName = file + pathname;
+
+            string strExcelFileName = string.Empty;
+            #endregion
+
+            #region 导出前校验模板信息
+            if (string.IsNullOrEmpty(sfdDownFile.FileName))
+            {
+                MessageBox.Show("File name can't be empty, please confirm, thanks!");
+                return;
+            }
+            if (!File.Exists(fullPath))
+            {
+                MessageBox.Show("Template file does not exist, please confirm, thanks!");
+                return;
+            }
+            else
+            {
+                strExcelFileName = sfdDownFile.FileName;
+              //  strExcelFileName = pathname;
+
+            }
+            #endregion
+            #region Excel 初始化
+
+            Microsoft.Office.Interop.Excel.ApplicationClass ExcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+            System.Reflection.Missing missingValue = System.Reflection.Missing.Value;
+            Microsoft.Office.Interop.Excel._Workbook ExcelBook =
+            ExcelApp.Workbooks.Open(fullPath, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue);
+            #endregion
+            #region Sheet 初始化
+            try
+            {
+                Microsoft.Office.Interop.Excel._Worksheet ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Worksheets[1];
+                //打开时是否显示Excel
+                //ExcelApp.Visible = true;
+                //ExcelApp.ScreenUpdating = true;
+            #endregion
+
+                #region 填充数据
+                int doing = 0;
+                if (tclass_datas != null)
+                    foreach (Datas item in tclass_datas)
+                    {
+
+                        int RowIndex = 2;
+                        doing++;
+
+                        bgWorker1.ReportProgress(0, "导出进度  :  " + RowIndex.ToString() + "/" + tclass_datas.Count.ToString());
+
+                        RowIndex++;
+                        #region MyRegion
+                        //ExcelApp.Visible = true;
+                        //ExcelApp.ScreenUpdating = true;
+                        ExcelSheet.Cells[3, 3] = item.inspectId;
+                        ExcelSheet.Cells[3, 7] = item.serialNumber;
+                        ExcelSheet.Cells[6, 3] = item.patientName;
+                        ExcelSheet.Cells[6, 5] = item.diseaseType;
+                        ExcelSheet.Cells[8, 3] = item.checkType;
+                        ExcelSheet.Cells[8, 5] = item.checkStartTime;
+                        ExcelSheet.Cells[10, 3] = item.checkDoctorName;
+                        ExcelSheet.Cells[10, 8] = item.auditDoctorName;
+                        ExcelSheet.Cells[14, 2] = item.checkConclusion;
+                        ExcelSheet.Cells[43, 3] = item.checkDoctorName;
+                        ExcelSheet.Cells[43, 6] = item.auditDoctorName;
+                        ExcelSheet.Cells[45, 3] = DateTime.Now.ToString("MM/dd/yyyy");
+                        ExcelSheet.Cells[50, 5] = item.checkHospitalName;
+
+                        #endregion
+                        ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Worksheets[2];
+
+                        ExcelSheet.Cells[7, 6] = item.sistDuration;
+                        ExcelSheet.Cells[8, 6] = item.peakSiStAngularVelocity;
+                        ExcelSheet.Cells[9, 6] = item.sistTrunkRoM;
+                        ExcelSheet.Cells[23, 6] = item.balanceTrunkSagittalPeakVelocity;
+                        ExcelSheet.Cells[24, 6] = item.balanceTrunkHorizontalPeakVelocity;
+
+                        ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Worksheets[3];
+
+                        ExcelSheet.Cells[7, 6] = item.stepLength_avg;
+                        ExcelSheet.Cells[7, 7] = item.stepLength_R;
+                        ExcelSheet.Cells[7, 8] = item.stepLength_L;
+                        ExcelSheet.Cells[8, 6] = item.strideVelocity_avg;
+                        ExcelSheet.Cells[8, 7] = item.strideVelocity_R;
+                        ExcelSheet.Cells[8, 8] = item.strideVelocity_L;
+                        ExcelSheet.Cells[9, 6] = item.strideLength_avg;
+                        ExcelSheet.Cells[9, 7] = item.strideLength_R;
+                        ExcelSheet.Cells[9, 8] = item.strideLength_L;
+                        ExcelSheet.Cells[10, 6] = item.gaitCycle_avg;
+                        ExcelSheet.Cells[10, 7] = item.gaitCycle_R;
+                        ExcelSheet.Cells[10, 8] = item.gaitCycle_L;
+                        ExcelSheet.Cells[11, 6] = item.cadence_avg;
+                        ExcelSheet.Cells[11, 7] = item.cadence_R;
+                        ExcelSheet.Cells[11, 8] = item.cadence_L;
+                        ExcelSheet.Cells[12, 6] = item.support_avg;
+                        ExcelSheet.Cells[12, 7] = item.support_R;
+                        ExcelSheet.Cells[12, 8] = item.support_L;
+                        ExcelSheet.Cells[13, 6] = item.swing_avg;
+                        ExcelSheet.Cells[13, 7] = item.swing_R;
+                        ExcelSheet.Cells[13, 8] = item.swing_L;
+                        ExcelSheet.Cells[14, 6] = item.stance_avg;
+                        ExcelSheet.Cells[14, 7] = item.stance_R;
+                        ExcelSheet.Cells[14, 8] = item.stance_L;
+                        ExcelSheet.Cells[15, 6] = item.trunkSagittalPeakVelocity;
+                        ExcelSheet.Cells[16, 6] = item.trunkHorizontalPeakVelocity;
+                        ExcelSheet.Cells[17, 6] = item.strideVelocityAsymmetry;
+                        ExcelSheet.Cells[18, 6] = item.strideLengthAsymmetry;
+                        ExcelSheet.Cells[19, 6] = item.swingAsymmetry;
+                        ExcelSheet.Cells[20, 6] = item.stanceAsymmetry;
+                        ExcelSheet.Cells[21, 6] = item.shankAsymmetry;
+                        ExcelSheet.Cells[22, 6] = item.peakShankVelocityAsymmetry;
+                        ExcelSheet.Cells[23, 6] = item.shank_SSI;
+                        ExcelSheet.Cells[24, 6] = item.meanPhaseDifference;
+                        ExcelSheet.Cells[25, 6] = "";
+
+                    }
+                ExcelBook.RefreshAll();
+                #region 写入文件
+                ExcelApp.ScreenUpdating = true;
+              
+                    ExcelBook.SaveAs(strExcelFileName, missingValue, missingValue, missingValue, missingValue, missingValue, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlNoChange, missingValue, missingValue, missingValue, missingValue, missingValue);
+                ExcelApp.DisplayAlerts = false;
+                savepdfexcel_path = strExcelFileName;
+
+                #endregion
+            }
+
+            #region 异常处理
+            catch (Exception ex)
+            {
+                ExcelApp.DisplayAlerts = false;
+                ExcelApp.Quit();
+                ExcelBook = null;
+                ExcelApp = null;
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                throw ex;
+            }
+            #endregion
+
+            #region Finally垃圾回收
+            finally
+            {
+                ExcelBook.Close(false, missingValue, missingValue);
+                ExcelBook = null;
+                ExcelApp.DisplayAlerts = true;
+                ExcelApp.Quit();
+                clsKeyMyExcelProcess.Kill(ExcelApp);
+
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+            }
+            #endregion
+
+                #endregion
+        }
+
+        private bool XLSConvertToPDF(string sourcePath, string targetPath)
+        {
+            bool result = false;
+            Microsoft.Office.Interop.Excel.XlFixedFormatType targetType = Microsoft.Office.Interop.Excel.XlFixedFormatType.xlTypePDF;
+            object missing = Type.Missing;
+            Microsoft.Office.Interop.Excel.ApplicationClass ExcelApp = null;
+            Microsoft.Office.Interop.Excel._Workbook ExcelBook = null;
+            try
+            {
+
+                object target = targetPath;
+                object type = targetType;
+
+                System.Globalization.CultureInfo CurrentCI = System.Threading.Thread.CurrentThread.CurrentCulture;
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+                ExcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+                System.Reflection.Missing missingValue = System.Reflection.Missing.Value;
+                ExcelBook = ExcelApp.Workbooks.Open(sourcePath, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue);
+
+                ExcelBook.ExportAsFixedFormat(targetType, target, Microsoft.Office.Interop.Excel.XlFixedFormatQuality.xlQualityStandard, true, false, missing, missing, missing, missing);
+                result = true;
+
+
+            }
+            catch
+            {
+                result = false;
+            }
+            finally
+            {
+                if (ExcelBook != null)
+                {
+                    ExcelBook.Close(true, missing, missing);
+                    ExcelBook = null;
+                }
+                if (ExcelApp != null)
+                {
+                    ExcelApp.Quit();
+                    ExcelApp = null;
+                }
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+            }
+            return result;
+        }
+
+
     }
 }

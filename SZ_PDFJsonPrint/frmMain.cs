@@ -1,4 +1,5 @@
-﻿using SPJP.Buiness;
+﻿using Microsoft.Reporting.WinForms;
+using SPJP.Buiness;
 using SPJP.Common;
 using SPJP.DB;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -31,6 +33,10 @@ namespace SZ_PDFJsonPrint
         List<clsOrderDatabaseinfo> FilterOrderResults;
 
         public ReportForm reportForm;
+
+        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        
+        string strFileName;
 
 
         //excel
@@ -254,11 +260,9 @@ namespace SZ_PDFJsonPrint
 
                 return;
 
-                BusinessHelp.Run(FilterOrderResults);
-                BusinessHelp.Run2(FilterOrderResults);
-                BusinessHelp.Run3(FilterOrderResults);
+                Print();
             }
-            MessageBox.Show("打印完成！", "提醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
         }
         private void PrintReportForEDI()
         {
@@ -420,6 +424,135 @@ namespace SZ_PDFJsonPrint
                 this.dataGridView4.AutoGenerateColumns = false;
                 this.dataGridView4.DataSource = findsapinfo;
             }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".xlsx";
+            saveFileDialog.Filter = "Excel Files(*.xls,*.xlsx,*.xlsm,*.xlsb)|*.xls;*.xlsx;*.xlsm;*.xlsb";
+              strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            saveFileDialog.FileName = strFileName;
+            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                strFileName = saveFileDialog.FileName.ToString();
+            }
+            else
+            {
+                return;
+            }
+            try
+            {
+                InitialBackGroundWorker();
+                bgWorker.DoWork += new DoWorkEventHandler(downreport);
+                bgWorker.RunWorkerAsync();
+                // 启动消息显示画面
+                frmMessageShow = new frmMessageShow(clsShowMessage.MSG_001,
+                                                    clsShowMessage.MSG_007,
+                                                    clsConstant.Dialog_Status_Disable);
+                frmMessageShow.ShowDialog();
+                // 数据读取成功后在画面显示
+                if (blnBackGroundWorkIsOK)
+                {
+                    string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Results"), "");
+                    System.Diagnostics.Process.Start("explorer.exe", strFileName);
+                }          
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ex" + ex);
+                return;
+                throw ex;
+            }
+        }
+        private void downreport(object sender, DoWorkEventArgs e)
+        {
+            DateTime oldDate = DateTime.Now;
+
+            //初始化信息
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            BusinessHelp.InitializeDataSource(TBB,tclass_datas,Root_datas, Online_datas,Online_MaGait, Online_Root_datas, PDF_Rootdb,PDF_Types,  PDF_ChildType);
+            
+            BusinessHelp.pbStatus = pbStatus;
+            BusinessHelp.tsStatusLabel1 = toolStripLabel1;
+            BusinessHelp.DownLoadExcel(ref this.bgWorker, strFileName);
+
+
+            BusinessHelp.DownLoadPDF(ref this.bgWorker, strFileName);
+ 
+            DateTime FinishTime = DateTime.Now;
+            TimeSpan s = DateTime.Now - oldDate;
+            string timei = s.Minutes.ToString() + ":" + s.Seconds.ToString();
+            string Showtime = clsShowMessage.MSG_029 + timei.ToString();
+            bgWorker.ReportProgress(clsConstant.Thread_Progress_OK, clsShowMessage.MSG_015 + "\r\n" + Showtime);
+
+     
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            pdfExport();
+
+            PrintReportForEDI();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Print();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ex" + ex);
+                return;
+                throw;
+            }
+        }
+
+        private void Print()
+        {
+            clsAllnew BusinessHelp = new clsAllnew();
+            this.toolStripLabel1.Text = "打印中 1/3";
+            BusinessHelp.Run(FilterOrderResults);
+            this.toolStripLabel1.Text = "打印中 2/3";
+
+            BusinessHelp.Run2(FilterOrderResults);
+            this.toolStripLabel1.Text = "打印中 3/3";
+
+            BusinessHelp.Run3(FilterOrderResults);
+            MessageBox.Show("打印完成！", "提醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pdfExport()
+        {
+            //回写测试，如果可以回写到数据集中，然后更新RDLC，并输出，那么就用这种模式
+
+            //refresh report viewer
+            Warning[] warnings;
+            string[] streamids;
+            string mimeType;
+            string encoding;
+            string extension;
+
+            reportViewer1 = new ReportViewer();
+
+            reportForm.InitializeDataSource(tclass_datas);
+            reportViewer1=reportForm.reportViewer1;
+            //reportForm.ShowDialog();
+
+
+            byte[] bytes = this.reportViewer1.LocalReport.Render(
+               "pdf", null, out mimeType, out encoding, out extension,
+               out streamids, out warnings);
+
+            FileStream fs = new FileStream(@"d:/output.pdf", FileMode.Create);
+            fs.Write(bytes, 0, bytes.Length);
+            fs.Close();
+
+            MessageBox.Show("报表已经成功导出到桌面！", "Info");
+            //ExportRpt(0); 
         }
     }
 }

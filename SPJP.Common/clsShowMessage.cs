@@ -23,7 +23,7 @@ namespace SPJP.Common
         public const string MSG_011 = " Reading Raw Data and Check   ....";
         public const string MSG_012 = "System Update Successful !";
         public const string MSG_013 = "Initialize System  ....";
-        public const string MSG_015 = "System Operation Finish !";
+        public const string MSG_015 = "下载完成 !";
         public const string MSG_016 = "System No Read Data !";
         public const string MSG_0017 = "System Read Raw Data Successful !";
         public const string MSG_018 = "Please check your step !";
