@@ -59,13 +59,13 @@ namespace SZ_PDFJsonPrint
         public frmMain()
         {
             InitializeComponent();
-            FilterOrderResults = new List<clsOrderDatabaseinfo>();
+             FilterOrderResults = new List<clsOrderDatabaseinfo>();
 
-            clsOrderDatabaseinfo item = new clsOrderDatabaseinfo();
-            item.patientId = "2323";
-            item.dizhi = "jintian";
+            //clsOrderDatabaseinfo item = new clsOrderDatabaseinfo();
+            //item.patientId = "2323";
+            //item.dizhi = "jintian";
 
-            FilterOrderResults.Add(item);
+            //FilterOrderResults.Add(item);
             InitializeDataSource();
 
             //
@@ -478,8 +478,8 @@ namespace SZ_PDFJsonPrint
             BusinessHelp.tsStatusLabel1 = toolStripLabel1;
             BusinessHelp.DownLoadExcel(ref this.bgWorker, strFileName);
 
-
-            BusinessHelp.DownLoadPDF(ref this.bgWorker, strFileName);
+            //暂停
+            //BusinessHelp.DownLoadPDF(ref this.bgWorker, strFileName);
  
             DateTime FinishTime = DateTime.Now;
             TimeSpan s = DateTime.Now - oldDate;
@@ -492,7 +492,7 @@ namespace SZ_PDFJsonPrint
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            pdfExport();
+            //pdfExport();
 
             PrintReportForEDI();
         }
@@ -515,17 +515,17 @@ namespace SZ_PDFJsonPrint
         {
             clsAllnew BusinessHelp = new clsAllnew();
             this.toolStripLabel1.Text = "打印中 1/3";
-            BusinessHelp.Run(FilterOrderResults);
+            BusinessHelp.Run(tclass_datas);
             this.toolStripLabel1.Text = "打印中 2/3";
 
-            BusinessHelp.Run2(FilterOrderResults);
+            BusinessHelp.Run2(tclass_datas);
             this.toolStripLabel1.Text = "打印中 3/3";
 
-            BusinessHelp.Run3(FilterOrderResults);
+            BusinessHelp.Run3(tclass_datas);
             MessageBox.Show("打印完成！", "提醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void pdfExport()
+        private void pdfExport(string pathl)
         {
             //回写测试，如果可以回写到数据集中，然后更新RDLC，并输出，那么就用这种模式
 
@@ -547,12 +547,31 @@ namespace SZ_PDFJsonPrint
                "pdf", null, out mimeType, out encoding, out extension,
                out streamids, out warnings);
 
-            FileStream fs = new FileStream(@"d:/output.pdf", FileMode.Create);
+            FileStream fs = new FileStream(pathl, FileMode.Create);
             fs.Write(bytes, 0, bytes.Length);
             fs.Close();
 
             MessageBox.Show("报表已经成功导出到桌面！", "Info");
             //ExportRpt(0); 
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".pdf";
+            saveFileDialog.Filter = "PDF(*.pdf)|*.pdf";
+            strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            saveFileDialog.FileName = strFileName;
+            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                strFileName = saveFileDialog.FileName.ToString();
+            }
+            else
+            {
+                return;
+            }
+            pdfExport(strFileName);
+            
         }
     }
 }

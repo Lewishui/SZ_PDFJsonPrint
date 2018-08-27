@@ -203,8 +203,8 @@
         <ReportItems>
           <Subreport Name="Subreport0">
             <ReportName>Report4</ReportName>
-            <Height>33.5in</Height>
-            <Width>9in</Width>
+            <Height>29.7cm</Height>
+            <Width>21cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -212,15 +212,18 @@
             </Style>
           </Subreport>
         </ReportItems>
-        <Height>33.5in</Height>
+        <Height>29.7cm</Height>
         <Style />
       </Body>
-      <Width>9in</Width>
+      <Width>21cm</Width>
       <Page>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>1cm</LeftMargin>
+        <RightMargin>1cm</RightMargin>
+        <TopMargin>0cm</TopMargin>
+        <BottomMargin>0cm</BottomMargin>
+        <ColumnSpacing>1.27cm</ColumnSpacing>
         <Style />
       </Page>
     </ReportSection>
@@ -3124,6 +3127,6 @@ v2m3b+0l0URJ8MoO0GcZa+gzYUkvy6UyE23UobSsqKffg8EZw3SYOYaAS3pcn890B7cJzvdDxVIE3Bw8
 lJ82Vxe8YfBboKwAuFIlEwTz0VWGwwKZgpYagtJcRsMhJkPxvnPUqyEVDl8VDIa4vVDwxZU0tKRGqi7j2mPQJ6tspJm2itCA6w9I2+6m6oKTESIGFuTDAMDLKy/+eRsq5wpX2zjjK6D462bm6LFQIZcSTRttBs1MfEBCqZbJwODC9fZHxni4RyZhdB6H+Aj9n2BSBGf8f83+C6fRtnTOocWCAAAAAElFTkSuQmCC</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
-  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>316069be-7ac9-4ee2-a342-87f9279bec64</rd:ReportID>
 </Report>

@@ -52,7 +52,7 @@ namespace SPJP.Buiness
 
         #endregion
 
-        public void Run(List<clsOrderDatabaseinfo> FilterOrderResults)
+        public void Run(List<Datas> FilterOrderResults)
         {
             LocalReport report = new LocalReport();
             report.ReportPath = Application.StartupPath + "\\Report1.rdlc";
@@ -108,18 +108,27 @@ namespace SPJP.Buiness
             //"  <MarginBottom>0.0cm</MarginBottom>" +
             //"</DeviceInfo>";
 
+            //string deviceInfo =
+            //                "<DeviceInfo>" +
+            //                "  <OutputFormat>EMF</OutputFormat>" +
+            //                "  <PageWidth>8.5in</PageWidth>" +
+            //                "  <PageHeight>11.1in</PageHeight>" +
+            //                "  <MarginTop>0in</MarginTop>" +
+            //                "  <MarginLeft>0.0cm</MarginLeft>" +
+            //                "  <MarginRight>0.0cm</MarginRight>" +
+            //                "  <MarginBottom>0in</MarginBottom>" +
+            //                "</DeviceInfo>";
+
             string deviceInfo =
-                            "<DeviceInfo>" +
-                            "  <OutputFormat>EMF</OutputFormat>" +
-                            "  <PageWidth>8.5in</PageWidth>" +
-                            "  <PageHeight>11.1in</PageHeight>" +
-                            "  <MarginTop>0in</MarginTop>" +
-                            "  <MarginLeft>0.0cm</MarginLeft>" +
-                            "  <MarginRight>0.0cm</MarginRight>" +
-                            "  <MarginBottom>0in</MarginBottom>" +
-                            "</DeviceInfo>";
-
-
+                      "<DeviceInfo>" +
+                      "  <OutputFormat>EMF</OutputFormat>" +
+                      "  <PageWidth>21cm</PageWidth>" +
+                      "  <PageHeight>29.7cm</PageHeight>" +
+                      "  <MarginTop>1cm</MarginTop>" +
+                      "  <MarginLeft>1cm</MarginLeft>" +
+                      "  <MarginRight>1cm</MarginRight>" +
+                      "  <MarginBottom>1cm</MarginBottom>" +
+                      "</DeviceInfo>";
             Warning[] warnings;
             m_streams = new List<Stream>();
             report.Render("Image", deviceInfo, CreateStream,
@@ -212,7 +221,7 @@ Encoding encoding, string mimeType, bool willSeek)
         #endregion
 
 
-        public void Run2(List<clsOrderDatabaseinfo> FilterOrderResults)
+        public void Run2(List<Datas> FilterOrderResults)
         {
             LocalReport report = new LocalReport();
             report.ReportPath = Application.StartupPath + "\\Report2.rdlc";
@@ -221,7 +230,7 @@ Encoding encoding, string mimeType, bool willSeek)
             m_currentPageIndex = 0;
             Print(orderprint, 0, 0);
         }
-        public void Run3(List<clsOrderDatabaseinfo> FilterOrderResults)
+        public void Run3(List<Datas> FilterOrderResults)
         {
             LocalReport report = new LocalReport();
             report.ReportPath = Application.StartupPath + "\\Report3.rdlc";
