@@ -30,14 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bindingSource5 = new System.Windows.Forms.BindingSource(this.components);
@@ -52,18 +50,6 @@
             this.pbStatus = new System.Windows.Forms.ToolStripProgressBar();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.CheckColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.fukuandanwe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weituoren = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dizhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dianhua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shouji = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.daodaidi2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shouhuoren2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dianhua2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -156,10 +142,10 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.读取 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource6)).BeginInit();
@@ -168,8 +154,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.toolStrip2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -243,126 +227,8 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "actn020.gif");
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dataGridView);
-            this.tabPage1.ImageIndex = 0;
-            this.tabPage1.Location = new System.Drawing.Point(4, 23);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(905, 510);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "在线数据";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.AllowUserToResizeColumns = false;
-            this.dataGridView.AllowUserToResizeRows = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CheckColumn1,
-            this.fukuandanwe,
-            this.weituoren,
-            this.dizhi,
-            this.dianhua,
-            this.shouji,
-            this.daodaidi2,
-            this.shouhuoren2,
-            this.dianhua2,
-            this.editColumn1});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle16;
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersVisible = false;
-            this.dataGridView.RowTemplate.Height = 50;
-            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(899, 504);
-            this.dataGridView.TabIndex = 23;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
-            // 
-            // CheckColumn1
-            // 
-            this.CheckColumn1.HeaderText = "选择";
-            this.CheckColumn1.Name = "CheckColumn1";
-            this.CheckColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CheckColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.CheckColumn1.Width = 40;
-            // 
-            // fukuandanwe
-            // 
-            this.fukuandanwe.DataPropertyName = "fukuandanwei";
-            this.fukuandanwe.HeaderText = "付款单位";
-            this.fukuandanwe.Name = "fukuandanwe";
-            // 
-            // weituoren
-            // 
-            this.weituoren.DataPropertyName = "weituoren";
-            this.weituoren.HeaderText = "委托人";
-            this.weituoren.Name = "weituoren";
-            // 
-            // dizhi
-            // 
-            this.dizhi.DataPropertyName = "dizhi";
-            this.dizhi.HeaderText = "地址";
-            this.dizhi.Name = "dizhi";
-            // 
-            // dianhua
-            // 
-            this.dianhua.DataPropertyName = "dianhua";
-            this.dianhua.HeaderText = "电话";
-            this.dianhua.Name = "dianhua";
-            // 
-            // shouji
-            // 
-            this.shouji.DataPropertyName = "shouji";
-            this.shouji.HeaderText = "手机";
-            this.shouji.Name = "shouji";
-            // 
-            // daodaidi2
-            // 
-            this.daodaidi2.DataPropertyName = "daodaidi2";
-            this.daodaidi2.HeaderText = "到达地";
-            this.daodaidi2.Name = "daodaidi2";
-            // 
-            // shouhuoren2
-            // 
-            this.shouhuoren2.DataPropertyName = "shouhuoren2";
-            this.shouhuoren2.HeaderText = "收货人";
-            this.shouhuoren2.Name = "shouhuoren2";
-            // 
-            // dianhua2
-            // 
-            this.dianhua2.DataPropertyName = "dianhua2";
-            this.dianhua2.HeaderText = "收货人电话";
-            this.dianhua2.Name = "dianhua2";
-            // 
-            // editColumn1
-            // 
-            this.editColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2, 12, 2, 12);
-            this.editColumn1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.editColumn1.HeaderText = "";
-            this.editColumn1.Name = "editColumn1";
-            this.editColumn1.Text = "打印";
-            this.editColumn1.UseColumnTextForButtonValue = true;
-            this.editColumn1.Width = 60;
-            // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.客户查询);
@@ -471,7 +337,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.74584F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.25416F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 478F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 479F));
             this.tableLayoutPanel4.Controls.Add(this.dataGridView1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.dataGridView5, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.dataGridView2, 1, 0);
@@ -486,8 +352,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -523,8 +389,8 @@
             // dataGridView5
             // 
             this.dataGridView5.AllowUserToAddRows = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView5.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView5.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -590,10 +456,10 @@
             this.balanceTrunkHorizontalPeakVelocity});
             this.dataGridView5.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView5.Location = new System.Drawing.Point(423, 3);
+            this.dataGridView5.Location = new System.Drawing.Point(422, 3);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersVisible = false;
-            this.dataGridView5.Size = new System.Drawing.Size(473, 498);
+            this.dataGridView5.Size = new System.Drawing.Size(474, 498);
             this.dataGridView5.TabIndex = 13;
             // 
             // indexNumber
@@ -959,8 +825,8 @@
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -971,7 +837,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(283, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(134, 498);
+            this.dataGridView2.Size = new System.Drawing.Size(133, 498);
             this.dataGridView2.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn1
@@ -1002,7 +868,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.16201F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.83799F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 362F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 363F));
             this.tableLayoutPanel3.Controls.Add(this.dataGridView8, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.dataGridView7, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.dataGridView6, 2, 0);
@@ -1017,8 +883,8 @@
             // dataGridView8
             // 
             this.dataGridView8.AllowUserToAddRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView8.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView8.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1054,8 +920,8 @@
             // dataGridView7
             // 
             this.dataGridView7.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView7.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView7.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView7.ContextMenuStrip = this.contextMenuStrip1;
@@ -1063,22 +929,22 @@
             this.dataGridView7.Location = new System.Drawing.Point(266, 3);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.RowHeadersVisible = false;
-            this.dataGridView7.Size = new System.Drawing.Size(267, 498);
+            this.dataGridView7.Size = new System.Drawing.Size(266, 498);
             this.dataGridView7.TabIndex = 17;
             // 
             // dataGridView6
             // 
             this.dataGridView6.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView6.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView6.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView6.Location = new System.Drawing.Point(539, 3);
+            this.dataGridView6.Location = new System.Drawing.Point(538, 3);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.RowHeadersVisible = false;
-            this.dataGridView6.Size = new System.Drawing.Size(357, 498);
+            this.dataGridView6.Size = new System.Drawing.Size(358, 498);
             this.dataGridView6.TabIndex = 21;
             // 
             // groupBox1
@@ -1141,21 +1007,14 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // tableLayoutPanel1
+            // toolStripButton5
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 918F));
-            this.tableLayoutPanel1.Controls.Add(this.toolStrip1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1006, 588);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(79, 25);
+            this.toolStripButton5.Text = "下载P";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripButton1
             // 
@@ -1175,14 +1034,21 @@
             this.toolStripButton3.Text = "PDF V";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
-            // toolStripButton5
+            // tableLayoutPanel1
             // 
-            this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(79, 25);
-            this.toolStripButton5.Text = "下载P";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 918F));
+            this.tableLayoutPanel1.Controls.Add(this.toolStrip1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1006, 588);
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
             // frmMain
             // 
@@ -1202,8 +1068,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1244,7 +1108,6 @@
         private System.Windows.Forms.ToolStripProgressBar pbStatus;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
@@ -1252,17 +1115,6 @@
         private System.Windows.Forms.ToolStripButton 读取;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn CheckColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fukuandanwe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weituoren;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dizhi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dianhua;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shouji;
-        private System.Windows.Forms.DataGridViewTextBoxColumn daodaidi2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shouhuoren2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dianhua2;
-        private System.Windows.Forms.DataGridViewButtonColumn editColumn1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridView dataGridView3;

@@ -27,6 +27,7 @@ namespace SZ_PDFJsonPrint
         {
             InitializeComponent();
             aboutbox = new frmAboutBox();
+           
         }
 
     

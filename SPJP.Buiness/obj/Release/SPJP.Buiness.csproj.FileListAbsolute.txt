@@ -1,0 +1,12 @@
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Release\SPJP.Buiness.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Release\SPJP.Buiness.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Release\log4net.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Release\Microsoft.Office.Interop.Excel.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Release\Newtonsoft.Json.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Release\SPJP.Common.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Release\SPJP.DB.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Release\SPJP.Common.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Release\SPJP.DB.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\obj\Release\SPJP.Buiness.csprojResolveAssemblyReference.cache
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\obj\Release\SPJP.Buiness.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\obj\Release\SPJP.Buiness.pdb

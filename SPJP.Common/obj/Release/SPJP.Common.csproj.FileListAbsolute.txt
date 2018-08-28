@@ -1,0 +1,6 @@
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Common\bin\Release\SPJP.Common.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Common\bin\Release\SPJP.Common.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Common\bin\Release\Microsoft.Office.Interop.Excel.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Common\obj\Release\SPJP.Common.csprojResolveAssemblyReference.cache
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Common\obj\Release\SPJP.Common.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Common\obj\Release\SPJP.Common.pdb

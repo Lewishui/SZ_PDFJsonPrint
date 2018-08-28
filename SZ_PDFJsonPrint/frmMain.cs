@@ -125,10 +125,10 @@ namespace SZ_PDFJsonPrint
             //OrderResults = BusinessHelp.findOrder_Server(this.keywordTextBox.Text, start_time, end_time);
 
             //if (Result)
-            this.dataGridView.AutoGenerateColumns = false;
+            this.dataGridView3.AutoGenerateColumns = false;
             sortablePendingOrderList = new SortableBindingList<clsOrderDatabaseinfo>(FilterOrderResults);
             this.bindingSource1.DataSource = sortablePendingOrderList;
-            this.dataGridView.DataSource = this.bindingSource1;
+            this.dataGridView3.DataSource = this.bindingSource1;
         }
         public class SortableBindingList<T> : BindingList<T>
         {
@@ -245,23 +245,23 @@ namespace SZ_PDFJsonPrint
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewColumn column = dataGridView.Columns[e.ColumnIndex];
-            clsAllnew BusinessHelp = new clsAllnew();
+            //DataGridViewColumn column = dataGridView.Columns[e.ColumnIndex];
+            //clsAllnew BusinessHelp = new clsAllnew();
 
-            if (column == editColumn1)
-            {
-                var row = dataGridView.Rows[e.RowIndex];
+            //if (column == editColumn1)
+            //{
+            //    var row = dataGridView.Rows[e.RowIndex];
 
-                var model = row.DataBoundItem as clsOrderDatabaseinfo;
-                //隐藏背景图
-                //FilterOrderResults[0].showimage = true;
+            //    var model = row.DataBoundItem as clsOrderDatabaseinfo;
+            //    //隐藏背景图
+            //    //FilterOrderResults[0].showimage = true;
 
-                PrintReportForEDI();
+            //    PrintReportForEDI();
 
-                return;
+            //    return;
 
-                Print();
-            }
+            //    Print();
+            //}
            
         }
         private void PrintReportForEDI()
@@ -399,7 +399,7 @@ namespace SZ_PDFJsonPrint
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewColumn column = dataGridView.Columns[e.ColumnIndex];
+            DataGridViewColumn column = dataGridView3.Columns[e.ColumnIndex];
             clsAllnew BusinessHelp = new clsAllnew();
 
             if (column == typeCode)

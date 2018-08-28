@@ -481,13 +481,13 @@ Encoding encoding, string mimeType, bool willSeek)
             string result1 = DoPost("https://api.douban.com/v2/book/isbn/9787115212948", "10");
 
             //假数据
-            string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\pdf.json";
+            //string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\pdf.json";
 
-            result1 = readtxtJsom(A_Path);
+            //result1 = readtxtJsom(A_Path);
 
-            JObject obj = (JObject)JsonConvert.DeserializeObject(result1);
+            //JObject obj = (JObject)JsonConvert.DeserializeObject(result1);
 
-            string tx1 = obj["typegroupcode"].ToString();
+            //string tx1 = obj["typegroupcode"].ToString();
 
             //new 
             #region MyRegion
@@ -569,6 +569,7 @@ Encoding encoding, string mimeType, bool willSeek)
         private void Tocovermethod_PDF(string json)
         {
             string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\pdf.json";
+            A_Path =  "C:\\json\\pdf.json";
             json = readtxtJsom(A_Path);
 
             //第一次解析
@@ -620,6 +621,7 @@ Encoding encoding, string mimeType, bool willSeek)
         private void Tocovermethod_excel(string json)
         {
             string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\excel.json";
+            A_Path = "C:\\json\\excel.json";
             json = readtxtJsom(A_Path);
 
             //第一次解析
@@ -698,6 +700,7 @@ Encoding encoding, string mimeType, bool willSeek)
         private void Tocovermethod_clientOnline(string json)
         {
             string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\Online.json";
+            A_Path = "C:\\json\\Online.json";
             json = readtxtJsom(A_Path);
 
             Dictionary<string, object> dic = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
@@ -1024,7 +1027,7 @@ Encoding encoding, string mimeType, bool willSeek)
             string DesktopPath = Convert.ToString(System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
             sfdDownFile.Filter = "Excel files (*.xls,*.xlsx)|*.xls;*.xlsx";
             string file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Results\\");
-            string pathname = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss")+
+            string pathname = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") +
                 ".xlsx";
 
             sfdDownFile.FileName = file + pathname;
@@ -1046,7 +1049,7 @@ Encoding encoding, string mimeType, bool willSeek)
             else
             {
                 strExcelFileName = sfdDownFile.FileName;
-              //  strExcelFileName = pathname;
+                //  strExcelFileName = pathname;
 
             }
             #endregion
@@ -1146,8 +1149,8 @@ Encoding encoding, string mimeType, bool willSeek)
                 ExcelBook.RefreshAll();
                 #region 写入文件
                 ExcelApp.ScreenUpdating = true;
-              
-                    ExcelBook.SaveAs(strExcelFileName, missingValue, missingValue, missingValue, missingValue, missingValue, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlNoChange, missingValue, missingValue, missingValue, missingValue, missingValue);
+
+                ExcelBook.SaveAs(strExcelFileName, missingValue, missingValue, missingValue, missingValue, missingValue, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlNoChange, missingValue, missingValue, missingValue, missingValue, missingValue);
                 ExcelApp.DisplayAlerts = false;
                 savepdfexcel_path = strExcelFileName;
 

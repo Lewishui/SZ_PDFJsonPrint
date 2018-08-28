@@ -1,4 +1,3 @@
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.exe
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe.config
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.exe
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.pdb
@@ -41,6 +40,7 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Co
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Newtonsoft.Json.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Microsoft.Office.Interop.Excel.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Buiness.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Common.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.pdb
@@ -54,5 +54,5 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJ
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.csproj.GenerateResource.Cache
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.cache
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.compiled
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.exe
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.pdb
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Microsoft.Office.Interop.Excel.dll

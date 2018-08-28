@@ -1,0 +1,4 @@
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.DB\bin\Release\SPJP.DB.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.DB\bin\Release\SPJP.DB.pdb
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.DB\obj\Release\SPJP.DB.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.DB\obj\Release\SPJP.DB.pdb
