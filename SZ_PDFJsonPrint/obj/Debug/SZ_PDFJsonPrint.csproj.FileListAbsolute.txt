@@ -40,7 +40,6 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Co
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Newtonsoft.Json.dll
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Microsoft.Office.Interop.Excel.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Buiness.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Common.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.DB.pdb

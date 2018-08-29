@@ -865,7 +865,7 @@ Encoding encoding, string mimeType, bool willSeek)
             #endregion
             #region Excel 初始化
 
-            Microsoft.Office.Interop.Excel.ApplicationClass ExcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
             System.Reflection.Missing missingValue = System.Reflection.Missing.Value;
             Microsoft.Office.Interop.Excel._Workbook ExcelBook =
             ExcelApp.Workbooks.Open(fullPath, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue);
@@ -1055,7 +1055,7 @@ Encoding encoding, string mimeType, bool willSeek)
             #endregion
             #region Excel 初始化
 
-            Microsoft.Office.Interop.Excel.ApplicationClass ExcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
             System.Reflection.Missing missingValue = System.Reflection.Missing.Value;
             Microsoft.Office.Interop.Excel._Workbook ExcelBook =
             ExcelApp.Workbooks.Open(fullPath, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue);
@@ -1192,7 +1192,7 @@ Encoding encoding, string mimeType, bool willSeek)
             bool result = false;
             Microsoft.Office.Interop.Excel.XlFixedFormatType targetType = Microsoft.Office.Interop.Excel.XlFixedFormatType.xlTypePDF;
             object missing = Type.Missing;
-            Microsoft.Office.Interop.Excel.ApplicationClass ExcelApp = null;
+            Microsoft.Office.Interop.Excel.Application ExcelApp = null;
             Microsoft.Office.Interop.Excel._Workbook ExcelBook = null;
             try
             {
@@ -1202,7 +1202,7 @@ Encoding encoding, string mimeType, bool willSeek)
 
                 System.Globalization.CultureInfo CurrentCI = System.Threading.Thread.CurrentThread.CurrentCulture;
                 System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
-                ExcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+                ExcelApp = new Microsoft.Office.Interop.Excel.Application();
                 System.Reflection.Missing missingValue = System.Reflection.Missing.Value;
                 ExcelBook = ExcelApp.Workbooks.Open(sourcePath, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue);
 

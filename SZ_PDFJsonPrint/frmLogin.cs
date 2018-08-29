@@ -28,9 +28,7 @@ namespace SZ_PDFJsonPrint
             InitializeComponent();
             aboutbox = new frmAboutBox();
            
-        }
-
-    
+        }   
 
         private void btmain_Click(object sender, EventArgs e)
         {

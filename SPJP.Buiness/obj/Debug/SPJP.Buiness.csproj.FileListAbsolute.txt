@@ -10,7 +10,6 @@ D:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\obj\Debug\SPJP.Buiness.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SPJP.Buiness.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SPJP.Buiness.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\log4net.dll
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\Newtonsoft.Json.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SPJP.Common.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SPJP.DB.dll
