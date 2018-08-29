@@ -513,6 +513,9 @@ namespace SZ_PDFJsonPrint
 
         private void Print()
         {
+            if (tclass_datas == null)
+                return;
+
             clsAllnew BusinessHelp = new clsAllnew();
             this.toolStripLabel1.Text = "打印中 1/3";
             BusinessHelp.Run(tclass_datas);
