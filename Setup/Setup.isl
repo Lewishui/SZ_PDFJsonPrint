@@ -52,7 +52,7 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
-		<subject/>
+		<subject></subject>
 		<author>##ID_STRING2##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
@@ -346,6 +346,9 @@
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{913E12CA-3BAE-428A-A63D-B9A9AA1C94EA}</td><td>SYSTEM</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IrisSkin2.dll</td><td>{8C15526A-342F-4D7C-BC88-347EC1AA3BFC}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Microsoft.Office.Interop.Excel.dll</td><td>{0F3CC35E-2A28-4CD7-B94E-4DAAD8A8084C}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.interop.exc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.Common.dll</td><td>{F36039F1-2D06-4A90-8091-8AAC3D37C551}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.commo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>{6C190203-7AF8-4388-AC66-C187E5D3271F}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.proce</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td>{8DFB074E-5E41-4129-98D4-C741C3F2E4C8}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{28046AF6-CA64-4A6C-BB56-0009CE6A0A74}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Newtonsoft.Json.dll</td><td>{475B049F-3639-4522-B652-229BA86646EC}</td><td>INSTALLDIR</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SPJP.Buiness.dll</td><td>{855953D8-0C02-4A54-9FE2-5E162E0E6F20}</td><td>INSTALLDIR</td><td>2</td><td/><td>spjp.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1882,6 +1885,9 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>AlwaysInstall</td><td>IrisSkin2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.Office.Interop.Excel.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.ReportViewer.Common.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.ReportViewer.WinForms.dll</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent1</td></row>
 		<row><td>AlwaysInstall</td><td>Newtonsoft.Json.dll</td></row>
 		<row><td>AlwaysInstall</td><td>SPJP.Buiness.dll</td></row>
@@ -1911,6 +1917,9 @@
 		<row><td>irisskin2.dll</td><td>IrisSkin2.dll</td><td>IRISSK~1.DLL|IrisSkin2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\IrisSkin2.dll</td><td>1</td><td/></row>
 		<row><td>log4net.dll</td><td>log4net.dll</td><td>log4net.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\log4net.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.office.interop.exc</td><td>Microsoft.Office.Interop.Excel.dll</td><td>MICROS~1.DLL|Microsoft.Office.Interop.Excel.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Microsoft.Office.Interop.Excel.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.commo</td><td>Microsoft.ReportViewer.Common.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Microsoft.ReportViewer.Common.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.proce</td><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.winfo</td><td>Microsoft.ReportViewer.WinForms.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WinForms.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Microsoft.ReportViewer.WinForms.dll</td><td>1</td><td/></row>
 		<row><td>model.xlsx</td><td>ISX_DEFAULTCOMPONENT3</td><td>MODEL~1.XLS|Model.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\System\Model.xlsx</td><td>1</td><td/></row>
 		<row><td>newtonsoft.json.dll</td><td>Newtonsoft.Json.dll</td><td>NEWTON~1.DLL|Newtonsoft.Json.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Newtonsoft.Json.dll</td><td>1</td><td/></row>
 		<row><td>online.json</td><td>ISX_DEFAULTCOMPONENT1</td><td>ONLINE~1.JSO|Online.json</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\json\Online.json</td><td>1</td><td/></row>
@@ -2195,6 +2204,9 @@
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_58176EFD_0779_4D8F_83F8_B825F8D8CC13_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IrisSkin2.dll</td><td/><td/><td>_29AF4044_5E46_4409_929F_AFAC41991EF0_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Microsoft.Office.Interop.Excel.dll</td><td/><td/><td>_0A57F0FE_EFEA_4145_96C7_3E7A719B2BB0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.Common.dll</td><td/><td/><td>_E74EBE12_E665_4C82_8E52_BBA11C0B85F3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td/><td/><td>_01F04D9E_3C7C_43DB_AE04_C66096485802_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td/><td/><td>_5365943A_81A2_4E88_A4C9_8B373834FB38_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_811D597A_6F70_4ED5_A778_D771B7448138_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_5A7EE076_E9F5_490A_8D70_A26DBAFEF6E7_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SPJP.Buiness.dll</td><td/><td/><td>_9629ADA6_0CC6_4530_AA70_250B09267018_FILTER</td><td/><td/><td/><td/></row>
