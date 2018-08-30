@@ -35,7 +35,7 @@ namespace SZ_PDFJsonPrint
         public ReportForm reportForm;
 
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        
+
         string strFileName;
 
 
@@ -49,7 +49,7 @@ namespace SZ_PDFJsonPrint
         //客户查找
         List<Online_Data> Online_datas;
         List<MaGait> Online_MaGait;
-     List<Online_Root> Online_Root_datas;
+        List<Online_Root> Online_Root_datas;
         //PDF
         List<PDF_Root> PDF_Rootdb;
         List<Types> PDF_Types;
@@ -59,7 +59,7 @@ namespace SZ_PDFJsonPrint
         public frmMain()
         {
             InitializeComponent();
-             FilterOrderResults = new List<clsOrderDatabaseinfo>();
+            FilterOrderResults = new List<clsOrderDatabaseinfo>();
 
             //clsOrderDatabaseinfo item = new clsOrderDatabaseinfo();
             //item.patientId = "2323";
@@ -262,7 +262,7 @@ namespace SZ_PDFJsonPrint
 
             //    Print();
             //}
-           
+
         }
         private void PrintReportForEDI()
         {
@@ -300,12 +300,12 @@ namespace SZ_PDFJsonPrint
                     //this.dataGridView4.AutoGenerateColumns = false;
                     this.dataGridView4.DataSource = PDF_ChildType;
 
-                    this.toolStripLabel1.Text = "Count : 0"; 
+                    this.toolStripLabel1.Text = "Count : 0";
 
                     #endregion
 
-                 
-                    #region Excel 
+
+                    #region Excel
                     this.dataGridView1.DataSource = null;
                     this.dataGridView1.AutoGenerateColumns = false;
                     this.dataGridView1.DataSource = Root_datas;
@@ -428,10 +428,20 @@ namespace SZ_PDFJsonPrint
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            int s = this.tabControl1.SelectedIndex;
+            if (s == 1)
+            {
+                downcsv(dataGridView5);
+
+            }
+
+            return;
+
+
             var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.DefaultExt = ".xlsx";
-            saveFileDialog.Filter = "Excel Files(*.xls,*.xlsx,*.xlsm,*.xlsb)|*.xls;*.xlsx;*.xlsm;*.xlsb";
-              strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            saveFileDialog.DefaultExt = ".csv";
+            saveFileDialog.Filter = "Excel Files(*.xls,*.xlsx,*.xlsm,*.xlsb,*.csv)|*.xls;*.xlsx;*.xlsm;*.xlsb;*.csv";
+            strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
             saveFileDialog.FileName = strFileName;
             if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
             {
@@ -456,7 +466,7 @@ namespace SZ_PDFJsonPrint
                 {
                     string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Results"), "");
                     System.Diagnostics.Process.Start("explorer.exe", strFileName);
-                }          
+                }
             }
             catch (Exception ex)
             {
@@ -467,27 +477,94 @@ namespace SZ_PDFJsonPrint
         }
         private void downreport(object sender, DoWorkEventArgs e)
         {
+
+
             DateTime oldDate = DateTime.Now;
 
             //初始化信息
             clsAllnew BusinessHelp = new clsAllnew();
 
-            BusinessHelp.InitializeDataSource(TBB,tclass_datas,Root_datas, Online_datas,Online_MaGait, Online_Root_datas, PDF_Rootdb,PDF_Types,  PDF_ChildType);
-            
+            BusinessHelp.InitializeDataSource(TBB, tclass_datas, Root_datas, Online_datas, Online_MaGait, Online_Root_datas, PDF_Rootdb, PDF_Types, PDF_ChildType);
+
             BusinessHelp.pbStatus = pbStatus;
             BusinessHelp.tsStatusLabel1 = toolStripLabel1;
             BusinessHelp.DownLoadExcel(ref this.bgWorker, strFileName);
 
+            BusinessHelp.XLSSavesaCSV(strFileName);
             //暂停
             //BusinessHelp.DownLoadPDF(ref this.bgWorker, strFileName);
- 
+
             DateTime FinishTime = DateTime.Now;
             TimeSpan s = DateTime.Now - oldDate;
             string timei = s.Minutes.ToString() + ":" + s.Seconds.ToString();
             string Showtime = clsShowMessage.MSG_029 + timei.ToString();
             bgWorker.ReportProgress(clsConstant.Thread_Progress_OK, clsShowMessage.MSG_015 + "\r\n" + Showtime);
 
-     
+
+        }
+        private void downcsv(DataGridView dataGridView)
+        {
+
+            if (dataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("Sorry , No Data Output !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".csv";
+            saveFileDialog.Filter = "csv|*.csv";
+            string strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            saveFileDialog.FileName = strFileName;
+            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                strFileName = saveFileDialog.FileName.ToString();
+            }
+            else
+            {
+                return;
+            }
+            FileStream fa = new FileStream(strFileName, FileMode.Create);
+            StreamWriter sw = new StreamWriter(fa, Encoding.Unicode);
+            string delimiter = "\t";
+            string strHeader = "";
+            for (int i = 0; i < dataGridView.Columns.Count; i++)
+            {
+                strHeader += dataGridView.Columns[i].HeaderText + delimiter;
+            }
+            sw.WriteLine(strHeader);
+
+            //output rows data
+            for (int j = 0; j < dataGridView.Rows.Count; j++)
+            {
+                string strRowValue = "";
+
+                for (int k = 0; k < dataGridView.Columns.Count; k++)
+                {
+                    if (dataGridView.Rows[j].Cells[k].Value != null)
+                    {
+
+
+                        strRowValue +=   dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
+                        //if (dataGridView.Rows[j].Cells[k].Value != null)
+                        //    strRowValue +=   ((char)(9)).ToString() +dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ") + delimiter;
+                        //else
+                        //    strRowValue +=  ((char)(9)).ToString()+  dataGridView.Rows[j].Cells[k].Value + delimiter;
+
+
+                    }
+                    else
+                    {
+                        strRowValue += dataGridView.Rows[j].Cells[k].Value + delimiter;
+                    }
+                }
+
+                sw.WriteLine(strRowValue);
+            }
+            sw.Close();
+            fa.Close();
+            MessageBox.Show("下载完成 ！", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -542,7 +619,7 @@ namespace SZ_PDFJsonPrint
             reportViewer1 = new ReportViewer();
 
             reportForm.InitializeDataSource(tclass_datas);
-            reportViewer1=reportForm.reportViewer1;
+            reportViewer1 = reportForm.reportViewer1;
             //reportForm.ShowDialog();
 
 
@@ -574,7 +651,7 @@ namespace SZ_PDFJsonPrint
                 return;
             }
             pdfExport(strFileName);
-            
+
         }
     }
 }

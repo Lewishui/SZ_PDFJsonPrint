@@ -987,10 +987,10 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>0.2552in</Top>
-            <Left>3.02532in</Left>
+            <Top>0.79687in</Top>
+            <Left>4.86593in</Left>
             <Height>0.21653in</Height>
-            <Width>1.69792in</Width>
+            <Width>1.20834in</Width>
             <ZIndex>23</ZIndex>
             <Style>
               <Border>
@@ -1048,7 +1048,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>0.79687in</Top>
-            <Left>4.75917in</Left>
+            <Left>3.75917in</Left>
             <Height>0.21653in</Height>
             <Width>0.99531in</Width>
             <ZIndex>25</ZIndex>

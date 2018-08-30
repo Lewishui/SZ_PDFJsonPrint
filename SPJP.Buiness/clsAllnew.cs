@@ -17,6 +17,8 @@ using System.Net;
 using System.Web.Script.Serialization;
 using System.Data;
 using SPJP.Common;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Diagnostics;
 namespace SPJP.Buiness
 {
     public class clsAllnew
@@ -880,43 +882,44 @@ Encoding encoding, string mimeType, bool willSeek)
             #endregion
 
                 #region 填充数据
+                int RowIndex = 2;
                 int doing = 0;
                 if (tclass_datas != null)
                     foreach (Datas item in tclass_datas)
                     {
 
-                        int RowIndex = 2;
+                 
                         doing++;
 
                         bgWorker1.ReportProgress(0, "导出进度  :  " + RowIndex.ToString() + "/" + tclass_datas.Count.ToString());
 
                         RowIndex++;
                         #region MyRegion
-                        //ExcelApp.Visible = true;
-                        //ExcelApp.ScreenUpdating = true;
+                        ExcelApp.Visible = true;
+                        ExcelApp.ScreenUpdating = true;
                         ExcelSheet.Cells[RowIndex, 1] = RowIndex - 2;
                         ExcelSheet.Cells[RowIndex, 2] = item.patientId;
                         ExcelSheet.Cells[RowIndex, 3] = item.patientName;
                         ExcelSheet.Cells[RowIndex, 4] = item.sex;
                         ExcelSheet.Cells[RowIndex, 5] = item.birthday;
-                        ExcelSheet.Cells[RowIndex, 6] = item.diseaseType;
+                        ExcelSheet.Cells[RowIndex, 6] = "'" + item.diseaseType;
                         ExcelSheet.Cells[RowIndex, 7] = item.courseOfDisease;
-                        ExcelSheet.Cells[RowIndex, 8] = item.serialNumber;
-                        ExcelSheet.Cells[RowIndex, 9] = item.inspectId;
-                        ExcelSheet.Cells[RowIndex, 10] = item.checkType;
-                        ExcelSheet.Cells[RowIndex, 11] = item.dualTask;
+                        ExcelSheet.Cells[RowIndex, 8] = "'"+item.serialNumber;
+                        ExcelSheet.Cells[RowIndex, 9] = "'" + item.inspectId;
+                        ExcelSheet.Cells[RowIndex, 10] = "'" + item.checkType;
+                        ExcelSheet.Cells[RowIndex, 11] = "'" + item.dualTask;
                         ExcelSheet.Cells[RowIndex, 12] = item.checkRemark;
                         ExcelSheet.Cells[RowIndex, 13] = item.checkStartTime;
                         ExcelSheet.Cells[RowIndex, 14] = item.checkEndTime;
-                        ExcelSheet.Cells[RowIndex, 15] = item.checkHospitalId;
+                        ExcelSheet.Cells[RowIndex, 15] = "'" + item.checkHospitalId;
                         ExcelSheet.Cells[RowIndex, 16] = item.checkHospitalName;
                         ExcelSheet.Cells[RowIndex, 17] = item.checkDoctorId;
                         ExcelSheet.Cells[RowIndex, 18] = item.checkDoctorName;
                         ExcelSheet.Cells[RowIndex, 19] = item.auditDoctorName;
                         ExcelSheet.Cells[RowIndex, 20] = item.checkConclusion;
-                        ExcelSheet.Cells[RowIndex, 21] = item.sistDuration;
-                        ExcelSheet.Cells[RowIndex, 22] = item.peakSiStAngularVelocity;
-                        ExcelSheet.Cells[RowIndex, 23] = item.sistTrunkRoM;
+                        ExcelSheet.Cells[RowIndex, 21] = "'" + item.sistDuration;
+                        ExcelSheet.Cells[RowIndex, 22] = "'" + item.peakSiStAngularVelocity;
+                        ExcelSheet.Cells[RowIndex, 23] = "'" + item.sistTrunkRoM;
                         ExcelSheet.Cells[RowIndex, 24] = item.stepLength_R;
                         ExcelSheet.Cells[RowIndex, 25] = item.stepLength_L;
                         ExcelSheet.Cells[RowIndex, 26] = item.stepLength_avg;
@@ -996,6 +999,48 @@ Encoding encoding, string mimeType, bool willSeek)
 
                 #endregion
         }
+        public   string XLSSavesaCSV(string FilePath)
+        {
+            System.Reflection.Missing missingValue = System.Reflection.Missing.Value;
+            QuertExcel();
+            string _NewFilePath = "";
+
+            Excel.Application excelApplication;
+            Excel.Workbooks excelWorkBooks = null;
+            Excel.Workbook excelWorkBook = null;
+            Excel.Worksheet excelWorkSheet = null;
+
+            try
+            {
+                excelApplication = new Excel.Application();
+                excelWorkBooks = excelApplication.Workbooks;
+                excelWorkBook = ((Excel.Workbook)excelWorkBooks.Open(FilePath, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue));
+                excelWorkSheet = (Excel.Worksheet)excelWorkBook.Worksheets[1];
+                excelApplication.Visible = false;
+                excelApplication.DisplayAlerts = false;
+                _NewFilePath = FilePath.Replace(".xlsx", ".csv");
+
+                // excelWorkSheet._SaveAs(FilePath, Excel.XlFileFormat.xlCSVWindows, missingValue, missingValue, missingValue,missingValue,missingValue, missingValue, missingValue);
+                excelWorkBook.SaveAs(_NewFilePath, Excel.XlFileFormat.xlCSV, missingValue, missingValue, missingValue, missingValue, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlNoChange, missingValue, missingValue, missingValue, missingValue, missingValue);
+                QuertExcel();
+                //ExcelFormatHelper.DeleteFile(FilePath);
+            }
+            catch (Exception exc)
+            {
+                throw new Exception(exc.Message);
+            }
+            return _NewFilePath;
+        }
+        private static void QuertExcel()
+        {
+            Process[] excels = Process.GetProcessesByName("EXCEL");
+            foreach (var item in excels)
+            {
+                item.Kill();
+            }
+        }
+
+
 
         public void DownLoadPDF(ref BackgroundWorker bgWorker, string pathname)
         {
