@@ -38,12 +38,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -66,66 +60,6 @@
             this.msg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reqId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.indexNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diseaseType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseOfDisease = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inspectId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dualTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkRemark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkStartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkHospitalId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkHospitalName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkDoctorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkDoctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.auditDoctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkConclusion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sistDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peakSiStAngularVelocity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sistTrunkRoM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stepLength_R = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stepLength_L = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stepLength_avg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strideVelocity_R = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strideVelocity_L = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strideVelocity_avg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strideLength_R = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strideLength_L = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strideLength_avg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gaitCycle_R = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gaitCycle_L = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gaitCycle_avg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cadence_R = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cadence_L = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cadence_avg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.support_R = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.support_L = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.support_avg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.swing_R = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.swing_L = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.swing_avg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stance_R = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stance_L = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stance_avg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trunkSagittalPeakVelocity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trunkHorizontalPeakVelocity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strideVelocityAsymmetry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strideLengthAsymmetry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.swingAsymmetry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stanceAsymmetry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shankAsymmetry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peakShankVelocityAsymmetry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shank_SSI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.meanPhaseDifference = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phaseCoordinationIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.balanceTrunkSagittalPeakVelocity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.balanceTrunkHorizontalPeakVelocity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,13 +80,14 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.bindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -172,6 +107,13 @@
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource7)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -337,7 +279,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.74584F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.25416F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 479F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 481F));
             this.tableLayoutPanel4.Controls.Add(this.dataGridView1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.dataGridView5, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.dataGridView2, 1, 0);
@@ -365,7 +307,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(274, 498);
+            this.dataGridView1.Size = new System.Drawing.Size(272, 498);
             this.dataGridView1.TabIndex = 15;
             // 
             // code
@@ -393,434 +335,14 @@
             this.dataGridView5.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.indexNumber,
-            this.patientId,
-            this.patientName,
-            this.sex,
-            this.birthday,
-            this.diseaseType,
-            this.courseOfDisease,
-            this.serialNumber,
-            this.inspectId,
-            this.checkType,
-            this.dualTask,
-            this.checkRemark,
-            this.checkStartTime,
-            this.checkEndTime,
-            this.checkHospitalId,
-            this.checkHospitalName,
-            this.checkDoctorId,
-            this.checkDoctorName,
-            this.auditDoctorName,
-            this.checkConclusion,
-            this.sistDuration,
-            this.peakSiStAngularVelocity,
-            this.sistTrunkRoM,
-            this.stepLength_R,
-            this.stepLength_L,
-            this.stepLength_avg,
-            this.strideVelocity_R,
-            this.strideVelocity_L,
-            this.strideVelocity_avg,
-            this.strideLength_R,
-            this.strideLength_L,
-            this.strideLength_avg,
-            this.gaitCycle_R,
-            this.gaitCycle_L,
-            this.gaitCycle_avg,
-            this.cadence_R,
-            this.cadence_L,
-            this.cadence_avg,
-            this.support_R,
-            this.support_L,
-            this.support_avg,
-            this.swing_R,
-            this.swing_L,
-            this.swing_avg,
-            this.stance_R,
-            this.stance_L,
-            this.stance_avg,
-            this.trunkSagittalPeakVelocity,
-            this.trunkHorizontalPeakVelocity,
-            this.strideVelocityAsymmetry,
-            this.strideLengthAsymmetry,
-            this.swingAsymmetry,
-            this.stanceAsymmetry,
-            this.shankAsymmetry,
-            this.peakShankVelocityAsymmetry,
-            this.shank_SSI,
-            this.meanPhaseDifference,
-            this.phaseCoordinationIndex,
-            this.balanceTrunkSagittalPeakVelocity,
-            this.balanceTrunkHorizontalPeakVelocity});
             this.dataGridView5.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView5.Location = new System.Drawing.Point(422, 3);
+            this.dataGridView5.Location = new System.Drawing.Point(420, 3);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersVisible = false;
-            this.dataGridView5.Size = new System.Drawing.Size(474, 498);
+            this.dataGridView5.Size = new System.Drawing.Size(476, 498);
             this.dataGridView5.TabIndex = 13;
-            // 
-            // indexNumber
-            // 
-            this.indexNumber.DataPropertyName = "indexNumber";
-            this.indexNumber.HeaderText = "indexNumber";
-            this.indexNumber.Name = "indexNumber";
-            // 
-            // patientId
-            // 
-            this.patientId.DataPropertyName = "patientId";
-            this.patientId.HeaderText = "patientId";
-            this.patientId.Name = "patientId";
-            // 
-            // patientName
-            // 
-            this.patientName.DataPropertyName = "patientName";
-            this.patientName.HeaderText = "patientName";
-            this.patientName.Name = "patientName";
-            // 
-            // sex
-            // 
-            this.sex.DataPropertyName = "sex";
-            this.sex.HeaderText = "sex";
-            this.sex.Name = "sex";
-            // 
-            // birthday
-            // 
-            this.birthday.DataPropertyName = "birthday";
-            this.birthday.HeaderText = "birthday";
-            this.birthday.Name = "birthday";
-            // 
-            // diseaseType
-            // 
-            this.diseaseType.DataPropertyName = "diseaseType";
-            this.diseaseType.HeaderText = "diseaseType";
-            this.diseaseType.Name = "diseaseType";
-            // 
-            // courseOfDisease
-            // 
-            this.courseOfDisease.DataPropertyName = "courseOfDisease";
-            this.courseOfDisease.HeaderText = "courseOfDisease";
-            this.courseOfDisease.Name = "courseOfDisease";
-            // 
-            // serialNumber
-            // 
-            this.serialNumber.DataPropertyName = "serialNumber";
-            this.serialNumber.HeaderText = "serialNumber";
-            this.serialNumber.Name = "serialNumber";
-            // 
-            // inspectId
-            // 
-            this.inspectId.DataPropertyName = "inspectId";
-            this.inspectId.HeaderText = "inspectId";
-            this.inspectId.Name = "inspectId";
-            // 
-            // checkType
-            // 
-            this.checkType.DataPropertyName = "checkType";
-            this.checkType.HeaderText = "checkType";
-            this.checkType.Name = "checkType";
-            // 
-            // dualTask
-            // 
-            this.dualTask.DataPropertyName = "dualTask";
-            this.dualTask.HeaderText = "dualTask";
-            this.dualTask.Name = "dualTask";
-            // 
-            // checkRemark
-            // 
-            this.checkRemark.DataPropertyName = "checkRemark";
-            this.checkRemark.HeaderText = "checkRemark";
-            this.checkRemark.Name = "checkRemark";
-            // 
-            // checkStartTime
-            // 
-            this.checkStartTime.DataPropertyName = "checkStartTime";
-            this.checkStartTime.HeaderText = "checkStartTime";
-            this.checkStartTime.Name = "checkStartTime";
-            // 
-            // checkEndTime
-            // 
-            this.checkEndTime.DataPropertyName = "checkEndTime";
-            this.checkEndTime.HeaderText = "checkEndTime";
-            this.checkEndTime.Name = "checkEndTime";
-            // 
-            // checkHospitalId
-            // 
-            this.checkHospitalId.DataPropertyName = "checkHospitalId";
-            this.checkHospitalId.HeaderText = "checkHospitalId";
-            this.checkHospitalId.Name = "checkHospitalId";
-            // 
-            // checkHospitalName
-            // 
-            this.checkHospitalName.DataPropertyName = "checkHospitalName";
-            this.checkHospitalName.HeaderText = "checkHospitalName";
-            this.checkHospitalName.Name = "checkHospitalName";
-            // 
-            // checkDoctorId
-            // 
-            this.checkDoctorId.DataPropertyName = "checkDoctorId";
-            this.checkDoctorId.HeaderText = "checkDoctorId";
-            this.checkDoctorId.Name = "checkDoctorId";
-            // 
-            // checkDoctorName
-            // 
-            this.checkDoctorName.DataPropertyName = "checkDoctorName";
-            this.checkDoctorName.HeaderText = "checkDoctorName";
-            this.checkDoctorName.Name = "checkDoctorName";
-            // 
-            // auditDoctorName
-            // 
-            this.auditDoctorName.DataPropertyName = "auditDoctorName";
-            this.auditDoctorName.HeaderText = "auditDoctorName";
-            this.auditDoctorName.Name = "auditDoctorName";
-            // 
-            // checkConclusion
-            // 
-            this.checkConclusion.DataPropertyName = "checkConclusion";
-            this.checkConclusion.HeaderText = "checkConclusion";
-            this.checkConclusion.Name = "checkConclusion";
-            // 
-            // sistDuration
-            // 
-            this.sistDuration.DataPropertyName = "sistDuration";
-            this.sistDuration.HeaderText = "sistDuration";
-            this.sistDuration.Name = "sistDuration";
-            // 
-            // peakSiStAngularVelocity
-            // 
-            this.peakSiStAngularVelocity.DataPropertyName = "peakSiStAngularVelocity";
-            this.peakSiStAngularVelocity.HeaderText = "peakSiStAngularVelocity";
-            this.peakSiStAngularVelocity.Name = "peakSiStAngularVelocity";
-            // 
-            // sistTrunkRoM
-            // 
-            this.sistTrunkRoM.DataPropertyName = "sistTrunkRoM";
-            this.sistTrunkRoM.HeaderText = "sistTrunkRoM";
-            this.sistTrunkRoM.Name = "sistTrunkRoM";
-            // 
-            // stepLength_R
-            // 
-            this.stepLength_R.DataPropertyName = "stepLength_R";
-            this.stepLength_R.HeaderText = "stepLength_R";
-            this.stepLength_R.Name = "stepLength_R";
-            // 
-            // stepLength_L
-            // 
-            this.stepLength_L.DataPropertyName = "stepLength_L";
-            this.stepLength_L.HeaderText = "stepLength_L";
-            this.stepLength_L.Name = "stepLength_L";
-            // 
-            // stepLength_avg
-            // 
-            this.stepLength_avg.DataPropertyName = "stepLength_avg";
-            this.stepLength_avg.HeaderText = "stepLength_avg";
-            this.stepLength_avg.Name = "stepLength_avg";
-            // 
-            // strideVelocity_R
-            // 
-            this.strideVelocity_R.DataPropertyName = "strideVelocity_R";
-            this.strideVelocity_R.HeaderText = "strideVelocity_R";
-            this.strideVelocity_R.Name = "strideVelocity_R";
-            // 
-            // strideVelocity_L
-            // 
-            this.strideVelocity_L.DataPropertyName = "strideVelocity_L";
-            this.strideVelocity_L.HeaderText = "strideVelocity_L";
-            this.strideVelocity_L.Name = "strideVelocity_L";
-            // 
-            // strideVelocity_avg
-            // 
-            this.strideVelocity_avg.DataPropertyName = "strideVelocity_avg";
-            this.strideVelocity_avg.HeaderText = "strideVelocity_avg";
-            this.strideVelocity_avg.Name = "strideVelocity_avg";
-            // 
-            // strideLength_R
-            // 
-            this.strideLength_R.DataPropertyName = "strideLength_R";
-            this.strideLength_R.HeaderText = "strideLength_R";
-            this.strideLength_R.Name = "strideLength_R";
-            // 
-            // strideLength_L
-            // 
-            this.strideLength_L.DataPropertyName = "strideLength_L";
-            this.strideLength_L.HeaderText = "strideLength_L";
-            this.strideLength_L.Name = "strideLength_L";
-            // 
-            // strideLength_avg
-            // 
-            this.strideLength_avg.DataPropertyName = "strideLength_avg";
-            this.strideLength_avg.HeaderText = "strideLength_avg";
-            this.strideLength_avg.Name = "strideLength_avg";
-            // 
-            // gaitCycle_R
-            // 
-            this.gaitCycle_R.DataPropertyName = "gaitCycle_R";
-            this.gaitCycle_R.HeaderText = "gaitCycle_R";
-            this.gaitCycle_R.Name = "gaitCycle_R";
-            // 
-            // gaitCycle_L
-            // 
-            this.gaitCycle_L.DataPropertyName = "gaitCycle_L";
-            this.gaitCycle_L.HeaderText = "gaitCycle_L";
-            this.gaitCycle_L.Name = "gaitCycle_L";
-            // 
-            // gaitCycle_avg
-            // 
-            this.gaitCycle_avg.DataPropertyName = "gaitCycle_avg";
-            this.gaitCycle_avg.HeaderText = "gaitCycle_avg";
-            this.gaitCycle_avg.Name = "gaitCycle_avg";
-            // 
-            // cadence_R
-            // 
-            this.cadence_R.DataPropertyName = "cadence_R";
-            this.cadence_R.HeaderText = "cadence_R";
-            this.cadence_R.Name = "cadence_R";
-            // 
-            // cadence_L
-            // 
-            this.cadence_L.DataPropertyName = "cadence_L";
-            this.cadence_L.HeaderText = "cadence_L";
-            this.cadence_L.Name = "cadence_L";
-            // 
-            // cadence_avg
-            // 
-            this.cadence_avg.DataPropertyName = "cadence_avg";
-            this.cadence_avg.HeaderText = "cadence_avg";
-            this.cadence_avg.Name = "cadence_avg";
-            // 
-            // support_R
-            // 
-            this.support_R.DataPropertyName = "support_R";
-            this.support_R.HeaderText = "support_R";
-            this.support_R.Name = "support_R";
-            // 
-            // support_L
-            // 
-            this.support_L.DataPropertyName = "support_L";
-            this.support_L.HeaderText = "support_L";
-            this.support_L.Name = "support_L";
-            // 
-            // support_avg
-            // 
-            this.support_avg.DataPropertyName = "support_avg";
-            this.support_avg.HeaderText = "support_avg";
-            this.support_avg.Name = "support_avg";
-            // 
-            // swing_R
-            // 
-            this.swing_R.DataPropertyName = "swing_R";
-            this.swing_R.HeaderText = "swing_R";
-            this.swing_R.Name = "swing_R";
-            // 
-            // swing_L
-            // 
-            this.swing_L.DataPropertyName = "swing_L";
-            this.swing_L.HeaderText = "swing_L";
-            this.swing_L.Name = "swing_L";
-            // 
-            // swing_avg
-            // 
-            this.swing_avg.DataPropertyName = "swing_avg";
-            this.swing_avg.HeaderText = "swing_avg";
-            this.swing_avg.Name = "swing_avg";
-            // 
-            // stance_R
-            // 
-            this.stance_R.DataPropertyName = "stance_R";
-            this.stance_R.HeaderText = "stance_R";
-            this.stance_R.Name = "stance_R";
-            // 
-            // stance_L
-            // 
-            this.stance_L.DataPropertyName = "stance_L";
-            this.stance_L.HeaderText = "stance_L";
-            this.stance_L.Name = "stance_L";
-            // 
-            // stance_avg
-            // 
-            this.stance_avg.DataPropertyName = "stance_avg";
-            this.stance_avg.HeaderText = "stance_avg";
-            this.stance_avg.Name = "stance_avg";
-            // 
-            // trunkSagittalPeakVelocity
-            // 
-            this.trunkSagittalPeakVelocity.DataPropertyName = "trunkSagittalPeakVelocity";
-            this.trunkSagittalPeakVelocity.HeaderText = "trunkSagittalPeakVelocity";
-            this.trunkSagittalPeakVelocity.Name = "trunkSagittalPeakVelocity";
-            // 
-            // trunkHorizontalPeakVelocity
-            // 
-            this.trunkHorizontalPeakVelocity.DataPropertyName = "trunkHorizontalPeakVelocity";
-            this.trunkHorizontalPeakVelocity.HeaderText = "trunkHorizontalPeakVelocity";
-            this.trunkHorizontalPeakVelocity.Name = "trunkHorizontalPeakVelocity";
-            // 
-            // strideVelocityAsymmetry
-            // 
-            this.strideVelocityAsymmetry.DataPropertyName = "strideVelocityAsymmetry";
-            this.strideVelocityAsymmetry.HeaderText = "strideVelocityAsymmetry";
-            this.strideVelocityAsymmetry.Name = "strideVelocityAsymmetry";
-            // 
-            // strideLengthAsymmetry
-            // 
-            this.strideLengthAsymmetry.DataPropertyName = "strideLengthAsymmetry";
-            this.strideLengthAsymmetry.HeaderText = "strideLengthAsymmetry";
-            this.strideLengthAsymmetry.Name = "strideLengthAsymmetry";
-            // 
-            // swingAsymmetry
-            // 
-            this.swingAsymmetry.DataPropertyName = "swingAsymmetry";
-            this.swingAsymmetry.HeaderText = "swingAsymmetry";
-            this.swingAsymmetry.Name = "swingAsymmetry";
-            // 
-            // stanceAsymmetry
-            // 
-            this.stanceAsymmetry.DataPropertyName = "stanceAsymmetry";
-            this.stanceAsymmetry.HeaderText = "stanceAsymmetry";
-            this.stanceAsymmetry.Name = "stanceAsymmetry";
-            // 
-            // shankAsymmetry
-            // 
-            this.shankAsymmetry.DataPropertyName = "shankAsymmetry";
-            this.shankAsymmetry.HeaderText = "shankAsymmetry";
-            this.shankAsymmetry.Name = "shankAsymmetry";
-            // 
-            // peakShankVelocityAsymmetry
-            // 
-            this.peakShankVelocityAsymmetry.DataPropertyName = "peakShankVelocityAsymmetry";
-            this.peakShankVelocityAsymmetry.HeaderText = "peakShankVelocityAsymmetry";
-            this.peakShankVelocityAsymmetry.Name = "peakShankVelocityAsymmetry";
-            // 
-            // shank_SSI
-            // 
-            this.shank_SSI.DataPropertyName = "shank_SSI";
-            this.shank_SSI.HeaderText = "shank_SSI";
-            this.shank_SSI.Name = "shank_SSI";
-            // 
-            // meanPhaseDifference
-            // 
-            this.meanPhaseDifference.DataPropertyName = "meanPhaseDifference";
-            this.meanPhaseDifference.HeaderText = "meanPhaseDifference";
-            this.meanPhaseDifference.Name = "meanPhaseDifference";
-            // 
-            // phaseCoordinationIndex
-            // 
-            this.phaseCoordinationIndex.DataPropertyName = "phaseCoordinationIndex";
-            this.phaseCoordinationIndex.HeaderText = "phaseCoordinationIndex";
-            this.phaseCoordinationIndex.Name = "phaseCoordinationIndex";
-            // 
-            // balanceTrunkSagittalPeakVelocity
-            // 
-            this.balanceTrunkSagittalPeakVelocity.DataPropertyName = "balanceTrunkSagittalPeakVelocity";
-            this.balanceTrunkSagittalPeakVelocity.HeaderText = "balanceTrunkSagittalPeakVelocity";
-            this.balanceTrunkSagittalPeakVelocity.Name = "balanceTrunkSagittalPeakVelocity";
-            // 
-            // balanceTrunkHorizontalPeakVelocity
-            // 
-            this.balanceTrunkHorizontalPeakVelocity.DataPropertyName = "balanceTrunkHorizontalPeakVelocity";
-            this.balanceTrunkHorizontalPeakVelocity.HeaderText = "balanceTrunkHorizontalPeakVelocity";
-            this.balanceTrunkHorizontalPeakVelocity.Name = "balanceTrunkHorizontalPeakVelocity";
+            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
             // 
             // dataGridView2
             // 
@@ -834,7 +356,7 @@
             this.dataGridViewTextBoxColumn2});
             this.dataGridView2.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(283, 3);
+            this.dataGridView2.Location = new System.Drawing.Point(281, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.Size = new System.Drawing.Size(133, 498);
@@ -868,7 +390,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.16201F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.83799F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 363F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 365F));
             this.tableLayoutPanel3.Controls.Add(this.dataGridView8, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.dataGridView7, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.dataGridView6, 2, 0);
@@ -896,7 +418,7 @@
             this.dataGridView8.Location = new System.Drawing.Point(3, 3);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.RowHeadersVisible = false;
-            this.dataGridView8.Size = new System.Drawing.Size(257, 498);
+            this.dataGridView8.Size = new System.Drawing.Size(256, 498);
             this.dataGridView8.TabIndex = 22;
             // 
             // dataGridViewTextBoxColumn9
@@ -926,10 +448,10 @@
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView7.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView7.Location = new System.Drawing.Point(266, 3);
+            this.dataGridView7.Location = new System.Drawing.Point(265, 3);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.RowHeadersVisible = false;
-            this.dataGridView7.Size = new System.Drawing.Size(266, 498);
+            this.dataGridView7.Size = new System.Drawing.Size(265, 498);
             this.dataGridView7.TabIndex = 17;
             // 
             // dataGridView6
@@ -941,10 +463,10 @@
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView6.Location = new System.Drawing.Point(538, 3);
+            this.dataGridView6.Location = new System.Drawing.Point(536, 3);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.RowHeadersVisible = false;
-            this.dataGridView6.Size = new System.Drawing.Size(358, 498);
+            this.dataGridView6.Size = new System.Drawing.Size(360, 498);
             this.dataGridView6.TabIndex = 21;
             // 
             // groupBox1
@@ -1039,7 +561,7 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 918F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 925F));
             this.tableLayoutPanel1.Controls.Add(this.toolStrip1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1060,12 +582,6 @@
             this.Name = "frmMain";
             this.Text = "Main";
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -1088,6 +604,13 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1130,66 +653,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn msg;
         private System.Windows.Forms.DataGridViewTextBoxColumn reqId;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn indexNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diseaseType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn courseOfDisease;
-        private System.Windows.Forms.DataGridViewTextBoxColumn serialNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inspectId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn checkType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dualTask;
-        private System.Windows.Forms.DataGridViewTextBoxColumn checkRemark;
-        private System.Windows.Forms.DataGridViewTextBoxColumn checkStartTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn checkEndTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn checkHospitalId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn checkHospitalName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn checkDoctorId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn checkDoctorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn auditDoctorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn checkConclusion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sistDuration;
-        private System.Windows.Forms.DataGridViewTextBoxColumn peakSiStAngularVelocity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sistTrunkRoM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stepLength_R;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stepLength_L;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stepLength_avg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn strideVelocity_R;
-        private System.Windows.Forms.DataGridViewTextBoxColumn strideVelocity_L;
-        private System.Windows.Forms.DataGridViewTextBoxColumn strideVelocity_avg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn strideLength_R;
-        private System.Windows.Forms.DataGridViewTextBoxColumn strideLength_L;
-        private System.Windows.Forms.DataGridViewTextBoxColumn strideLength_avg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gaitCycle_R;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gaitCycle_L;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gaitCycle_avg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cadence_R;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cadence_L;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cadence_avg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn support_R;
-        private System.Windows.Forms.DataGridViewTextBoxColumn support_L;
-        private System.Windows.Forms.DataGridViewTextBoxColumn support_avg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn swing_R;
-        private System.Windows.Forms.DataGridViewTextBoxColumn swing_L;
-        private System.Windows.Forms.DataGridViewTextBoxColumn swing_avg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stance_R;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stance_L;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stance_avg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trunkSagittalPeakVelocity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trunkHorizontalPeakVelocity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn strideVelocityAsymmetry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn strideLengthAsymmetry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn swingAsymmetry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stanceAsymmetry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shankAsymmetry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn peakShankVelocityAsymmetry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shank_SSI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn meanPhaseDifference;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phaseCoordinationIndex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn balanceTrunkSagittalPeakVelocity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn balanceTrunkHorizontalPeakVelocity;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1204,5 +667,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.BindingSource bindingSource7;
     }
 }

@@ -39,6 +39,7 @@ namespace SPJP.Buiness
         public List<PDF_Root> PDF_Rootdb;
         public List<Types> PDF_Types;
         public List<ChildType> PDF_ChildType;
+       public DataTable Excel_body;
 
         string savepdfexcel_path;
 
@@ -257,6 +258,7 @@ Encoding encoding, string mimeType, bool willSeek)
             PDF_ChildType = new List<ChildType>();
             Root_datas = new List<Root>();
             Online_Root_datas = new List<Online_Root>();
+            Excel_body = new DataTable();
 
             ReadJsonID();
 
@@ -571,7 +573,7 @@ Encoding encoding, string mimeType, bool willSeek)
         private void Tocovermethod_PDF(string json)
         {
             string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\pdf.json";
-            A_Path =  "C:\\json\\pdf.json";
+            A_Path = "C:\\json\\pdf.json";
             json = readtxtJsom(A_Path);
 
             //第一次解析
@@ -670,18 +672,23 @@ Encoding encoding, string mimeType, bool willSeek)
 
 
             //cols
+            int rowindex = 0;
+
             foreach (JToken jt in jArray)
             {
 
                 JObject jo = (JObject)jt;
 
                 JArray temp = (JArray)jo["cols"];
+                rowindex++;
+
 
                 foreach (JToken token in temp)
                 {
                     clsExcelinfo item = new clsExcelinfo();
                     item.text = token["text"].ToString();
                     item.size = token["size"].ToString();
+                    item.cols = rowindex.ToString();
                     TBB.Add(item);
                 }
             }
@@ -696,6 +703,10 @@ Encoding encoding, string mimeType, bool willSeek)
             tclass_datas[0].reqId = item1.reqId;
 
 
+
+
+            
+            Excel_body = Newtonsoft.Json.JsonConvert.DeserializeObject<DataTable>(jsondata_datas);
 
         }
 
@@ -888,7 +899,7 @@ Encoding encoding, string mimeType, bool willSeek)
                     foreach (Datas item in tclass_datas)
                     {
 
-                 
+
                         doing++;
 
                         bgWorker1.ReportProgress(0, "导出进度  :  " + RowIndex.ToString() + "/" + tclass_datas.Count.ToString());
@@ -904,7 +915,7 @@ Encoding encoding, string mimeType, bool willSeek)
                         ExcelSheet.Cells[RowIndex, 5] = item.birthday;
                         ExcelSheet.Cells[RowIndex, 6] = "'" + item.diseaseType;
                         ExcelSheet.Cells[RowIndex, 7] = item.courseOfDisease;
-                        ExcelSheet.Cells[RowIndex, 8] = "'"+item.serialNumber;
+                        ExcelSheet.Cells[RowIndex, 8] = "'" + item.serialNumber;
                         ExcelSheet.Cells[RowIndex, 9] = "'" + item.inspectId;
                         ExcelSheet.Cells[RowIndex, 10] = "'" + item.checkType;
                         ExcelSheet.Cells[RowIndex, 11] = "'" + item.dualTask;
@@ -999,7 +1010,7 @@ Encoding encoding, string mimeType, bool willSeek)
 
                 #endregion
         }
-        public   string XLSSavesaCSV(string FilePath)
+        public string XLSSavesaCSV(string FilePath)
         {
             System.Reflection.Missing missingValue = System.Reflection.Missing.Value;
             QuertExcel();

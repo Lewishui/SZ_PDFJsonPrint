@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsConstant.cs" />
+    <Compile Include="clsCSVHelper.cs" />
     <Compile Include="clsKeyMyExcelProcess.cs" />
     <Compile Include="clsShowMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

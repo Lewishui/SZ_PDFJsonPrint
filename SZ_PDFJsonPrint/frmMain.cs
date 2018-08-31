@@ -37,13 +37,13 @@ namespace SZ_PDFJsonPrint
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
 
         string strFileName;
-
+        DataTable Excel_body;
 
         //excel
         List<clsExcelinfo> TBB;
         List<Datas> tclass_datas;
         List<Root> Root_datas;
-
+        List<Datas> printclass_datas;
 
 
         //客户查找
@@ -55,6 +55,7 @@ namespace SZ_PDFJsonPrint
         List<Types> PDF_Types;
         List<ChildType> PDF_ChildType;
 
+        bool issaveok = false;
 
         public frmMain()
         {
@@ -266,8 +267,16 @@ namespace SZ_PDFJsonPrint
         }
         private void PrintReportForEDI()
         {
-            reportForm.InitializeDataSource(tclass_datas);
-            reportForm.ShowDialog();
+            for (int i = 0; i < tclass_datas.Count; i++)
+            {
+                reportForm = new ReportForm();
+
+
+                List<Datas> findsapinfo = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
+
+                reportForm.InitializeDataSource(findsapinfo);
+                reportForm.ShowDialog();
+            }
             //InitializeEdiData();
         }
 
@@ -306,19 +315,78 @@ namespace SZ_PDFJsonPrint
 
 
                     #region Excel
+                    #region 构造 datatable
+                    var qtyTable = new DataTable();
+                    //第一行
+                    // qtyTable.Rows.Add(qtyTable.NewRow());
+
+
+
+                    int cl = 0;
+                    //foreach (clsExcelinfo k in TBB)
+                    //{
+                    //    if (k.cols == "1")
+                    //    {
+                    //        qtyTable.Columns.Add(k.text, System.Type.GetType("System.String"));
+                    //        //qtyTable.Rows[0][cl] = k.text;
+                    //        cl++;
+                    //    }
+                    //}
+                    //第二行
+                    qtyTable.Rows.Add(qtyTable.NewRow());
+                    int cl2 = 0;
+                    foreach (clsExcelinfo k in TBB)
+                    {
+                        if (k.cols == "2")
+                        {
+                            if (cl2 < cl)
+                            {
+                                qtyTable.Rows[0][cl2] = k.text;
+
+                                cl2++;
+                            }
+                            else
+                            {
+                                qtyTable.Columns.Add(k.text, System.Type.GetType("System.String"));
+                                cl2++;
+                            }
+                        }
+                    }
+                    foreach (Datas k in tclass_datas)
+                    {
+                        qtyTable.Rows.Add(qtyTable.NewRow());
+                    }
+                    int rowi = 1;
+
+                    foreach (Datas k in tclass_datas)
+                    {
+                        //qtyTable.Rows[rowi][0] = k.Maichangdaima;
+                    }
+                    for (int row = 0; row < Excel_body.Rows.Count; row++)
+                        for (int cloumn = 0; cloumn < Excel_body.Columns.Count; cloumn++)
+                        //foreach (DataColumn dcn in Excel_body.Columns)
+                        {
+                            qtyTable.Rows[row][cloumn] = Excel_body.Rows[row][cloumn].ToString();
+                        }
+
+
+                    #endregion
+
                     this.dataGridView1.DataSource = null;
-                    this.dataGridView1.AutoGenerateColumns = false;
+                    //this.dataGridView1.AutoGenerateColumns = false;
                     this.dataGridView1.DataSource = Root_datas;
 
 
                     this.dataGridView2.DataSource = null;
-                    this.dataGridView2.AutoGenerateColumns = false;
+                    //this.dataGridView2.AutoGenerateColumns = false;
                     this.dataGridView2.DataSource = TBB;
 
 
-                    this.dataGridView5.DataSource = null;
-                    this.dataGridView5.AutoGenerateColumns = false;
-                    this.dataGridView5.DataSource = tclass_datas;
+                    //this.dataGridView5.DataSource = null;
+                    //this.dataGridView5.AutoGenerateColumns = false;
+                    //this.dataGridView5.DataSource = tclass_datas;
+                    this.bindingSource7.DataSource = qtyTable;
+                    this.dataGridView5.DataSource = this.bindingSource7;
 
                     #endregion
 
@@ -366,6 +434,7 @@ namespace SZ_PDFJsonPrint
             TBB = new List<clsExcelinfo>();
             tclass_datas = new List<Datas>();
             Root_datas = new List<Root>();
+            Excel_body = new DataTable();
 
 
             clsAllnew BusinessHelp = new clsAllnew();
@@ -382,7 +451,7 @@ namespace SZ_PDFJsonPrint
             TBB = BusinessHelp.TBB;
             tclass_datas = BusinessHelp.tclass_datas;
             Root_datas = BusinessHelp.Root_datas;
-
+            Excel_body = BusinessHelp.Excel_body;
 
             Online_datas = BusinessHelp.Online_datas;
             Online_MaGait = BusinessHelp.Online_MaGait;
@@ -542,13 +611,14 @@ namespace SZ_PDFJsonPrint
                 {
                     if (dataGridView.Rows[j].Cells[k].Value != null)
                     {
-
-
-                        strRowValue +=   dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
+                        if (k == 7 || k == 5 || k == 8 || k == 9 || k == 10 || k == 5 || k == 5)
+                            strRowValue += "'" + dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
                         //if (dataGridView.Rows[j].Cells[k].Value != null)
                         //    strRowValue +=   ((char)(9)).ToString() +dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ") + delimiter;
                         //else
                         //    strRowValue +=  ((char)(9)).ToString()+  dataGridView.Rows[j].Cells[k].Value + delimiter;
+                        else
+                            strRowValue += dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
 
 
                     }
@@ -618,7 +688,7 @@ namespace SZ_PDFJsonPrint
 
             reportViewer1 = new ReportViewer();
 
-            reportForm.InitializeDataSource(tclass_datas);
+            reportForm.InitializeDataSource(printclass_datas);//tclass_datas
             reportViewer1 = reportForm.reportViewer1;
             //reportForm.ShowDialog();
 
@@ -630,28 +700,58 @@ namespace SZ_PDFJsonPrint
             FileStream fs = new FileStream(pathl, FileMode.Create);
             fs.Write(bytes, 0, bytes.Length);
             fs.Close();
+            issaveok = true;
 
-            MessageBox.Show("报表已经成功导出到桌面！", "Info");
+
             //ExportRpt(0); 
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.DefaultExt = ".pdf";
-            saveFileDialog.Filter = "PDF(*.pdf)|*.pdf";
-            strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
-            saveFileDialog.FileName = strFileName;
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                strFileName = saveFileDialog.FileName.ToString();
-            }
-            else
-            {
-                return;
-            }
-            pdfExport(strFileName);
+            issaveok = false;
 
+            for (int i = 0; i < tclass_datas.Count; i++)
+            {
+                printclass_datas = new List<Datas>();
+
+                printclass_datas = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.DefaultExt = ".pdf";
+                saveFileDialog.Filter = "PDF(*.pdf)|*.pdf";
+                strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+                saveFileDialog.FileName = strFileName;
+                if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+                {
+                    strFileName = saveFileDialog.FileName.ToString();
+                }
+                else
+                {
+                    return;
+                }
+                pdfExport(strFileName);
+            }
+            if (issaveok == true)
+                MessageBox.Show("报表已经成功导出到桌面！", "Info");
+            else
+                MessageBox.Show("报表导出失败，请查找原因！", "Info");
+        }
+
+        private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewColumn column = dataGridView5.Columns[e.ColumnIndex];
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            if (column == typeCode)
+            {
+                var row = dataGridView3.Rows[e.RowIndex];
+
+                var model = row.DataBoundItem as Datas;
+                printclass_datas = new List<Datas>();
+
+                printclass_datas = tclass_datas.FindAll(o => o.serialNumber != null && model != null && o.serialNumber == model.serialNumber);
+
+            }
         }
     }
 }

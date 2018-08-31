@@ -339,34 +339,34 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>EntityFramework.SqlServer.dll</td><td>{F5D78AD8-5889-4777-A1D0-65307ECBE94F}</td><td>INSTALLDIR</td><td>2</td><td/><td>entityframework.sqlserver.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>EntityFramework.dll</td><td>{4CE3417B-52F7-4EE6-8601-720430FE9AE7}</td><td>INSTALLDIR</td><td>2</td><td/><td>entityframework.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>EntityFramework.SqlServer.dll</td><td>{A6D2C501-9178-43A7-89B3-C9AE223916BE}</td><td>INSTALLDIR</td><td>2</td><td/><td>entityframework.sqlserver.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>EntityFramework.dll</td><td>{9FD09CB6-0C8C-401E-BC8C-AB2884DB4BED}</td><td>INSTALLDIR</td><td>2</td><td/><td>entityframework.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{E8701904-34D3-4476-8AB6-2756CA94021D}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{083D05C7-F9E3-42E6-B492-2C8CF7264BB5}</td><td>JSON</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{B96D6A2B-CA4F-4BCD-8C97-396850E48A3D}</td><td>RESULTS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{A9B67B7E-6177-40CB-8A36-77A059A21CA1}</td><td>SYSTEM</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>IrisSkin2.dll</td><td>{A76307CE-5ED2-49EB-A206-E26D2F96F7EE}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Office.Interop.Excel.dll</td><td>{0B5FBCCD-9772-4BD8-8AA3-1553B27E2F8D}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.interop.exc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.Common.dll</td><td>{E8BBD045-0AEF-4E88-AFEC-72105D80BACE}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.commo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.Design.resources.dll</td><td>{493DD0EC-28EE-429E-A6B8-5CFE8CCB037C}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.desig</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>{520B9E27-EF27-4A46-BFEE-0F568A3A0E45}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.proce</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WebDesign.DLL</td><td>{EE2AC5AC-905D-4F20-8B9D-7A41DE619CD8}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webde</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WebDesign.resources.dll</td><td>{32CECF68-81AC-486B-AD25-4C5C32AA869F}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webde1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WebForms.DLL</td><td>{045A06AC-EF27-4EFB-A95E-97BC8809329F}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WebForms.resources.dll</td><td>{71846B84-AE1F-4830-850E-F4EC9E4205C7}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webfo1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td>{8E926210-020A-4D2F-8923-9A9D34D1FB94}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WinForms.resources.dll</td><td>{0AF9A64C-9C2F-4D9A-8C67-AD685AB0D3ED}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.SqlServer.Types.dll</td><td>{96FF94DD-0B3C-4AC8-A932-60B65D8AF73C}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.sqlserver.types.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>IrisSkin2.dll</td><td>{AAA00DC6-B311-4075-8D13-0721AC27E868}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Interop.Excel.dll</td><td>{1D303806-2F6B-4B5B-9E5D-51452057B539}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.interop.exc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.Common.dll</td><td>{F03B3E95-915E-4C3F-972F-121F2D839783}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.commo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.Design.resources.dll</td><td>{BE87975B-7552-4967-B217-16E8ECD3FD22}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.desig</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>{F4684405-E32A-4111-BDC7-77243B82E3A0}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.proce</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WebDesign.DLL</td><td>{16315DB6-FE3F-4261-B78E-96C857614FC2}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webde</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WebDesign.resources.dll</td><td>{42CEEB91-0C89-46E2-B7C7-0FE7B0BF5BA5}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webde1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WebForms.DLL</td><td>{CEF67B22-2104-45D2-B452-94B768EC606A}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WebForms.resources.dll</td><td>{52CC60B9-ADD6-418E-94AC-51F00D2ACBCD}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webfo1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td>{B9F4455D-52F3-4552-9E40-42807BA47CBA}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WinForms.resources.dll</td><td>{37CF4B04-B03B-40E2-9A2C-316FAAB1F98E}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.SqlServer.Types.dll</td><td>{04B755B2-2584-44A4-AE22-D40DC02CBAC7}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.sqlserver.types.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{4C454713-9BBA-4102-A30B-BE05DAE04E55}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Newtonsoft.Json.dll</td><td>{920633E5-252D-4B90-8911-6E4ABBD75F77}</td><td>INSTALLDIR</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SPJP.Buiness.dll</td><td>{ACE626E2-7D63-4B07-89AB-B0B4E9EB6B26}</td><td>INSTALLDIR</td><td>2</td><td/><td>spjp.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SPJP.Common.dll</td><td>{A0CD35EA-30D7-4ED1-BE20-BAB81057D5BF}</td><td>INSTALLDIR</td><td>2</td><td/><td>spjp.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SPJP.DB.dll</td><td>{DC75B0BC-F1BD-4853-85BE-55EB93D7DF8C}</td><td>INSTALLDIR</td><td>2</td><td/><td>spjp.db.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SZ_PDFJsonPrint.exe</td><td>{00E0D63A-05C0-48C5-8C55-BFAD5697F2DD}</td><td>INSTALLDIR</td><td>2</td><td/><td>sz_pdfjsonprint.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SZ_PDFJsonPrint.vshost.exe</td><td>{453EBE49-C7C3-40B7-8BE4-69C933729319}</td><td>INSTALLDIR</td><td>2</td><td/><td>sz_pdfjsonprint.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{FB57D623-41DA-4665-BF8D-E4EA68CD0D51}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>log4net.dll</td><td>{082F01A3-6D4D-4322-AAAD-C0761274B285}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>office.dll</td><td>{8E3E308C-17A2-4D9A-AF21-60B09AAAD224}</td><td>INSTALLDIR</td><td>2</td><td/><td>office.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Newtonsoft.Json.dll</td><td>{8FDBD40F-62AF-496E-938B-968C83AF9F65}</td><td>INSTALLDIR</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SPJP.Buiness.dll</td><td>{3358C679-DCBE-499E-8807-D4028B77FE07}</td><td>INSTALLDIR</td><td>2</td><td/><td>spjp.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SPJP.Common.dll</td><td>{F668BD00-01CB-4957-B65C-1EE3C37B2615}</td><td>INSTALLDIR</td><td>2</td><td/><td>spjp.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SPJP.DB.dll</td><td>{06736ACE-B0CD-43E0-807E-30D7EB643A82}</td><td>INSTALLDIR</td><td>2</td><td/><td>spjp.db.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SZ_PDFJsonPrint.exe</td><td>{BA29E6E7-832D-4490-A8F5-0EBACC21FA89}</td><td>INSTALLDIR</td><td>2</td><td/><td>sz_pdfjsonprint.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SZ_PDFJsonPrint.vshost.exe</td><td>{AF8032D3-2D48-447A-AD04-1A159F2009AA}</td><td>INSTALLDIR</td><td>2</td><td/><td>sz_pdfjsonprint.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{E15FFAEC-7D8E-4B49-A22C-204628D8A661}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>log4net.dll</td><td>{E625ECF0-04B0-4276-97E0-1728A3757506}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>office.dll</td><td>{16DAC1E7-E336-4670-8282-2DE49EE7C2F0}</td><td>INSTALLDIR</td><td>2</td><td/><td>office.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1973,7 +1973,6 @@
 		<row><td>sz_pdfjsonprint.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>SZ_PDF~1.PDB|SZ_PDFJsonPrint.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.pdb</td><td>1</td><td/></row>
 		<row><td>sz_pdfjsonprint.vshost.exe</td><td>SZ_PDFJsonPrint.vshost.exe</td><td>SZ_PDF~1.EXE|SZ_PDFJsonPrint.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.vshost.exe</td><td>1</td><td/></row>
 		<row><td>sz_pdfjsonprint.vshost.exe.c</td><td>ISX_DEFAULTCOMPONENT</td><td>SZ_PDF~1.CON|SZ_PDFJsonPrint.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.vshost.exe.config</td><td>1</td><td/></row>
-		<row><td>sz_pdfjsonprint.vshost.exe.m</td><td>ISX_DEFAULTCOMPONENT</td><td>SZ_PDF~1.MAN|SZ_PDFJsonPrint.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.vshost.exe.manifest</td><td>1</td><td/></row>
 		<row><td>tel.xlsx</td><td>ISX_DEFAULTCOMPONENT3</td><td>TEL~1.XLS|TEL.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\System\TEL.xlsx</td><td>1</td><td/></row>
 		<row><td>weifenluo.winformsui.docking</td><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>WEIFEN~1.DLL|WeifenLuo.WinFormsUI.Docking.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</td><td>1</td><td/></row>
 	</table>
@@ -2232,34 +2231,34 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>EntityFramework.SqlServer.dll</td><td/><td/><td>_704C8FDF_BA13_4AE1_8DFF_9228271BB5A7_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>EntityFramework.dll</td><td/><td/><td>_2EBCABB5_813A_4DCD_86C1_401D1BFE412B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>EntityFramework.SqlServer.dll</td><td/><td/><td>_864D8002_2A10_4CB4_8BAF_4760E5FC974D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>EntityFramework.dll</td><td/><td/><td>_46F799D9_5F66_4837_884B_CEB3CB45BF06_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_5FDA92DA_4CA9_437C_AB17_5D5175F82007_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_8277FE99_62F3_464F_BE6B_90F6AC6B9A6A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_E67E426F_F1BD_4DD1_8F0C_CD4933AF3410_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_CD309444_AEAC_47CD_BF6C_06515648C456_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>IrisSkin2.dll</td><td/><td/><td>_2DC5ABCE_CDA1_4880_A535_AF586A3EE95E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Office.Interop.Excel.dll</td><td/><td/><td>_097559CB_612F_4183_8043_9A89104F75A1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.Common.dll</td><td/><td/><td>_FC323DC6_1AC2_40DD_9FC7_DC284DE02FCE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.Design.resources.dll</td><td/><td/><td>_BD29196A_4419_4005_A508_1457A8C2E83B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td/><td/><td>_F74295A3_EA1C_4221_B49D_4E375A4116C1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WebDesign.DLL</td><td/><td/><td>_BA241226_D3FE_4A23_A5AF_A405C4CD90C6_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WebDesign.resources.dll</td><td/><td/><td>_D1B760C2_E66E_495A_8675_CC66BD979FC0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WebForms.DLL</td><td/><td/><td>_D6E990F7_C990_4A43_B77E_A2E0CA0BAB82_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WebForms.resources.dll</td><td/><td/><td>_CDED961D_A68A_48D2_95B2_A8CDB67AE2F5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td/><td/><td>_48ADE2FE_5B57_4675_85F3_09FAFFEA42BC_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WinForms.resources.dll</td><td/><td/><td>_DB8169E4_2510_4305_B210_ACE794AC2DD3_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.SqlServer.Types.dll</td><td/><td/><td>_B5CDDC3E_07FA_4120_9CDD_6187FE667565_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>IrisSkin2.dll</td><td/><td/><td>_C5AE95CA_2AD7_400D_9D2C_67FA1BC6C410_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Interop.Excel.dll</td><td/><td/><td>_F6283997_87B8_4B52_8B5C_CD889630326D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.Common.dll</td><td/><td/><td>_F38BCC07_2267_4718_83E5_DE215F4A0951_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.Design.resources.dll</td><td/><td/><td>_493FDD42_5409_4F04_A404_F03F46259C37_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td/><td/><td>_C7D462A4_6998_43BD_A1FA_4C123B6B99F3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WebDesign.DLL</td><td/><td/><td>_08DF6EC6_83C9_4163_A75D_BB063AFF12AD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WebDesign.resources.dll</td><td/><td/><td>_1CD29366_38B8_48EE_B2D9_ED7D6E109BB0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WebForms.DLL</td><td/><td/><td>_2E512D1F_6CC8_4DA6_BE2F_B4AEC7E29E65_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WebForms.resources.dll</td><td/><td/><td>_F99E2D9C_712A_4FEE_A8D2_AEB61765365F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td/><td/><td>_752DE96C_BEE5_4F85_9E08_273FC6D1C07B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WinForms.resources.dll</td><td/><td/><td>_90FAEA56_106E_483E_A1C4_45B0202129DC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.SqlServer.Types.dll</td><td/><td/><td>_63D17EC2_A87D_428C_AC12_A074FBDD1A58_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_FC9F92B9_1B2F_4833_8C61_679404183356_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_68908C44_BA65_4ACD_A62B_7E8666D71DF9_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SPJP.Buiness.dll</td><td/><td/><td>_C736AD68_1F42_4471_8A49_0417DFD03454_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SPJP.Common.dll</td><td/><td/><td>_90E9455E_CBAF_4773_9F52_AE33F45C70E1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SPJP.DB.dll</td><td/><td/><td>_F692CB8A_C8C5_4166_A38C_EF05B4CC9492_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SZ_PDFJsonPrint.exe</td><td/><td/><td>_BF5A03DA_05FA_40E3_9E78_2F8A22902C44_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SZ_PDFJsonPrint.vshost.exe</td><td/><td/><td>_CBB6AB00_9F6F_44B4_AA0C_36BF7DFCEDB8_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_8D1DC9D4_CE2D_4773_A151_B4ED3EE25417_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>log4net.dll</td><td/><td/><td>_4B853749_82E9_4BDD_9C33_6132EBFD73FE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>office.dll</td><td/><td/><td>_34C6390B_3C41_4FF4_9BC4_D838804973C3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_10F11378_7F51_4103_B770_2287AF449B07_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SPJP.Buiness.dll</td><td/><td/><td>_DDA2D57E_ECF5_4578_B246_44C1F7EC742B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SPJP.Common.dll</td><td/><td/><td>_E0A9CFB7_2C2F_4954_8A7D_CE94B05F29C3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SPJP.DB.dll</td><td/><td/><td>_F6B26D5F_8AB3_4C81_B6FC_48F53261D8E4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SZ_PDFJsonPrint.exe</td><td/><td/><td>_C51D92A3_3ABB_444B_872E_F19133181732_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SZ_PDFJsonPrint.vshost.exe</td><td/><td/><td>_1D7F4370_5340_47A7_988D_9EF2008C148C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_C2FB0715_03BD_43B9_AC67_D53BBD063378_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>log4net.dll</td><td/><td/><td>_F2E1C8A8_1BDC_441C_8037_9FDA4C1834BC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>office.dll</td><td/><td/><td>_C4EBC403_A58A_49DD_81DB_BCC7A78DA36C_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3703,6 +3702,10 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>2052</td><td>GYENNO.exe</td><td>0</td><td/><td>-198779379</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td/><td>0</td><td/><td>-198812179</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>2052</td><td>LAUNCH~1.EXE|Launch SZ_PDFJsonPrint.vshost.exe</td><td>0</td><td/><td>-198812179</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td/><td>0</td><td/><td>-64568274</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>2052</td><td>LAUNCH~1.EXE|Launch SZ_PDFJsonPrint.exe</td><td>0</td><td/><td>-64568274</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td/><td>0</td><td/><td>-64568274</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>2052</td><td>LAUNCH~1.EXE|Launch SZ_PDFJsonPrint.vshost.exe</td><td>0</td><td/><td>-64568274</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>2052</td><td>从以下服务器列表中选择要连接的数据库服务器。</td><td>0</td><td/><td>-198806067</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>2052</td><td>从以下的编录名称列表中，选择您希望将其作为目标的数据库编录。</td><td>0</td><td/><td>-198806067</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>2052</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-198806067</td></row>
@@ -4103,8 +4106,10 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
+		<row><td>SZ_PDFJsonPrint.ex_86D81BDC5A804499873B60DCA64CC79F.exe</td><td/><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe</td><td>0</td></row>
 		<row><td>SZ_PDFJsonPrint.ex_9720F2B57CF346C7B563FE50A10CDC6F.exe</td><td/><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe</td><td>0</td></row>
 		<row><td>SZ_PDFJsonPrint.ex_F8988B01640B4FF388AE8E8CF2812890.exe</td><td/><td>D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe</td><td>0</td></row>
+		<row><td>SZ_PDFJsonPrint.vs_7E2B1E5D3FE141DA98756AC3EC3CA179.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>SZ_PDFJsonPrint.vs_F1E22C39AA084C7BAAE2385ADEE02C8C.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_G_0772F47922264443B700F17A6A38297F.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
@@ -4688,8 +4693,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>SZ_PDFJsonPrint.exe</td><td/><td>gyenno</td><td>2</td></row>
-		<row><td>FileKey2</td><td>SZ_PDFJsonPrint.exe</td><td/><td>gyenno1</td><td>2</td></row>
 		<row><td>SZ_PDFJsonPrint.exe</td><td>SZ_PDFJsonPrint.exe</td><td/><td>gyenno1</td><td>2</td></row>
 		<row><td>SZ_PDFJsonPrint.vshost.exe</td><td>SZ_PDFJsonPrint.vshost.exe</td><td/><td>gyenno1</td><td>2</td></row>
 		<row><td>UNINST_Uninstall_GYENNO</td><td>NewComponent1</td><td/><td>gyenno1</td><td>2</td></row>
@@ -4778,9 +4781,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>SZ_PDFJsonPrint.exe</td><td>gyenno1</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>SZ_PDFJsonPrint.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SZ_PDFJsonPrint.ex_F8988B01640B4FF388AE8E8CF2812890.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>SZ_PDFJsonPrint.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>SZ_PDFJsonPrint.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SZ_PDFJsonPrint.ex_9720F2B57CF346C7B563FE50A10CDC6F.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>SZ_PDFJsonPrint.vshost.exe</td><td>gyenno1</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>SZ_PDFJsonPrint.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SZ_PDFJsonPrint.vs_F1E22C39AA084C7BAAE2385ADEE02C8C.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>SZ_PDFJsonPrint.exe</td><td>gyenno1</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>SZ_PDFJsonPrint.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SZ_PDFJsonPrint.ex_86D81BDC5A804499873B60DCA64CC79F.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>SZ_PDFJsonPrint.vshost.exe</td><td>gyenno1</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>SZ_PDFJsonPrint.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SZ_PDFJsonPrint.vs_7E2B1E5D3FE141DA98756AC3EC3CA179.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_GYENNO</td><td>gyenno1</td><td>UNINST|Uninstall GYENNO</td><td>NewComponent1</td><td>[SystemFolder]msiexec.exe</td><td>/x {2E3875A5-6D3D-49DD-B633-ACE460757E30}</td><td/><td/><td>UNINST_Uninstall_G_0772F47922264443B700F17A6A38297F.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
