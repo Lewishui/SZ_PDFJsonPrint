@@ -39,7 +39,13 @@ namespace SPJP.Buiness
         public List<PDF_Root> PDF_Rootdb;
         public List<Types> PDF_Types;
         public List<ChildType> PDF_ChildType;
-       public DataTable Excel_body;
+        public DataTable Excel_body;
+
+        private string interface_pdfinfo;
+        private string interface_excelinfo;
+        private string interface_onlineinfo;
+        string readtypeA;
+
 
         string savepdfexcel_path;
 
@@ -245,8 +251,13 @@ Encoding encoding, string mimeType, bool willSeek)
 
 
 
-        public List<clsOrderDatabaseinfo> ReadJSON_Report(ref BackgroundWorker bgWorker, string casetype)
+        public List<clsOrderDatabaseinfo> ReadJSON_Report(ref BackgroundWorker bgWorker, string readtype, string pdf_json, string excel_json, string Online_json)
         {
+            interface_pdfinfo = pdf_json;
+            interface_excelinfo = excel_json;
+
+            interface_onlineinfo = Online_json;
+            readtypeA = readtype;
 
             List<clsOrderDatabaseinfo> ResutsReport = new List<clsOrderDatabaseinfo>();
             TBB = new List<clsExcelinfo>();
@@ -536,11 +547,35 @@ Encoding encoding, string mimeType, bool willSeek)
             #endregion
 
             //TEST_Tocovermethod2(result1);
-            Tocovermethod_PDF(result1);
 
-            Tocovermethod_excel(result1);
+            string A_Path = "";
+            if (readtypeA != "" && readtypeA != "A")
+            {
+                if (interface_pdfinfo != null && interface_pdfinfo != "")
+                    Tocovermethod_PDF(interface_pdfinfo);
+                if (interface_excelinfo != null && interface_excelinfo != "")
+                    Tocovermethod_excel(interface_excelinfo);
+                if (interface_onlineinfo != null && interface_onlineinfo != "")
+                    Tocovermethod_clientOnline(interface_onlineinfo);
 
-            Tocovermethod_clientOnline(result1);
+            }
+            else
+            {
+                A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\pdf.json";
+                A_Path = "C:\\json\\pdf.json";
+                result1 = readtxtJsom(A_Path);
+                Tocovermethod_PDF(result1);
+
+                A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\excel.json";
+                A_Path = "C:\\json\\excel.json";
+                result1 = readtxtJsom(A_Path);
+                Tocovermethod_excel(result1);
+
+                A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\Online.json";
+                A_Path = "C:\\json\\Online.json";
+                result1 = readtxtJsom(A_Path);
+                Tocovermethod_clientOnline(result1);
+            }
         }
 
         private void TEST_Tocovermethod2(string json)
@@ -572,9 +607,7 @@ Encoding encoding, string mimeType, bool willSeek)
         }
         private void Tocovermethod_PDF(string json)
         {
-            string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\pdf.json";
-            A_Path = "C:\\json\\pdf.json";
-            json = readtxtJsom(A_Path);
+
 
             //第一次解析
             Dictionary<string, object> dic = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
@@ -624,9 +657,6 @@ Encoding encoding, string mimeType, bool willSeek)
         }
         private void Tocovermethod_excel(string json)
         {
-            string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\excel.json";
-            A_Path = "C:\\json\\excel.json";
-            json = readtxtJsom(A_Path);
 
             //第一次解析
             Dictionary<string, object> dic = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
@@ -705,16 +735,13 @@ Encoding encoding, string mimeType, bool willSeek)
 
 
 
-            
+
             Excel_body = Newtonsoft.Json.JsonConvert.DeserializeObject<DataTable>(jsondata_datas);
 
         }
 
         private void Tocovermethod_clientOnline(string json)
         {
-            string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\Online.json";
-            A_Path = "C:\\json\\Online.json";
-            json = readtxtJsom(A_Path);
 
             Dictionary<string, object> dic = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
 

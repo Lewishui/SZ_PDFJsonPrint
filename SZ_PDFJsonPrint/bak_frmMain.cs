@@ -399,7 +399,7 @@ namespace SZ_PDFJsonPrint
             //导入程序集
             DateTime oldDate = DateTime.Now;
 
-            BusinessHelp.ReadJSON_Report(ref this.bgWorker, "A");
+            //BusinessHelp.ReadJSON_Report(ref this.bgWorker, "A");
 
             PDF_Rootdb = BusinessHelp.PDF_Rootdb;
             PDF_Types = BusinessHelp.PDF_Types;

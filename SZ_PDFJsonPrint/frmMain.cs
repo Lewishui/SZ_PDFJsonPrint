@@ -270,8 +270,6 @@ namespace SZ_PDFJsonPrint
             for (int i = 0; i < tclass_datas.Count; i++)
             {
                 reportForm = new ReportForm();
-
-
                 List<Datas> findsapinfo = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
 
                 reportForm.InitializeDataSource(findsapinfo);
@@ -444,7 +442,7 @@ namespace SZ_PDFJsonPrint
             //导入程序集
             DateTime oldDate = DateTime.Now;
 
-            BusinessHelp.ReadJSON_Report(ref this.bgWorker, "A");
+            BusinessHelp.ReadJSON_Report(ref this.bgWorker, "A","","","");
 
             PDF_Rootdb = BusinessHelp.PDF_Rootdb;
             PDF_Types = BusinessHelp.PDF_Types;
@@ -667,16 +665,22 @@ namespace SZ_PDFJsonPrint
         {
             if (tclass_datas == null)
                 return;
+            for (int i = 0; i < tclass_datas.Count; i++)
+            {
+                printclass_datas = new List<Datas>();
 
-            clsAllnew BusinessHelp = new clsAllnew();
-            this.toolStripLabel1.Text = "打印中 1/3";
-            BusinessHelp.Run(tclass_datas);
-            this.toolStripLabel1.Text = "打印中 2/3";
+                printclass_datas = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
 
-            BusinessHelp.Run2(tclass_datas);
-            this.toolStripLabel1.Text = "打印中 3/3";
+                clsAllnew BusinessHelp = new clsAllnew();
+                this.toolStripLabel1.Text = "打印中 1/3";
+                BusinessHelp.Run(printclass_datas);
+                this.toolStripLabel1.Text = "打印中 2/3";
 
-            BusinessHelp.Run3(tclass_datas);
+                BusinessHelp.Run2(printclass_datas);
+                this.toolStripLabel1.Text = "打印中 3/3";
+
+                BusinessHelp.Run3(printclass_datas);
+            }
             MessageBox.Show("打印完成！", "提醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
