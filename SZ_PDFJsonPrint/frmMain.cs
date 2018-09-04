@@ -364,10 +364,11 @@ namespace SZ_PDFJsonPrint
                     }
                     for (int row = 0; row < Excel_body.Rows.Count; row++)
                         for (int cloumn = 0; cloumn < Excel_body.Columns.Count; cloumn++)
-                        //foreach (DataColumn dcn in Excel_body.Columns)
-                        {
-                            qtyTable.Rows[row][cloumn] = Excel_body.Rows[row][cloumn].ToString();
-                        }
+                            //foreach (DataColumn dcn in Excel_body.Columns)
+                            if (row < Excel_body.Rows.Count && cloumn < Excel_body.Columns.Count)
+                            {
+                                qtyTable.Rows[row][cloumn] = Excel_body.Rows[row][cloumn].ToString();
+                            }
 
 
                     #endregion
@@ -413,6 +414,8 @@ namespace SZ_PDFJsonPrint
             }
             catch (Exception ex)
             {
+                MessageBox.Show("初始化信息失败，请检查数据格式！" + ex, "异常", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 return;
                 throw ex;
             }
@@ -482,6 +485,8 @@ namespace SZ_PDFJsonPrint
         {
             DataGridViewColumn column = dataGridView3.Columns[e.ColumnIndex];
             clsAllnew BusinessHelp = new clsAllnew();
+            if (e.RowIndex < 0)
+                return;
 
             if (column == typeCode)
             {
