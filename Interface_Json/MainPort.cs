@@ -392,7 +392,8 @@ namespace Interface_Json
 
         public void DownSystemFile_CSV()
         {
-            ExportCSV(qtyTable_, "");
+            //ExportCSV(qtyTable_, "");
+            downcsv(qtyTable_);
         }
         private void downreport(object sender, DoWorkEventArgs e)
         {
@@ -416,7 +417,7 @@ namespace Interface_Json
             string Showtime = clsShowMessage.MSG_029 + timei.ToString();
             bgWorker.ReportProgress(clsConstant.Thread_Progress_OK, clsShowMessage.MSG_015 + "\r\n" + Showtime);
         }
-        private void downcsv(DataGridView dataGridView)
+        private void downcsv(DataTable dataGridView)
         {
             if (dataGridView.Rows.Count == 0)
             {
@@ -428,7 +429,7 @@ namespace Interface_Json
             saveFileDialog.Filter = "csv|*.csv";
             string strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
             saveFileDialog.FileName = strFileName;
-            if (strFileName != null && strFileName != "")
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 strFileName = saveFileDialog.FileName.ToString();
             }
@@ -442,7 +443,7 @@ namespace Interface_Json
             string strHeader = "";
             for (int i = 0; i < dataGridView.Columns.Count; i++)
             {
-                strHeader += dataGridView.Columns[i].HeaderText + delimiter;
+                strHeader += dataGridView.Columns[i].ColumnName + delimiter;
             }
             sw.WriteLine(strHeader);
 
@@ -453,21 +454,21 @@ namespace Interface_Json
 
                 for (int k = 0; k < dataGridView.Columns.Count; k++)
                 {
-                    if (dataGridView.Rows[j].Cells[k].Value != null)
+                    if (dataGridView.Rows[j][k].ToString() != null)
                     {
                         if (k == 7 || k == 5 || k == 8 || k == 9 || k == 10 || k == 5 || k == 5)
-                            strRowValue += "'" + dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
+                            strRowValue += "'" + dataGridView.Rows[j][k].ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
                         //if (dataGridView.Rows[j].Cells[k].Value != null)
                         //    strRowValue +=   ((char)(9)).ToString() +dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ") + delimiter;
                         //else
                         //    strRowValue +=  ((char)(9)).ToString()+  dataGridView.Rows[j].Cells[k].Value + delimiter;
                         else
-                            strRowValue += dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
+                            strRowValue += dataGridView.Rows[j][k].ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
 
                     }
                     else
                     {
-                        strRowValue += dataGridView.Rows[j].Cells[k].Value + delimiter;
+                        strRowValue += dataGridView.Rows[j][k].ToString() + delimiter;
                     }
                 }
 
@@ -492,17 +493,19 @@ namespace Interface_Json
             saveFileDialog.Filter = "csv|*.csv";
             string strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
             saveFileDialog.FileName = strFileName;
-           if (strFileName != null && strFileName != "")
-            //if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+           //if (strFileName != null && strFileName != "")
+           if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 strFileName = saveFileDialog.FileName.ToString();
+
             }
             else
             {
                 return;
+
             }
 
-            StreamWriter StreamWriter = new StreamWriter(fileName, false, System.Text.Encoding.GetEncoding("gb2312"));
+           StreamWriter StreamWriter = new StreamWriter(strFileName, false, System.Text.Encoding.GetEncoding("gb2312"));
             StreamWriter.WriteLine(GetCSVFormatData(dataTable).ToString());
             StreamWriter.Flush();
             StreamWriter.Close();
@@ -544,6 +547,9 @@ namespace Interface_Json
                     {
                         field = "\"" + field + "\"";
                     }
+                    if (DataColumn.ColumnName == "检查订单流水号" || DataColumn.ColumnName == "检查订单流水号" || DataColumn.ColumnName == "检查订单流水号" || DataColumn.ColumnName == "检查订单流水号" || DataColumn.ColumnName == "检查订单流水号")
+                        field = "'" + field;
+
                     StringBuilder.Append(field + ",");
                     field = string.Empty;
                 }
