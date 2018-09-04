@@ -493,8 +493,8 @@ namespace Interface_Json
             saveFileDialog.Filter = "csv|*.csv";
             string strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
             saveFileDialog.FileName = strFileName;
-           //if (strFileName != null && strFileName != "")
-           if (saveFileDialog.ShowDialog() == DialogResult.OK)
+          
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 strFileName = saveFileDialog.FileName.ToString();
 
@@ -505,7 +505,7 @@ namespace Interface_Json
 
             }
 
-           StreamWriter StreamWriter = new StreamWriter(strFileName, false, System.Text.Encoding.GetEncoding("gb2312"));
+            StreamWriter StreamWriter = new StreamWriter(strFileName, false, System.Text.Encoding.GetEncoding("gb2312"));
             StreamWriter.WriteLine(GetCSVFormatData(dataTable).ToString());
             StreamWriter.Flush();
             StreamWriter.Close();
@@ -652,14 +652,15 @@ namespace Interface_Json
                 saveFileDialog.Filter = "PDF(*.pdf)|*.pdf";
                 strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
                 saveFileDialog.FileName = strFileName;
-                if (strFileName != null && strFileName != "")
-                {
-                    strFileName = saveFileDialog.FileName.ToString();
-                }
-                else
-                {
-                    return;
-                }
+         
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        strFileName = saveFileDialog.FileName.ToString();
+                    }
+                    else
+                    {
+                        return;
+                    }
                 pdfExport(strFileName);
             }
             if (issaveok == true)
