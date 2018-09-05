@@ -1,0 +1,125 @@
+﻿{
+  "code": 0, 
+  "msg": "success", 
+  "reqId": "40288a5f6518566601651861fd000004", 
+  "data": {
+    "header": {
+      "rows": [
+        {
+          "cols": [
+            {
+              "text": "基础信息", 
+              "size": 20
+            }, 
+            {
+              "text": "站立过程SiSt", 
+              "size": 3
+            }, 
+            {
+              "text": "行走Gait", 
+              "size": 35
+            }, 
+            {
+              "text": "平衡Balance", 
+              "size": 2
+            }
+          ]
+        }, 
+        {
+          "cols": [
+            {
+              "text": "序号", 
+              "size": 1
+            }, 
+            {
+              "text": "患者", 
+              "size": 1
+            }, 
+            {
+              "text": "起立过程时间SiSt Duration（sec）", 
+              "size": 1
+            }, 
+            {
+              "text": "右脚步长Step Length R.（cm）", 
+              "size": 1
+            }, 
+            {
+              "text": "左脚步长Step Length L.（cm）", 
+              "size": 1
+            }, 
+            {
+              "text": "躯干矢状面峰值角速度Trunk Sagittal PeakVelocity（degree/sec）", 
+              "size": 1
+            }
+          ]
+        }
+      ]
+    }, 
+    "content": {
+      "datas": [
+        {
+          "indexNumber": 1, 
+          "patientId": 7957, 
+          "patientName": "王二", 
+          "sex": 1, 
+          "birthday": "2000-01-01 00:00:00", 
+          "diseaseType": "1", 
+          "courseOfDisease": 2, 
+          "serialNumber": "201808062022447132156", 
+          "inspectId": "25", 
+          "checkType": "1", 
+          "dualTask": "1", 
+          "checkRemark": "检查项备注内容", 
+          "checkStartTime": "2018-08-01 17:19:00", 
+          "checkEndTime": "2018-08-06 17:19:00", 
+          "checkHospitalId": "8a9e2d385f1eb70c015f2e41a15000c5", 
+          "checkHospitalName": "华侨医院", 
+          "checkDoctorId": "biwei", 
+          "checkDoctorName": "毕伟", 
+          "auditDoctorName": null, 
+          "checkConclusion": "这是医生的结论", 
+          "sistDuration": "23±2", 
+          "peakSiStAngularVelocity": "22±1", 
+          "sistTrunkRoM": "21±0.5", 
+          "stepLength_R": null, 
+          "stepLength_L": null, 
+          "stepLength_avg": null, 
+          "strideVelocity_R": null, 
+          "strideVelocity_L": null, 
+          "strideVelocity_avg": null, 
+          "strideLength_R": null, 
+          "strideLength_L": null, 
+          "strideLength_avg": null, 
+          "gaitCycle_R": null, 
+          "gaitCycle_L": null, 
+          "gaitCycle_avg": null, 
+          "cadence_R": null, 
+          "cadence_L": null, 
+          "cadence_avg": null, 
+          "support_R": null, 
+          "support_L": null, 
+          "support_avg": null, 
+          "swing_R": null, 
+          "swing_L": null, 
+          "swing_avg": null, 
+          "stance_R": null, 
+          "stance_L": null, 
+          "stance_avg": null, 
+          "trunkSagittalPeakVelocity": null, 
+          "trunkHorizontalPeakVelocity": null, 
+          "strideVelocityAsymmetry": null, 
+          "strideLengthAsymmetry": null, 
+          "swingAsymmetry": null, 
+          "stanceAsymmetry": null, 
+          "shankAsymmetry": null, 
+          "peakShankVelocityAsymmetry": null, 
+          "shank_SSI": null, 
+          "meanPhaseDifference": null, 
+          "phaseCoordinationIndex": null, 
+          "balanceTrunkSagittalPeakVelocity": null, 
+          "balanceTrunkHorizontalPeakVelocity": null
+        }
+      ]
+    }
+  }
+}

@@ -172,7 +172,7 @@ namespace SPJP.DB
 
     public class Datas
     {
- 
+
         /// <summary>
         /// IndexNumber
         /// </summary>
@@ -503,6 +503,11 @@ namespace SPJP.DB
         /// cm
         /// </summary>
         public string unit { get; set; }
+
+        //bangding
+        public string reqId { get; set; }
+
+
     }
 
     public class Online_Data
@@ -555,6 +560,10 @@ namespace SPJP.DB
         /// MaGait
         /// </summary>
         public List<MaGait> maGait { get; set; }
+
+        //bangding
+        public string reqId { get; set; }
+
     }
 
     public class Online_Root
@@ -577,6 +586,137 @@ namespace SPJP.DB
         public Online_Data data { get; set; }
     }
 
+    public class OnlineShow
+    {
+        //////////////////// //Online_Root
+
+        /// <summary>
+        /// Code
+        /// </summary>
+        public string code { get; set; }
+        /// <summary>
+        /// success
+        /// </summary>
+        public string msg { get; set; }
+        /// <summary>
+        /// 40288a5f6503b178016504465deb0245
+        /// </summary>
+        public string reqId { get; set; }
+        /// <summary>
+        /// Data
+        /// </summary>
+        public Online_Data data { get; set; }
+
+
+        ////////////////////  //Online_Data
+
+        /// <summary>
+        /// 40288a5f64feff480164ff1f3606003c
+        /// </summary>
+        public string id { get; set; }
+        /// <summary>
+        /// 201808031729529029897
+        /// </summary>
+        public string serialNumber { get; set; }
+        /// <summary>
+        /// PatientId
+        /// </summary>
+        public string patientId { get; set; }
+        //new
+        public string ptName { get; set; }
+
+        /// <summary>
+        /// 2018-08-03 17:19
+        /// </summary>
+        public string acquisitionStartTime { get; set; }
+        /// <summary>
+        /// 2018-08-03 17:19
+        /// </summary>
+        public string acquisitionEndTime { get; set; }
+        /// <summary>
+        /// EquipmentModel
+        /// </summary>
+        public string equipmentModel { get; set; }
+        /// <summary>
+        /// A22323
+        /// </summary>
+        public string equipmentNumber { get; set; }
+        /// <summary>
+        /// 40288a5f64feff480164ff14843a002e
+        /// </summary>
+        public string checkNumber { get; set; }
+        /// <summary>
+        /// 1
+        /// </summary>
+        public string dataSources { get; set; }
+        /// <summary>
+        /// 2
+        /// </summary>
+        public string type { get; set; }
+        /// <summary>
+        /// 检查结果正常
+        /// </summary>
+        public string remark { get; set; }
+
+        public string checkDoctor { get; set; }//-审核医生
+
+        public string toExamineDoctor { get; set; }//-审核医生
+
+        public string result { get; set; }//-审核医生
+
+       
+        ///////////////////////  //MaGait
+        /// <summary>
+        /// 1
+        /// </summary>
+        public string type_MaGait { get; set; }
+        /// <summary>
+        /// ma10Parameters
+        /// </summary>
+        public string typeCode { get; set; }
+        /// <summary>
+        /// 起立过程时间
+        /// </summary>
+        public string typeName { get; set; }
+        /// <summary>
+        /// 2
+        /// </summary>
+        public string leftNormal { get; set; }
+        /// <summary>
+        /// 22
+        /// </summary>
+        public string leftError { get; set; }
+        /// <summary>
+        /// 2
+        /// </summary>
+        public string rightNormal { get; set; }
+        /// <summary>
+        /// 1
+        /// </summary>
+        public string rightError { get; set; }
+        /// <summary>
+        /// 2
+        /// </summary>
+        public string avgNormal { get; set; }
+        /// <summary>
+        /// 1
+        /// </summary>
+        public string avgError { get; set; }
+        /// <summary>
+        /// cm
+        /// </summary>
+        public string unit { get; set; }
+    }
+    public class OnlinecheckTableShow
+    {
+        public string name1 { get; set; }
+        public string name2 { get; set; }
+        public string name3 { get; set; }
+        public string name4 { get; set; }
+        public string name5{ get; set; }
+        public string name6 { get; set; }
+    
+    }
     #endregion
 
     #region PDF
@@ -638,6 +778,9 @@ namespace SPJP.DB
         /// </summary>
         public List<Types> types { get; set; }
     }
+
+
+
 
     #endregion
 }

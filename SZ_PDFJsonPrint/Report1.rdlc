@@ -2,274 +2,142 @@
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="TJDB">
+    <DataSource Name="SPJPDB">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>d516f535-7df0-496f-a208-ea6f1e38e217</rd:DataSourceID>
+      <rd:DataSourceID>ba8b5272-45cd-4946-ae10-bbcdccb4274e</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>TJDB</DataSourceName>
+        <DataSourceName>SPJPDB</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="auditDoctorName">
-          <DataField>auditDoctorName</DataField>
+        <Field Name="acquisitionEndTime">
+          <DataField>acquisitionEndTime</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="balanceTrunkHorizontalPeakVelocity">
-          <DataField>balanceTrunkHorizontalPeakVelocity</DataField>
+        <Field Name="acquisitionStartTime">
+          <DataField>acquisitionStartTime</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="balanceTrunkSagittalPeakVelocity">
-          <DataField>balanceTrunkSagittalPeakVelocity</DataField>
+        <Field Name="avgError">
+          <DataField>avgError</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="birthday">
-          <DataField>birthday</DataField>
+        <Field Name="avgNormal">
+          <DataField>avgNormal</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cadence_avg">
-          <DataField>cadence_avg</DataField>
+        <Field Name="checkDoctor">
+          <DataField>checkDoctor</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cadence_L">
-          <DataField>cadence_L</DataField>
+        <Field Name="checkNumber">
+          <DataField>checkNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cadence_R">
-          <DataField>cadence_R</DataField>
+        <Field Name="code">
+          <DataField>code</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkConclusion">
-          <DataField>checkConclusion</DataField>
+        <Field Name="data">
+          <DataField>data</DataField>
+          <rd:TypeName>SPJP.DB.Online_Data</rd:TypeName>
+        </Field>
+        <Field Name="dataSources">
+          <DataField>dataSources</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkDoctorId">
-          <DataField>checkDoctorId</DataField>
+        <Field Name="equipmentModel">
+          <DataField>equipmentModel</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkDoctorName">
-          <DataField>checkDoctorName</DataField>
+        <Field Name="equipmentNumber">
+          <DataField>equipmentNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkEndTime">
-          <DataField>checkEndTime</DataField>
+        <Field Name="id">
+          <DataField>id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkHospitalId">
-          <DataField>checkHospitalId</DataField>
+        <Field Name="leftError">
+          <DataField>leftError</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkHospitalName">
-          <DataField>checkHospitalName</DataField>
+        <Field Name="leftNormal">
+          <DataField>leftNormal</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkRemark">
-          <DataField>checkRemark</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="checkStartTime">
-          <DataField>checkStartTime</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="checkType">
-          <DataField>checkType</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="courseOfDisease">
-          <DataField>courseOfDisease</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="diseaseType">
-          <DataField>diseaseType</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="dizhi">
-          <DataField>dizhi</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="dualTask">
-          <DataField>dualTask</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="gaitCycle_avg">
-          <DataField>gaitCycle_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="gaitCycle_L">
-          <DataField>gaitCycle_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="gaitCycle_R">
-          <DataField>gaitCycle_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="inspectId">
-          <DataField>inspectId</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="meanPhaseDifference">
-          <DataField>meanPhaseDifference</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Order_id">
-          <DataField>Order_id</DataField>
+        <Field Name="msg">
+          <DataField>msg</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="patientId">
           <DataField>patientId</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="patientName">
-          <DataField>patientName</DataField>
+        <Field Name="ptName">
+          <DataField>ptName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="peakShankVelocityAsymmetry">
-          <DataField>peakShankVelocityAsymmetry</DataField>
+        <Field Name="remark">
+          <DataField>remark</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="peakSiStAngularVelocity">
-          <DataField>peakSiStAngularVelocity</DataField>
+        <Field Name="reqId">
+          <DataField>reqId</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="phaseCoordinationIndex">
-          <DataField>phaseCoordinationIndex</DataField>
+        <Field Name="result">
+          <DataField>result</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rightError">
+          <DataField>rightError</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rightNormal">
+          <DataField>rightNormal</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="serialNumber">
           <DataField>serialNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="sex">
-          <DataField>sex</DataField>
+        <Field Name="toExamineDoctor">
+          <DataField>toExamineDoctor</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="shank_SSI">
-          <DataField>shank_SSI</DataField>
+        <Field Name="type">
+          <DataField>type</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="shankAsymmetry">
-          <DataField>shankAsymmetry</DataField>
+        <Field Name="type_MaGait">
+          <DataField>type_MaGait</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="showimage">
-          <DataField>showimage</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="sistDuration">
-          <DataField>sistDuration</DataField>
+        <Field Name="typeCode">
+          <DataField>typeCode</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="sistTrunkRoM">
-          <DataField>sistTrunkRoM</DataField>
+        <Field Name="typeName">
+          <DataField>typeName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="stance_avg">
-          <DataField>stance_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stance_L">
-          <DataField>stance_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stance_R">
-          <DataField>stance_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stanceAsymmetry">
-          <DataField>stanceAsymmetry</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stepLength_avg">
-          <DataField>stepLength_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stepLength_L">
-          <DataField>stepLength_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stepLength_R">
-          <DataField>stepLength_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideLength_avg">
-          <DataField>strideLength_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideLength_L">
-          <DataField>strideLength_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideLength_R">
-          <DataField>strideLength_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideLengthAsymmetry">
-          <DataField>strideLengthAsymmetry</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideVelocity_avg">
-          <DataField>strideVelocity_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideVelocity_L">
-          <DataField>strideVelocity_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideVelocity_R">
-          <DataField>strideVelocity_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideVelocityAsymmetry">
-          <DataField>strideVelocityAsymmetry</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="support_avg">
-          <DataField>support_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="support_L">
-          <DataField>support_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="support_R">
-          <DataField>support_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="swing_avg">
-          <DataField>swing_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="swing_L">
-          <DataField>swing_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="swing_R">
-          <DataField>swing_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="swingAsymmetry">
-          <DataField>swingAsymmetry</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="trunkHorizontalPeakVelocity">
-          <DataField>trunkHorizontalPeakVelocity</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="trunkSagittalPeakVelocity">
-          <DataField>trunkSagittalPeakVelocity</DataField>
+        <Field Name="unit">
+          <DataField>unit</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SPJP.DB</rd:DataSetName>
-        <rd:TableName>clsOrderDatabaseinfo</rd:TableName>
-        <rd:ObjectDataSourceType>SPJP.DB.clsOrderDatabaseinfo, SPJP.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>OnlineShow</rd:TableName>
+        <rd:ObjectDataSourceType>SPJP.DB.OnlineShow, SPJP.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -284,7 +152,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!patientName.Value</Value>
+                    <Value>=First(Fields!ptName.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -294,7 +162,7 @@
             <Top>1.9984in</Top>
             <Left>1.27917in</Left>
             <Height>0.18749in</Height>
-            <Width>1.88633in</Width>
+            <Width>0.90501in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -312,7 +180,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!diseaseType.Value</Value>
+                    <Value EvaluationMode="Constant" />
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -341,7 +209,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!checkConclusion.Value</Value>
+                    <Value>=First(Fields!result.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -372,7 +240,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!checkStartTime.Value</Value>
+                    <Value>=First(Fields!acquisitionStartTime.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -401,7 +269,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!checkType.Value</Value>
+                    <Value>=First(Fields!remark.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -430,7 +298,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!auditDoctorName.Value</Value>
+                    <Value>=First(Fields!toExamineDoctor.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -459,7 +327,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!checkDoctorName.Value</Value>
+                    <Value>=First(Fields!checkDoctor.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -517,7 +385,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!auditDoctorName.Value</Value>
+                    <Value>=First(Fields!toExamineDoctor.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -582,7 +450,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>患　　者：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -614,7 +484,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>诊　　断：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -644,7 +516,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>检查内容：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -676,7 +550,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>检查时间：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -706,7 +582,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>检查医生：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -737,7 +615,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!checkDoctorId.Value</Value>
+                    <Value>=First(Fields!checkDoctor.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -767,7 +645,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>审核医生：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -797,7 +677,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>检查结论</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -829,7 +711,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>检查医生（签名）：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -861,7 +745,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>审核医生（签名）：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -891,7 +777,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>打印时间：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -923,7 +811,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>GYENNO步态数据采集系统</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -951,8 +841,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!inspectId.Value</Value>
-                    <Style />
+                    <Value>=First(Fields!id.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -980,17 +872,19 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!serialNumber.Value</Value>
-                    <Style />
+                    <Value>=First(Fields!serialNumber.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <Top>0.79687in</Top>
-            <Left>4.86593in</Left>
+            <Left>4.61593in</Left>
             <Height>0.21653in</Height>
-            <Width>1.20834in</Width>
+            <Width>1.69792in</Width>
             <ZIndex>23</ZIndex>
             <Style>
               <Border>
@@ -1010,7 +904,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>检查报告：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -1040,7 +936,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>订单流水号：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -1048,7 +946,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>0.79687in</Top>
-            <Left>3.75917in</Left>
+            <Left>3.50917in</Left>
             <Height>0.21653in</Height>
             <Width>0.99531in</Width>
             <ZIndex>25</ZIndex>
@@ -1084,7 +982,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!checkHospitalName.Value</Value>
+                    <Value />
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -1114,7 +1012,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>GYENNO步态数据采集系统</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -1144,8 +1044,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>医院 　步态分析检查室</Value>
-                    <Style />
+                    <Value> 　步态分析检查室</Value>
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -1197,6 +1099,59 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="dianhua3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!ptName.Value, "DataSet1")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.99841in</Top>
+            <Left>2.21196in</Left>
+            <Height>0.18749in</Height>
+            <Width>0.90501in</Width>
+            <ZIndex>31</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line1">
+            <Top>2.80141cm</Top>
+            <Height>0cm</Height>
+            <Width>17cm</Width>
+            <ZIndex>32</ZIndex>
+            <Style>
+              <Border>
+                <Color>DimGray</Color>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line2">
+            <Top>26.93833cm</Top>
+            <Height>0cm</Height>
+            <Width>17cm</Width>
+            <ZIndex>33</ZIndex>
+            <Style>
+              <Border>
+                <Color>DimGray</Color>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
         </ReportItems>
         <Height>28.9cm</Height>
         <Style>

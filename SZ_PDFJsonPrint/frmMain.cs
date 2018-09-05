@@ -50,6 +50,7 @@ namespace SZ_PDFJsonPrint
         List<Online_Data> Online_datas;
         List<MaGait> Online_MaGait;
         List<Online_Root> Online_Root_datas;
+        List<OnlineShow> OnlineShow_datas;
         //PDF
         List<PDF_Root> PDF_Rootdb;
         List<Types> PDF_Types;
@@ -272,7 +273,61 @@ namespace SZ_PDFJsonPrint
                 reportForm = new ReportForm();
                 List<Datas> findsapinfo = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
 
-                reportForm.InitializeDataSource(findsapinfo);
+                #region 整理书几乎
+
+                var qtyTable = new DataTable();
+                qtyTable.Columns.Add("name1", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("name2", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("name3", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("name4", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("name5", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("name6", System.Type.GetType("System.String"));
+
+                foreach (MaGait k in Online_MaGait)
+                {
+                    qtyTable.Rows.Add(qtyTable.NewRow());
+                }
+                int row = 0;
+                foreach (MaGait k in Online_MaGait)
+                {
+                    if (k.typeName == null || k.typeName == "")
+                        qtyTable.Rows[row][0] = "-";
+                    else
+                        qtyTable.Rows[row][0] = k.typeName;
+
+
+                    if (k.unit == null || k.unit == "")
+                        qtyTable.Rows[row][1] = "-";
+                    else
+                        qtyTable.Rows[row][1] = k.unit;
+
+
+                    if (k.avgNormal == null || k.avgNormal == "")
+                        qtyTable.Rows[row][2] = "-";
+                    else
+                        qtyTable.Rows[row][2] = k.avgNormal;
+
+
+                    if (k.rightNormal == null || k.rightNormal == "")
+                        qtyTable.Rows[row][3] = "-";
+                    else
+                        qtyTable.Rows[row][3] = k.rightNormal;
+
+
+                    qtyTable.Rows[row][4] = "/";
+
+                    if (k.leftNormal == null || k.leftNormal == "")
+                        qtyTable.Rows[row][5] = "-";
+                    else
+                        qtyTable.Rows[row][5] = k.leftNormal;
+                    row++;
+                }
+                #endregion
+
+
+
+                //reportForm.InitializeDataSource(findsapinfo);
+                reportForm.InitializeDataSource(qtyTable, OnlineShow_datas);
                 reportForm.ShowDialog();
             }
             //InitializeEdiData();
@@ -436,13 +491,14 @@ namespace SZ_PDFJsonPrint
             tclass_datas = new List<Datas>();
             Root_datas = new List<Root>();
             Excel_body = new DataTable();
+            OnlineShow_datas = new List<OnlineShow>();
 
 
             clsAllnew BusinessHelp = new clsAllnew();
             //导入程序集
             DateTime oldDate = DateTime.Now;
 
-            BusinessHelp.ReadJSON_Report(ref this.bgWorker, "A","","","");
+            BusinessHelp.ReadJSON_Report(ref this.bgWorker, "A", "", "", "");
 
             PDF_Rootdb = BusinessHelp.PDF_Rootdb;
             PDF_Types = BusinessHelp.PDF_Types;
@@ -457,7 +513,7 @@ namespace SZ_PDFJsonPrint
             Online_datas = BusinessHelp.Online_datas;
             Online_MaGait = BusinessHelp.Online_MaGait;
             Online_Root_datas = BusinessHelp.Online_Root_datas;
-
+            OnlineShow_datas = BusinessHelp.OnlineShow_datas;
 
             DateTime FinishTime = DateTime.Now;
             TimeSpan s = DateTime.Now - oldDate;
@@ -606,7 +662,7 @@ namespace SZ_PDFJsonPrint
             sw.WriteLine(strHeader);
 
             //output rows data
-            for (int j = 0; j < dataGridView.Rows.Count; j++)
+            for (int j = 0; j < dataGridView.Rows.Count-1; j++)
             {
                 string strRowValue = "";
 
@@ -614,7 +670,7 @@ namespace SZ_PDFJsonPrint
                 {
                     if (dataGridView.Rows[j].Cells[k].Value != null)
                     {
-                        if (k == 7 || k == 5 || k == 8 || k == 9 || k == 10 || k == 5 || k == 5)
+                        if (k == 7 || k == 5 || k == 8 || k == 9 || k == 10 || k == 5)
                             strRowValue += "'" + dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
                         //if (dataGridView.Rows[j].Cells[k].Value != null)
                         //    strRowValue +=   ((char)(9)).ToString() +dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ") + delimiter;
@@ -642,6 +698,9 @@ namespace SZ_PDFJsonPrint
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+
+
+
             //pdfExport();
 
             PrintReportForEDI();
@@ -697,7 +756,7 @@ namespace SZ_PDFJsonPrint
 
             reportViewer1 = new ReportViewer();
 
-            reportForm.InitializeDataSource(printclass_datas);//tclass_datas
+            //   reportForm.InitializeDataSource(printclass_datas);//tclass_datas
             reportViewer1 = reportForm.reportViewer1;
             //reportForm.ShowDialog();
 

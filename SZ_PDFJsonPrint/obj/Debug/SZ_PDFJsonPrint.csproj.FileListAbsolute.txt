@@ -25,8 +25,6 @@ D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.Repo
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.csproj.GenerateResource.Cache
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.cache
 D:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.compiled
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report1.rdlc
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report2.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report3.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4_0.rdlc
@@ -55,4 +53,3 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlComp
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\RdlCompile.compiled
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.exe
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.pdb
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\obj\Debug\SZ_PDFJsonPrint.bak_frmMain.resources

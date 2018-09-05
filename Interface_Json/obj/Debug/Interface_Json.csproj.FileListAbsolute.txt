@@ -1,5 +1,3 @@
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report1.rdlc
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report2.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report3.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report4.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report4_0.rdlc

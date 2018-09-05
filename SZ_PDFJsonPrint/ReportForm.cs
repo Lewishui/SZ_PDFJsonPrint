@@ -15,7 +15,9 @@ namespace SZ_PDFJsonPrint
 {
     public partial class ReportForm : Form
     {
-        List<Datas> FilterOrderResults;
+        DataTable FilterOrderResults;
+        List<OnlineShow> OnlineShow_datas;
+        
         public ReportForm()
         {
             InitializeComponent();
@@ -60,16 +62,17 @@ namespace SZ_PDFJsonPrint
             this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }
-        public void InitializeDataSource(List<Datas> orders)
+        public void InitializeDataSource(DataTable orders,     List<OnlineShow> OnlineShow_datas1)
         {
-            FilterOrderResults = new List<Datas>();
+            FilterOrderResults = new DataTable();
             FilterOrderResults = orders;
+            OnlineShow_datas = OnlineShow_datas1;
 
             this.reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.EnableExternalImages = true;
             //this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", orders));
-            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", orders));
-
+            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet3", orders));
+            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", OnlineShow_datas));
         }
 
         void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)
@@ -87,7 +90,9 @@ namespace SZ_PDFJsonPrint
             var s = e.ReportPath;
             e.DataSources.Clear();
             //e.DataSources.Add(new ReportDataSource("DataSet1", new List<v_pendingorder>() { orderFirst }));
-            e.DataSources.Add(new ReportDataSource("DataSet1", FilterOrderResults));
+            e.DataSources.Add(new ReportDataSource("DataSet3", FilterOrderResults));
+            e.DataSources.Add(new ReportDataSource("DataSet1", OnlineShow_datas));
+         
             //e.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource(reportName, ds1.Tables[0]));
             //throw new NotImplementedException();
         }

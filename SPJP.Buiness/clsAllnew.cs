@@ -35,6 +35,8 @@ namespace SPJP.Buiness
         public List<Online_Data> Online_datas;
         public List<MaGait> Online_MaGait;
         public List<Online_Root> Online_Root_datas;
+
+        public List<OnlineShow> OnlineShow_datas;
         //PDF
         public List<PDF_Root> PDF_Rootdb;
         public List<Types> PDF_Types;
@@ -270,6 +272,7 @@ Encoding encoding, string mimeType, bool willSeek)
             Root_datas = new List<Root>();
             Online_Root_datas = new List<Online_Root>();
             Excel_body = new DataTable();
+            OnlineShow_datas = new List<OnlineShow>();
 
             ReadJsonID();
 
@@ -760,8 +763,6 @@ Encoding encoding, string mimeType, bool willSeek)
             item1.reqId = mm1["reqId"].ToString();
 
             Online_Root_datas.Add(item1);
-
-
             //
             Online_Data item = new Online_Data();
 
@@ -778,12 +779,46 @@ Encoding encoding, string mimeType, bool willSeek)
             item.dataSources = mm["dataSources"].ToString();
             item.type = mm["type"].ToString();
             item.remark = mm["remark"].ToString();
-
+            //绑定reqId
+            item.reqId = item1.reqId;
             Online_datas.Add(item);
+             
+            //string jsonother = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+            //DataTable DTOnline_Data = Newtonsoft.Json.JsonConvert.DeserializeObject<DataTable>(jsonother);
+
+
 
             object obj_maGait = dic1["maGait"];
             string json_maGait = Newtonsoft.Json.JsonConvert.SerializeObject(obj_maGait);
             Online_MaGait = Newtonsoft.Json.JsonConvert.DeserializeObject<List<MaGait>>(json_maGait);
+            //绑定reqId
+            foreach (MaGait itemn in Online_MaGait)
+                itemn.reqId = item1.reqId;
+
+          
+            #region   //整理数据
+            OnlineShow allitem = new OnlineShow();
+
+            allitem.code = item1.code;
+            allitem.msg = item1.msg;
+            allitem.reqId = item1.reqId;
+            //Online Data
+            allitem.id = item.id;
+            allitem.serialNumber = item.serialNumber;
+            allitem.patientId = item.patientId;
+            allitem.acquisitionStartTime = item.acquisitionStartTime;
+            allitem.acquisitionEndTime = item.acquisitionEndTime;
+
+            allitem.equipmentModel = item.equipmentModel;
+            allitem.equipmentNumber = item.equipmentNumber;
+            allitem.checkNumber = item.checkNumber;
+            allitem.dataSources = item.dataSources;
+            allitem.type = item.type;
+            allitem.remark = item.remark;
+
+            OnlineShow_datas.Add(allitem);
+
+            #endregion
 
         }
         public string DoPost(string url, string data)

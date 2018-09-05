@@ -239,7 +239,7 @@ namespace Interface_Json
 
                 List<Datas> findsapinfo = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
 
-                reportForm.InitializeDataSource(findsapinfo);
+                //  reportForm.InitializeDataSource(findsapinfo);
                 reportForm.ShowDialog();
             }
             //InitializeEdiData();
@@ -448,7 +448,7 @@ namespace Interface_Json
             sw.WriteLine(strHeader);
 
             //output rows data
-            for (int j = 0; j < dataGridView.Rows.Count; j++)
+            for (int j = 0; j < dataGridView.Rows.Count - 1; j++)
             {
                 string strRowValue = "";
 
@@ -456,7 +456,7 @@ namespace Interface_Json
                 {
                     if (dataGridView.Rows[j][k].ToString() != null)
                     {
-                        if (k == 7 || k == 5 || k == 8 || k == 9 || k == 10 || k == 5 || k == 5)
+                        if (k == 7 || k == 5 || k == 8 || k == 9 || k == 10 || k == 5)
                             strRowValue += "'" + dataGridView.Rows[j][k].ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
                         //if (dataGridView.Rows[j].Cells[k].Value != null)
                         //    strRowValue +=   ((char)(9)).ToString() +dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ") + delimiter;
@@ -493,7 +493,7 @@ namespace Interface_Json
             saveFileDialog.Filter = "csv|*.csv";
             string strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
             saveFileDialog.FileName = strFileName;
-          
+
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 strFileName = saveFileDialog.FileName.ToString();
@@ -621,7 +621,7 @@ namespace Interface_Json
 
             reportViewer1 = new ReportViewer();
 
-            reportForm.InitializeDataSource(printclass_datas);//tclass_datas
+            //  reportForm.InitializeDataSource(printclass_datas);//tclass_datas
             reportViewer1 = reportForm.reportViewer1;
             //reportForm.ShowDialog();
 
@@ -652,15 +652,15 @@ namespace Interface_Json
                 saveFileDialog.Filter = "PDF(*.pdf)|*.pdf";
                 strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
                 saveFileDialog.FileName = strFileName;
-         
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        strFileName = saveFileDialog.FileName.ToString();
-                    }
-                    else
-                    {
-                        return;
-                    }
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    strFileName = saveFileDialog.FileName.ToString();
+                }
+                else
+                {
+                    return;
+                }
                 pdfExport(strFileName);
             }
             if (issaveok == true)

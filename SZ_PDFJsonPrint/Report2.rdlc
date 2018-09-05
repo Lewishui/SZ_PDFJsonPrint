@@ -9,267 +9,193 @@
       </ConnectionProperties>
       <rd:DataSourceID>d516f535-7df0-496f-a208-ea6f1e38e217</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="SPJPDB">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>45a68f16-95ab-460c-940d-9a24e0044ca7</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="SPJPDB1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>82765bc5-4e16-4a54-b246-0d7392c0256f</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="SPJPDB2">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>244a7e02-aba9-4c3b-a0cb-cf5c4557d23f</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>TJDB</DataSourceName>
+        <DataSourceName>SPJPDB</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="auditDoctorName">
-          <DataField>auditDoctorName</DataField>
+        <Field Name="acquisitionEndTime">
+          <DataField>acquisitionEndTime</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="balanceTrunkHorizontalPeakVelocity">
-          <DataField>balanceTrunkHorizontalPeakVelocity</DataField>
+        <Field Name="acquisitionStartTime">
+          <DataField>acquisitionStartTime</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="balanceTrunkSagittalPeakVelocity">
-          <DataField>balanceTrunkSagittalPeakVelocity</DataField>
+        <Field Name="avgError">
+          <DataField>avgError</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="birthday">
-          <DataField>birthday</DataField>
+        <Field Name="avgNormal">
+          <DataField>avgNormal</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cadence_avg">
-          <DataField>cadence_avg</DataField>
+        <Field Name="checkDoctor">
+          <DataField>checkDoctor</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cadence_L">
-          <DataField>cadence_L</DataField>
+        <Field Name="checkNumber">
+          <DataField>checkNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cadence_R">
-          <DataField>cadence_R</DataField>
+        <Field Name="code">
+          <DataField>code</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkConclusion">
-          <DataField>checkConclusion</DataField>
+        <Field Name="data">
+          <DataField>data</DataField>
+          <rd:TypeName>SPJP.DB.Online_Data</rd:TypeName>
+        </Field>
+        <Field Name="dataSources">
+          <DataField>dataSources</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkDoctorId">
-          <DataField>checkDoctorId</DataField>
+        <Field Name="equipmentModel">
+          <DataField>equipmentModel</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkDoctorName">
-          <DataField>checkDoctorName</DataField>
+        <Field Name="equipmentNumber">
+          <DataField>equipmentNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkEndTime">
-          <DataField>checkEndTime</DataField>
+        <Field Name="id">
+          <DataField>id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkHospitalId">
-          <DataField>checkHospitalId</DataField>
+        <Field Name="leftError">
+          <DataField>leftError</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkHospitalName">
-          <DataField>checkHospitalName</DataField>
+        <Field Name="leftNormal">
+          <DataField>leftNormal</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="checkRemark">
-          <DataField>checkRemark</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="checkStartTime">
-          <DataField>checkStartTime</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="checkType">
-          <DataField>checkType</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="courseOfDisease">
-          <DataField>courseOfDisease</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="diseaseType">
-          <DataField>diseaseType</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="dizhi">
-          <DataField>dizhi</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="dualTask">
-          <DataField>dualTask</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="gaitCycle_avg">
-          <DataField>gaitCycle_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="gaitCycle_L">
-          <DataField>gaitCycle_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="gaitCycle_R">
-          <DataField>gaitCycle_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="inspectId">
-          <DataField>inspectId</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="meanPhaseDifference">
-          <DataField>meanPhaseDifference</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Order_id">
-          <DataField>Order_id</DataField>
+        <Field Name="msg">
+          <DataField>msg</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="patientId">
           <DataField>patientId</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="patientName">
-          <DataField>patientName</DataField>
+        <Field Name="ptName">
+          <DataField>ptName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="peakShankVelocityAsymmetry">
-          <DataField>peakShankVelocityAsymmetry</DataField>
+        <Field Name="remark">
+          <DataField>remark</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="peakSiStAngularVelocity">
-          <DataField>peakSiStAngularVelocity</DataField>
+        <Field Name="reqId">
+          <DataField>reqId</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="phaseCoordinationIndex">
-          <DataField>phaseCoordinationIndex</DataField>
+        <Field Name="result">
+          <DataField>result</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rightError">
+          <DataField>rightError</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rightNormal">
+          <DataField>rightNormal</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="serialNumber">
           <DataField>serialNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="sex">
-          <DataField>sex</DataField>
+        <Field Name="toExamineDoctor">
+          <DataField>toExamineDoctor</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="shank_SSI">
-          <DataField>shank_SSI</DataField>
+        <Field Name="type">
+          <DataField>type</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="shankAsymmetry">
-          <DataField>shankAsymmetry</DataField>
+        <Field Name="type_MaGait">
+          <DataField>type_MaGait</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="showimage">
-          <DataField>showimage</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="sistDuration">
-          <DataField>sistDuration</DataField>
+        <Field Name="typeCode">
+          <DataField>typeCode</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="sistTrunkRoM">
-          <DataField>sistTrunkRoM</DataField>
+        <Field Name="typeName">
+          <DataField>typeName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="stance_avg">
-          <DataField>stance_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stance_L">
-          <DataField>stance_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stance_R">
-          <DataField>stance_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stanceAsymmetry">
-          <DataField>stanceAsymmetry</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stepLength_avg">
-          <DataField>stepLength_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stepLength_L">
-          <DataField>stepLength_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="stepLength_R">
-          <DataField>stepLength_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideLength_avg">
-          <DataField>strideLength_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideLength_L">
-          <DataField>strideLength_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideLength_R">
-          <DataField>strideLength_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideLengthAsymmetry">
-          <DataField>strideLengthAsymmetry</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideVelocity_avg">
-          <DataField>strideVelocity_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideVelocity_L">
-          <DataField>strideVelocity_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideVelocity_R">
-          <DataField>strideVelocity_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="strideVelocityAsymmetry">
-          <DataField>strideVelocityAsymmetry</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="support_avg">
-          <DataField>support_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="support_L">
-          <DataField>support_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="support_R">
-          <DataField>support_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="swing_avg">
-          <DataField>swing_avg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="swing_L">
-          <DataField>swing_L</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="swing_R">
-          <DataField>swing_R</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="swingAsymmetry">
-          <DataField>swingAsymmetry</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="trunkHorizontalPeakVelocity">
-          <DataField>trunkHorizontalPeakVelocity</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="trunkSagittalPeakVelocity">
-          <DataField>trunkSagittalPeakVelocity</DataField>
+        <Field Name="unit">
+          <DataField>unit</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SPJP.DB</rd:DataSetName>
-        <rd:TableName>clsOrderDatabaseinfo</rd:TableName>
-        <rd:ObjectDataSourceType>SPJP.DB.clsOrderDatabaseinfo, SPJP.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>OnlineShow</rd:TableName>
+        <rd:ObjectDataSourceType>SPJP.DB.OnlineShow, SPJP.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet3">
+      <Query>
+        <DataSourceName>SPJPDB2</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="name1">
+          <DataField>name1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="name2">
+          <DataField>name2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="name3">
+          <DataField>name3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="name4">
+          <DataField>name4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="name5">
+          <DataField>name5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="name6">
+          <DataField>name6</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SPJP.DB</rd:DataSetName>
+        <rd:TableName>OnlinecheckTableShow</rd:TableName>
+        <rd:ObjectDataSourceType>SPJP.DB.OnlinecheckTableShow, SPJP.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -285,7 +211,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>GYENNO步态数据采集系统</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -312,8 +240,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!inspectId.Value</Value>
-                    <Style />
+                    <Value>=First(Fields!id.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -341,8 +271,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!serialNumber.Value</Value>
-                    <Style />
+                    <Value>=First(Fields!serialNumber.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -371,7 +303,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>检查报告：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -401,7 +335,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>订单流水号：</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -445,7 +381,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!checkHospitalName.Value</Value>
+                    <Value />
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -475,7 +411,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>GYENNO步态数据采集系统</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -484,7 +422,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>10.63217in</Top>
-            <Left>0.25192in</Left>
+            <Left>0.26234in</Left>
             <Height>0.25in</Height>
             <Width>1.83333in</Width>
             <ZIndex>7</ZIndex>
@@ -505,15 +443,17 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>医院 　步态分析检查室</Value>
-                    <Style />
+                    <Value> 　步态分析检查室</Value>
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <Top>10.63217in</Top>
-            <Left>5.04301in</Left>
+            <Left>5.05343in</Left>
             <Height>0.25in</Height>
             <Width>1.52398in</Width>
             <ZIndex>8</ZIndex>
@@ -566,7 +506,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>检查数据　（站立过程　SiSt）</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -576,7 +518,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>1.41244in</Top>
-            <Left>0.21543in</Left>
+            <Left>0.20626in</Left>
             <Height>0.25in</Height>
             <Width>2.23834in</Width>
             <ZIndex>10</ZIndex>
@@ -584,6 +526,7 @@
               <Border>
                 <Style>None</Style>
               </Border>
+              <BackgroundColor>White</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -594,7 +537,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.84535in</Width>
+                  <Width>2.29482in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.79375in</Width>
@@ -604,6 +547,9 @@
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.77292in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.15261in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.77292in</Width>
@@ -623,7 +569,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>检查项</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -634,7 +582,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Item</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -667,7 +617,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>单位</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -678,7 +630,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Unit</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -711,7 +665,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>平均值</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -722,7 +678,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Average</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -755,7 +713,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>右侧</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -766,7 +726,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>R</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -791,6 +753,39 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox48">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox48</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>#5a7193</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox10">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -799,7 +794,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>左侧</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -810,7 +807,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>L</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -840,22 +839,21 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="dianhua">
+                        <Textbox Name="name1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Constant">起立过程时间
-SiSt Duration</Value>
+                                  <Value>=Fields!name1.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>dianhua</rd:DefaultName>
+                          <rd:DefaultName>name1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -871,21 +869,23 @@ SiSt Duration</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="dianhua2">
+                        <Textbox Name="name2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Constant">sec</Value>
+                                  <Value>=Fields!name2.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>dianhua2</rd:DefaultName>
+                          <rd:DefaultName>name2</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -901,21 +901,23 @@ SiSt Duration</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox25">
+                        <Textbox Name="name3">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!sistDuration.Value</Value>
+                                  <Value>=Fields!name3.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox25</rd:DefaultName>
+                          <rd:DefaultName>name3</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -931,26 +933,31 @@ SiSt Duration</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox13">
+                        <Textbox Name="name4">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!name4.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox13</rd:DefaultName>
+                          <rd:DefaultName>name4</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <RightBorder>
+                              <Style>None</Style>
+                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -961,62 +968,32 @@ SiSt Duration</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox11">
+                        <Textbox Name="name5">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!name5.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <rd:DefaultName>name5</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.4375in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value EvaluationMode="Constant">起立过程中躯干矢状面峰值角速度
-SiSt Duration</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
+                            <LeftBorder>
+                              <Style>None</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>None</Style>
+                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1027,272 +1004,31 @@ SiSt Duration</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox6">
+                        <Textbox Name="name6">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Constant">degree/sec</Value>
+                                  <Value>=Fields!name6.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <rd:DefaultName>name6</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox7">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!peakSiStAngularVelocity.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox7</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox8">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox8</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox9">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox9</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.38542in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox18">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value EvaluationMode="Constant">起立过程中躯干矢状面角度范围
-SiSt Duration</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox18</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox19">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>degree</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox19</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox28">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!sistTrunkRoM.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox28</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox29">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox29</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox30">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox30</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
+                            <LeftBorder>
+                              <Style>None</Style>
+                            </LeftBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1312,6 +1048,7 @@ SiSt Duration</Value>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1323,17 +1060,15 @@ SiSt Duration</Value>
                   <Group Name="详细信息" />
                   <TablixMembers>
                     <TablixMember />
-                    <TablixMember />
-                    <TablixMember />
                   </TablixMembers>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DataSet1</DataSetName>
+            <DataSetName>DataSet3</DataSetName>
             <Top>1.88119in</Top>
-            <Left>0.58832in</Left>
-            <Height>1.58334in</Height>
-            <Width>5.97867in</Width>
+            <Left>0.71332in</Left>
+            <Height>0.76042in</Height>
+            <Width>5.58077in</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
@@ -1349,7 +1084,9 @@ SiSt Duration</Value>
                 <TextRuns>
                   <TextRun>
                     <Value>检查数据　（平衡　Balance）</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -1359,7 +1096,7 @@ SiSt Duration</Value>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>5.88119in</Top>
-            <Left>0.21543in</Left>
+            <Left>0.22585in</Left>
             <Height>0.25in</Height>
             <Width>2.23834in</Width>
             <ZIndex>12</ZIndex>
@@ -1377,7 +1114,7 @@ SiSt Duration</Value>
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.84535in</Width>
+                  <Width>2.29482in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.79375in</Width>
@@ -1387,6 +1124,9 @@ SiSt Duration</Value>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.77292in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.15261in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.77292in</Width>
@@ -1406,7 +1146,9 @@ SiSt Duration</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>检查项</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1417,7 +1159,9 @@ SiSt Duration</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>Item</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1450,7 +1194,9 @@ SiSt Duration</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>单位</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1461,7 +1207,9 @@ SiSt Duration</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>Unit</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1486,7 +1234,7 @@ SiSt Duration</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox26">
+                        <Textbox Name="Textbox25">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1494,7 +1242,9 @@ SiSt Duration</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>平均值</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1505,7 +1255,9 @@ SiSt Duration</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>Average</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1530,7 +1282,7 @@ SiSt Duration</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox14">
+                        <Textbox Name="Textbox13">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1538,7 +1290,9 @@ SiSt Duration</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>右侧</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1549,7 +1303,9 @@ SiSt Duration</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>R</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1574,7 +1330,40 @@ SiSt Duration</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox15">
+                        <Textbox Name="Textbox49">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox48</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>#5a7193</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox11">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1582,7 +1371,9 @@ SiSt Duration</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>左侧</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1593,7 +1384,9 @@ SiSt Duration</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>L</Value>
-                                  <Style />
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1619,26 +1412,25 @@ SiSt Duration</Value>
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.42709in</Height>
+                  <Height>0.40625in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="fapiaohao2">
+                        <Textbox Name="name7">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Constant">躯干矢状面峰值角速度
-Trunk Sagittal Peak Velocity</Value>
+                                  <Value>=Fields!name1.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>fapiaohao</rd:DefaultName>
+                          <rd:DefaultName>name1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1654,21 +1446,23 @@ Trunk Sagittal Peak Velocity</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="bianhao2">
+                        <Textbox Name="name8">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>degree/sec</Value>
+                                  <Value>=Fields!name2.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>bianhao</rd:DefaultName>
+                          <rd:DefaultName>name2</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1684,21 +1478,23 @@ Trunk Sagittal Peak Velocity</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox27">
+                        <Textbox Name="name9">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!balanceTrunkSagittalPeakVelocity.Value</Value>
+                                  <Value>=Fields!name3.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox25</rd:DefaultName>
+                          <rd:DefaultName>name3</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1714,26 +1510,31 @@ Trunk Sagittal Peak Velocity</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox16">
+                        <Textbox Name="name10">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!name4.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox13</rd:DefaultName>
+                          <rd:DefaultName>name4</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <RightBorder>
+                              <Style>None</Style>
+                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1744,70 +1545,32 @@ Trunk Sagittal Peak Velocity</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox17">
+                        <Textbox Name="name11">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!name5.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <rd:DefaultName>name5</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.34375in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox31">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>躯干横断面峰值角速度</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Trunk Horizontal Peak Velocity</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox31</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
+                            <LeftBorder>
+                              <Style>None</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>None</Style>
+                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1818,116 +1581,31 @@ Trunk Sagittal Peak Velocity</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox32">
+                        <Textbox Name="name12">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>degree/sec</Value>
+                                  <Value>=Fields!name6.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox32</rd:DefaultName>
+                          <rd:DefaultName>name6</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox33">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!balanceTrunkHorizontalPeakVelocity.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox33</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox34">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox34</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox35">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox35</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
+                            <LeftBorder>
+                              <Style>None</Style>
+                            </LeftBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1947,6 +1625,7 @@ Trunk Sagittal Peak Velocity</Value>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1958,16 +1637,15 @@ Trunk Sagittal Peak Velocity</Value>
                   <Group Name="详细信息2" />
                   <TablixMembers>
                     <TablixMember />
-                    <TablixMember />
                   </TablixMembers>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DataSet1</DataSetName>
-            <Top>6.35514in</Top>
-            <Left>0.58832in</Left>
-            <Height>1.12501in</Height>
-            <Width>5.97867in</Width>
+            <DataSetName>DataSet3</DataSetName>
+            <Top>6.43606in</Top>
+            <Left>0.71332in</Left>
+            <Height>0.76042in</Height>
+            <Width>5.58077in</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -1975,6 +1653,30 @@ Trunk Sagittal Peak Velocity</Value>
               </Border>
             </Style>
           </Tablix>
+          <Line Name="Line1">
+            <Top>26.53453cm</Top>
+            <Height>0cm</Height>
+            <Width>17cm</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Color>DimGray</Color>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line2">
+            <Top>3.27766cm</Top>
+            <Height>0cm</Height>
+            <Width>17cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Color>DimGray</Color>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
         </ReportItems>
         <Height>28.7cm</Height>
         <Style>
