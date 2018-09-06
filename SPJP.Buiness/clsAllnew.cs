@@ -496,7 +496,8 @@ Encoding encoding, string mimeType, bool willSeek)
 
         private void ReadJsonID()
         {
-            string result1 = DoPost("https://api.douban.com/v2/book/isbn/9787115212948", "10");
+            // string result1 = DoPost("https://api.douban.com/v2/book/isbn/9787115212948", "10");
+            string result1 = "";
 
             //假数据
             //string A_Path = AppDomain.CurrentDomain.BaseDirectory + "json\\pdf.json";
@@ -771,18 +772,24 @@ Encoding encoding, string mimeType, bool willSeek)
             item.id = mm["id"].ToString();
             item.serialNumber = mm["serialNumber"].ToString();
             item.patientId = mm["patientId"].ToString();
+            item.ptName = mm["ptName"].ToString();
+           
             item.acquisitionStartTime = mm["acquisitionStartTime"].ToString();
             item.acquisitionEndTime = mm["acquisitionEndTime"].ToString();
             item.equipmentModel = mm["equipmentModel"].ToString();
             item.equipmentNumber = mm["equipmentNumber"].ToString();
             item.checkNumber = mm["checkNumber"].ToString();
+            item.diseaseType = mm["diseaseType"].ToString();
+            item.checkTime = mm["checkTime"].ToString();
+            item.hospitalName = mm["hospitalName"].ToString();
+            item.patientAge = mm["patientAge"].ToString();
             item.dataSources = mm["dataSources"].ToString();
             item.type = mm["type"].ToString();
             item.remark = mm["remark"].ToString();
             //绑定reqId
             item.reqId = item1.reqId;
             Online_datas.Add(item);
-             
+
             //string jsonother = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
             //DataTable DTOnline_Data = Newtonsoft.Json.JsonConvert.DeserializeObject<DataTable>(jsonother);
 
@@ -795,7 +802,7 @@ Encoding encoding, string mimeType, bool willSeek)
             foreach (MaGait itemn in Online_MaGait)
                 itemn.reqId = item1.reqId;
 
-          
+
             #region   //整理数据
             OnlineShow allitem = new OnlineShow();
 
@@ -806,12 +813,19 @@ Encoding encoding, string mimeType, bool willSeek)
             allitem.id = item.id;
             allitem.serialNumber = item.serialNumber;
             allitem.patientId = item.patientId;
+            allitem.ptName = item.ptName;
             allitem.acquisitionStartTime = item.acquisitionStartTime;
             allitem.acquisitionEndTime = item.acquisitionEndTime;
 
             allitem.equipmentModel = item.equipmentModel;
             allitem.equipmentNumber = item.equipmentNumber;
             allitem.checkNumber = item.checkNumber;
+            allitem.diseaseType = item.diseaseType;
+            allitem.checkTime = item.checkTime;
+            allitem.hospitalName = item.hospitalName;
+            allitem.patientAge = item.patientAge;
+
+
             allitem.dataSources = item.dataSources;
             allitem.type = item.type;
             allitem.remark = item.remark;

@@ -41,6 +41,10 @@
           <DataField>checkNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="checkTime">
+          <DataField>checkTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="code">
           <DataField>code</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -53,12 +57,20 @@
           <DataField>dataSources</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="diseaseType">
+          <DataField>diseaseType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="equipmentModel">
           <DataField>equipmentModel</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="equipmentNumber">
           <DataField>equipmentNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="hospitalName">
+          <DataField>hospitalName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="id">
@@ -75,6 +87,10 @@
         </Field>
         <Field Name="msg">
           <DataField>msg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="patientAge">
+          <DataField>patientAge</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="patientId">
@@ -160,17 +176,13 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.9984in</Top>
-            <Left>1.27917in</Left>
+            <Left>1.07182in</Left>
             <Height>0.18749in</Height>
             <Width>0.90501in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="shouji">
@@ -180,7 +192,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=First(Fields!diseaseType.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -188,7 +200,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.99839in</Top>
-            <Left>4.25274in</Left>
+            <Left>3.87873in</Left>
             <Height>0.18751in</Height>
             <Width>2.08333in</Width>
             <ZIndex>1</ZIndex>
@@ -196,10 +208,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="zhongyaotishi3">
@@ -240,7 +248,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!acquisitionStartTime.Value, "DataSet1")</Value>
+                    <Value>=First(Fields!checkTime.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -248,7 +256,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>2.375in</Top>
-            <Left>4.25274in</Left>
+            <Left>3.87873in</Left>
             <Height>0.1875in</Height>
             <Width>2.08333in</Width>
             <ZIndex>3</ZIndex>
@@ -256,10 +264,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="shouhuoren2">
@@ -277,7 +281,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>2.375in</Top>
-            <Left>1.27917in</Left>
+            <Left>1.07182in</Left>
             <Height>0.1875in</Height>
             <Width>1.88633in</Width>
             <ZIndex>4</ZIndex>
@@ -285,10 +289,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="danwei2">
@@ -306,7 +306,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>2.72917in</Top>
-            <Left>4.25274in</Left>
+            <Left>3.87873in</Left>
             <Height>0.1875in</Height>
             <Width>2.08333in</Width>
             <ZIndex>5</ZIndex>
@@ -314,10 +314,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="dizhi2">
@@ -335,18 +331,14 @@
               </Paragraph>
             </Paragraphs>
             <Top>8.76405in</Top>
-            <Left>1.6012in</Left>
+            <Left>1.61162in</Left>
             <Height>0.1875in</Height>
-            <Width>2.08333in</Width>
+            <Width>1.41853in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="dianhua2">
@@ -364,18 +356,14 @@
               </Paragraph>
             </Paragraphs>
             <Top>9.19142in</Top>
-            <Left>1.6012in</Left>
+            <Left>1.04341in</Left>
             <Height>0.1875in</Height>
-            <Width>2.08333in</Width>
+            <Width>1.55395in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="shouji2">
@@ -393,7 +381,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>8.76405in</Top>
-            <Left>5.00403in</Left>
+            <Left>4.77565in</Left>
             <Height>0.1875in</Height>
             <Width>1.34328in</Width>
             <ZIndex>8</ZIndex>
@@ -401,10 +389,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox3">
@@ -464,16 +448,12 @@
             <Top>1.99839in</Top>
             <Left>0.33125in</Left>
             <Height>0.1875in</Height>
-            <Width>0.86931in</Width>
+            <Width>0.72668in</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox5">
@@ -494,18 +474,14 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>1.9984in</Top>
-            <Left>3.31995in</Left>
+            <Left>3.1126in</Left>
             <Height>0.1875in</Height>
-            <Width>0.86335in</Width>
+            <Width>0.71057in</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox6">
@@ -530,16 +506,12 @@
             <Top>2.375in</Top>
             <Left>0.34042in</Left>
             <Height>0.1875in</Height>
-            <Width>0.86931in</Width>
+            <Width>0.71751in</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox7">
@@ -560,18 +532,14 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>2.375in</Top>
-            <Left>3.31995in</Left>
+            <Left>3.1126in</Left>
             <Height>0.1875in</Height>
-            <Width>0.86335in</Width>
+            <Width>0.71057in</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox8">
@@ -596,16 +564,12 @@
             <Top>2.72917in</Top>
             <Left>0.34042in</Left>
             <Height>0.1875in</Height>
-            <Width>0.86931in</Width>
+            <Width>0.71751in</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="shouhuoren3">
@@ -623,7 +587,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>2.72917in</Top>
-            <Left>1.27917in</Left>
+            <Left>1.07182in</Left>
             <Height>0.1875in</Height>
             <Width>1.88633in</Width>
             <ZIndex>15</ZIndex>
@@ -631,10 +595,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox9">
@@ -655,18 +615,14 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>2.72917in</Top>
-            <Left>3.31995in</Left>
+            <Left>3.1126in</Left>
             <Height>0.1875in</Height>
-            <Width>0.86335in</Width>
+            <Width>0.71057in</Width>
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox10">
@@ -691,16 +647,12 @@
             <Top>3.05208in</Top>
             <Left>0.34042in</Left>
             <Height>0.1875in</Height>
-            <Width>0.86931in</Width>
+            <Width>0.71751in</Width>
             <ZIndex>17</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox11">
@@ -723,18 +675,14 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>8.76405in</Top>
-            <Left>0.125in</Left>
+            <Left>0.34043in</Left>
             <Height>0.1875in</Height>
-            <Width>1.44133in</Width>
+            <Width>1.27291in</Width>
             <ZIndex>18</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox12">
@@ -755,18 +703,14 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>8.76405in</Top>
-            <Left>3.50274in</Left>
+            <Left>3.50917in</Left>
             <Height>0.1875in</Height>
-            <Width>1.43184in</Width>
+            <Width>1.27291in</Width>
             <ZIndex>19</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox13">
@@ -789,18 +733,14 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>9.19142in</Top>
-            <Left>0.125in</Left>
+            <Left>0.33125in</Left>
             <Height>0.1875in</Height>
-            <Width>1.44133in</Width>
+            <Width>0.71216in</Width>
             <ZIndex>20</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="fukuandanwei">
@@ -851,7 +791,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.79242in</Top>
-            <Left>1.30695in</Left>
+            <Left>1.07182in</Left>
             <Height>0.22097in</Height>
             <Width>2.08333in</Width>
             <ZIndex>22</ZIndex>
@@ -859,10 +799,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="dizhi">
@@ -878,22 +814,20 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.79687in</Top>
-            <Left>4.61593in</Left>
-            <Height>0.21653in</Height>
+            <Top>0.79242in</Top>
+            <Left>4.40726in</Left>
+            <Height>0.22097in</Height>
             <Width>1.69792in</Width>
             <ZIndex>23</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox1">
@@ -916,16 +850,12 @@
             <Top>0.79242in</Top>
             <Left>0.33126in</Left>
             <Height>0.22097in</Height>
-            <Width>0.87847in</Width>
+            <Width>0.72667in</Width>
             <ZIndex>24</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox2">
@@ -941,23 +871,21 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.79687in</Top>
+            <Top>0.79242in</Top>
             <Left>3.50917in</Left>
-            <Height>0.21653in</Height>
-            <Width>0.99531in</Width>
+            <Height>0.22097in</Height>
+            <Width>0.89809in</Width>
             <ZIndex>25</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Image Name="Image1">
@@ -982,7 +910,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=First(Fields!hospitalName.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -998,10 +926,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="fukuandanwei2">
@@ -1031,10 +955,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="fukuandanwei3">
@@ -1044,13 +964,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value> 　步态分析检查室</Value>
+                    <Value>步态分析检查室</Value>
                     <Style>
                       <FontFamily>宋体</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <Top>10.74675in</Top>
@@ -1062,10 +984,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="fukuandanwei4">
@@ -1093,10 +1011,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="dianhua3">
@@ -1106,7 +1020,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!ptName.Value, "DataSet1")</Value>
+                    <Value>="("+First(Fields!patientAge.Value, "DataSet1")+")"</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -1114,7 +1028,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.99841in</Top>
-            <Left>2.21196in</Left>
+            <Left>2.00461in</Left>
             <Height>0.18749in</Height>
             <Width>0.90501in</Width>
             <ZIndex>31</ZIndex>
@@ -1122,10 +1036,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Line Name="Line1">

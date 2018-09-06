@@ -18,3 +18,6 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\obj\Debug\Interfac
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\obj\Debug\Interface_Json.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\obj\Debug\Interface_Json.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\System.Windows.Forms.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report1.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report2.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\ReportHome.rdlc

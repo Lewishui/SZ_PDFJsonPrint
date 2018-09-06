@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -17,26 +18,27 @@ namespace SZ_PDFJsonPrint
     {
         DataTable FilterOrderResults;
         List<OnlineShow> OnlineShow_datas;
-        
+
         public ReportForm()
         {
             InitializeComponent();
 
-            InitializeReportEvent();
+          InitializeReportEvent_pl();
+       // InitializeReportEvent();
         }
 
         private void ReportForm_Load(object sender, EventArgs e)
         {
-          //  reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
+            //  reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
             //NewMethod(); 
-        this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
         private void InitializeReportEvent()
         {
             this.reportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_SubreportProcessing);
             this.reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
 
-
+            
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.Percent;
             this.reportViewer1.ZoomPercent = 100;
             PageSettings pageset = new PageSettings();
@@ -62,17 +64,20 @@ namespace SZ_PDFJsonPrint
             this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }
-        public void InitializeDataSource(DataTable orders,     List<OnlineShow> OnlineShow_datas1)
+        public void InitializeDataSource(DataTable orders, List<OnlineShow> OnlineShow_datas1)
         {
             FilterOrderResults = new DataTable();
             FilterOrderResults = orders;
             OnlineShow_datas = OnlineShow_datas1;
+
 
             this.reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.EnableExternalImages = true;
             //this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", orders));
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet3", orders));
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", OnlineShow_datas));
+            //  this.reportViewer1.Reset();
+
         }
 
         void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)
@@ -92,7 +97,7 @@ namespace SZ_PDFJsonPrint
             //e.DataSources.Add(new ReportDataSource("DataSet1", new List<v_pendingorder>() { orderFirst }));
             e.DataSources.Add(new ReportDataSource("DataSet3", FilterOrderResults));
             e.DataSources.Add(new ReportDataSource("DataSet1", OnlineShow_datas));
-         
+
             //e.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource(reportName, ds1.Tables[0]));
             //throw new NotImplementedException();
         }
@@ -144,7 +149,7 @@ namespace SZ_PDFJsonPrint
         private void PrintPage(object sender, PrintPageEventArgs ev)
         {
             int ass = 0;
-            
+
             {
                 // var m_streams = ItemEnities.GroupBy(x => x.ジャンル).Select(y => y.First());
 
@@ -155,6 +160,40 @@ namespace SZ_PDFJsonPrint
             }
         }
 
+        #endregion
+
+
+        #region new
+
+        private void InitializeReportEvent_pl()
+        {
+            reportViewer1.Reset();
+            StreamReader mainstream = new StreamReader(Application.StartupPath + "\\Report1.rdlc");
+            reportViewer1.LocalReport.LoadReportDefinition(mainstream);
+            mainstream.Close();
+            //if (reportViewer1.ShowReportBody == false)
+            //{
+            //    reportViewer1.ShowReportBody = true;
+            //}
+
+            List<string> _reportNameList = new List<string>();
+            _reportNameList.Add("Report4");
+            _reportNameList.Add("Report1");//这个名字为在插入子报表时候，需要输入的报表名称。这个名称可以有具体的文件也可以没有。不要用类似Subreport2名称去加载子报表，否则会出错
+            _reportNameList.Add("Report2");
+            _reportNameList.Add("Report3");
+            _reportNameList.Add("Report2");
+            foreach (string reportName in _reportNameList)
+            {
+                StreamReader subStream = new StreamReader( reportName + ".rdlc");
+                reportViewer1.LocalReport.LoadSubreportDefinition(reportName, subStream);
+                subStream.Close();
+            }
+            //设置主报表数据源和所有报表（主，子）报表需要的参数等逻辑
+            // ReportViewer1.LocalReport.DataSources.Add(数据源);
+            //设置子报表进行事件订阅            
+            reportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_SubreportProcessing);
+
+        }
         #endregion
     }
 }

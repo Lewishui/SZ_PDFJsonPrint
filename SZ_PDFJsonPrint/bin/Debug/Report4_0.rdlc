@@ -55,6 +55,10 @@
           <DataField>checkNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="checkTime">
+          <DataField>checkTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="code">
           <DataField>code</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -67,12 +71,20 @@
           <DataField>dataSources</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="diseaseType">
+          <DataField>diseaseType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="equipmentModel">
           <DataField>equipmentModel</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="equipmentNumber">
           <DataField>equipmentNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="hospitalName">
+          <DataField>hospitalName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="id">
@@ -89,6 +101,10 @@
         </Field>
         <Field Name="msg">
           <DataField>msg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="patientAge">
+          <DataField>patientAge</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="patientId">

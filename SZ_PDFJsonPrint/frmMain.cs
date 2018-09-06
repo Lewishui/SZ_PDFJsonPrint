@@ -268,12 +268,86 @@ namespace SZ_PDFJsonPrint
         }
         private void PrintReportForEDI()
         {
-            for (int i = 0; i < tclass_datas.Count; i++)
+         
+            if (PDF_Types == null)
+                return;
+
+            //for (int i = 0; i < tclass_datas.Count; i++)
             {
                 reportForm = new ReportForm();
-                List<Datas> findsapinfo = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
+                //List<Datas> findsapinfo = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
 
                 #region 整理书几乎
+
+                //var qtyTable = new DataTable();
+                //qtyTable.Columns.Add("name1", System.Type.GetType("System.String"));
+                //qtyTable.Columns.Add("name2", System.Type.GetType("System.String"));
+                //qtyTable.Columns.Add("name3", System.Type.GetType("System.String"));
+                //qtyTable.Columns.Add("name4", System.Type.GetType("System.String"));
+                //qtyTable.Columns.Add("name5", System.Type.GetType("System.String"));
+                //qtyTable.Columns.Add("name6", System.Type.GetType("System.String"));
+
+                //foreach (MaGait k in Online_MaGait)
+                //{
+                //    qtyTable.Rows.Add(qtyTable.NewRow());
+                //}
+                //int row = 0;
+                //foreach (MaGait k in Online_MaGait)
+                //{
+                //    if (k.typeName == null || k.typeName == "")
+                //        qtyTable.Rows[row][0] = "-";
+                //    else
+                //        qtyTable.Rows[row][0] = k.typeName;
+
+
+                //    if (k.unit == null || k.unit == "")
+                //        qtyTable.Rows[row][1] = "-";
+                //    else
+                //        qtyTable.Rows[row][1] = k.unit;
+
+
+                //    if (k.avgNormal == null || k.avgNormal == "")
+                //        qtyTable.Rows[row][2] = "-";
+                //    else
+                //        qtyTable.Rows[row][2] = k.avgNormal;
+
+
+                //    if (k.rightNormal == null || k.rightNormal == "")
+                //        qtyTable.Rows[row][3] = "-";
+                //    else
+                //        qtyTable.Rows[row][3] = k.rightNormal;
+
+
+                //    qtyTable.Rows[row][4] = "/";
+
+                //    if (k.leftNormal == null || k.leftNormal == "")
+                //        qtyTable.Rows[row][5] = "-";
+                //    else
+                //        qtyTable.Rows[row][5] = k.leftNormal;
+                //    row++;
+                //}
+                #endregion
+
+                #region maintain
+
+
+                Create_table();
+                #endregion
+
+
+
+                //reportForm.InitializeDataSource(findsapinfo);
+                
+            }
+            //InitializeEdiData();
+        }
+
+        private void Create_table()
+        {
+            foreach (Types item in PDF_Types)
+            {
+                List<ChildType> Child = item.childType;
+
 
                 var qtyTable = new DataTable();
                 qtyTable.Columns.Add("name1", System.Type.GetType("System.String"));
@@ -283,17 +357,23 @@ namespace SZ_PDFJsonPrint
                 qtyTable.Columns.Add("name5", System.Type.GetType("System.String"));
                 qtyTable.Columns.Add("name6", System.Type.GetType("System.String"));
 
-                foreach (MaGait k in Online_MaGait)
+                foreach (ChildType k in Child)
                 {
                     qtyTable.Rows.Add(qtyTable.NewRow());
                 }
                 int row = 0;
-                foreach (MaGait k in Online_MaGait)
+                foreach (ChildType k in Child)
                 {
                     if (k.typeName == null || k.typeName == "")
                         qtyTable.Rows[row][0] = "-";
                     else
                         qtyTable.Rows[row][0] = k.typeName;
+
+
+                    if (k.typeEnName == null || k.typeEnName == "")
+                        qtyTable.Rows[row][0] = "-";
+                    else
+                        qtyTable.Rows[row][0] = k.typeName + "\r\n" + k.typeEnName;
 
 
                     if (k.unit == null || k.unit == "")
@@ -302,35 +382,45 @@ namespace SZ_PDFJsonPrint
                         qtyTable.Rows[row][1] = k.unit;
 
 
-                    if (k.avgNormal == null || k.avgNormal == "")
-                        qtyTable.Rows[row][2] = "-";
-                    else
-                        qtyTable.Rows[row][2] = k.avgNormal;
+                    List<MaGait> FindOnline_MaGait = Online_MaGait.FindAll(o => o.type != null && o.type == k.typeCode);
 
+                    if (FindOnline_MaGait.Count == 1)
+                    {
+                        MaGait ik = FindOnline_MaGait[0];
 
-                    if (k.rightNormal == null || k.rightNormal == "")
-                        qtyTable.Rows[row][3] = "-";
-                    else
-                        qtyTable.Rows[row][3] = k.rightNormal;
+                        if (ik.avgNormal == null || ik.avgNormal == "")
+                            qtyTable.Rows[row][2] = "-";
+                        else
+                            qtyTable.Rows[row][2] = ik.avgNormal;
 
+                        if (ik.rightNormal == null || ik.rightNormal == "")
+                            qtyTable.Rows[row][3] = "-";
+                        else
+                            qtyTable.Rows[row][3] = ik.rightNormal;
 
-                    qtyTable.Rows[row][4] = "/";
+                        qtyTable.Rows[row][4] = "/";
 
-                    if (k.leftNormal == null || k.leftNormal == "")
-                        qtyTable.Rows[row][5] = "-";
-                    else
-                        qtyTable.Rows[row][5] = k.leftNormal;
+                        if (ik.leftNormal == null || ik.leftNormal == "")
+                            qtyTable.Rows[row][5] = "-";
+                        else
+                            qtyTable.Rows[row][5] = ik.leftNormal;
+                    }
                     row++;
                 }
-                #endregion
-
-
-
-                //reportForm.InitializeDataSource(findsapinfo);
+                reportForm = new ReportForm();
                 reportForm.InitializeDataSource(qtyTable, OnlineShow_datas);
                 reportForm.ShowDialog();
+
+                reportForm = null;
+                foreach (DataRow emp in qtyTable.Rows)
+                {
+                    //clsribaodatasoureinfo tempnote = new clsribaodatasoureinfo(); //定义返回值
+
+                    //if (emp["riqi"].ToString() != "")
+                    //    tempnote.riqi = Convert.ToDateTime(emp["riqi"].ToString());
+
+                }
             }
-            //InitializeEdiData();
         }
 
         private void filterButton_Click(object sender, EventArgs e)
@@ -662,7 +752,7 @@ namespace SZ_PDFJsonPrint
             sw.WriteLine(strHeader);
 
             //output rows data
-            for (int j = 0; j < dataGridView.Rows.Count-1; j++)
+            for (int j = 0; j < dataGridView.Rows.Count - 1; j++)
             {
                 string strRowValue = "";
 
@@ -757,6 +847,10 @@ namespace SZ_PDFJsonPrint
             reportViewer1 = new ReportViewer();
 
             //   reportForm.InitializeDataSource(printclass_datas);//tclass_datas
+
+            //new 
+          //  Create_table();
+
             reportViewer1 = reportForm.reportViewer1;
             //reportForm.ShowDialog();
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -524,6 +525,8 @@ namespace SPJP.DB
         /// PatientId
         /// </summary>
         public string patientId { get; set; }
+        public string ptName { get; set; }
+        
         /// <summary>
         /// 2018-08-03 17:19
         /// </summary>
@@ -544,6 +547,13 @@ namespace SPJP.DB
         /// 40288a5f64feff480164ff14843a002e
         /// </summary>
         public string checkNumber { get; set; }
+
+
+        public string diseaseType { get; set; } // 诊断
+        public string checkTime { get; set; } //检查时间
+        public string hospitalName { get; set; } //检查医院
+        public string patientAge { get; set; } //患者年龄
+
         /// <summary>
         /// 1
         /// </summary>
@@ -645,6 +655,11 @@ namespace SPJP.DB
         /// 40288a5f64feff480164ff14843a002e
         /// </summary>
         public string checkNumber { get; set; }
+
+        public string diseaseType { get; set; } // 诊断
+        public string checkTime { get; set; } //检查时间
+        public string hospitalName { get; set; } //检查医院
+        public string patientAge { get; set; } //患者年龄
         /// <summary>
         /// 1
         /// </summary>
@@ -778,6 +793,48 @@ namespace SPJP.DB
         /// </summary>
         public List<Types> types { get; set; }
     }
+
+
+
+
+    #endregion
+
+    #region 检查数据
+    public class PDF_checkdatalist
+    {
+        public string name { get; set; }
+        public string _id { get; set; }
+        public List<PDF_checkdataDetail> pdf_checkdataDetail { get; set; }
+
+        public List<PDF_DataTableDetail> pdf_DataTableDetail { get; set; }
+
+    }
+    public class PDF_checkdataDetail
+    {
+
+        public string name1 { get; set; }
+        public string name2 { get; set; }
+        public string name3 { get; set; }
+        public string name4 { get; set; }
+        public string name5 { get; set; }
+        public string name6 { get; set; }
+        public string name7 { get; set; }
+        public string name8 { get; set; }
+        public string name9 { get; set; }
+        public string name10 { get; set; }
+        public string name11 { get; set; }
+        public string name12 { get; set; }
+        public string name13 { get; set; }
+
+    }
+    public class PDF_DataTableDetail
+    {
+        public DataTable name13 { get; set; }
+       
+
+    }
+
+
 
 
 

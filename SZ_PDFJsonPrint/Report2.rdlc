@@ -62,6 +62,10 @@
           <DataField>checkNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="checkTime">
+          <DataField>checkTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="code">
           <DataField>code</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -74,12 +78,20 @@
           <DataField>dataSources</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="diseaseType">
+          <DataField>diseaseType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="equipmentModel">
           <DataField>equipmentModel</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="equipmentNumber">
           <DataField>equipmentNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="hospitalName">
+          <DataField>hospitalName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="id">
@@ -96,6 +108,10 @@
         </Field>
         <Field Name="msg">
           <DataField>msg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="patientAge">
+          <DataField>patientAge</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="patientId">
@@ -250,7 +266,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.91742in</Top>
-            <Left>1.18195in</Left>
+            <Left>0.88681in</Left>
             <Height>0.22097in</Height>
             <Width>2.08333in</Width>
             <ZIndex>1</ZIndex>
@@ -258,10 +274,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="dizhi">
@@ -281,7 +293,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.92187in</Top>
-            <Left>4.86907in</Left>
+            <Left>4.61907in</Left>
             <Height>0.21653in</Height>
             <Width>1.69792in</Width>
             <ZIndex>2</ZIndex>
@@ -289,10 +301,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox1">
@@ -315,16 +323,12 @@
             <Top>0.91742in</Top>
             <Left>0.20626in</Left>
             <Height>0.22097in</Height>
-            <Width>0.87847in</Width>
+            <Width>0.68055in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox2">
@@ -347,16 +351,12 @@
             <Top>0.92187in</Top>
             <Left>3.68625in</Left>
             <Height>0.21653in</Height>
-            <Width>0.99531in</Width>
+            <Width>0.90939in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Image Name="Image1">
@@ -381,7 +381,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=First(Fields!hospitalName.Value, "DataSet1")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -397,10 +397,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="fukuandanwei2">
@@ -430,10 +426,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="fukuandanwei3">
@@ -443,7 +435,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value> 　步态分析检查室</Value>
+                    <Value>步态分析检查室</Value>
                     <Style>
                       <FontFamily>宋体</FontFamily>
                     </Style>
@@ -461,10 +453,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="fukuandanwei4">
@@ -492,10 +480,6 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox4">
