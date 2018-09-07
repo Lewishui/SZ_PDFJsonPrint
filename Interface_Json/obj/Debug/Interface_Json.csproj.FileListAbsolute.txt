@@ -20,7 +20,6 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\obj\Debug\Interfac
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\System.Windows.Forms.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report1.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report2.rdlc
-D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\ReportHome.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report1.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report2.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report3.rdlc
@@ -45,3 +44,16 @@ F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\obj\Debug\Interface_Json.csproj
 F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\obj\Debug\Interface_Json.dll
 F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\obj\Debug\Interface_Json.pdb
 F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report4_new.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report4_new.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report_Home.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report5.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report6.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report7.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report8.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report9.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report10.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report11.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report12.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report15.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report14.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report13.rdlc

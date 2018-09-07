@@ -427,7 +427,7 @@ namespace SZ_PDFJsonPrint
                
 
             }
-            reportForm = new ReportForm();
+         //   reportForm = new ReportForm();
             reportForm.InitializeDataSource(qtyTable, OnlineShow_datas, PDFcheckdataDetail, PDF_Types);
             reportForm.ShowDialog();
 

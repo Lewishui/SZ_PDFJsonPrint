@@ -917,7 +917,7 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>10.74675in</Top>
+            <Top>10.49675in</Top>
             <Left>3.85898in</Left>
             <Height>0.26042in</Height>
             <Width>0.8125in</Width>
@@ -946,7 +946,7 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>10.75717in</Top>
+            <Top>10.50717in</Top>
             <Left>0.12692in</Left>
             <Height>0.25in</Height>
             <Width>1.83333in</Width>
@@ -975,7 +975,7 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>10.74675in</Top>
+            <Top>10.49675in</Top>
             <Left>4.86593in</Left>
             <Height>0.25in</Height>
             <Width>1.52398in</Width>
@@ -1002,7 +1002,7 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>10.74675in</Top>
+            <Top>10.49675in</Top>
             <Left>2.47675in</Left>
             <Height>0.25in</Height>
             <Width>1.12722in</Width>
@@ -1051,7 +1051,7 @@
             </Style>
           </Line>
           <Line Name="Line2">
-            <Top>26.93833cm</Top>
+            <Top>26.21703cm</Top>
             <Height>0cm</Height>
             <Width>17cm</Width>
             <ZIndex>33</ZIndex>
@@ -1063,7 +1063,7 @@
             </Style>
           </Line>
         </ReportItems>
-        <Height>28.9cm</Height>
+        <Height>27.60354cm</Height>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1074,10 +1074,10 @@
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
-        <LeftMargin>1cm</LeftMargin>
-        <RightMargin>1cm</RightMargin>
-        <TopMargin>1cm</TopMargin>
-        <BottomMargin>1cm</BottomMargin>
+        <LeftMargin>2cm</LeftMargin>
+        <RightMargin>2cm</RightMargin>
+        <TopMargin>2cm</TopMargin>
+        <BottomMargin>2cm</BottomMargin>
         <ColumnSpacing>1.27cm</ColumnSpacing>
         <Style />
       </Page>

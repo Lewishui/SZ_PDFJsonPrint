@@ -721,6 +721,12 @@ namespace SPJP.DB
         /// cm
         /// </summary>
         public string unit { get; set; }
+
+
+        public bool showimage { get; set; }
+
+        public bool showimage15 { get; set; }
+
     }
     public class OnlinecheckTableShow
     {
