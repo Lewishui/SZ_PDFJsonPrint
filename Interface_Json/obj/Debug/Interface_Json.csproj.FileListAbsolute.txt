@@ -21,3 +21,27 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\System.W
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report1.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report2.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\ReportHome.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report1.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report2.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report3.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report4.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report4_0.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\ReportHome.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Interface_Json.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Interface_Json.pdb
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\log4net.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Newtonsoft.Json.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\SPJP.Buiness.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\SPJP.Common.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\SPJP.DB.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\System.Windows.Forms.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\SZ_PDFJsonPrint.exe
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\SPJP.Buiness.pdb
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\SPJP.Common.pdb
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\SPJP.DB.pdb
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\SZ_PDFJsonPrint.pdb
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\obj\Debug\Interface_Json.csprojResolveAssemblyReference.cache
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\obj\Debug\Interface_Json.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\obj\Debug\Interface_Json.pdb
+F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Report4_new.rdlc

@@ -562,6 +562,7 @@
                                 <TextRun>
                                   <Value>检查项</Value>
                                   <Style>
+                                    <FontFamily>宋体</FontFamily>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -575,6 +576,7 @@
                                 <TextRun>
                                   <Value>Item</Value>
                                   <Style>
+                                    <FontFamily>宋体</FontFamily>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -610,6 +612,7 @@
                                 <TextRun>
                                   <Value>单位</Value>
                                   <Style>
+                                    <FontFamily>宋体</FontFamily>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -623,6 +626,7 @@
                                 <TextRun>
                                   <Value>Unit</Value>
                                   <Style>
+                                    <FontFamily>宋体</FontFamily>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -658,6 +662,7 @@
                                 <TextRun>
                                   <Value>平均值</Value>
                                   <Style>
+                                    <FontFamily>宋体</FontFamily>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -671,6 +676,7 @@
                                 <TextRun>
                                   <Value>Average</Value>
                                   <Style>
+                                    <FontFamily>宋体</FontFamily>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -706,6 +712,7 @@
                                 <TextRun>
                                   <Value>右侧</Value>
                                   <Style>
+                                    <FontFamily>宋体</FontFamily>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -719,6 +726,7 @@
                                 <TextRun>
                                   <Value>R</Value>
                                   <Style>
+                                    <FontFamily>宋体</FontFamily>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -787,6 +795,7 @@
                                 <TextRun>
                                   <Value>左侧</Value>
                                   <Style>
+                                    <FontFamily>宋体</FontFamily>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -800,6 +809,7 @@
                                 <TextRun>
                                   <Value>L</Value>
                                   <Style>
+                                    <FontFamily>宋体</FontFamily>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>

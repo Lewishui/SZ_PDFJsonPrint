@@ -18,13 +18,17 @@ namespace SZ_PDFJsonPrint
     {
         DataTable FilterOrderResults;
         List<OnlineShow> OnlineShow_datas;
-
+        List<PDF_checkdataDetail> PDFcheckdataDetail;
+        List<Types> PDF_Types;
+        int ongong_index = 0;
+        double allpage_count = 0;
+      
         public ReportForm()
         {
             InitializeComponent();
 
-          InitializeReportEvent_pl();
-       // InitializeReportEvent();
+            // InitializeReportEvent_pl();
+            InitializeReportEvent();
         }
 
         private void ReportForm_Load(object sender, EventArgs e)
@@ -38,7 +42,7 @@ namespace SZ_PDFJsonPrint
             this.reportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_SubreportProcessing);
             this.reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
 
-            
+
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.Percent;
             this.reportViewer1.ZoomPercent = 100;
             PageSettings pageset = new PageSettings();
@@ -64,13 +68,37 @@ namespace SZ_PDFJsonPrint
             this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }
-        public void InitializeDataSource(DataTable orders, List<OnlineShow> OnlineShow_datas1)
+        public void InitializeDataSource(DataTable orders, List<OnlineShow> OnlineShow_datas1, List<PDF_checkdataDetail> PDFcheckdataDetail1, List<Types> PDF_Types1)
         {
+            PDFcheckdataDetail = new List<PDF_checkdataDetail>();
+            PDF_Types = new List<Types>();
             FilterOrderResults = new DataTable();
+            PDFcheckdataDetail = PDFcheckdataDetail1;
             FilterOrderResults = orders;
             OnlineShow_datas = OnlineShow_datas1;
+            PDF_Types = PDF_Types1;
 
+            #region 确认要用多少个report
+            int i = 0;
 
+            double isneed_danye=PDF_Types.Count/2;
+            var ddd_danye = String.Format("{0:N2}", 57 / 2); ;
+
+            foreach (Types item in PDF_Types)
+            {
+                i++;
+                if (PDF_Types.Count %  2 == 0)
+                {
+                    if (i == 2)
+                    {
+                        allpage_count++;
+                        i = 0;
+                    }
+                }
+            
+            }
+
+            #endregion
             this.reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.EnableExternalImages = true;
             //this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", orders));
@@ -100,6 +128,45 @@ namespace SZ_PDFJsonPrint
 
             //e.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource(reportName, ds1.Tables[0]));
             //throw new NotImplementedException();
+
+
+            //check  add  index 
+            if (PDF_Types != null)
+            {
+                int report_voulmn = PDF_Types.Count / 2;
+                report_voulmn = report_voulmn + 1;
+
+                if (s == "Report2" && PDF_Types.Count == 2)
+                {
+                    if (ongong_index == 0)
+                    {
+                        string typecode = PDF_Types[0].typeCode;
+                        string typecode2 = PDF_Types[1].typeCode;
+
+                        List<PDF_checkdataDetail> findsapinfo = PDFcheckdataDetail.FindAll(o => o.typeCode != null && o.typeCode == typecode);
+                        e.DataSources.Add(new ReportDataSource("DataSet_up", findsapinfo));
+
+                        List<PDF_checkdataDetail> findsapinfo2 = PDFcheckdataDetail.FindAll(o => o.typeCode != null && o.typeCode == typecode2);
+                        e.DataSources.Add(new ReportDataSource("DataSet_down", findsapinfo2));
+                    }
+                }
+                if (s == "Report3" && PDF_Types.Count > 2 && PDF_Types.Count < 4)
+                {
+
+
+                    string typecode = PDF_Types[2].typeCode;
+
+                    List<PDF_checkdataDetail> findsapinfo = PDFcheckdataDetail.FindAll(o => o.typeCode != null && o.typeCode == typecode);
+                    e.DataSources.Add(new ReportDataSource("DataSet_up", findsapinfo));
+                    //e.DataSources.Add(new ReportParameter("DeptNo", "02"));
+                    //e.DataSources.Add(new ReportParameter("Parameter1", "This　is　a　parameter"));
+                    e.DataSources.Add(new ReportDataSource("showimage", true));
+
+                }
+            }
+
+
+
         }
 
         private void rz(object sender, EventArgs e)
@@ -184,7 +251,7 @@ namespace SZ_PDFJsonPrint
             _reportNameList.Add("Report2");
             foreach (string reportName in _reportNameList)
             {
-                StreamReader subStream = new StreamReader( reportName + ".rdlc");
+                StreamReader subStream = new StreamReader(reportName + ".rdlc");
                 reportViewer1.LocalReport.LoadSubreportDefinition(reportName, subStream);
                 subStream.Close();
             }

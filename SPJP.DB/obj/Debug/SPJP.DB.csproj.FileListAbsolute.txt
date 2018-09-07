@@ -7,3 +7,8 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.DB\bin\Debug\SPJP.DB.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.DB\obj\Debug\SPJP.DB.dll
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.DB\obj\Debug\SPJP.DB.pdb
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.DB\obj\Debug\SPJP.DB.csprojResolveAssemblyReference.cache
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.DB\bin\Debug\SPJP.DB.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.DB\bin\Debug\SPJP.DB.pdb
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.DB\obj\Debug\SPJP.DB.csprojResolveAssemblyReference.cache
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.DB\obj\Debug\SPJP.DB.dll
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.DB\obj\Debug\SPJP.DB.pdb

@@ -769,22 +769,37 @@ Encoding encoding, string mimeType, bool willSeek)
 
             JObject mm = (JObject)JsonConvert.DeserializeObject(obj.ToString());
             //再讲字符串转成json格式
+            if (mm["id"] != null && mm["id"].ToString() != "")
             item.id = mm["id"].ToString();
+            if (mm["serialNumber"] != null && mm["serialNumber"].ToString() != "")
             item.serialNumber = mm["serialNumber"].ToString();
+            if (mm["patientId"] != null && mm["patientId"].ToString() != "")
             item.patientId = mm["patientId"].ToString();
+            if (mm["ptName"]!=null&& mm["ptName"].ToString() != "")
             item.ptName = mm["ptName"].ToString();
-           
+            if (mm["acquisitionStartTime"] != null && mm["acquisitionStartTime"].ToString() != "")
             item.acquisitionStartTime = mm["acquisitionStartTime"].ToString();
+            if (mm["acquisitionEndTime"] != null && mm["acquisitionEndTime"].ToString() != "")
             item.acquisitionEndTime = mm["acquisitionEndTime"].ToString();
+            if (mm["equipmentModel"] != null && mm["equipmentModel"].ToString() != "")
             item.equipmentModel = mm["equipmentModel"].ToString();
+            if (mm["equipmentNumber"] != null && mm["equipmentNumber"].ToString() != "")
             item.equipmentNumber = mm["equipmentNumber"].ToString();
+            if (mm["checkNumber"] != null && mm["checkNumber"].ToString() != "")
             item.checkNumber = mm["checkNumber"].ToString();
+            if (mm["diseaseType"] != null && mm["diseaseType"].ToString() != "")
             item.diseaseType = mm["diseaseType"].ToString();
+            if (mm["checkTime"] != null && mm["checkTime"].ToString() != "")
             item.checkTime = mm["checkTime"].ToString();
+            if (mm["hospitalName"] != null && mm["hospitalName"].ToString() != "")
             item.hospitalName = mm["hospitalName"].ToString();
+            if (mm["patientAge"] != null && mm["patientAge"].ToString() != "")
             item.patientAge = mm["patientAge"].ToString();
+            if (mm["dataSources"] != null && mm["dataSources"].ToString() != "")
             item.dataSources = mm["dataSources"].ToString();
+            if (mm["type"] != null && mm["type"].ToString() != "")
             item.type = mm["type"].ToString();
+            if (mm["remark"] != null && mm["remark"].ToString() != "")
             item.remark = mm["remark"].ToString();
             //绑定reqId
             item.reqId = item1.reqId;

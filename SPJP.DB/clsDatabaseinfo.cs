@@ -826,6 +826,17 @@ namespace SPJP.DB
         public string name12 { get; set; }
         public string name13 { get; set; }
 
+
+        public string typeCode { get; set; }
+        /// <summary>
+        /// 站立过程
+        /// </summary>
+        public string typeName { get; set; }
+        /// <summary>
+        /// SiSt
+        /// </summary>
+        public string typeEnName { get; set; }
+
     }
     public class PDF_DataTableDetail
     {

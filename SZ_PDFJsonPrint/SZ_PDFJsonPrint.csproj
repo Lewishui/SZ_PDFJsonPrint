@@ -107,6 +107,9 @@
     <Compile Include="testReportForm.Designer.cs">
       <DependentUpon>testReportForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report4_new.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAboutBox.resx">
       <DependentUpon>frmAboutBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +160,7 @@
     <None Include="Properties\DataSources\SPJP.DB.MaGait.datasource" />
     <None Include="Properties\DataSources\SPJP.DB.OnlinecheckTableShow.datasource" />
     <None Include="Properties\DataSources\SPJP.DB.OnlineShow.datasource" />
+    <None Include="Properties\DataSources\SPJP.DB.PDF_checkdataDetail.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -55,6 +55,7 @@ namespace SZ_PDFJsonPrint
         List<PDF_Root> PDF_Rootdb;
         List<Types> PDF_Types;
         List<ChildType> PDF_ChildType;
+        List<PDF_checkdataDetail> PDFcheckdataDetail;
 
         bool issaveok = false;
 
@@ -268,7 +269,7 @@ namespace SZ_PDFJsonPrint
         }
         private void PrintReportForEDI()
         {
-         
+
             if (PDF_Types == null)
                 return;
 
@@ -337,19 +338,20 @@ namespace SZ_PDFJsonPrint
 
 
                 //reportForm.InitializeDataSource(findsapinfo);
-                
+
             }
             //InitializeEdiData();
         }
 
         private void Create_table()
         {
+            PDFcheckdataDetail = new List<PDF_checkdataDetail>();
+            DataTable qtyTable =new DataTable();
             foreach (Types item in PDF_Types)
             {
                 List<ChildType> Child = item.childType;
 
-
-                var qtyTable = new DataTable();
+                  qtyTable = new DataTable();
                 qtyTable.Columns.Add("name1", System.Type.GetType("System.String"));
                 qtyTable.Columns.Add("name2", System.Type.GetType("System.String"));
                 qtyTable.Columns.Add("name3", System.Type.GetType("System.String"));
@@ -404,23 +406,32 @@ namespace SZ_PDFJsonPrint
                             qtyTable.Rows[row][5] = "-";
                         else
                             qtyTable.Rows[row][5] = ik.leftNormal;
+
+
+                       
                     }
+                    PDF_checkdataDetail tempnote = new PDF_checkdataDetail();
+                    tempnote.name1 = qtyTable.Rows[row][0].ToString();
+                    tempnote.name2 = qtyTable.Rows[row][1].ToString();
+                    tempnote.name3 = qtyTable.Rows[row][2].ToString();
+                    tempnote.name4 = qtyTable.Rows[row][3].ToString();
+                    tempnote.name5 = qtyTable.Rows[row][4].ToString();
+                    tempnote.name6 = qtyTable.Rows[row][5].ToString();
+                    tempnote.typeCode = item.typeCode;
+                    tempnote.typeName = item.typeName;
+                    tempnote.typeEnName = item.typeEnName;
+                    PDFcheckdataDetail.Add(tempnote);
                     row++;
                 }
-                reportForm = new ReportForm();
-                reportForm.InitializeDataSource(qtyTable, OnlineShow_datas);
-                reportForm.ShowDialog();
 
-                reportForm = null;
-                foreach (DataRow emp in qtyTable.Rows)
-                {
-                    //clsribaodatasoureinfo tempnote = new clsribaodatasoureinfo(); //定义返回值
+               
 
-                    //if (emp["riqi"].ToString() != "")
-                    //    tempnote.riqi = Convert.ToDateTime(emp["riqi"].ToString());
-
-                }
             }
+            reportForm = new ReportForm();
+            reportForm.InitializeDataSource(qtyTable, OnlineShow_datas, PDFcheckdataDetail, PDF_Types);
+            reportForm.ShowDialog();
+
+            reportForm = null;
         }
 
         private void filterButton_Click(object sender, EventArgs e)
@@ -849,7 +860,7 @@ namespace SZ_PDFJsonPrint
             //   reportForm.InitializeDataSource(printclass_datas);//tclass_datas
 
             //new 
-          //  Create_table();
+            //  Create_table();
 
             reportViewer1 = reportForm.reportViewer1;
             //reportForm.ShowDialog();
