@@ -251,7 +251,39 @@ Encoding encoding, string mimeType, bool willSeek)
             Print(orderprint, 0, 0);
         }
 
-
+        public void RunR1(List<OnlineShow> FilterOrderResults)
+        {
+            LocalReport report = new LocalReport();
+            report.ReportPath = Application.StartupPath + "\\Report1.rdlc";
+            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
+            Export(report);
+            m_currentPageIndex = 0;
+            Print(orderprint, 0, 0);
+        }
+        public void RunR2(List<OnlineShow> FilterOrderResults, List<PDF_checkdataDetail> findsapinfo, List<PDF_checkdataDetail> findsapinfo2)
+        {
+            LocalReport report = new LocalReport();
+            report.ReportPath = Application.StartupPath + "\\Report2.rdlc";
+            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
+            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet_up", findsapinfo));
+            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet_down", findsapinfo2));
+          
+                 
+            Export(report);
+            m_currentPageIndex = 0;
+            Print(orderprint, 0, 0);
+        }
+        public void RunR3(List<OnlineShow> FilterOrderResults, List<PDF_checkdataDetail> findsapinfo)
+        {
+            LocalReport report = new LocalReport();
+            report.ReportPath = Application.StartupPath + "\\Report3.rdlc";
+            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
+            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet_up", findsapinfo));
+          
+            Export(report);
+            m_currentPageIndex = 0;
+            Print(orderprint, 0, 0);
+        }
 
         public List<clsOrderDatabaseinfo> ReadJSON_Report(ref BackgroundWorker bgWorker, string readtype, string pdf_json, string excel_json, string Online_json)
         {

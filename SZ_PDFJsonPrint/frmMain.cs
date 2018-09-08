@@ -355,25 +355,11 @@ namespace SZ_PDFJsonPrint
             }
 
             #region check show page
-            int i = 0;
-            int allpage_count = 0;
-            bool have_yushu = false;
+            int allpage_count;
+            bool have_yushu;
+            get_pagecount_andYushu(out allpage_count, out have_yushu);
 
-            foreach (Types item in PDF_Types)
-            {
-                i++;
-                if (i == 2)
-                {
-                    allpage_count++;
-                    i = 0;
-                }
-                if (PDF_Types.Count % 2 == 0)
-                {
 
-                }
-                else
-                    have_yushu = true;
-            }
             if (allpage_count >= 1)
                 OnlineShow_datas[0].showimage2 = true;
             if (allpage_count >= 2)
@@ -408,6 +394,29 @@ namespace SZ_PDFJsonPrint
                 reportForm.ShowDialog();
 
             //  reportForm = null;
+        }
+
+        private void get_pagecount_andYushu(out int allpage_count, out bool have_yushu)
+        {
+            int i = 0;
+            allpage_count = 0;
+            have_yushu = false;
+
+            foreach (Types item in PDF_Types)
+            {
+                i++;
+                if (i == 2)
+                {
+                    allpage_count++;
+                    i = 0;
+                }
+                if (PDF_Types.Count % 2 == 0)
+                {
+
+                }
+                else
+                    have_yushu = true;
+            }
         }
 
         private void filterButton_Click(object sender, EventArgs e)
@@ -801,22 +810,61 @@ namespace SZ_PDFJsonPrint
         {
             if (tclass_datas == null)
                 return;
-            for (int i = 0; i < tclass_datas.Count; i++)
+            //for (int i = 0; i < tclass_datas.Count; i++)
+            //{
+            //    printclass_datas = new List<Datas>();
+
+            //    printclass_datas = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
+
+            clsAllnew BusinessHelp = new clsAllnew();
+            #region OLD
+            //this.toolStripLabel1.Text = "打印中 1/3";
+            //BusinessHelp.Run(printclass_datas);
+            //this.toolStripLabel1.Text = "打印中 2/3";
+
+            //BusinessHelp.Run2(printclass_datas);
+            //this.toolStripLabel1.Text = "打印中 3/3";
+
+            //BusinessHelp.Run3(printclass_datas);
+            #endregion
+
+            //new
+
+            #region new pirnt
+            int allpage_count;
+            bool have_yushu;
+            int ongong_index = 0;
+            int vvv = 0;
+            get_pagecount_andYushu(out allpage_count, out have_yushu);
+
+            BusinessHelp.RunR1(OnlineShow_datas);
+
+            foreach (Types item in PDF_Types)
             {
-                printclass_datas = new List<Datas>();
+                string typecode = "";
+                string typecode2 = "";
+                if (ongong_index < allpage_count)
+                {
+                    typecode = PDF_Types[vvv].typeCode;
+                    typecode2 = PDF_Types[vvv + 1].typeCode;
 
-                printclass_datas = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
+                    List<PDF_checkdataDetail> findsapinfo = PDFcheckdataDetail.FindAll(o => o.typeCode != null && o.typeCode == typecode);
 
-                clsAllnew BusinessHelp = new clsAllnew();
-                this.toolStripLabel1.Text = "打印中 1/3";
-                BusinessHelp.Run(printclass_datas);
-                this.toolStripLabel1.Text = "打印中 2/3";
-
-                BusinessHelp.Run2(printclass_datas);
-                this.toolStripLabel1.Text = "打印中 3/3";
-
-                BusinessHelp.Run3(printclass_datas);
+                    List<PDF_checkdataDetail> findsapinfo2 = PDFcheckdataDetail.FindAll(o => o.typeCode != null && o.typeCode == typecode2);
+                    BusinessHelp.RunR2(OnlineShow_datas, findsapinfo, findsapinfo2);
+                }
+                ongong_index++;
+                vvv = ongong_index + 1;
             }
+            if (have_yushu == true)
+            {
+                string typecode = PDF_Types[PDF_Types.Count - 1].typeCode;
+                List<PDF_checkdataDetail> findsapinfo = PDFcheckdataDetail.FindAll(o => o.typeCode != null && o.typeCode == typecode);
+                BusinessHelp.RunR3(OnlineShow_datas, findsapinfo);
+            }
+            #endregion
+
+            //}
             MessageBox.Show("打印完成！", "提醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
