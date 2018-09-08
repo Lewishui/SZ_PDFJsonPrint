@@ -53,6 +53,10 @@
           <DataField>acquisitionStartTime</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="all_count">
+          <DataField>all_count</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="avgError">
           <DataField>avgError</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -157,157 +161,56 @@
           <DataField>showimage</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
-        <Field Name="toExamineDoctor">
-          <DataField>toExamineDoctor</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="showimage10">
+          <DataField>showimage10</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
-        <Field Name="type">
-          <DataField>type</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="showimage11">
+          <DataField>showimage11</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
-        <Field Name="type_MaGait">
-          <DataField>type_MaGait</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="showimage12">
+          <DataField>showimage12</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
-        <Field Name="typeCode">
-          <DataField>typeCode</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="showimage13">
+          <DataField>showimage13</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
-        <Field Name="typeName">
-          <DataField>typeName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="unit">
-          <DataField>unit</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>SPJP.DB</rd:DataSetName>
-        <rd:TableName>OnlineShow</rd:TableName>
-        <rd:ObjectDataSourceType>SPJP.DB.OnlineShow, SPJP.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DataSet_hide">
-      <Query>
-        <DataSourceName>SPJPDB4</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="acquisitionEndTime">
-          <DataField>acquisitionEndTime</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="acquisitionStartTime">
-          <DataField>acquisitionStartTime</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="avgError">
-          <DataField>avgError</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="avgNormal">
-          <DataField>avgNormal</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="checkDoctor">
-          <DataField>checkDoctor</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="checkNumber">
-          <DataField>checkNumber</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="checkTime">
-          <DataField>checkTime</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="code">
-          <DataField>code</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="data">
-          <DataField>data</DataField>
-          <rd:TypeName>SPJP.DB.Online_Data</rd:TypeName>
-        </Field>
-        <Field Name="dataSources">
-          <DataField>dataSources</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="diseaseType">
-          <DataField>diseaseType</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="equipmentModel">
-          <DataField>equipmentModel</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="equipmentNumber">
-          <DataField>equipmentNumber</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="hospitalName">
-          <DataField>hospitalName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="id">
-          <DataField>id</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="leftError">
-          <DataField>leftError</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="leftNormal">
-          <DataField>leftNormal</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="msg">
-          <DataField>msg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="patientAge">
-          <DataField>patientAge</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="patientId">
-          <DataField>patientId</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ptName">
-          <DataField>ptName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="remark">
-          <DataField>remark</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="reqId">
-          <DataField>reqId</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="result">
-          <DataField>result</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="rightError">
-          <DataField>rightError</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="rightNormal">
-          <DataField>rightNormal</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="serialNumber">
-          <DataField>serialNumber</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="showimage">
-          <DataField>showimage</DataField>
+        <Field Name="showimage14">
+          <DataField>showimage14</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
         <Field Name="showimage15">
           <DataField>showimage15</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage2">
+          <DataField>showimage2</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage3">
+          <DataField>showimage3</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage5">
+          <DataField>showimage5</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage6">
+          <DataField>showimage6</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage7">
+          <DataField>showimage7</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage8">
+          <DataField>showimage8</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage9">
+          <DataField>showimage9</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
         <Field Name="toExamineDoctor">
@@ -362,7 +265,7 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Height>0.5341cm</Height>
-            <Width>6.72416in</Width>
+            <Width>6.72417in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -376,7 +279,7 @@
                 <Height>0.48118cm</Height>
                 <Width>17cm</Width>
                 <Visibility>
-                  <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+                  <Hidden>=IIf(First(Fields!showimage2.Value, "DataSet1") =false,True,False)</Hidden>
                 </Visibility>
                 <Style>
                   <Border>
@@ -386,9 +289,9 @@
               </Subreport>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0.69427cm</Top>
+            <Top>0.6634cm</Top>
             <Height>0.5341cm</Height>
-            <Width>17.07938cm</Width>
+            <Width>17.07939cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -403,7 +306,7 @@
                 <Height>0.48118cm</Height>
                 <Width>17cm</Width>
                 <Visibility>
-                  <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+                  <Hidden>=IIf(First(Fields!showimage5.Value, "DataSet1") =false,True,False)</Hidden>
                 </Visibility>
                 <Style>
                   <Border>
@@ -413,9 +316,9 @@
               </Subreport>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>1.38854cm</Top>
+            <Top>1.27389cm</Top>
             <Height>0.5341cm</Height>
-            <Width>17.07938cm</Width>
+            <Width>17.07939cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -430,7 +333,7 @@
                 <Height>0.6075cm</Height>
                 <Width>17cm</Width>
                 <Visibility>
-                  <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+                  <Hidden>=IIf(First(Fields!showimage3.Value, "DataSet1") =false,True,False)</Hidden>
                 </Visibility>
                 <Style>
                   <Border>
@@ -441,7 +344,7 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>8.54928cm</Top>
-            <Height>0.5341cm</Height>
+            <Height>0.6075cm</Height>
             <Width>17.07938cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
@@ -457,7 +360,7 @@
                 <Height>0.48118cm</Height>
                 <Width>17cm</Width>
                 <Visibility>
-                  <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+                  <Hidden>=IIf(First(Fields!showimage6.Value, "DataSet1") =false,True,False)</Hidden>
                 </Visibility>
                 <Style>
                   <Border>
@@ -467,10 +370,9 @@
               </Subreport>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>2.08281cm</Top>
-            <Left>0.06614cm</Left>
+            <Top>1.93729cm</Top>
             <Height>0.5341cm</Height>
-            <Width>17.07938cm</Width>
+            <Width>17.07939cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -480,13 +382,12 @@
           </Rectangle>
           <Subreport Name="Subreport8">
             <ReportName>Report7</ReportName>
-            <Top>2.77709cm</Top>
-            <Left>0.10583cm</Left>
-            <Height>0.48118cm</Height>
-            <Width>17cm</Width>
+            <Top>2.60069cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
             <ZIndex>5</ZIndex>
             <Visibility>
-              <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+              <Hidden>=IIf(First(Fields!showimage7.Value, "DataSet1") =false,True,False)</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -496,13 +397,12 @@
           </Subreport>
           <Subreport Name="Subreport9">
             <ReportName>Report8</ReportName>
-            <Top>3.41844cm</Top>
-            <Left>0.10583cm</Left>
-            <Height>0.48118cm</Height>
-            <Width>17cm</Width>
+            <Top>3.2641cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
             <ZIndex>6</ZIndex>
             <Visibility>
-              <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+              <Hidden>=IIf(First(Fields!showimage8.Value, "DataSet1") =false,True,False)</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -512,13 +412,12 @@
           </Subreport>
           <Subreport Name="Subreport10">
             <ReportName>Report9</ReportName>
-            <Top>4.05979cm</Top>
-            <Left>0.10583cm</Left>
-            <Height>0.48118cm</Height>
-            <Width>17cm</Width>
+            <Top>3.9275cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
             <ZIndex>7</ZIndex>
             <Visibility>
-              <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+              <Hidden>=IIf(First(Fields!showimage9.Value, "DataSet1") =false,True,False)</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -528,13 +427,12 @@
           </Subreport>
           <Subreport Name="Subreport11">
             <ReportName>Report10</ReportName>
-            <Top>4.70115cm</Top>
-            <Left>0.10583cm</Left>
-            <Height>0.48118cm</Height>
-            <Width>17cm</Width>
+            <Top>4.5909cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
             <ZIndex>8</ZIndex>
             <Visibility>
-              <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+              <Hidden>=IIf(First(Fields!showimage10.Value, "DataSet1") =false,True,False)</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -544,13 +442,12 @@
           </Subreport>
           <Subreport Name="Subreport12">
             <ReportName>Report11</ReportName>
-            <Top>5.3425cm</Top>
-            <Left>0.10583cm</Left>
-            <Height>0.48118cm</Height>
-            <Width>17cm</Width>
+            <Top>5.25431cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
             <ZIndex>9</ZIndex>
             <Visibility>
-              <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+              <Hidden>=IIf(First(Fields!showimage11.Value, "DataSet1") =false,True,False)</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -560,13 +457,12 @@
           </Subreport>
           <Subreport Name="Subreport13">
             <ReportName>Report12</ReportName>
-            <Top>5.98386cm</Top>
-            <Left>0.10583cm</Left>
-            <Height>0.48118cm</Height>
-            <Width>17cm</Width>
+            <Top>5.91771cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
             <ZIndex>10</ZIndex>
             <Visibility>
-              <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+              <Hidden>=IIf(First(Fields!showimage12.Value, "DataSet1") =false,True,False)</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -576,13 +472,12 @@
           </Subreport>
           <Subreport Name="Subreport14">
             <ReportName>Report13</ReportName>
-            <Top>6.62521cm</Top>
-            <Left>0.10583cm</Left>
-            <Height>0.48118cm</Height>
-            <Width>17cm</Width>
+            <Top>6.58111cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
             <ZIndex>11</ZIndex>
             <Visibility>
-              <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+              <Hidden>=IIf(First(Fields!showimage13.Value, "DataSet1") =false,True,False)</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -592,13 +487,12 @@
           </Subreport>
           <Subreport Name="Subreport15">
             <ReportName>Report14</ReportName>
-            <Top>7.26657cm</Top>
-            <Left>0.10583cm</Left>
-            <Height>0.48118cm</Height>
-            <Width>17cm</Width>
+            <Top>7.24452cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
             <ZIndex>12</ZIndex>
             <Visibility>
-              <Hidden>=IIf(First(Fields!showimage.Value, "DataSet_hide") =true,True,False)</Hidden>
+              <Hidden>=IIf(First(Fields!showimage14.Value, "DataSet1") =false,True,False)</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -609,12 +503,11 @@
           <Subreport Name="Subreport16">
             <ReportName>Report15</ReportName>
             <Top>7.90792cm</Top>
-            <Left>0.10583cm</Left>
-            <Height>0.48118cm</Height>
-            <Width>17cm</Width>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
             <ZIndex>13</ZIndex>
             <Visibility>
-              <Hidden>=IIf(First(Fields!showimage15.Value, "DataSet_hide") =true,True,False)</Hidden>
+              <Hidden>=IIf(First(Fields!showimage15.Value, "DataSet1") =false,True,False)</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -623,10 +516,10 @@
             </Style>
           </Subreport>
         </ReportItems>
-        <Height>9.08337cm</Height>
+        <Height>9.15678cm</Height>
         <Style />
       </Body>
-      <Width>17.21167cm</Width>
+      <Width>17.15877cm</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
@@ -641,9 +534,13 @@
   </ReportSections>
   <ReportParameters>
     <ReportParameter Name="ReportParameter1">
-      <DataType>String</DataType>
+      <DataType>Boolean</DataType>
       <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>

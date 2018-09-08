@@ -73,7 +73,7 @@ namespace SZ_PDFJsonPrint
 
             //
             reportForm = new ReportForm();
-
+            //reportForm.InitializeDataSource(null, OnlineShow_datas, PDFcheckdataDetail, PDF_Types);
 
         }
         private void InitialBackGroundWorker()
@@ -272,86 +272,21 @@ namespace SZ_PDFJsonPrint
 
             if (PDF_Types == null)
                 return;
-
-            //for (int i = 0; i < tclass_datas.Count; i++)
-            {
-                reportForm = new ReportForm();
-                //List<Datas> findsapinfo = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
-
-                #region 整理书几乎
-
-                //var qtyTable = new DataTable();
-                //qtyTable.Columns.Add("name1", System.Type.GetType("System.String"));
-                //qtyTable.Columns.Add("name2", System.Type.GetType("System.String"));
-                //qtyTable.Columns.Add("name3", System.Type.GetType("System.String"));
-                //qtyTable.Columns.Add("name4", System.Type.GetType("System.String"));
-                //qtyTable.Columns.Add("name5", System.Type.GetType("System.String"));
-                //qtyTable.Columns.Add("name6", System.Type.GetType("System.String"));
-
-                //foreach (MaGait k in Online_MaGait)
-                //{
-                //    qtyTable.Rows.Add(qtyTable.NewRow());
-                //}
-                //int row = 0;
-                //foreach (MaGait k in Online_MaGait)
-                //{
-                //    if (k.typeName == null || k.typeName == "")
-                //        qtyTable.Rows[row][0] = "-";
-                //    else
-                //        qtyTable.Rows[row][0] = k.typeName;
-
-
-                //    if (k.unit == null || k.unit == "")
-                //        qtyTable.Rows[row][1] = "-";
-                //    else
-                //        qtyTable.Rows[row][1] = k.unit;
-
-
-                //    if (k.avgNormal == null || k.avgNormal == "")
-                //        qtyTable.Rows[row][2] = "-";
-                //    else
-                //        qtyTable.Rows[row][2] = k.avgNormal;
-
-
-                //    if (k.rightNormal == null || k.rightNormal == "")
-                //        qtyTable.Rows[row][3] = "-";
-                //    else
-                //        qtyTable.Rows[row][3] = k.rightNormal;
-
-
-                //    qtyTable.Rows[row][4] = "/";
-
-                //    if (k.leftNormal == null || k.leftNormal == "")
-                //        qtyTable.Rows[row][5] = "-";
-                //    else
-                //        qtyTable.Rows[row][5] = k.leftNormal;
-                //    row++;
-                //}
-                #endregion
-
-                #region maintain
-
-
-                Create_table();
-                #endregion
-
-
-
-                //reportForm.InitializeDataSource(findsapinfo);
-
-            }
+            #region maintain
+            Create_table(true);
+            #endregion
+            //reportForm.InitializeDataSource(findsapinfo);
             //InitializeEdiData();
         }
 
-        private void Create_table()
+        private void Create_table(bool ishow)
         {
             PDFcheckdataDetail = new List<PDF_checkdataDetail>();
-            DataTable qtyTable =new DataTable();
+            DataTable qtyTable = new DataTable();
             foreach (Types item in PDF_Types)
             {
                 List<ChildType> Child = item.childType;
-
-                  qtyTable = new DataTable();
+                qtyTable = new DataTable();
                 qtyTable.Columns.Add("name1", System.Type.GetType("System.String"));
                 qtyTable.Columns.Add("name2", System.Type.GetType("System.String"));
                 qtyTable.Columns.Add("name3", System.Type.GetType("System.String"));
@@ -371,18 +306,15 @@ namespace SZ_PDFJsonPrint
                     else
                         qtyTable.Rows[row][0] = k.typeName;
 
-
                     if (k.typeEnName == null || k.typeEnName == "")
                         qtyTable.Rows[row][0] = "-";
                     else
                         qtyTable.Rows[row][0] = k.typeName + "\r\n" + k.typeEnName;
 
-
                     if (k.unit == null || k.unit == "")
                         qtyTable.Rows[row][1] = "-";
                     else
                         qtyTable.Rows[row][1] = k.unit;
-
 
                     List<MaGait> FindOnline_MaGait = Online_MaGait.FindAll(o => o.type != null && o.type == k.typeCode);
 
@@ -406,9 +338,6 @@ namespace SZ_PDFJsonPrint
                             qtyTable.Rows[row][5] = "-";
                         else
                             qtyTable.Rows[row][5] = ik.leftNormal;
-
-
-                       
                     }
                     PDF_checkdataDetail tempnote = new PDF_checkdataDetail();
                     tempnote.name1 = qtyTable.Rows[row][0].ToString();
@@ -423,15 +352,62 @@ namespace SZ_PDFJsonPrint
                     PDFcheckdataDetail.Add(tempnote);
                     row++;
                 }
-
-               
-
             }
-         //   reportForm = new ReportForm();
-            reportForm.InitializeDataSource(qtyTable, OnlineShow_datas, PDFcheckdataDetail, PDF_Types);
-            reportForm.ShowDialog();
 
-            reportForm = null;
+            #region check show page
+            int i = 0;
+            int allpage_count = 0;
+            bool have_yushu = false;
+
+            foreach (Types item in PDF_Types)
+            {
+                i++;
+                if (i == 2)
+                {
+                    allpage_count++;
+                    i = 0;
+                }
+                if (PDF_Types.Count % 2 == 0)
+                {
+
+                }
+                else
+                    have_yushu = true;
+            }
+            if (allpage_count >= 1)
+                OnlineShow_datas[0].showimage2 = true;
+            if (allpage_count >= 2)
+                OnlineShow_datas[0].showimage5 = true;
+            if (allpage_count >= 3)
+                OnlineShow_datas[0].showimage6 = true;
+            if (allpage_count >= 4)
+                OnlineShow_datas[0].showimage7 = true;
+            if (allpage_count >= 5)
+                OnlineShow_datas[0].showimage8 = true;
+            if (allpage_count >= 6)
+                OnlineShow_datas[0].showimage9 = true;
+            if (allpage_count >= 7)
+                OnlineShow_datas[0].showimage10 = true;
+            if (allpage_count >= 8)
+                OnlineShow_datas[0].showimage11 = true;
+            if (allpage_count >= 9)
+                OnlineShow_datas[0].showimage12 = true;
+            if (allpage_count >= 10)
+                OnlineShow_datas[0].showimage13 = true;
+            if (allpage_count >= 11)
+                OnlineShow_datas[0].showimage14 = true;
+            if (allpage_count >= 12)
+                OnlineShow_datas[0].showimage15 = true;
+            if (have_yushu == true)
+                OnlineShow_datas[0].showimage3 = true;
+            #endregion
+
+            reportForm = new ReportForm();
+            reportForm.InitializeDataSource(qtyTable, OnlineShow_datas, PDFcheckdataDetail, PDF_Types);
+            if (ishow == true)
+                reportForm.ShowDialog();
+
+            //  reportForm = null;
         }
 
         private void filterButton_Click(object sender, EventArgs e)
@@ -860,7 +836,7 @@ namespace SZ_PDFJsonPrint
             //   reportForm.InitializeDataSource(printclass_datas);//tclass_datas
 
             //new 
-            //  Create_table();
+            Create_table(false);
 
             reportViewer1 = reportForm.reportViewer1;
             //reportForm.ShowDialog();
@@ -883,27 +859,21 @@ namespace SZ_PDFJsonPrint
         {
             issaveok = false;
 
-            for (int i = 0; i < tclass_datas.Count; i++)
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".pdf";
+            saveFileDialog.Filter = "PDF(*.pdf)|*.pdf";
+            strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            saveFileDialog.FileName = strFileName;
+            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
             {
-                printclass_datas = new List<Datas>();
-
-                printclass_datas = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
-
-                var saveFileDialog = new SaveFileDialog();
-                saveFileDialog.DefaultExt = ".pdf";
-                saveFileDialog.Filter = "PDF(*.pdf)|*.pdf";
-                strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
-                saveFileDialog.FileName = strFileName;
-                if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-                {
-                    strFileName = saveFileDialog.FileName.ToString();
-                }
-                else
-                {
-                    return;
-                }
-                pdfExport(strFileName);
+                strFileName = saveFileDialog.FileName.ToString();
             }
+            else
+            {
+                return;
+            }
+            pdfExport(strFileName);
+
             if (issaveok == true)
                 MessageBox.Show("报表已经成功导出到桌面！", "Info");
             else

@@ -60,6 +60,10 @@
           <DataField>acquisitionStartTime</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="all_count">
+          <DataField>all_count</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="avgError">
           <DataField>avgError</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -162,6 +166,14 @@
         </Field>
         <Field Name="showimage">
           <DataField>showimage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage15">
+          <DataField>showimage15</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage5">
+          <DataField>showimage5</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
         <Field Name="toExamineDoctor">
@@ -354,269 +366,6 @@
     <ReportSection>
       <Body>
         <ReportItems>
-          <Textbox Name="fukuandanwei">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>GYENNO步态数据采集系统</Value>
-                    <Style>
-                      <FontFamily>宋体</FontFamily>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>0.62451in</Top>
-            <Left>0.34043in</Left>
-            <Height>0.25in</Height>
-            <Width>1.84375in</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="weituoren">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!id.Value, "DataSet1")</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>0.91742in</Top>
-            <Left>1.01181in</Left>
-            <Height>0.22097in</Height>
-            <Width>2.08333in</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="dizhi">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!serialNumber.Value, "DataSet1")</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>0.92187in</Top>
-            <Left>4.74407in</Left>
-            <Height>0.21653in</Height>
-            <Width>1.69792in</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>检查报告：</Value>
-                    <Style>
-                      <FontFamily>宋体</FontFamily>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.91742in</Top>
-            <Left>0.33126in</Left>
-            <Height>0.22097in</Height>
-            <Width>0.68055in</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>订单流水号：</Value>
-                    <Style>
-                      <FontFamily>宋体</FontFamily>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.92187in</Top>
-            <Left>3.81125in</Left>
-            <Height>0.21653in</Height>
-            <Width>0.90939in</Width>
-            <ZIndex>4</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Image Name="Image1">
-            <Source>Embedded</Source>
-            <Value>LOGO</Value>
-            <Sizing>FitProportional</Sizing>
-            <Top>0.375in</Top>
-            <Left>0.34043in</Left>
-            <Height>0.22173in</Height>
-            <Width>0.35467in</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Image>
-          <Textbox Name="weituoren3">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!hospitalName.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>9.37175in</Top>
-            <Left>3.98398in</Left>
-            <Height>0.26042in</Height>
-            <Width>0.8125in</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="fukuandanwei2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>GYENNO步态数据采集系统</Value>
-                    <Style>
-                      <FontFamily>宋体</FontFamily>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>9.38217in</Top>
-            <Left>0.25192in</Left>
-            <Height>0.25in</Height>
-            <Width>1.83333in</Width>
-            <ZIndex>7</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="fukuandanwei3">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>步态分析检查室</Value>
-                    <Style>
-                      <FontFamily>宋体</FontFamily>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>9.37175in</Top>
-            <Left>4.99093in</Left>
-            <Height>0.25in</Height>
-            <Width>1.52398in</Width>
-            <ZIndex>8</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
-          <Textbox Name="fukuandanwei4">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>3/3</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>9.37175in</Top>
-            <Left>2.60175in</Left>
-            <Height>0.25in</Height>
-            <Width>1.12722in</Width>
-            <ZIndex>9</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox4">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -636,11 +385,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.41244in</Top>
+            <Top>0.03744in</Top>
             <Left>0.33126in</Left>
             <Height>0.25in</Height>
             <Width>2.23834in</Width>
-            <ZIndex>10</ZIndex>
             <Visibility>
               <Hidden>=IIf(First(Fields!showimage.Value, "DataSet1") =true,True,False)</Hidden>
             </Visibility>
@@ -1197,11 +945,11 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_up</DataSetName>
-            <Top>1.88119in</Top>
+            <Top>0.50619in</Top>
             <Left>0.83832in</Left>
             <Height>0.76042in</Height>
             <Width>5.58077in</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1227,11 +975,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>3.63119in</Top>
+            <Top>2.25619in</Top>
             <Left>0.35085in</Left>
             <Height>0.25in</Height>
             <Width>2.23834in</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1784,52 +1532,90 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_down</DataSetName>
-            <Top>4.18606in</Top>
+            <Top>2.81106in</Top>
             <Left>0.83832in</Left>
             <Height>0.76042in</Height>
             <Width>5.58077in</Width>
-            <ZIndex>13</ZIndex>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Line Name="Line1">
-            <Top>23.04203cm</Top>
-            <Left>0.3175cm</Left>
-            <Height>0cm</Height>
-            <Width>16.23037cm</Width>
-            <ZIndex>14</ZIndex>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>5</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.18203cm</Top>
+            <Left>14.07266cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
-                <Color>DimGray</Color>
-                <Style>Solid</Style>
+                <Style>None</Style>
               </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
             </Style>
-          </Line>
-          <Line Name="Line2">
-            <Top>3.27766cm</Top>
-            <Left>0.3175cm</Left>
-            <Height>0cm</Height>
-            <Width>16.23037cm</Width>
-            <ZIndex>15</ZIndex>
+          </Textbox>
+          <Textbox Name="Textbox2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=IIf(First(Fields!showimage5.Value, "DataSet1") =true,True,False)</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.34078cm</Top>
+            <Left>10.28912cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>5</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(First(Fields!showimage5.Value, "DataSet1") =true,True,False)</Hidden>
+            </Visibility>
             <Style>
               <Border>
-                <Color>DimGray</Color>
-                <Style>Solid</Style>
+                <Style>None</Style>
               </Border>
+              <BackgroundColor>Red</BackgroundColor>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
             </Style>
-          </Line>
+          </Textbox>
         </ReportItems>
-        <Height>24.64521cm</Height>
+        <Height>9.59042cm</Height>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Body>
-      <Width>17cm</Width>
+      <Width>17.20766cm</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

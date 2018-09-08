@@ -724,8 +724,22 @@ namespace SPJP.DB
 
 
         public bool showimage { get; set; }
-
+        public bool showimage2 { get; set; }
+        public bool showimage3 { get; set; }
+        public bool showimage5 { get; set; }
+        public bool showimage6 { get; set; }
+        public bool showimage7 { get; set; }
+        public bool showimage8 { get; set; }
+        public bool showimage9 { get; set; }
+        public bool showimage10 { get; set; }
+        public bool showimage11 { get; set; }
+        public bool showimage12 { get; set; }
+        public bool showimage13 { get; set; }
+        public bool showimage14 { get; set; }
         public bool showimage15 { get; set; }
+      
+        //
+        public string all_count { get; set; }
 
     }
     public class OnlinecheckTableShow

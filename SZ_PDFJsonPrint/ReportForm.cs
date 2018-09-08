@@ -36,10 +36,17 @@ namespace SZ_PDFJsonPrint
 
         private void ReportForm_Load(object sender, EventArgs e)
         {
+            //4
+
             ongong_index = 0;
             //  reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
             //NewMethod(); 
             this.reportViewer1.RefreshReport();
+        }
+        public void autoRefreshReport()
+        {
+
+            this.reportViewer1.RefreshReport();  
         }
         private void InitializeReportEvent()
         {
@@ -77,7 +84,9 @@ namespace SZ_PDFJsonPrint
         }
         public void InitializeDataSource(DataTable orders, List<OnlineShow> OnlineShow_datas1, List<PDF_checkdataDetail> PDFcheckdataDetail1, List<Types> PDF_Types1)
         {
+         //   ongong_index = 0;
 
+            //3
             have_yushu = false;
             PDFcheckdataDetail = new List<PDF_checkdataDetail>();
             PDF_Types = new List<Types>();
@@ -87,41 +96,56 @@ namespace SZ_PDFJsonPrint
             OnlineShow_datas = OnlineShow_datas1;
             PDF_Types = PDF_Types1;
 
-
-
-            #region 确认要用多少个report
-            int i = 0;
-
-            foreach (Types item in PDF_Types)
+            //下方 显示总页数
+            if (PDF_Types != null)
             {
-                i++;
-                if (i == 2)
-                {
-                    allpage_count++;
-                    i = 0;
-                }
-                if (PDF_Types.Count % 2 == 0)
-                {
+                int add1 = 0;
+                if (PDF_Types.Count % 2 != 0)
+                    add1 = add1 + 1;
 
+                int allc = PDFcheckdataDetail.Count / 2 + add1;
+
+                OnlineShow_datas[0].all_count = allc.ToString();
+
+                #region 确认要用多少个report
+                int i = 0;
+
+                foreach (Types item in PDF_Types)
+                {
+                    i++;
+                    if (i == 2)
+                    {
+                        allpage_count++;
+                        i = 0;
+                    }
+                    if (PDF_Types.Count % 2 == 0)
+                    {
+
+                    }
+                    else
+                        have_yushu = true;
                 }
-                else
-                    have_yushu = true;
             }
 
-            #endregion
+                #endregion
             this.reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.EnableExternalImages = true;
             //this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", orders));
             //this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet3", orders));
+
+
             this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", OnlineShow_datas));
 
-            //this.reportViewer1.LocalReport.SetParameters(new ReportParameter("ReportParameter1", "1243"));
+            //this.reportViewer1.LocalReport.SetParameters(new ReportParameter("ReportParameter1", PDFcheckdataDetail.Count.ToString()));
 
 
         }
 
         void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)
         {
+
+            //5
+
             #region step 1
             //ReportDataSource rds = new ReportDataSource("DataSet1", FilterOrderResults);
 
@@ -138,12 +162,6 @@ namespace SZ_PDFJsonPrint
             int not = 0;
             #region   //check  add  index
 
-            List<OnlineShow> hide_datas = new List<OnlineShow>();
-
-            OnlineShow item = new OnlineShow();
-            item.showimage = false;
-            hide_datas.Add(item);
-            e.DataSources.Add(new ReportDataSource("DataSet_hide", hide_datas));
 
             if (PDF_Types != null)
             {
@@ -165,12 +183,7 @@ namespace SZ_PDFJsonPrint
 
                     ongong_index++;
 
-                    hide_datas = new List<OnlineShow>();
 
-                    item = new OnlineShow();
-                    item.showimage = false;
-                    hide_datas.Add(item);
-                    e.DataSources.Add(new ReportDataSource("DataSet_hide", hide_datas));
 
                 }
                 else if (s == "Report3" && have_yushu == true)//如果有余数则 新建一个单页
@@ -184,15 +197,9 @@ namespace SZ_PDFJsonPrint
                     //e.DataSources.Add(new ReportDataSource("showimage", true));
                     ongong_index++;
 
-                    hide_datas = new List<OnlineShow>();
-
-                    item = new OnlineShow();
-                    item.showimage = false;
-                    hide_datas.Add(item);
-                    e.DataSources.Add(new ReportDataSource("DataSet_hide", hide_datas));
 
                 }
-                else if (s.Contains("Report") && !s.Contains("_") && Convert.ToDouble(s.Substring(6, s.Length - 6)) >= 5 && allpage_count > 1 && ongong_index <= allpage_count)//
+                else if (s.Contains("Report") && !s.Contains("_") && Convert.ToDouble(s.Substring(6, s.Length - 6)) >= 5 && allpage_count > 1 && ongong_index < allpage_count)//
                 {
                     string typecode = "";
                     string typecode2 = "";
@@ -207,8 +214,11 @@ namespace SZ_PDFJsonPrint
                     else
                     {
                         newindex = ongong_index + 1;
-                        typecode = PDF_Types[newindex + 1].typeCode;
-                        typecode2 = PDF_Types[newindex + 2].typeCode;
+                        if (newindex < PDF_Types.Count)
+                        typecode = PDF_Types[newindex].typeCode;
+                        if (newindex < PDF_Types.Count-1)
+                            typecode2 = PDF_Types[newindex + 1].typeCode;
+                   
                     }
 
                     List<PDF_checkdataDetail> findsapinfo = PDFcheckdataDetail.FindAll(o => o.typeCode != null && o.typeCode == typecode);
@@ -219,37 +229,29 @@ namespace SZ_PDFJsonPrint
                     e.DataSources.Add(new ReportDataSource("DataSet_down", findsapinfo2));
 
                     ongong_index++;
+                    string rname = s.Substring(6, s.Length - 6);
 
+                    if (rname == "5")
+                        OnlineShow_datas[0].showimage5 = true;
 
-                    hide_datas = new List<OnlineShow>();
-
-                    item = new OnlineShow();
-                    item.showimage = false;
-                    hide_datas.Add(item);
-                    e.DataSources.Add(new ReportDataSource("DataSet_hide", hide_datas));
 
                 }
-                else if (ongong_index > allpage_count)
+                else if (ongong_index >= allpage_count)
                 {
-                    hide_datas = new List<OnlineShow>();
 
-                    item = new OnlineShow();
-                    if (s == "Report15")
-                        item.showimage15 = false;
-                    hide_datas.Add(item);
-                    e.DataSources.Add(new ReportDataSource("DataSet_hide", hide_datas));
 
                     //OnlineShow_datas[0].showimage = true;
                     e.DataSources.Add(new ReportDataSource("DataSet_up", PDFcheckdataDetail));
                     e.DataSources.Add(new ReportDataSource("DataSet_down", PDFcheckdataDetail));
 
                 }
+                e.DataSources.Add(new ReportDataSource("DataSet1", OnlineShow_datas));
+
             }
             #endregion
 
             //e.DataSources.Add(new ReportDataSource("DataSet1", new List<v_pendingorder>() { orderFirst }));
             //  e.DataSources.Add(new ReportDataSource("DataSet3", FilterOrderResults));
-            e.DataSources.Add(new ReportDataSource("DataSet1", OnlineShow_datas));
 
             //e.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource(reportName, ds1.Tables[0]));
             //throw new NotImplementedException();

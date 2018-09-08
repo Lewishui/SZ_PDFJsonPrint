@@ -64,7 +64,6 @@ F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report2.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report3.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report4_0.rdlc
-F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\ReportHome.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.exe
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SZ_PDFJsonPrint.pdb
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\SPJP.Buiness.dll
@@ -99,3 +98,15 @@ D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report1
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report15.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report14.rdlc
 D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report13.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report_Home.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report5.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report6.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report7.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report8.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report9.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report10.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report11.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report12.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report15.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report14.rdlc
+F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report13.rdlc
