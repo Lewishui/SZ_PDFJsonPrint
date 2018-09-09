@@ -169,7 +169,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=First(Fields!ptName.Value, "DataSet1")</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -193,7 +195,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=First(Fields!diseaseType.Value, "DataSet1")</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -249,7 +253,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=First(Fields!checkTime.Value, "DataSet1")</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -274,7 +280,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=First(Fields!remark.Value, "DataSet1")</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -299,7 +307,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=First(Fields!toExamineDoctor.Value, "DataSet1")</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -324,7 +334,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=First(Fields!checkDoctor.Value, "DataSet1")</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -349,7 +361,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Now</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -374,7 +388,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=First(Fields!toExamineDoctor.Value, "DataSet1")</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -580,7 +596,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=First(Fields!checkDoctor.Value, "DataSet1")</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -751,7 +769,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>="("+First(Fields!patientAge.Value, "DataSet1")+")"</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>宋体</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />

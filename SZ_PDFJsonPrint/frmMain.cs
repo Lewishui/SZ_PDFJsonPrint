@@ -282,6 +282,52 @@ namespace SZ_PDFJsonPrint
         private void Create_table(bool ishow)
         {
             PDFcheckdataDetail = new List<PDF_checkdataDetail>();
+            DataTable qtyTable = PDFcheckdaadetail_Method();
+
+            #region check show page
+            int allpage_count;
+            bool have_yushu;
+            get_pagecount_andYushu(out allpage_count, out have_yushu);
+
+
+            if (allpage_count >= 1)
+                OnlineShow_datas[0].showimage2 = true;
+            if (allpage_count >= 2)
+                OnlineShow_datas[0].showimage5 = true;
+            if (allpage_count >= 3)
+                OnlineShow_datas[0].showimage6 = true;
+            if (allpage_count >= 4)
+                OnlineShow_datas[0].showimage7 = true;
+            if (allpage_count >= 5)
+                OnlineShow_datas[0].showimage8 = true;
+            if (allpage_count >= 6)
+                OnlineShow_datas[0].showimage9 = true;
+            if (allpage_count >= 7)
+                OnlineShow_datas[0].showimage10 = true;
+            if (allpage_count >= 8)
+                OnlineShow_datas[0].showimage11 = true;
+            if (allpage_count >= 9)
+                OnlineShow_datas[0].showimage12 = true;
+            if (allpage_count >= 10)
+                OnlineShow_datas[0].showimage13 = true;
+            if (allpage_count >= 11)
+                OnlineShow_datas[0].showimage14 = true;
+            if (allpage_count >= 12)
+                OnlineShow_datas[0].showimage15 = true;
+            if (have_yushu == true)
+                OnlineShow_datas[0].showimage3 = true;
+            #endregion
+
+            reportForm = new ReportForm();
+            reportForm.InitializeDataSource(qtyTable, OnlineShow_datas, PDFcheckdataDetail, PDF_Types);
+            if (ishow == true)
+                reportForm.ShowDialog();
+
+            //  reportForm = null;
+        }
+
+        private DataTable PDFcheckdaadetail_Method()
+        {
             DataTable qtyTable = new DataTable();
             foreach (Types item in PDF_Types)
             {
@@ -353,47 +399,7 @@ namespace SZ_PDFJsonPrint
                     row++;
                 }
             }
-
-            #region check show page
-            int allpage_count;
-            bool have_yushu;
-            get_pagecount_andYushu(out allpage_count, out have_yushu);
-
-
-            if (allpage_count >= 1)
-                OnlineShow_datas[0].showimage2 = true;
-            if (allpage_count >= 2)
-                OnlineShow_datas[0].showimage5 = true;
-            if (allpage_count >= 3)
-                OnlineShow_datas[0].showimage6 = true;
-            if (allpage_count >= 4)
-                OnlineShow_datas[0].showimage7 = true;
-            if (allpage_count >= 5)
-                OnlineShow_datas[0].showimage8 = true;
-            if (allpage_count >= 6)
-                OnlineShow_datas[0].showimage9 = true;
-            if (allpage_count >= 7)
-                OnlineShow_datas[0].showimage10 = true;
-            if (allpage_count >= 8)
-                OnlineShow_datas[0].showimage11 = true;
-            if (allpage_count >= 9)
-                OnlineShow_datas[0].showimage12 = true;
-            if (allpage_count >= 10)
-                OnlineShow_datas[0].showimage13 = true;
-            if (allpage_count >= 11)
-                OnlineShow_datas[0].showimage14 = true;
-            if (allpage_count >= 12)
-                OnlineShow_datas[0].showimage15 = true;
-            if (have_yushu == true)
-                OnlineShow_datas[0].showimage3 = true;
-            #endregion
-
-            reportForm = new ReportForm();
-            reportForm.InitializeDataSource(qtyTable, OnlineShow_datas, PDFcheckdataDetail, PDF_Types);
-            if (ishow == true)
-                reportForm.ShowDialog();
-
-            //  reportForm = null;
+            return qtyTable;
         }
 
         private void get_pagecount_andYushu(out int allpage_count, out bool have_yushu)
@@ -831,6 +837,10 @@ namespace SZ_PDFJsonPrint
             //new
 
             #region new pirnt
+            PDFcheckdataDetail = new List<PDF_checkdataDetail>();
+            DataTable qtyTable = PDFcheckdaadetail_Method();
+
+
             int allpage_count;
             bool have_yushu;
             int ongong_index = 0;
@@ -887,9 +897,10 @@ namespace SZ_PDFJsonPrint
             Create_table(false);
 
             reportViewer1 = reportForm.reportViewer1;
-            //reportForm.ShowDialog();
+           reportForm.ShowDialog();
 
-
+           reportViewer1 = reportForm.reportViewer1;
+        
             byte[] bytes = this.reportViewer1.LocalReport.Render(
                "pdf", null, out mimeType, out encoding, out extension,
                out streamids, out warnings);

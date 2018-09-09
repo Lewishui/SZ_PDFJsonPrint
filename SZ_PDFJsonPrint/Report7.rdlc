@@ -823,7 +823,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name1.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -853,7 +855,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name2.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -885,7 +889,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name3.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -917,7 +923,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name4.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -952,7 +960,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name5.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -988,7 +998,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name6.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1410,7 +1422,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name1.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1440,7 +1454,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name2.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1472,7 +1488,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name3.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1504,7 +1522,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name4.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1539,7 +1559,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name5.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1575,7 +1597,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!name6.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>宋体</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>

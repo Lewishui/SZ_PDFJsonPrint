@@ -254,7 +254,7 @@ Encoding encoding, string mimeType, bool willSeek)
         public void RunR1(List<OnlineShow> FilterOrderResults)
         {
             LocalReport report = new LocalReport();
-            report.ReportPath = Application.StartupPath + "\\Report1.rdlc";
+            report.ReportPath = Application.StartupPath + "\\print\\PReport1.rdlc";
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
             Export(report);
             m_currentPageIndex = 0;
@@ -263,7 +263,7 @@ Encoding encoding, string mimeType, bool willSeek)
         public void RunR2(List<OnlineShow> FilterOrderResults, List<PDF_checkdataDetail> findsapinfo, List<PDF_checkdataDetail> findsapinfo2)
         {
             LocalReport report = new LocalReport();
-            report.ReportPath = Application.StartupPath + "\\Report2.rdlc";
+            report.ReportPath = Application.StartupPath + "\\print\\PReport2.rdlc";
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet_up", findsapinfo));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet_down", findsapinfo2));
@@ -276,7 +276,7 @@ Encoding encoding, string mimeType, bool willSeek)
         public void RunR3(List<OnlineShow> FilterOrderResults, List<PDF_checkdataDetail> findsapinfo)
         {
             LocalReport report = new LocalReport();
-            report.ReportPath = Application.StartupPath + "\\Report3.rdlc";
+            report.ReportPath = Application.StartupPath + "\\print\\PReport3.rdlc";
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet_up", findsapinfo));
           
