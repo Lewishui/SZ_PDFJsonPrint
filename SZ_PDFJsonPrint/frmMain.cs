@@ -648,18 +648,20 @@ namespace SZ_PDFJsonPrint
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            int s = this.tabControl1.SelectedIndex;
-            if (s == 1)
-            {
-                downcsv(dataGridView5);
+            #region Down  CSV
+            //int s = this.tabControl1.SelectedIndex;
+            //if (s == 1)
+            //{
+            //    downcsv(dataGridView5);
 
-            }
+            //}
 
-            return;
+            //return; 
+            #endregion
 
 
             var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.DefaultExt = ".csv";
+            saveFileDialog.DefaultExt = ".xls";
             saveFileDialog.Filter = "Excel Files(*.xls,*.xlsx,*.xlsm,*.xlsb,*.csv)|*.xls;*.xlsx;*.xlsm;*.xlsb;*.csv";
             strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
             saveFileDialog.FileName = strFileName;
@@ -704,13 +706,13 @@ namespace SZ_PDFJsonPrint
             //初始化信息
             clsAllnew BusinessHelp = new clsAllnew();
 
-            BusinessHelp.InitializeDataSource(TBB, tclass_datas, Root_datas, Online_datas, Online_MaGait, Online_Root_datas, PDF_Rootdb, PDF_Types, PDF_ChildType);
+            BusinessHelp.InitializeDataSource(TBB, tclass_datas, Root_datas, Online_datas, Online_MaGait, Online_Root_datas, PDF_Rootdb, PDF_Types, PDF_ChildType, Excel_body);
 
             BusinessHelp.pbStatus = pbStatus;
             BusinessHelp.tsStatusLabel1 = toolStripLabel1;
             BusinessHelp.DownLoadExcel(ref this.bgWorker, strFileName);
 
-            BusinessHelp.XLSSavesaCSV(strFileName);
+            //BusinessHelp.XLSSavesaCSV(strFileName);
             //暂停
             //BusinessHelp.DownLoadPDF(ref this.bgWorker, strFileName);
 
@@ -783,7 +785,7 @@ namespace SZ_PDFJsonPrint
             }
             sw.Close();
             fa.Close();
-            MessageBox.Show("下载完成 ！", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // MessageBox.Show("下载完成 ！", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
         }
@@ -878,8 +880,12 @@ namespace SZ_PDFJsonPrint
             MessageBox.Show("打印完成！", "提醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void pdfExport(string pathl)
+        //private void pdfExport(string pathl)
+        //{
+        private void pdfExport(object sender, DoWorkEventArgs e)
         {
+            DateTime oldDate = DateTime.Now;
+
             //回写测试，如果可以回写到数据集中，然后更新RDLC，并输出，那么就用这种模式
 
             //refresh report viewer
@@ -896,19 +902,26 @@ namespace SZ_PDFJsonPrint
             //new 
             Create_table(false);
 
-            reportViewer1 = reportForm.reportViewer1;
-           reportForm.ShowDialog();
+            //reportViewer1 = reportForm.reportViewer1;
+            //  reportForm.ShowDialog();
 
-           reportViewer1 = reportForm.reportViewer1;
-        
+            reportViewer1 = reportForm.reportViewer1;
+
             byte[] bytes = this.reportViewer1.LocalReport.Render(
                "pdf", null, out mimeType, out encoding, out extension,
                out streamids, out warnings);
 
-            FileStream fs = new FileStream(pathl, FileMode.Create);
+            FileStream fs = new FileStream(strFileName, FileMode.Create);
             fs.Write(bytes, 0, bytes.Length);
             fs.Close();
             issaveok = true;
+
+
+            DateTime FinishTime = DateTime.Now;
+            TimeSpan s = DateTime.Now - oldDate;
+            string timei = s.Minutes.ToString() + ":" + s.Seconds.ToString();
+            string Showtime = clsShowMessage.MSG_029 + timei.ToString();
+            bgWorker.ReportProgress(clsConstant.Thread_Progress_OK, clsShowMessage.MSG_015 + "\r\n" + Showtime);
 
 
             //ExportRpt(0); 
@@ -931,7 +944,32 @@ namespace SZ_PDFJsonPrint
             {
                 return;
             }
-            pdfExport(strFileName);
+
+            //pdfExport(strFileName);
+
+            try
+            {
+                InitialBackGroundWorker();
+                bgWorker.DoWork += new DoWorkEventHandler(pdfExport);
+                bgWorker.RunWorkerAsync();
+                // 启动消息显示画面
+                frmMessageShow = new frmMessageShow(clsShowMessage.MSG_001,
+                                                    clsShowMessage.MSG_007,
+                                                    clsConstant.Dialog_Status_Disable);
+                frmMessageShow.ShowDialog();
+                // 数据读取成功后在画面显示
+                if (blnBackGroundWorkIsOK)
+                {
+                    string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Results"), "");
+                    System.Diagnostics.Process.Start("explorer.exe", strFileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ex" + ex);
+                return;
+                throw ex;
+            }
 
             if (issaveok == true)
                 MessageBox.Show("报表已经成功导出到桌面！", "Info");

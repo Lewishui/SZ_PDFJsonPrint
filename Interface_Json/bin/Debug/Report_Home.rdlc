@@ -210,9 +210,8 @@
         <ReportItems>
           <Subreport Name="Subreport0">
             <ReportName>Report4_new</ReportName>
-            <Top>0cm</Top>
             <Height>29.7cm</Height>
-            <Width>21cm</Width>
+            <Width>18.183cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -223,7 +222,7 @@
         <Height>29.7cm</Height>
         <Style />
       </Body>
-      <Width>21.0405cm</Width>
+      <Width>18.183cm</Width>
       <Page>
         <PageHeader>
           <Height>2.22821cm</Height>
@@ -415,7 +414,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.14891in</Top>
-              <Left>5.75273in</Left>
+              <Left>4.12773in</Left>
               <Height>0.26042in</Height>
               <Width>0.8125in</Width>
               <Style>
@@ -472,7 +471,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.14891in</Top>
-              <Left>6.75968in</Left>
+              <Left>5.13468in</Left>
               <Height>0.25in</Height>
               <Width>1.52398in</Width>
               <ZIndex>2</ZIndex>
@@ -499,7 +498,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.14891in</Top>
-              <Left>3.4955in</Left>
+              <Left>2.4955in</Left>
               <Height>0.25in</Height>
               <Width>1.12722in</Width>
               <ZIndex>3</ZIndex>
@@ -521,8 +520,8 @@
         </PageFooter>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
-        <LeftMargin>2cm</LeftMargin>
-        <RightMargin>2cm</RightMargin>
+        <LeftMargin>1cm</LeftMargin>
+        <RightMargin>1cm</RightMargin>
         <TopMargin>2cm</TopMargin>
         <BottomMargin>2cm</BottomMargin>
         <ColumnSpacing>1.27cm</ColumnSpacing>

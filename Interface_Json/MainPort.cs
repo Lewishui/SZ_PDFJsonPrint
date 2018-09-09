@@ -50,10 +50,13 @@ namespace Interface_Json
         List<Online_Data> Online_datas;
         List<MaGait> Online_MaGait;
         List<Online_Root> Online_Root_datas;
+        List<OnlineShow> OnlineShow_datas;
+
         //PDF
         List<PDF_Root> PDF_Rootdb;
         List<Types> PDF_Types;
         List<ChildType> PDF_ChildType;
+        List<PDF_checkdataDetail> PDFcheckdataDetail;
 
         bool issaveok = false;
 
@@ -232,17 +235,13 @@ namespace Interface_Json
 
         private void PrintReportForEDI()
         {
-            for (int i = 0; i < tclass_datas.Count; i++)
-            {
-                reportForm = new ReportForm();
 
+            if (PDF_Types == null)
+                return;
+            #region maintain
+            Create_table(true);
+            #endregion
 
-                List<Datas> findsapinfo = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
-
-                //  reportForm.InitializeDataSource(findsapinfo);
-                reportForm.ShowDialog();
-            }
-            //InitializeEdiData();
         }
 
         public void Readform_interface(string pdfinfo, string excelinfo, string onlineinfo)
@@ -350,21 +349,15 @@ namespace Interface_Json
             tclass_datas = new List<Datas>();
             Root_datas = new List<Root>();
             Excel_body = new DataTable();
-
-
+            OnlineShow_datas = new List<OnlineShow>();
             clsAllnew BusinessHelp = new clsAllnew();
             //导入程序集
             DateTime oldDate = DateTime.Now;
-
-
-
-
             BusinessHelp.ReadJSON_Report(ref this.bgWorker, "B", interface_pdfinfo, interface_excelinfo, interface_onlineinfo);
 
             PDF_Rootdb = BusinessHelp.PDF_Rootdb;
             PDF_Types = BusinessHelp.PDF_Types;
             PDF_ChildType = BusinessHelp.PDF_ChildType;
-
 
             TBB = BusinessHelp.TBB;
             tclass_datas = BusinessHelp.tclass_datas;
@@ -374,6 +367,7 @@ namespace Interface_Json
             Online_datas = BusinessHelp.Online_datas;
             Online_MaGait = BusinessHelp.Online_MaGait;
             Online_Root_datas = BusinessHelp.Online_Root_datas;
+            OnlineShow_datas = BusinessHelp.OnlineShow_datas;
 
 
             DateTime FinishTime = DateTime.Now;
@@ -385,15 +379,61 @@ namespace Interface_Json
         }
         /// <summary>
         /// 下载CSV 
-        /// </summary>
+        /// </summary> 好用 替换成 Eexcel
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// 
 
+        //public void DownSystemFile_CSV()
+        //{
+        //    //ExportCSV(qtyTable_, "");
+        //    //好用
+        //    downcsv(qtyTable_);
+        //    //
+
+        //}
+        /// <summary>
+        /// 下载excel 
+        /// </summary>
         public void DownSystemFile_CSV()
         {
-            //ExportCSV(qtyTable_, "");
-            downcsv(qtyTable_);
+
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".xls";
+            saveFileDialog.Filter = "Excel Files(*.xls,*.xlsx,*.xlsm,*.xlsb,*.csv)|*.xls;*.xlsx;*.xlsm;*.xlsb;*.csv";
+            strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            saveFileDialog.FileName = strFileName;
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                strFileName = saveFileDialog.FileName.ToString();
+            }
+            else
+            {
+                return;
+            }
+            try
+            {
+                InitialBackGroundWorker();
+                bgWorker.DoWork += new DoWorkEventHandler(downreport);
+                bgWorker.RunWorkerAsync();
+                // 启动消息显示画面
+                frmMessageShow = new frmMessageShow(clsShowMessage.MSG_001,
+                                                    clsShowMessage.MSG_007,
+                                                    clsConstant.Dialog_Status_Disable);
+                frmMessageShow.ShowDialog();
+                // 数据读取成功后在画面显示
+                if (blnBackGroundWorkIsOK)
+                {
+                    string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Results"), "");
+                    System.Diagnostics.Process.Start("explorer.exe", strFileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ex" + ex);
+                return;
+                throw ex;
+            }
         }
         private void downreport(object sender, DoWorkEventArgs e)
         {
@@ -401,13 +441,13 @@ namespace Interface_Json
             //初始化信息
             clsAllnew BusinessHelp = new clsAllnew();
 
-            BusinessHelp.InitializeDataSource(TBB, tclass_datas, Root_datas, Online_datas, Online_MaGait, Online_Root_datas, PDF_Rootdb, PDF_Types, PDF_ChildType);
+            BusinessHelp.InitializeDataSource(TBB, tclass_datas, Root_datas, Online_datas, Online_MaGait, Online_Root_datas, PDF_Rootdb, PDF_Types, PDF_ChildType, Excel_body);
 
             //BusinessHelp.pbStatus = pbStatus;
             //BusinessHelp.tsStatusLabel1 = toolStripLabel1;
             BusinessHelp.DownLoadExcel(ref this.bgWorker, strFileName);
 
-            BusinessHelp.XLSSavesaCSV(strFileName);
+            //    BusinessHelp.XLSSavesaCSV(strFileName);
             //暂停
             //BusinessHelp.DownLoadPDF(ref this.bgWorker, strFileName);
 
@@ -456,14 +496,14 @@ namespace Interface_Json
                 {
                     if (dataGridView.Rows[j][k].ToString() != null)
                     {
-                        if (k == 7 || k == 5 || k == 8 || k == 9 || k == 10 || k == 5)
-                            strRowValue += "'" + dataGridView.Rows[j][k].ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
+                        // if (k == 7 || k == 5 || k == 8 || k == 9 || k == 10 || k == 5)
+                        strRowValue += "'" + dataGridView.Rows[j][k].ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
                         //if (dataGridView.Rows[j].Cells[k].Value != null)
                         //    strRowValue +=   ((char)(9)).ToString() +dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ") + delimiter;
                         //else
                         //    strRowValue +=  ((char)(9)).ToString()+  dataGridView.Rows[j].Cells[k].Value + delimiter;
-                        else
-                            strRowValue += dataGridView.Rows[j][k].ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
+                        // else
+                        strRowValue += dataGridView.Rows[j][k].ToString().Replace("\r\n", " ").Replace("\n", "'") + delimiter;
 
                     }
                     else
@@ -588,28 +628,54 @@ namespace Interface_Json
         {
             if (tclass_datas == null)
                 return;
-
+  
             clsAllnew BusinessHelp = new clsAllnew();
-            for (int i = 0; i < tclass_datas.Count; i++)
+            //new
+
+            #region new pirnt
+            PDFcheckdataDetail = new List<PDF_checkdataDetail>();
+            DataTable qtyTable = PDFcheckdaadetail_Method();
+
+
+            int allpage_count;
+            bool have_yushu;
+            int ongong_index = 0;
+            int vvv = 0;
+            get_pagecount_andYushu(out allpage_count, out have_yushu);
+
+            BusinessHelp.RunR1(OnlineShow_datas);
+
+            foreach (Types item in PDF_Types)
             {
-                printclass_datas = new List<Datas>();
+                string typecode = "";
+                string typecode2 = "";
+                if (ongong_index < allpage_count)
+                {
+                    typecode = PDF_Types[vvv].typeCode;
+                    typecode2 = PDF_Types[vvv + 1].typeCode;
 
-                printclass_datas = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
+                    List<PDF_checkdataDetail> findsapinfo = PDFcheckdataDetail.FindAll(o => o.typeCode != null && o.typeCode == typecode);
 
-                //this.toolStripLabel1.Text = "打印中 1/3";
-                BusinessHelp.Run(printclass_datas);
-                //this.toolStripLabel1.Text = "打印中 2/3";
-
-                BusinessHelp.Run2(printclass_datas);
-                //this.toolStripLabel1.Text = "打印中 3/3";
-
-                BusinessHelp.Run3(printclass_datas);
+                    List<PDF_checkdataDetail> findsapinfo2 = PDFcheckdataDetail.FindAll(o => o.typeCode != null && o.typeCode == typecode2);
+                    BusinessHelp.RunR2(OnlineShow_datas, findsapinfo, findsapinfo2);
+                }
+                ongong_index++;
+                vvv = ongong_index + 1;
             }
+            if (have_yushu == true)
+            {
+                string typecode = PDF_Types[PDF_Types.Count - 1].typeCode;
+                List<PDF_checkdataDetail> findsapinfo = PDFcheckdataDetail.FindAll(o => o.typeCode != null && o.typeCode == typecode);
+                BusinessHelp.RunR3(OnlineShow_datas, findsapinfo);
+            }
+            #endregion
             MessageBox.Show("打印完成！", "提醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void pdfExport(string pathl)
+        private void pdfExport(object sender, DoWorkEventArgs e)
         {
+            DateTime oldDate = DateTime.Now;
+
             //回写测试，如果可以回写到数据集中，然后更新RDLC，并输出，那么就用这种模式
 
             //refresh report viewer
@@ -621,19 +687,33 @@ namespace Interface_Json
 
             reportViewer1 = new ReportViewer();
 
-            //  reportForm.InitializeDataSource(printclass_datas);//tclass_datas
-            reportViewer1 = reportForm.reportViewer1;
-            //reportForm.ShowDialog();
+            //   reportForm.InitializeDataSource(printclass_datas);//tclass_datas
 
+            //new 
+            Create_table(false);
+
+            //reportViewer1 = reportForm.reportViewer1;
+            //  reportForm.ShowDialog();
+
+            reportViewer1 = reportForm.reportViewer1;
 
             byte[] bytes = this.reportViewer1.LocalReport.Render(
                "pdf", null, out mimeType, out encoding, out extension,
                out streamids, out warnings);
 
-            FileStream fs = new FileStream(pathl, FileMode.Create);
+            FileStream fs = new FileStream(strFileName, FileMode.Create);
             fs.Write(bytes, 0, bytes.Length);
             fs.Close();
             issaveok = true;
+
+
+            DateTime FinishTime = DateTime.Now;
+            TimeSpan s = DateTime.Now - oldDate;
+            string timei = s.Minutes.ToString() + ":" + s.Seconds.ToString();
+            string Showtime = clsShowMessage.MSG_029 + timei.ToString();
+            bgWorker.ReportProgress(clsConstant.Thread_Progress_OK, clsShowMessage.MSG_015 + "\r\n" + Showtime);
+
+
             //ExportRpt(0); 
         }
 
@@ -641,11 +721,7 @@ namespace Interface_Json
         {
             issaveok = false;
 
-            for (int i = 0; i < tclass_datas.Count; i++)
             {
-                printclass_datas = new List<Datas>();
-
-                printclass_datas = tclass_datas.FindAll(o => o.serialNumber != null && o.serialNumber == tclass_datas[i].serialNumber);
 
                 var saveFileDialog = new SaveFileDialog();
                 saveFileDialog.DefaultExt = ".pdf";
@@ -661,12 +737,184 @@ namespace Interface_Json
                 {
                     return;
                 }
-                pdfExport(strFileName);
+                //  pdfExport(strFileName);
+
+                try
+                {
+                    InitialBackGroundWorker();
+                    bgWorker.DoWork += new DoWorkEventHandler(pdfExport);
+                    bgWorker.RunWorkerAsync();
+                    // 启动消息显示画面
+                    frmMessageShow = new frmMessageShow(clsShowMessage.MSG_001,
+                                                        clsShowMessage.MSG_007,
+                                                        clsConstant.Dialog_Status_Disable);
+                    frmMessageShow.ShowDialog();
+                    // 数据读取成功后在画面显示
+                    if (blnBackGroundWorkIsOK)
+                    {
+                        string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Results"), "");
+                        System.Diagnostics.Process.Start("explorer.exe", strFileName);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ex" + ex);
+                    return;
+                    throw ex;
+                }
+
             }
-            if (issaveok == true)
-                MessageBox.Show("报表已经成功导出到桌面！", "Info");
-            else
-                MessageBox.Show("报表导出失败，请查找原因！", "Info");
+            //if (issaveok == true)
+            //    MessageBox.Show("报表已经成功导出到桌面！", "Info");
+            //else
+            //    MessageBox.Show("报表导出失败，请查找原因！", "Info");
+        }
+
+
+        private void Create_table(bool ishow)
+        {
+            PDFcheckdataDetail = new List<PDF_checkdataDetail>();
+            DataTable qtyTable = PDFcheckdaadetail_Method();
+
+            #region check show page
+            int allpage_count;
+            bool have_yushu;
+            get_pagecount_andYushu(out allpage_count, out have_yushu);
+
+
+            if (allpage_count >= 1)
+                OnlineShow_datas[0].showimage2 = true;
+            if (allpage_count >= 2)
+                OnlineShow_datas[0].showimage5 = true;
+            if (allpage_count >= 3)
+                OnlineShow_datas[0].showimage6 = true;
+            if (allpage_count >= 4)
+                OnlineShow_datas[0].showimage7 = true;
+            if (allpage_count >= 5)
+                OnlineShow_datas[0].showimage8 = true;
+            if (allpage_count >= 6)
+                OnlineShow_datas[0].showimage9 = true;
+            if (allpage_count >= 7)
+                OnlineShow_datas[0].showimage10 = true;
+            if (allpage_count >= 8)
+                OnlineShow_datas[0].showimage11 = true;
+            if (allpage_count >= 9)
+                OnlineShow_datas[0].showimage12 = true;
+            if (allpage_count >= 10)
+                OnlineShow_datas[0].showimage13 = true;
+            if (allpage_count >= 11)
+                OnlineShow_datas[0].showimage14 = true;
+            if (allpage_count >= 12)
+                OnlineShow_datas[0].showimage15 = true;
+            if (have_yushu == true)
+                OnlineShow_datas[0].showimage3 = true;
+            #endregion
+
+            reportForm = new ReportForm();
+            reportForm.InitializeDataSource(qtyTable, OnlineShow_datas, PDFcheckdataDetail, PDF_Types);
+            if (ishow == true)
+                reportForm.ShowDialog();
+
+            //  reportForm = null;
+        }
+
+        private DataTable PDFcheckdaadetail_Method()
+        {
+            DataTable qtyTable = new DataTable();
+            foreach (Types item in PDF_Types)
+            {
+                List<ChildType> Child = item.childType;
+                qtyTable = new DataTable();
+                qtyTable.Columns.Add("name1", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("name2", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("name3", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("name4", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("name5", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("name6", System.Type.GetType("System.String"));
+
+                foreach (ChildType k in Child)
+                {
+                    qtyTable.Rows.Add(qtyTable.NewRow());
+                }
+                int row = 0;
+                foreach (ChildType k in Child)
+                {
+                    if (k.typeName == null || k.typeName == "")
+                        qtyTable.Rows[row][0] = "-";
+                    else
+                        qtyTable.Rows[row][0] = k.typeName;
+
+                    if (k.typeEnName == null || k.typeEnName == "")
+                        qtyTable.Rows[row][0] = "-";
+                    else
+                        qtyTable.Rows[row][0] = k.typeName + "\r\n" + k.typeEnName;
+
+                    if (k.unit == null || k.unit == "")
+                        qtyTable.Rows[row][1] = "-";
+                    else
+                        qtyTable.Rows[row][1] = k.unit;
+
+                    List<MaGait> FindOnline_MaGait = Online_MaGait.FindAll(o => o.type != null && o.type == k.typeCode);
+
+                    if (FindOnline_MaGait.Count == 1)
+                    {
+                        MaGait ik = FindOnline_MaGait[0];
+
+                        if (ik.avgNormal == null || ik.avgNormal == "")
+                            qtyTable.Rows[row][2] = "-";
+                        else
+                            qtyTable.Rows[row][2] = ik.avgNormal;
+
+                        if (ik.rightNormal == null || ik.rightNormal == "")
+                            qtyTable.Rows[row][3] = "-";
+                        else
+                            qtyTable.Rows[row][3] = ik.rightNormal;
+
+                        qtyTable.Rows[row][4] = "/";
+
+                        if (ik.leftNormal == null || ik.leftNormal == "")
+                            qtyTable.Rows[row][5] = "-";
+                        else
+                            qtyTable.Rows[row][5] = ik.leftNormal;
+                    }
+                    PDF_checkdataDetail tempnote = new PDF_checkdataDetail();
+                    tempnote.name1 = qtyTable.Rows[row][0].ToString();
+                    tempnote.name2 = qtyTable.Rows[row][1].ToString();
+                    tempnote.name3 = qtyTable.Rows[row][2].ToString();
+                    tempnote.name4 = qtyTable.Rows[row][3].ToString();
+                    tempnote.name5 = qtyTable.Rows[row][4].ToString();
+                    tempnote.name6 = qtyTable.Rows[row][5].ToString();
+                    tempnote.typeCode = item.typeCode;
+                    tempnote.typeName = item.typeName;
+                    tempnote.typeEnName = item.typeEnName;
+                    PDFcheckdataDetail.Add(tempnote);
+                    row++;
+                }
+            }
+            return qtyTable;
+        }
+
+        private void get_pagecount_andYushu(out int allpage_count, out bool have_yushu)
+        {
+            int i = 0;
+            allpage_count = 0;
+            have_yushu = false;
+
+            foreach (Types item in PDF_Types)
+            {
+                i++;
+                if (i == 2)
+                {
+                    allpage_count++;
+                    i = 0;
+                }
+                if (PDF_Types.Count % 2 == 0)
+                {
+
+                }
+                else
+                    have_yushu = true;
+            }
         }
 
     }

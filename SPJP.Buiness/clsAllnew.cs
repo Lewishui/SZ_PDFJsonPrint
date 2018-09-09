@@ -267,8 +267,8 @@ Encoding encoding, string mimeType, bool willSeek)
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet_up", findsapinfo));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet_down", findsapinfo2));
-          
-                 
+
+
             Export(report);
             m_currentPageIndex = 0;
             Print(orderprint, 0, 0);
@@ -279,7 +279,7 @@ Encoding encoding, string mimeType, bool willSeek)
             report.ReportPath = Application.StartupPath + "\\print\\PReport3.rdlc";
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet_up", findsapinfo));
-          
+
             Export(report);
             m_currentPageIndex = 0;
             Print(orderprint, 0, 0);
@@ -802,37 +802,37 @@ Encoding encoding, string mimeType, bool willSeek)
             JObject mm = (JObject)JsonConvert.DeserializeObject(obj.ToString());
             //再讲字符串转成json格式
             if (mm["id"] != null && mm["id"].ToString() != "")
-            item.id = mm["id"].ToString();
+                item.id = mm["id"].ToString();
             if (mm["serialNumber"] != null && mm["serialNumber"].ToString() != "")
-            item.serialNumber = mm["serialNumber"].ToString();
+                item.serialNumber = mm["serialNumber"].ToString();
             if (mm["patientId"] != null && mm["patientId"].ToString() != "")
-            item.patientId = mm["patientId"].ToString();
-            if (mm["ptName"]!=null&& mm["ptName"].ToString() != "")
-            item.ptName = mm["ptName"].ToString();
+                item.patientId = mm["patientId"].ToString();
+            if (mm["ptName"] != null && mm["ptName"].ToString() != "")
+                item.ptName = mm["ptName"].ToString();
             if (mm["acquisitionStartTime"] != null && mm["acquisitionStartTime"].ToString() != "")
-            item.acquisitionStartTime = mm["acquisitionStartTime"].ToString();
+                item.acquisitionStartTime = mm["acquisitionStartTime"].ToString();
             if (mm["acquisitionEndTime"] != null && mm["acquisitionEndTime"].ToString() != "")
-            item.acquisitionEndTime = mm["acquisitionEndTime"].ToString();
+                item.acquisitionEndTime = mm["acquisitionEndTime"].ToString();
             if (mm["equipmentModel"] != null && mm["equipmentModel"].ToString() != "")
-            item.equipmentModel = mm["equipmentModel"].ToString();
+                item.equipmentModel = mm["equipmentModel"].ToString();
             if (mm["equipmentNumber"] != null && mm["equipmentNumber"].ToString() != "")
-            item.equipmentNumber = mm["equipmentNumber"].ToString();
+                item.equipmentNumber = mm["equipmentNumber"].ToString();
             if (mm["checkNumber"] != null && mm["checkNumber"].ToString() != "")
-            item.checkNumber = mm["checkNumber"].ToString();
+                item.checkNumber = mm["checkNumber"].ToString();
             if (mm["diseaseType"] != null && mm["diseaseType"].ToString() != "")
-            item.diseaseType = mm["diseaseType"].ToString();
+                item.diseaseType = mm["diseaseType"].ToString();
             if (mm["checkTime"] != null && mm["checkTime"].ToString() != "")
-            item.checkTime = mm["checkTime"].ToString();
+                item.checkTime = mm["checkTime"].ToString();
             if (mm["hospitalName"] != null && mm["hospitalName"].ToString() != "")
-            item.hospitalName = mm["hospitalName"].ToString();
+                item.hospitalName = mm["hospitalName"].ToString();
             if (mm["patientAge"] != null && mm["patientAge"].ToString() != "")
-            item.patientAge = mm["patientAge"].ToString();
+                item.patientAge = mm["patientAge"].ToString();
             if (mm["dataSources"] != null && mm["dataSources"].ToString() != "")
-            item.dataSources = mm["dataSources"].ToString();
+                item.dataSources = mm["dataSources"].ToString();
             if (mm["type"] != null && mm["type"].ToString() != "")
-            item.type = mm["type"].ToString();
+                item.type = mm["type"].ToString();
             if (mm["remark"] != null && mm["remark"].ToString() != "")
-            item.remark = mm["remark"].ToString();
+                item.remark = mm["remark"].ToString();
             //绑定reqId
             item.reqId = item1.reqId;
             Online_datas.Add(item);
@@ -935,12 +935,14 @@ Encoding encoding, string mimeType, bool willSeek)
         }
 
 
-        public void InitializeDataSource(List<clsExcelinfo> TBB1, List<Datas> tclass_datas1, List<Root> Root_datas1, List<Online_Data> Online_datas1, List<MaGait> Online_MaGait1, List<Online_Root> Online_Root_datas1, List<PDF_Root> PDF_Rootdb1, List<Types> PDF_Types1, List<ChildType> PDF_ChildType1)
+        public void InitializeDataSource(List<clsExcelinfo> TBB1, List<Datas> tclass_datas1, List<Root> Root_datas1, List<Online_Data> Online_datas1, List<MaGait> Online_MaGait1, List<Online_Root> Online_Root_datas1, List<PDF_Root> PDF_Rootdb1, List<Types> PDF_Types1, List<ChildType> PDF_ChildType1, DataTable Excel_body1)
         {
             //excel
             TBB = new List<clsExcelinfo>();
             tclass_datas = new List<Datas>();
             Root_datas = new List<Root>();
+            Excel_body = new DataTable();
+
 
             Online_datas = new List<Online_Data>();
             Online_MaGait = new List<MaGait>();
@@ -953,6 +955,7 @@ Encoding encoding, string mimeType, bool willSeek)
             TBB = TBB1;
             tclass_datas = tclass_datas1;
             Root_datas = Root_datas1;
+            Excel_body = Excel_body1;
 
             Online_datas = Online_datas1;
             Online_MaGait = Online_MaGait1;
@@ -969,7 +972,7 @@ Encoding encoding, string mimeType, bool willSeek)
             #region 获取模板路径
             System.Globalization.CultureInfo CurrentCI = System.Threading.Thread.CurrentThread.CurrentCulture;
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
-            string fullPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "System\\"), "Model.xlsx");
+            string fullPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "System\\"), "Model.xls");
             SaveFileDialog sfdDownFile = new SaveFileDialog();
             sfdDownFile.OverwritePrompt = false;
             string DesktopPath = Convert.ToString(System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
@@ -1015,85 +1018,138 @@ Encoding encoding, string mimeType, bool willSeek)
                 //ExcelApp.ScreenUpdating = true;
             #endregion
 
+                #region 写表头
+                List<string> quchongnashuidanwei = (from v in TBB select v.cols).Distinct().ToList();
+                int iRowIndex = 1;
+
+                for (int irow = 0; irow < quchongnashuidanwei.Count; irow++)
+                {
+
+                    List<clsExcelinfo> findinfo = TBB.FindAll(o => o.cols != null && o.cols == quchongnashuidanwei[irow]);
+                    int icloumn = 1;
+                    int endcloumn = 0;
+                    foreach (clsExcelinfo item in findinfo)
+                    {
+                        ExcelSheet.Cells[iRowIndex, icloumn] = item.text;
+                        if (item.size != null && item.size != "")
+                        {
+                            endcloumn = endcloumn + Convert.ToInt32(item.size);
+                            Microsoft.Office.Interop.Excel.Range excelRange = ExcelSheet.Range[ExcelSheet.Cells[iRowIndex, icloumn], ExcelSheet.Cells[iRowIndex, endcloumn]];
+                            excelRange.Merge(excelRange.MergeCells);
+                            excelRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter; ;
+                            excelRange.Font.Size = 12;
+                        }
+                        icloumn = endcloumn + 1;
+                    }
+                    iRowIndex++;
+
+                }
+                #endregion
+
+
                 #region 填充数据
                 int RowIndex = 2;
                 int doing = 0;
-                if (tclass_datas != null)
-                    foreach (Datas item in tclass_datas)
-                    {
+                #region old
+             
+                //if (tclass_datas != null)
+                //    foreach (Datas item in tclass_datas)
+                //    {
+                //        doing++;
 
+                //        bgWorker1.ReportProgress(0, "导出进度  :  " + RowIndex.ToString() + "/" + tclass_datas.Count.ToString());
 
-                        doing++;
+                //        RowIndex++;
+                //        #region MyRegion
 
-                        bgWorker1.ReportProgress(0, "导出进度  :  " + RowIndex.ToString() + "/" + tclass_datas.Count.ToString());
+                //        ExcelSheet.Cells[RowIndex, 1] = RowIndex - 2;
+                //        ExcelSheet.Cells[RowIndex, 2] = item.patientId;
+                //        ExcelSheet.Cells[RowIndex, 3] = item.patientName;
+                //        ExcelSheet.Cells[RowIndex, 4] = item.sex;
+                //        ExcelSheet.Cells[RowIndex, 5] = item.birthday;
+                //        ExcelSheet.Cells[RowIndex, 6] = "'" + item.diseaseType;
+                //        ExcelSheet.Cells[RowIndex, 7] = item.courseOfDisease;
+                //        ExcelSheet.Cells[RowIndex, 8] = "'" + item.serialNumber;
+                //        ExcelSheet.Cells[RowIndex, 9] = "'" + item.inspectId;
+                //        ExcelSheet.Cells[RowIndex, 10] = "'" + item.checkType;
+                //        ExcelSheet.Cells[RowIndex, 11] = "'" + item.dualTask;
+                //        ExcelSheet.Cells[RowIndex, 12] = item.checkRemark;
+                //        ExcelSheet.Cells[RowIndex, 13] = item.checkStartTime;
+                //        ExcelSheet.Cells[RowIndex, 14] = item.checkEndTime;
+                //        ExcelSheet.Cells[RowIndex, 15] = "'" + item.checkHospitalId;
+                //        ExcelSheet.Cells[RowIndex, 16] = item.checkHospitalName;
+                //        ExcelSheet.Cells[RowIndex, 17] = item.checkDoctorId;
+                //        ExcelSheet.Cells[RowIndex, 18] = item.checkDoctorName;
+                //        ExcelSheet.Cells[RowIndex, 19] = item.auditDoctorName;
+                //        ExcelSheet.Cells[RowIndex, 20] = item.checkConclusion;
+                //        ExcelSheet.Cells[RowIndex, 21] = "'" + item.sistDuration;
+                //        ExcelSheet.Cells[RowIndex, 22] = "'" + item.peakSiStAngularVelocity;
+                //        ExcelSheet.Cells[RowIndex, 23] = "'" + item.sistTrunkRoM;
+                //        ExcelSheet.Cells[RowIndex, 24] = item.stepLength_R;
+                //        ExcelSheet.Cells[RowIndex, 25] = item.stepLength_L;
+                //        ExcelSheet.Cells[RowIndex, 26] = item.stepLength_avg;
+                //        ExcelSheet.Cells[RowIndex, 27] = item.strideVelocity_R;
+                //        ExcelSheet.Cells[RowIndex, 28] = item.strideVelocity_L;
+                //        ExcelSheet.Cells[RowIndex, 29] = item.strideVelocity_avg;
+                //        ExcelSheet.Cells[RowIndex, 30] = item.strideLength_R;
+                //        ExcelSheet.Cells[RowIndex, 31] = item.strideLength_L;
+                //        ExcelSheet.Cells[RowIndex, 32] = item.strideLength_avg;
+                //        ExcelSheet.Cells[RowIndex, 33] = item.gaitCycle_R;
+                //        ExcelSheet.Cells[RowIndex, 34] = item.gaitCycle_L;
+                //        ExcelSheet.Cells[RowIndex, 35] = item.gaitCycle_avg;
+                //        ExcelSheet.Cells[RowIndex, 36] = item.cadence_R;
+                //        ExcelSheet.Cells[RowIndex, 37] = item.cadence_L;
+                //        ExcelSheet.Cells[RowIndex, 38] = item.cadence_avg;
+                //        ExcelSheet.Cells[RowIndex, 39] = item.support_R;
+                //        ExcelSheet.Cells[RowIndex, 40] = item.support_L;
+                //        ExcelSheet.Cells[RowIndex, 41] = item.support_avg;
+                //        ExcelSheet.Cells[RowIndex, 42] = item.swing_R;
+                //        ExcelSheet.Cells[RowIndex, 43] = item.swing_L;
+                //        ExcelSheet.Cells[RowIndex, 44] = item.swing_avg;
+                //        ExcelSheet.Cells[RowIndex, 45] = item.stance_R;
+                //        ExcelSheet.Cells[RowIndex, 46] = item.stance_L;
+                //        ExcelSheet.Cells[RowIndex, 47] = item.stance_avg;
+                //        ExcelSheet.Cells[RowIndex, 48] = item.trunkSagittalPeakVelocity;
+                //        ExcelSheet.Cells[RowIndex, 49] = item.trunkHorizontalPeakVelocity;
+                //        ExcelSheet.Cells[RowIndex, 50] = item.strideVelocityAsymmetry;
+                //        ExcelSheet.Cells[RowIndex, 51] = item.strideLengthAsymmetry;
+                //        ExcelSheet.Cells[RowIndex, 52] = item.swingAsymmetry;
+                //        ExcelSheet.Cells[RowIndex, 53] = item.stanceAsymmetry;
+                //        ExcelSheet.Cells[RowIndex, 54] = item.shankAsymmetry;
+                //        ExcelSheet.Cells[RowIndex, 55] = item.peakShankVelocityAsymmetry;
+                //        ExcelSheet.Cells[RowIndex, 56] = item.shank_SSI;
+                //        ExcelSheet.Cells[RowIndex, 57] = item.meanPhaseDifference;
+                //        ExcelSheet.Cells[RowIndex, 58] = item.phaseCoordinationIndex;
+                //        ExcelSheet.Cells[RowIndex, 59] = item.balanceTrunkSagittalPeakVelocity;
+                //        ExcelSheet.Cells[RowIndex, 60] = item.balanceTrunkHorizontalPeakVelocity;
+                //        #endregion
 
-                        RowIndex++;
-                        #region MyRegion
-                        ExcelApp.Visible = true;
-                        ExcelApp.ScreenUpdating = true;
-                        ExcelSheet.Cells[RowIndex, 1] = RowIndex - 2;
-                        ExcelSheet.Cells[RowIndex, 2] = item.patientId;
-                        ExcelSheet.Cells[RowIndex, 3] = item.patientName;
-                        ExcelSheet.Cells[RowIndex, 4] = item.sex;
-                        ExcelSheet.Cells[RowIndex, 5] = item.birthday;
-                        ExcelSheet.Cells[RowIndex, 6] = "'" + item.diseaseType;
-                        ExcelSheet.Cells[RowIndex, 7] = item.courseOfDisease;
-                        ExcelSheet.Cells[RowIndex, 8] = "'" + item.serialNumber;
-                        ExcelSheet.Cells[RowIndex, 9] = "'" + item.inspectId;
-                        ExcelSheet.Cells[RowIndex, 10] = "'" + item.checkType;
-                        ExcelSheet.Cells[RowIndex, 11] = "'" + item.dualTask;
-                        ExcelSheet.Cells[RowIndex, 12] = item.checkRemark;
-                        ExcelSheet.Cells[RowIndex, 13] = item.checkStartTime;
-                        ExcelSheet.Cells[RowIndex, 14] = item.checkEndTime;
-                        ExcelSheet.Cells[RowIndex, 15] = "'" + item.checkHospitalId;
-                        ExcelSheet.Cells[RowIndex, 16] = item.checkHospitalName;
-                        ExcelSheet.Cells[RowIndex, 17] = item.checkDoctorId;
-                        ExcelSheet.Cells[RowIndex, 18] = item.checkDoctorName;
-                        ExcelSheet.Cells[RowIndex, 19] = item.auditDoctorName;
-                        ExcelSheet.Cells[RowIndex, 20] = item.checkConclusion;
-                        ExcelSheet.Cells[RowIndex, 21] = "'" + item.sistDuration;
-                        ExcelSheet.Cells[RowIndex, 22] = "'" + item.peakSiStAngularVelocity;
-                        ExcelSheet.Cells[RowIndex, 23] = "'" + item.sistTrunkRoM;
-                        ExcelSheet.Cells[RowIndex, 24] = item.stepLength_R;
-                        ExcelSheet.Cells[RowIndex, 25] = item.stepLength_L;
-                        ExcelSheet.Cells[RowIndex, 26] = item.stepLength_avg;
-                        ExcelSheet.Cells[RowIndex, 27] = item.strideVelocity_R;
-                        ExcelSheet.Cells[RowIndex, 28] = item.strideVelocity_L;
-                        ExcelSheet.Cells[RowIndex, 29] = item.strideVelocity_avg;
-                        ExcelSheet.Cells[RowIndex, 30] = item.strideLength_R;
-                        ExcelSheet.Cells[RowIndex, 31] = item.strideLength_L;
-                        ExcelSheet.Cells[RowIndex, 32] = item.strideLength_avg;
-                        ExcelSheet.Cells[RowIndex, 33] = item.gaitCycle_R;
-                        ExcelSheet.Cells[RowIndex, 34] = item.gaitCycle_L;
-                        ExcelSheet.Cells[RowIndex, 35] = item.gaitCycle_avg;
-                        ExcelSheet.Cells[RowIndex, 36] = item.cadence_R;
-                        ExcelSheet.Cells[RowIndex, 37] = item.cadence_L;
-                        ExcelSheet.Cells[RowIndex, 38] = item.cadence_avg;
-                        ExcelSheet.Cells[RowIndex, 39] = item.support_R;
-                        ExcelSheet.Cells[RowIndex, 40] = item.support_L;
-                        ExcelSheet.Cells[RowIndex, 41] = item.support_avg;
-                        ExcelSheet.Cells[RowIndex, 42] = item.swing_R;
-                        ExcelSheet.Cells[RowIndex, 43] = item.swing_L;
-                        ExcelSheet.Cells[RowIndex, 44] = item.swing_avg;
-                        ExcelSheet.Cells[RowIndex, 45] = item.stance_R;
-                        ExcelSheet.Cells[RowIndex, 46] = item.stance_L;
-                        ExcelSheet.Cells[RowIndex, 47] = item.stance_avg;
-                        ExcelSheet.Cells[RowIndex, 48] = item.trunkSagittalPeakVelocity;
-                        ExcelSheet.Cells[RowIndex, 49] = item.trunkHorizontalPeakVelocity;
-                        ExcelSheet.Cells[RowIndex, 50] = item.strideVelocityAsymmetry;
-                        ExcelSheet.Cells[RowIndex, 51] = item.strideLengthAsymmetry;
-                        ExcelSheet.Cells[RowIndex, 52] = item.swingAsymmetry;
-                        ExcelSheet.Cells[RowIndex, 53] = item.stanceAsymmetry;
-                        ExcelSheet.Cells[RowIndex, 54] = item.shankAsymmetry;
-                        ExcelSheet.Cells[RowIndex, 55] = item.peakShankVelocityAsymmetry;
-                        ExcelSheet.Cells[RowIndex, 56] = item.shank_SSI;
-                        ExcelSheet.Cells[RowIndex, 57] = item.meanPhaseDifference;
-                        ExcelSheet.Cells[RowIndex, 58] = item.phaseCoordinationIndex;
-                        ExcelSheet.Cells[RowIndex, 59] = item.balanceTrunkSagittalPeakVelocity;
-                        ExcelSheet.Cells[RowIndex, 60] = item.balanceTrunkHorizontalPeakVelocity;
-                        #endregion
+                //    } 
+                #endregion
+                #region table
+                int rownow = quchongnashuidanwei.Count + 1;
+                RowIndex = 0;
+                int ColumnsIndex = 1;
 
+                for (int row = 0; row < Excel_body.Rows.Count; row++)
+                {
+                    ColumnsIndex = 1;
+
+                    doing++;
+                    bgWorker1.ReportProgress(0, "导出进度  :  " + RowIndex.ToString() + "/" + Excel_body.Rows.Count.ToString());
+
+                    for (int cloumn = 0; cloumn < Excel_body.Columns.Count; cloumn++)
+                    {    
+                        if (row < Excel_body.Rows.Count && cloumn < Excel_body.Columns.Count)
+                        {
+                            ExcelSheet.Cells[rownow, ColumnsIndex] ="'"+ Excel_body.Rows[row][cloumn].ToString();
+                            ColumnsIndex++;
+                        }
                     }
+                    rownow++;
+                }
+                #endregion
+                #endregion
                 ExcelBook.RefreshAll();
                 #region 写入文件
                 ExcelApp.ScreenUpdating = true;
@@ -1102,8 +1158,8 @@ Encoding encoding, string mimeType, bool willSeek)
                 ExcelApp.DisplayAlerts = false;
 
                 #endregion
-            }
 
+            }
             #region 异常处理
             catch (Exception ex)
             {
@@ -1131,8 +1187,9 @@ Encoding encoding, string mimeType, bool willSeek)
             }
             #endregion
 
-                #endregion
+
         }
+        #region conver
         public string XLSSavesaCSV(string FilePath)
         {
             System.Reflection.Missing missingValue = System.Reflection.Missing.Value;
@@ -1174,7 +1231,77 @@ Encoding encoding, string mimeType, bool willSeek)
             }
         }
 
+        public static string CSVSaveasXLS(string FilePath)
+        {
+            System.Reflection.Missing missingValue = System.Reflection.Missing.Value;
 
+            string _NewFilePath = "";
+
+            Excel.Application excelApplication;
+            Excel.Workbooks excelWorkBooks = null;
+            Excel.Workbook excelWorkBook = null;
+            Excel.Worksheet excelWorkSheet = null;
+
+            try
+            {
+                excelApplication = new Excel.Application();
+                excelWorkBooks = excelApplication.Workbooks;
+                excelWorkBook = ((Excel.Workbook)excelWorkBooks.Open(FilePath, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue, missingValue));
+                excelWorkSheet = (Excel.Worksheet)excelWorkBook.Worksheets[1];
+                excelApplication.Visible = false;
+                excelApplication.DisplayAlerts = false;
+                _NewFilePath = FilePath.Replace(".csv", ".xls");
+                excelWorkBook.SaveAs(_NewFilePath, Excel.XlFileFormat.xlAddIn, missingValue, missingValue, missingValue, missingValue, Excel.XlSaveAsAccessMode.xlNoChange, missingValue, missingValue, missingValue, missingValue, missingValue);
+                excelWorkBook.Close();
+                QuertExcel();
+                // ExcelFormatHelper.DeleteFile(FilePath);
+                //可以不用杀掉进程QuertExcel();
+
+
+                GC.Collect(System.GC.GetGeneration(excelWorkSheet));
+                GC.Collect(System.GC.GetGeneration(excelWorkBook));
+                GC.Collect(System.GC.GetGeneration(excelApplication));
+
+            }
+            catch (Exception exc)
+            {
+                throw new Exception(exc.Message);
+            }
+
+            finally
+            {
+                GC.Collect();
+            }
+
+            return _NewFilePath;
+        }
+        /// <summary>
+        /// 删除一个指定的文件
+        /// </summary>
+        /// <param name="FilePath">文件路径</param>
+        /// <returns></returns>
+        public static bool DeleteFile(string FilePath)
+        {
+            try
+            {
+                bool IsFind = File.Exists(FilePath);
+                if (IsFind)
+                {
+                    File.Delete(FilePath);
+                }
+                else
+                {
+                    throw new IOException("指定的文件不存在");
+                }
+                return true;
+            }
+            catch (Exception exc)
+            {
+                throw new Exception(exc.Message);
+            }
+
+        }
+        #endregion
 
         public void DownLoadPDF(ref BackgroundWorker bgWorker, string pathname)
         {
@@ -1413,7 +1540,6 @@ Encoding encoding, string mimeType, bool willSeek)
             }
             return result;
         }
-
-
+        
     }
 }
