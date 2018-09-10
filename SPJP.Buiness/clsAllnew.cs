@@ -194,6 +194,14 @@ Encoding encoding, string mimeType, bool willSeek)
             if (lenpage != 0)
                 printDoc.DefaultPageSettings.PaperSize = new PaperSize("Custom", lenpage, withpage);
 
+            //
+            if (printDoc.PrinterSettings.SupportsColor)
+            {
+
+                // Set the page default's to not print in color.
+                printDoc.DefaultPageSettings.Color = false;
+            }
+
 
             printDoc.Print();
 

@@ -971,10 +971,10 @@ namespace SZ_PDFJsonPrint
                 throw ex;
             }
 
-            if (issaveok == true)
-                MessageBox.Show("报表已经成功导出到桌面！", "Info");
-            else
-                MessageBox.Show("报表导出失败，请查找原因！", "Info");
+            //if (issaveok == true)
+            //    MessageBox.Show("报表已经成功导出到桌面！", "Info");
+            //else
+            //    MessageBox.Show("报表导出失败，请查找原因！", "Info");
         }
 
         private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)

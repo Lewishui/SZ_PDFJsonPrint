@@ -66,8 +66,12 @@ namespace SZ_PDFJsonPrint
             {
                 //Width = 210,
                 //Height = 297
+
+                //  Width = 827,
+                //Height = 1169
+
                 Width = 827,
-                Height = 1169
+                Height = 1050
             };
             pageset.Margins = new Margins() { Left = 10, Top = 10, Bottom = 10, Right = 10 };
             reportViewer1.SetPageSettings(pageset);
@@ -195,7 +199,7 @@ namespace SZ_PDFJsonPrint
                     //e.DataSources.Add(new ReportParameter("DeptNo", "02"));
                     //e.DataSources.Add(new ReportParameter("Parameter1", "This　is　a　parameter"));
                     //e.DataSources.Add(new ReportDataSource("showimage", true));
-                    ongong_index++;
+                  //  ongong_index++;
 
 
                 }
@@ -207,7 +211,7 @@ namespace SZ_PDFJsonPrint
                     int newindex = 0;
                     if (have_yushu == true)
                     {
-                        newindex = ongong_index;
+                        newindex = ongong_index+1;
                         typecode = PDF_Types[newindex].typeCode;
                         typecode2 = PDF_Types[newindex + 1].typeCode;
                     }

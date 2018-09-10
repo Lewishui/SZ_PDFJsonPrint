@@ -40,3 +40,14 @@ F:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\FlashControlV71.dll
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SAPBusinessObjects.WPF.Viewer.dll
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SAPBusinessObjects.WPF.ViewerShared.dll
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\log4net.xml
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\CrystalDecisions.Data.AdoDotNetInterop.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\CrystalDecisions.Shared.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\CrystalDecisions.Web.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\FlashControlV71.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SAPBusinessObjects.WPF.Viewer.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\SAPBusinessObjects.WPF.ViewerShared.dll
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SPJP.Buiness\bin\Debug\log4net.xml

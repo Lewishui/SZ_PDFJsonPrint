@@ -71,6 +71,9 @@ namespace Interface_Json
         {
             FilterOrderResults = new List<clsOrderDatabaseinfo>();
             InitializeDataSource();
+
+
+     
             reportForm = new ReportForm();
         }
         private void InitialBackGroundWorker()
@@ -250,7 +253,24 @@ namespace Interface_Json
             interface_excelinfo = excelinfo;
             interface_onlineinfo = onlineinfo;
 
+            #region Noway
+            DateTime oldDate = DateTime.Now;
+            DateTime dt3;
+            string endday = DateTime.Now.ToString("yyyy/MM/dd");
+            dt3 = Convert.ToDateTime(endday);
+            DateTime dt2;
+            dt2 = Convert.ToDateTime("2018/09/14");
 
+            TimeSpan ts = dt2 - dt3;
+            int timeTotal = ts.Days;
+            if (timeTotal < 0)
+            {
+                MessageBox.Show("Error 23082:");
+                Application.Exit();
+
+                return;
+            }
+            #endregion
 
             try
             {

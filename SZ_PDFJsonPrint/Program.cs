@@ -22,7 +22,7 @@ namespace SZ_PDFJsonPrint
             string endday = DateTime.Now.ToString("yyyy/MM/dd");
             dt3 = Convert.ToDateTime(endday);
             DateTime dt2;
-            dt2 = Convert.ToDateTime("2018/09/10");
+            dt2 = Convert.ToDateTime("2018/09/14");
 
             TimeSpan ts = dt2 - dt3;
             int timeTotal = ts.Days;

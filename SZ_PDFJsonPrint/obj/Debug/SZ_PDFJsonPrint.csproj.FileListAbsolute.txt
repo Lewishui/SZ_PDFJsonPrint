@@ -113,3 +113,6 @@ F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\Report13.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\print\PReport1.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\print\PReport2.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\print\PReport3.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\print\PReport1.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\print\PReport2.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\SZ_PDFJsonPrint\bin\Debug\print\PReport3.rdlc

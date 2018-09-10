@@ -72,3 +72,7 @@ F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Interface_Json.dll.co
 F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\print\PReport1.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\print\PReport2.rdlc
 F:\mysteap\Devpro\SZ_PDFJsonPrint\Interface_Json\bin\Debug\print\PReport3.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\print\PReport1.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\print\PReport2.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\print\PReport3.rdlc
+D:\Dev Project\SZ_PDFJsonPrint\SZ_PDFJsonPrint\Interface_Json\bin\Debug\Interface_Json.dll.config
