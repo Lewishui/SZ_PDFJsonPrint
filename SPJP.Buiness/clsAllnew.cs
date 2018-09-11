@@ -1035,8 +1035,8 @@ Encoding encoding, string mimeType, bool willSeek)
             {
                 Microsoft.Office.Interop.Excel._Worksheet ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Worksheets[1];
                 //打开时是否显示Excel
-                ExcelApp.Visible = true;
-                ExcelApp.ScreenUpdating = true;
+                //ExcelApp.Visible = true;
+                //ExcelApp.ScreenUpdating = true;
             #endregion
 
                 #region 写表头
@@ -1063,7 +1063,23 @@ Encoding encoding, string mimeType, bool willSeek)
                             excelRange.Borders.get_Item(Excel.XlBordersIndex.xlEdgeRight).Weight = Excel.XlBorderWeight.xlMedium;
                             excelRange.Borders.get_Item(Excel.XlBordersIndex.xlEdgeLeft).Weight = Excel.XlBorderWeight.xlMedium;
                             excelRange.Borders.get_Item(Excel.XlBordersIndex.xlEdgeTop).Weight = Excel.XlBorderWeight.xlMedium;
-                           excelRange.Borders.get_Item(Excel.XlBordersIndex.xlEdgeBottom).Weight = Excel.XlBorderWeight.xlMedium;
+                            excelRange.Borders.get_Item(Excel.XlBordersIndex.xlEdgeBottom).Weight = Excel.XlBorderWeight.xlMedium;
+                            if (iRowIndex == 2)
+                            {
+                                ExcelSheet.Cells[iRowIndex, icloumn].ColumnWidth = 16;
+                                ExcelSheet.Cells[iRowIndex, icloumn].RowHeight = 50;
+                                ExcelSheet.Cells[iRowIndex, icloumn].Font.Size = 12;
+
+                            }
+                            else if (iRowIndex ==1)
+                            {
+                                ExcelSheet.Cells[1, 1].Font.Size = 12;
+                                ExcelSheet.Cells[iRowIndex, icloumn].Font.Size = 12;
+                            }
+                            excelRange.Font.Bold = true;
+                            excelRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+                            excelRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+                            excelRange.WrapText = true;
                         }
                         icloumn = endcloumn + 1;
                     }
@@ -1075,7 +1091,7 @@ Encoding encoding, string mimeType, bool willSeek)
                     //excelRange1.Borders.get_Item(Excel.XlBordersIndex.xlEdgeBottom).Weight = Excel.XlBorderWeight.xlMedium;
                     iRowIndex++;
 
-                
+
                 }
                 #endregion
 
@@ -1084,7 +1100,7 @@ Encoding encoding, string mimeType, bool willSeek)
                 int RowIndex = 2;
                 int doing = 0;
                 #region old
-             
+
                 //if (tclass_datas != null)
                 //    foreach (Datas item in tclass_datas)
                 //    {
@@ -1172,10 +1188,10 @@ Encoding encoding, string mimeType, bool willSeek)
                     bgWorker1.ReportProgress(0, "导出进度  :  " + RowIndex.ToString() + "/" + Excel_body.Rows.Count.ToString());
 
                     for (int cloumn = 0; cloumn < Excel_body.Columns.Count; cloumn++)
-                    {    
+                    {
                         if (row < Excel_body.Rows.Count && cloumn < Excel_body.Columns.Count)
                         {
-                            ExcelSheet.Cells[rownow, ColumnsIndex] ="'"+ Excel_body.Rows[row][cloumn].ToString();
+                            ExcelSheet.Cells[rownow, ColumnsIndex] = "'" + Excel_body.Rows[row][cloumn].ToString();
                             ColumnsIndex++;
                         }
                     }
@@ -1573,6 +1589,6 @@ Encoding encoding, string mimeType, bool willSeek)
             }
             return result;
         }
-        
+
     }
 }

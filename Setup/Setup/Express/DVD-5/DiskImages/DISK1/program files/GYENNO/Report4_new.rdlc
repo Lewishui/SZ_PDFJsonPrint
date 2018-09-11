@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="SPJPDB">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>e5cc9d2a-c8da-413e-978d-253ba72793d5</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="SPJPDB1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>f7efdd7f-f38a-4d2f-bd7c-623f5e69bedb</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="SPJPDB2">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>bb6b6d48-de7e-479e-a4f7-0569ea0a237f</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="SPJPDB3">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>3ae0703b-675a-4e34-a565-51fac8a03401</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="SPJPDB4">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>52d502f0-1486-4583-9520-e368f69ddcdc</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>SPJPDB</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="acquisitionEndTime">
+          <DataField>acquisitionEndTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="acquisitionStartTime">
+          <DataField>acquisitionStartTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="all_count">
+          <DataField>all_count</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="avgError">
+          <DataField>avgError</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="avgNormal">
+          <DataField>avgNormal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="checkDoctor">
+          <DataField>checkDoctor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="checkNumber">
+          <DataField>checkNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="checkTime">
+          <DataField>checkTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="code">
+          <DataField>code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="data">
+          <DataField>data</DataField>
+          <rd:TypeName>SPJP.DB.Online_Data</rd:TypeName>
+        </Field>
+        <Field Name="dataSources">
+          <DataField>dataSources</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="diseaseType">
+          <DataField>diseaseType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="equipmentModel">
+          <DataField>equipmentModel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="equipmentNumber">
+          <DataField>equipmentNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="hospitalName">
+          <DataField>hospitalName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="leftError">
+          <DataField>leftError</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="leftNormal">
+          <DataField>leftNormal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="msg">
+          <DataField>msg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="patientAge">
+          <DataField>patientAge</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="patientId">
+          <DataField>patientId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ptName">
+          <DataField>ptName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="remark">
+          <DataField>remark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="reqId">
+          <DataField>reqId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="result">
+          <DataField>result</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rightError">
+          <DataField>rightError</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rightNormal">
+          <DataField>rightNormal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="serialNumber">
+          <DataField>serialNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="showimage">
+          <DataField>showimage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage10">
+          <DataField>showimage10</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage11">
+          <DataField>showimage11</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage12">
+          <DataField>showimage12</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage13">
+          <DataField>showimage13</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage14">
+          <DataField>showimage14</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage15">
+          <DataField>showimage15</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage2">
+          <DataField>showimage2</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage3">
+          <DataField>showimage3</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage5">
+          <DataField>showimage5</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage6">
+          <DataField>showimage6</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage7">
+          <DataField>showimage7</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage8">
+          <DataField>showimage8</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="showimage9">
+          <DataField>showimage9</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="toExamineDoctor">
+          <DataField>toExamineDoctor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="type">
+          <DataField>type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="type_MaGait">
+          <DataField>type_MaGait</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="typeCode">
+          <DataField>typeCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="typeName">
+          <DataField>typeName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="unit">
+          <DataField>unit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SPJP.DB</rd:DataSetName>
+        <rd:TableName>OnlineShow</rd:TableName>
+        <rd:ObjectDataSourceType>SPJP.DB.OnlineShow, SPJP.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Rectangle Name="Rectangle1">
+            <ReportItems>
+              <Subreport Name="Subreport1">
+                <ReportName>Report1</ReportName>
+                <Left>0.07938cm</Left>
+                <Height>0.48118cm</Height>
+                <Width>17cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Height>0.5341cm</Height>
+            <Width>6.72417in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle2">
+            <ReportItems>
+              <Subreport Name="Subreport2">
+                <ReportName>Report2</ReportName>
+                <Height>0.48118cm</Height>
+                <Width>17cm</Width>
+                <Visibility>
+                  <Hidden>=IIf(First(Fields!showimage2.Value, "DataSet1") =false,True,False)</Hidden>
+                </Visibility>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>0.6634cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle3">
+            <ReportItems>
+              <Subreport Name="Subreport6">
+                <ReportName>Report5</ReportName>
+                <Height>0.48118cm</Height>
+                <Width>17cm</Width>
+                <Visibility>
+                  <Hidden>=IIf(First(Fields!showimage5.Value, "DataSet1") =false,True,False)</Hidden>
+                </Visibility>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>1.27389cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle4">
+            <ReportItems>
+              <Subreport Name="Subreport3">
+                <ReportName>Report3</ReportName>
+                <Height>0.6075cm</Height>
+                <Width>17cm</Width>
+                <Visibility>
+                  <Hidden>=IIf(First(Fields!showimage3.Value, "DataSet1") =false,True,False)</Hidden>
+                </Visibility>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>8.54928cm</Top>
+            <Height>0.6075cm</Height>
+            <Width>17.07938cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle5">
+            <ReportItems>
+              <Subreport Name="Subreport7">
+                <ReportName>Report6</ReportName>
+                <Height>0.48118cm</Height>
+                <Width>17cm</Width>
+                <Visibility>
+                  <Hidden>=IIf(First(Fields!showimage6.Value, "DataSet1") =false,True,False)</Hidden>
+                </Visibility>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>1.93729cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Subreport Name="Subreport8">
+            <ReportName>Report7</ReportName>
+            <Top>2.60069cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>5</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(First(Fields!showimage7.Value, "DataSet1") =false,True,False)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport9">
+            <ReportName>Report8</ReportName>
+            <Top>3.2641cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>6</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(First(Fields!showimage8.Value, "DataSet1") =false,True,False)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport10">
+            <ReportName>Report9</ReportName>
+            <Top>3.9275cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>7</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(First(Fields!showimage9.Value, "DataSet1") =false,True,False)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport11">
+            <ReportName>Report10</ReportName>
+            <Top>4.5909cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>8</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(First(Fields!showimage10.Value, "DataSet1") =false,True,False)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport12">
+            <ReportName>Report11</ReportName>
+            <Top>5.25431cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>9</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(First(Fields!showimage11.Value, "DataSet1") =false,True,False)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport13">
+            <ReportName>Report12</ReportName>
+            <Top>5.91771cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>10</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(First(Fields!showimage12.Value, "DataSet1") =false,True,False)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport14">
+            <ReportName>Report13</ReportName>
+            <Top>6.58111cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>11</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(First(Fields!showimage13.Value, "DataSet1") =false,True,False)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport15">
+            <ReportName>Report14</ReportName>
+            <Top>7.24452cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>12</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(First(Fields!showimage14.Value, "DataSet1") =false,True,False)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport16">
+            <ReportName>Report15</ReportName>
+            <Top>7.90792cm</Top>
+            <Height>0.5341cm</Height>
+            <Width>17.07939cm</Width>
+            <ZIndex>13</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(First(Fields!showimage15.Value, "DataSet1") =false,True,False)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+        </ReportItems>
+        <Height>9.15678cm</Height>
+        <Style />
+      </Body>
+      <Width>17.13231cm</Width>
+      <Page>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>0cm</LeftMargin>
+        <RightMargin>0cm</RightMargin>
+        <TopMargin>2cm</TopMargin>
+        <BottomMargin>2cm</BottomMargin>
+        <ColumnSpacing>1.27cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ReportParameter1">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>316069be-7ac9-4ee2-a342-87f9279bec64</rd:ReportID>
+</Report>

@@ -177,11 +177,11 @@ namespace SPJP.DB
         /// <summary>
         /// IndexNumber
         /// </summary>
-        public int indexNumber { get; set; }
+        public string indexNumber { get; set; }
         /// <summary>
         /// PatientId
         /// </summary>
-        public int patientId { get; set; }
+        public string patientId { get; set; }
         /// <summary>
         /// 王二
         /// </summary>
@@ -189,11 +189,11 @@ namespace SPJP.DB
         /// <summary>
         /// Sex
         /// </summary>
-        public int sex { get; set; }
+        public string sex { get; set; }
         /// <summary>
         /// 2000-01-01 00:00:00
         /// </summary>
-        public DateTime birthday { get; set; }
+        public string birthday { get; set; }
         /// <summary>
         /// 1
         /// </summary>
@@ -201,7 +201,7 @@ namespace SPJP.DB
         /// <summary>
         /// CourseOfDisease
         /// </summary>
-        public int courseOfDisease { get; set; }
+        public string courseOfDisease { get; set; }
         /// <summary>
         /// 201808062022447132156
         /// </summary>
@@ -225,11 +225,11 @@ namespace SPJP.DB
         /// <summary>
         /// 2018-08-01 17:19:00
         /// </summary>
-        public DateTime checkStartTime { get; set; }
+        public string checkStartTime { get; set; }
         /// <summary>
         /// 2018-08-06 17:19:00
         /// </summary>
-        public DateTime checkEndTime { get; set; }
+        public string checkEndTime { get; set; }
         /// <summary>
         /// 8a9e2d385f1eb70c015f2e41a15000c5
         /// </summary>
