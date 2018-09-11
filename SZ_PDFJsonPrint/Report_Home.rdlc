@@ -236,7 +236,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>GYENNO步态数据采集系统</Value>
+                      <Value EvaluationMode="Constant">GYENNO运动评估系统</Value>
                       <Style>
                         <FontFamily>宋体</FontFamily>
                       </Style>
@@ -407,7 +407,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=First(Fields!hospitalName.Value, "DataSet1")</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>宋体</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -430,7 +432,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>GYENNO步态数据采集系统</Value>
+                      <Value EvaluationMode="Constant">GYENNO运动评估系统</Value>
                       <Style>
                         <FontFamily>宋体</FontFamily>
                       </Style>

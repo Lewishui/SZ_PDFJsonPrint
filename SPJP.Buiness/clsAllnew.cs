@@ -841,6 +841,14 @@ Encoding encoding, string mimeType, bool willSeek)
                 item.type = mm["type"].ToString();
             if (mm["remark"] != null && mm["remark"].ToString() != "")
                 item.remark = mm["remark"].ToString();
+
+            if (mm["checkDoctor"] != null && mm["checkDoctor"].ToString() != "")
+                item.checkDoctor = mm["checkDoctor"].ToString();
+            if (mm["toExamineDoctor"] != null && mm["toExamineDoctor"].ToString() != "")
+                item.toExamineDoctor = mm["toExamineDoctor"].ToString();
+            if (mm["result"] != null && mm["result"].ToString() != "")
+                item.result = mm["result"].ToString();
+
             //绑定reqId
             item.reqId = item1.reqId;
             Online_datas.Add(item);
@@ -874,6 +882,11 @@ Encoding encoding, string mimeType, bool willSeek)
 
             allitem.equipmentModel = item.equipmentModel;
             allitem.equipmentNumber = item.equipmentNumber;
+
+            allitem.checkDoctor = item.checkDoctor;
+            allitem.toExamineDoctor = item.toExamineDoctor;
+            allitem.result = item.result;
+
             allitem.checkNumber = item.checkNumber;
             allitem.diseaseType = item.diseaseType;
             allitem.checkTime = item.checkTime;
@@ -1022,8 +1035,8 @@ Encoding encoding, string mimeType, bool willSeek)
             {
                 Microsoft.Office.Interop.Excel._Worksheet ExcelSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Worksheets[1];
                 //打开时是否显示Excel
-                //ExcelApp.Visible = true;
-                //ExcelApp.ScreenUpdating = true;
+                ExcelApp.Visible = true;
+                ExcelApp.ScreenUpdating = true;
             #endregion
 
                 #region 写表头
@@ -1046,11 +1059,23 @@ Encoding encoding, string mimeType, bool willSeek)
                             excelRange.Merge(excelRange.MergeCells);
                             excelRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter; ;
                             excelRange.Font.Size = 12;
+
+                            excelRange.Borders.get_Item(Excel.XlBordersIndex.xlEdgeRight).Weight = Excel.XlBorderWeight.xlMedium;
+                            excelRange.Borders.get_Item(Excel.XlBordersIndex.xlEdgeLeft).Weight = Excel.XlBorderWeight.xlMedium;
+                            excelRange.Borders.get_Item(Excel.XlBordersIndex.xlEdgeTop).Weight = Excel.XlBorderWeight.xlMedium;
+                           excelRange.Borders.get_Item(Excel.XlBordersIndex.xlEdgeBottom).Weight = Excel.XlBorderWeight.xlMedium;
                         }
                         icloumn = endcloumn + 1;
                     }
+                    //Microsoft.Office.Interop.Excel.Range excelRange1 = ExcelSheet.Range[ExcelSheet.Cells[iRowIndex, icloumn], ExcelSheet.Cells[iRowIndex, endcloumn + 1]];
+
+                    //excelRange1.Borders.get_Item(Excel.XlBordersIndex.xlEdgeRight).Weight = Excel.XlBorderWeight.xlMedium;
+                    //excelRange1.Borders.get_Item(Excel.XlBordersIndex.xlEdgeLeft).Weight = Excel.XlBorderWeight.xlMedium;
+                    //excelRange1.Borders.get_Item(Excel.XlBordersIndex.xlEdgeTop).Weight = Excel.XlBorderWeight.xlMedium;
+                    //excelRange1.Borders.get_Item(Excel.XlBordersIndex.xlEdgeBottom).Weight = Excel.XlBorderWeight.xlMedium;
                     iRowIndex++;
 
+                
                 }
                 #endregion
 

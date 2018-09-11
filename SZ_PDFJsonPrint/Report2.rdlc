@@ -369,7 +369,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="("+First(Fields!typeName.Value, "DataSet_up")+First(Fields!typeEnName.Value, "DataSet_up")+")"</Value>
+                    <Value>="检查数据 ("+First(Fields!typeName.Value, "DataSet_up")+First(Fields!typeEnName.Value, "DataSet_up")+")"</Value>
                     <Style>
                       <FontFamily>宋体</FontFamily>
                     </Style>
@@ -381,7 +381,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.41244in</Top>
+            <Top>0.28744in</Top>
             <Left>0.33126in</Left>
             <Height>0.25in</Height>
             <Width>2.23834in</Width>
@@ -971,7 +971,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="("+First(Fields!typeName.Value, "DataSet_down")+First(Fields!typeEnName.Value, "DataSet_down")+")"</Value>
+                    <Value>="检查数据 ("+First(Fields!typeName.Value, "DataSet_down")+First(Fields!typeEnName.Value, "DataSet_down")+")"</Value>
                     <Style>
                       <FontFamily>宋体</FontFamily>
                     </Style>

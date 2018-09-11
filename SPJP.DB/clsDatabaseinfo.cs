@@ -543,6 +543,16 @@ namespace SPJP.DB
         /// A22323
         /// </summary>
         public string equipmentNumber { get; set; }
+
+
+        //new 
+        public string checkDoctor { get; set; }//-审核医生
+
+        public string toExamineDoctor { get; set; }//-审核医生
+
+        public string result { get; set; }//-审核医生
+
+
         /// <summary>
         /// 40288a5f64feff480164ff14843a002e
         /// </summary>

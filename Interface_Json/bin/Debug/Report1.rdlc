@@ -768,7 +768,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="("+First(Fields!patientAge.Value, "DataSet1")+")"</Value>
+                    <Value>="("+First(Fields!patientAge.Value, "DataSet1")+"岁)"</Value>
                     <Style>
                       <FontFamily>宋体</FontFamily>
                     </Style>

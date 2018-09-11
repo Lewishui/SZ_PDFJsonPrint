@@ -278,7 +278,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.02442in</Top>
+            <Top>0.14942in</Top>
             <Left>0.21543in</Left>
             <Height>0.25in</Height>
             <Width>2.23834in</Width>
@@ -869,7 +869,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>GYENNO步态数据采集系统</Value>
+                      <Value EvaluationMode="Constant">GYENNO运动评估系统</Value>
                       <Style>
                         <FontFamily>宋体</FontFamily>
                       </Style>
@@ -1022,6 +1022,11 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <BottomBorder>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+              <Width>1pt</Width>
+            </BottomBorder>
           </Style>
         </PageHeader>
         <PageFooter>
@@ -1036,7 +1041,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>GYENNO步态数据采集系统</Value>
+                      <Value EvaluationMode="Constant">GYENNO运动评估系统</Value>
                       <Style>
                         <FontFamily>宋体</FontFamily>
                       </Style>
@@ -1092,7 +1097,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=First(Fields!hospitalName.Value, "DataSet1")</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>宋体</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -1143,6 +1150,11 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <TopBorder>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+              <Width>1pt</Width>
+            </TopBorder>
           </Style>
         </PageFooter>
         <PageHeight>29.7cm</PageHeight>

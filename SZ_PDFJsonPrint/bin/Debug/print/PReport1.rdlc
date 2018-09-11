@@ -750,7 +750,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="("+First(Fields!patientAge.Value, "DataSet1")+")"</Value>
+                    <Value>="("+First(Fields!patientAge.Value, "DataSet1")+"岁)"</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -790,7 +790,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>GYENNO步态数据采集系统</Value>
+                      <Value EvaluationMode="Constant">GYENNO运动评估系统</Value>
                       <Style>
                         <FontFamily>宋体</FontFamily>
                       </Style>
@@ -943,6 +943,11 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <BottomBorder>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+              <Width>1pt</Width>
+            </BottomBorder>
           </Style>
         </PageHeader>
         <PageFooter>
@@ -957,7 +962,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>GYENNO步态数据采集系统</Value>
+                      <Value EvaluationMode="Constant">GYENNO运动评估系统</Value>
                       <Style>
                         <FontFamily>宋体</FontFamily>
                       </Style>
@@ -1013,7 +1018,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=First(Fields!hospitalName.Value, "DataSet1")</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>宋体</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -1064,6 +1071,11 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <TopBorder>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+              <Width>1pt</Width>
+            </TopBorder>
           </Style>
         </PageFooter>
         <PageHeight>29.7cm</PageHeight>

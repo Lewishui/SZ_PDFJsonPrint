@@ -373,7 +373,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="("+First(Fields!typeName.Value, "DataSet_up")+First(Fields!typeEnName.Value, "DataSet_up")+")"</Value>
+                    <Value>="检查数据 ("+First(Fields!typeName.Value, "DataSet_up")+First(Fields!typeEnName.Value, "DataSet_up")+")"</Value>
                     <Style>
                       <FontFamily>宋体</FontFamily>
                     </Style>
@@ -975,7 +975,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="("+First(Fields!typeName.Value, "DataSet_down")+First(Fields!typeEnName.Value, "DataSet_down")+")"</Value>
+                    <Value>="检查数据 ("+First(Fields!typeName.Value, "DataSet_down")+First(Fields!typeEnName.Value, "DataSet_down")+")"</Value>
                     <Style>
                       <FontFamily>宋体</FontFamily>
                     </Style>
